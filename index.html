@@ -65,8 +65,7 @@
         </div>
 
         <a id="nav-btn-services" href="#services" onclick="showPage('home')" class="nav-item text-white hover:text-amber-300 transition px-3 py-1.5 rounded">e-Services</a>
-        <!-- Sangguniang Panlungsod link direct users straight to their official Google Sites web page -->
-        <a id="nav-btn-officials" href="https://sites.google.com/view/YOUR_GOOGLE_SITE_URL_HERE" target="_blank" rel="noopener noreferrer" class="nav-item text-white hover:text-amber-300 transition px-3 py-1.5 rounded">Sangguniang Panlungsod</a>
+        <a id="nav-btn-officials" href="#sanggunian" onclick="showPage('officials')" class="nav-item text-white hover:text-amber-300 transition px-3 py-1.5 rounded">Sangguniang Panlungsod</a>
         <a href="#transparency" class="text-white hover:text-amber-300 transition px-3 py-1.5">Transparency</a>
         <a href="#links" class="text-white hover:text-amber-300 transition px-3 py-1.5">Government Links</a>
         <a href="#hotlines" class="text-white hover:text-amber-300 transition px-3 py-1.5">Emergency Hotlines</a>
@@ -91,8 +90,7 @@
         </div>
 
         <a href="#services" onclick="showPage('home'); toggleMobileMenu()" class="mobile-nav-link px-3 py-2 rounded hover:bg-blue-700/60 transition border-b border-blue-600/30">e-Services</a>
-        <!-- Sangguniang Panlungsod link direct users straight to their official Google Sites web page (Mobile) -->
-        <a href="https://sites.google.com/view/YOUR_GOOGLE_SITE_URL_HERE" target="_blank" rel="noopener noreferrer" class="mobile-nav-link px-3 py-2 rounded hover:bg-blue-700/60 transition border-b border-blue-600/30">Sangguniang Panlungsod</a>
+        <a href="#sanggunian" onclick="showPage('officials'); toggleMobileMenu()" class="mobile-nav-link px-3 py-2 rounded hover:bg-blue-700/60 transition border-b border-blue-600/30">Sangguniang Panlungsod</a>
         <a href="#transparency" class="mobile-nav-link px-3 py-2 rounded hover:bg-blue-700/60 transition border-b border-blue-600/30">Transparency</a>
         <a href="#links" class="mobile-nav-link px-3 py-2 rounded hover:bg-blue-700/60 transition border-b border-blue-600/30">Government Links</a>
         <a href="#hotlines" class="mobile-nav-link px-3 py-2 rounded hover:bg-blue-700/60 transition">Emergency Hotlines</a>
@@ -525,22 +523,545 @@
           <span class="text-xs font-bold text-slate-800">City Legal Office</span>
         </div>
 
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="CITY NUTRITION LOGO.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">City Nutrition Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="CITY PLANNING AND DEVELOPMENT OFFICE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">City Planning and Development Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="MANDAUE CITY PUBLIC MARKET.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">City Public Market</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="CITY SOCIAL WELFARE SERVICES.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">City Social Welfare Services Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="MANDAUE CITY SPORTS OFFICE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">City Sports Commission</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="OFFICE OF THE TREASURER.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">City Treasurer's Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="CITY VETERINARY OFFICE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">City Veterinary</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="DEPARTMENT OF GENERAL SERVICES.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Department of General Services</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="DILG.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Department of the Interior and Local Government</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="GENDER AND DEVELOPMENT OFFICE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Gender and Development</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="HOUSING & URBAN DEVELOPMENT OFFICE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Housing and Urban Development Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="HUMAN RESOURCES MANAGEMENT OFFICE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Human Resource Management Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="INTERNAL AUDIT SERVICE UNIT.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Internal Audit Service Unit</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="LOCAL CIVIL REGISTRAR.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Local Civil Registrar</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="MASA.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Local Office of Muslim Affairs</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="MANDAUE INFORMATION SYSTEM OFFICE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Management Information Systems Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="MANDAUE CITY ENVIRONMENTAL AND NATURAL RESOURCES OFFICE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Mandaue City Environmental & Natural Resource Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="MANDAUE CITY COLLEGE (1).png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Mandaue City College</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="MANDAUE CITY COLLEGE TECHNOLOGICAL AND ENTREPRENEURIAL TRAINING CENTER.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">MCCTEST</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="PERSONS WITH DISABILITY AFFAIRS OFFICE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Mandaue City Persons with Disability Affairs Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="MANDAUE CITY SECTORAL AFFAIRS.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Mandaue City Sectoral Affairs</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="SLAUGHTERHOUSE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Mandaue City Slaughter House</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="SUBSTANCE ABUSE AND MENTAL HEALTH SERVIES OFFICE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Mandaue City Substance Abuse and Mental Health Services Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="MANDAUE CITY YOUTH DEVELOPMENT OFFICE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Mandaue City Youth Development Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="MCH LOGO FINAL.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Mandaue City Hospital</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="MANDAUE CITY LIBRARY.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Mandaue City Public Library</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="MANDAUE INVESTMENT PROMOTION TOURISM ACTION CENTER.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Mandaue Investments Promotion and Action Center</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="OFFICE OF SENIOR CITIZENS AFFAIRS.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Office of Senior Citizens Affairs</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="OFFICE OF STRATEGIC MANAGEMENT.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Office of Strategy Management</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="OBO.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Office of the Building Official</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="PUBLIC EMPLOYMENT SERVICE OFFICE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Public Employment Services Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="PUBLIC INFORMATION OFFICE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Public Information Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="TEAM NEW 1.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Traffic Enforcement Agency of Mandaue</span>
+        </div>
+
       </div>
+
     </section>
   </div>
 
-  <!-- JavaScript for Navigation & Menu Toggle -->
+  <!-- ==================== CITY OFFICIALS PAGE VIEW ==================== -->
+  <div id="page-officials" class="hidden max-w-7xl w-full mx-auto px-4 py-6 md:py-8">
+    <section class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 md:p-10 space-y-10">
+      
+      <!-- BREADCRUMB -->
+      <div class="flex items-center space-x-2 text-xs text-slate-500">
+        <button onclick="showPage('home')" class="hover:text-mandaue-blue underline">Home</button>
+        <span>/</span>
+        <button onclick="showPage('about')" class="hover:text-mandaue-blue underline">About</button>
+        <span>/</span>
+        <span class="text-slate-800 font-semibold">City Officials</span>
+      </div>
+
+      <div class="border-b border-slate-200 pb-4">
+        <h1 class="text-2xl md:text-4xl font-black text-slate-800 tracking-tight uppercase">
+          City Officials
+        </h1>
+      </div>
+
+      <!-- EXECUTIVE LEADERSHIP SECTION -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-xl mx-auto">
+        <!-- MAYOR -->
+        <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm flex flex-col items-center text-center transition hover:shadow-md border-b-4 border-mandaue-blue">
+          <div class="w-full aspect-[4/3] max-h-64 bg-slate-100 overflow-hidden relative">
+            <img src="Mayor_Ouano_Jonkie.jpg" alt="Hon. Thadeo Jovito 'Jonkie' M. Ouano" class="w-full h-full object-cover object-top">
+          </div>
+          <div class="p-4 w-full space-y-1.5">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-mandaue-blue bg-blue-100 px-2.5 py-0.5 rounded-full inline-block">City Mayor</span>
+            <h2 class="text-sm sm:text-base font-black text-slate-800 leading-tight">Hon. Thadeo Jovito "Jonkie" M. Ouano</h2>
+          </div>
+        </div>
+
+        <!-- VICE MAYOR -->
+        <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm flex flex-col items-center text-center transition hover:shadow-md border-b-4 border-mandaue-blue">
+          <div class="w-full aspect-[4/3] max-h-64 bg-slate-100 overflow-hidden relative">
+            <img src="ViceMayor_Bercede_Glenn.jpg" alt="Hon. Glenn Ouano Bercede" class="w-full h-full object-cover object-top">
+          </div>
+          <div class="p-4 w-full space-y-1.5">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded-full inline-block">City Vice Mayor</span>
+            <h2 class="text-sm sm:text-base font-black text-slate-800 leading-tight">Hon. Glenn Ouano Bercede</h2>
+          </div>
+        </div>
+      </div>
+
+      <!-- 17TH SANGGUNIANG PANLUNGSOD MEMBERS -->
+      <div id="sanggunian" class="space-y-6 pt-6">
+        <div class="border-b-2 border-mandaue-blue pb-2 flex items-center space-x-3">
+          <i class="fa-solid fa-building-columns text-2xl text-mandaue-blue"></i>
+          <h2 class="text-2xl font-black text-slate-800">17th Sangguniang Panlungsod Members</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- JOEL SENO -->
+          <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col border-b-4 border-mandaue-blue">
+            <div class="p-5 flex flex-col flex-grow space-y-3">
+              <div class="border-b border-slate-200 pb-2">
+                <h3 class="font-bold text-lg text-mandaue-blue leading-tight">Hon. Joel M. Seno</h3>
+                <span class="inline-block text-[11px] font-semibold text-slate-500 bg-slate-200 px-2 py-0.5 rounded mt-1">SP Member</span>
+              </div>
+              <div class="text-xs space-y-3 text-slate-700">
+                <div>
+                  <p class="font-bold text-slate-800">Committee on Appropriation, Budget and Finance</p>
+                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Marie Immaline Cortes-Zafra</p>
+                  <p class="text-slate-600"><span class="font-medium">Member:</span> Coun. Eugene C. Andaya</p>
+                </div>
+                <div>
+                  <p class="font-bold text-slate-800">Committee on Education</p>
+                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Raul F. Cabahug V</p>
+                  <p class="text-slate-600"><span class="font-medium">Members:</span> Coun. Andreo O. Icalina, SKP Pres. Fleuritz Gayle T. Jumao-as, Councilor Cesar Y. Cabahug, Jr.</p>
+                </div>
+                <div>
+                  <p class="font-bold text-slate-800">Committee on Good Government, Public Ethics and Accountability</p>
+                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Carlo Pontico C. Fortuna</p>
+                  <p class="text-slate-600"><span class="font-medium">Members:</span> Coun. Cesar Y. Cabahug, Jr., Coun. Andreo O. Icalina, Coun. Raul F. Cabahug V</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FRITZ VILLAMOR -->
+          <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col border-b-4 border-mandaue-blue">
+            <div class="p-5 flex flex-col flex-grow space-y-3">
+              <div class="border-b border-slate-200 pb-2">
+                <h3 class="font-bold text-lg text-mandaue-blue leading-tight">Hon. Fritz B. Villamor</h3>
+                <span class="inline-block text-[11px] font-semibold text-slate-500 bg-slate-200 px-2 py-0.5 rounded mt-1">SP Member</span>
+              </div>
+              <div class="text-xs space-y-3 text-slate-700">
+                <div>
+                  <p class="font-bold text-slate-800">Committee on Planning, Development and Socialized Housing</p>
+                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Jesus P. Arcilla, Jr.</p>
+                  <p class="text-slate-600"><span class="font-medium">Member:</span> Coun. Joel M. Seno</p>
+                </div>
+                <div>
+                  <p class="font-bold text-slate-800">Committee on Information and Communications Technology</p>
+                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Raul F. Cabahug V</p>
+                  <p class="text-slate-600"><span class="font-medium">Member:</span> Coun. Benjamin H. Basiga</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- EUGENE ANDAYA -->
+          <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col border-b-4 border-mandaue-blue">
+            <div class="p-5 flex flex-col flex-grow space-y-3">
+              <div class="border-b border-slate-200 pb-2">
+                <h3 class="font-bold text-lg text-mandaue-blue leading-tight">Hon. Eugene C. Andaya</h3>
+                <span class="inline-block text-[11px] font-semibold text-slate-500 bg-slate-200 px-2 py-0.5 rounded mt-1">SP Member</span>
+              </div>
+              <div class="text-xs space-y-3 text-slate-700">
+                <div>
+                  <p class="font-bold text-slate-800">Committee on Disaster Risk Reduction and Management</p>
+                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> LnB Pres. Dante A. Borbajo</p>
+                  <p class="text-slate-600"><span class="font-medium">Members:</span> Coun. Jennifer S. Del Mar, Coun. Andreo O. Icalina, Coun. Joel M. Seno</p>
+                </div>
+                <div>
+                  <p class="font-bold text-slate-800">Committee on Economic Enterprise</p>
+                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> LnB Pres. Dante A. Borbajo</p>
+                  <p class="text-slate-600"><span class="font-medium">Member:</span> Coun. Joel M. Seno</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- BENJAMIN BASIGA -->
+          <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col border-b-4 border-mandaue-blue">
+            <div class="p-5 flex flex-col flex-grow space-y-3">
+              <div class="border-b border-slate-200 pb-2">
+                <h3 class="font-bold text-lg text-mandaue-blue leading-tight">Hon. Benjamin H. Basiga</h3>
+                <span class="inline-block text-[11px] font-semibold text-slate-500 bg-slate-200 px-2 py-0.5 rounded mt-1">SP Member</span>
+              </div>
+              <div class="text-xs space-y-3 text-slate-700">
+                <div>
+                  <p class="font-bold text-slate-800">Committee on Cooperatives</p>
+                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Jesus P. Arcilla, Jr.</p>
+                  <p class="text-slate-600"><span class="font-medium">Members:</span> Coun. Eugene C. Andaya</p>
+                </div>
+                <div>
+                  <p class="font-bold text-slate-800">Committee on Market and Abattoir</p>
+                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Jesus P. Arcilla, Jr.</p>
+                  <p class="text-slate-600"><span class="font-medium">Members:</span> Coun. Fritz B. Villamor, Coun. Jimmy C. Lumapas, Coun. Joel M. Seno</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- JIMMY LUMAPAS -->
+          <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col border-b-4 border-mandaue-blue">
+            <div class="p-5 flex flex-col flex-grow space-y-3">
+              <div class="border-b border-slate-200 pb-2">
+                <h3 class="font-bold text-lg text-mandaue-blue leading-tight">Hon. Jimmy C. Lumapas</h3>
+                <span class="inline-block text-[11px] font-semibold text-slate-500 bg-slate-200 px-2 py-0.5 rounded mt-1">SP Member</span>
+              </div>
+              <div class="text-xs space-y-3 text-slate-700">
+                <div>
+                  <p class="font-bold text-slate-800">Committee on Civil Service and Government Reorganization</p>
+                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Eugene C. Andaya</p>
+                  <p class="text-slate-600"><span class="font-medium">Member:</span> Coun. Carlo Pontico C. Fortuna</p>
+                </div>
+                <div>
+                  <p class="font-bold text-slate-800">Committee on Rules and Priviliges</p>
+                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Benjamin H. Basiga</p>
+                  <p class="text-slate-600"><span class="font-medium">Member:</span> LnB Pres. Dante A. Borbajo</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARLO FORTUNA -->
+          <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col border-b-4 border-mandaue-blue">
+            <div class="p-5 flex flex-col flex-grow space-y-3">
+              <div class="border-b border-slate-200 pb-2">
+                <h3 class="font-bold text-lg text-mandaue-blue leading-tight">Hon. Carlo Pontico C. Fortuna</h3>
+                <span class="inline-block text-[11px] font-semibold text-slate-500 bg-slate-200 px-2 py-0.5 rounded mt-1">SP Member</span>
+              </div>
+              <div class="text-xs space-y-3 text-slate-700">
+                <div>
+                  <p class="font-bold text-slate-800">Committee on Foreign and Domestic Relations</p>
+                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Joel M. Seno</p>
+                  <p class="text-slate-600"><span class="font-medium">Members:</span> Coun. Jennifer S. Del Mar, Coun. Benjamin H. Basiga, Coun. Jimmy C. Lumapas</p>
+                </div>
+                <div>
+                  <p class="font-bold text-slate-800">Committee on Laws and Ordinances</p>
+                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Joel M. Seno</p>
+                  <p class="text-slate-600"><span class="font-medium">Member:</span> Coun. Raul F. Cabahug V</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- MARIE IMMALINE CORTES-ZAFRA -->
+          <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col border-b-4 border-mandaue-blue">
+            <div class="p-5 flex flex-col flex-grow space-y-3">
+              <div class="border-b border-slate-200 pb-2">
+                <h3 class="font-bold text-lg text-mandaue-blue leading-tight">Hon. Marie Immaline C. Cortes-Zafra</h3>
+                <span class="inline-block text-[11px] font-semibold text-slate-500 bg-slate-200 px-2 py-0.5 rounded mt-1">SP Member</span>
+              </div>
+              <div class="text-xs space-y-3 text-slate-700">
+                <div>
+                  <p class="font-bold text-slate-800">Committee on Labor & Employment, Livelihood & Manpower Development</p>
+                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Fritz B. Villamor</p>
+                  <p class="text-slate-600"><span class="font-medium">Member:</span> Coun. Jimmy C. Lumapas</p>
+                </div>
+                <div>
+                  <p class="font-bold text-slate-800">Committee on Tourism, Heritage Development, Culture and Arts</p>
+                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Fritz B. Villamor</p>
+                  <p class="text-slate-600"><span class="font-medium">Members:</span> Coun. Jennifer S. Del Mar, Coun. Raul F. Cabahug V, Coun. Benjamin H. Basiga</p>
+                </div>
+                <div>
+                  <p class="font-bold text-slate-800">Committee on Trade and Industry</p>
+                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Eugene C. Andaya</p>
+                  <p class="text-slate-600"><span class="font-medium">Member:</span> Coun. Jennifer S. Del Mar</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- JESUS ARCILLA JR. -->
+          <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col border-b-4 border-mandaue-blue">
+            <div class="p-5 flex flex-col flex-grow space-y-3">
+              <div class="border-b border-slate-200 pb-2">
+                <h3 class="font-bold text-lg text-mandaue-blue leading-tight">Hon. Jesus P. Arcilla, Jr.</h3>
+                <span class="inline-block text-[11px] font-semibold text-slate-500 bg-slate-200 px-2 py-0.5 rounded mt-1">SP Member</span>
+              </div>
+              <div class="text-xs space-y-3 text-slate-700">
+                <div>
+                  <p class="font-bold text-slate-800">Committee on Energy</p>
+                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Benjamin H. Basiga</p>
+                  <p class="text-slate-600"><span class="font-medium">Member:</span> LnB Pres. Dante A. Borbajo</p>
+                </div>
+                <div>
+                  <p class="font-bold text-slate-800">Committee on Public Works and Infrastructure</p>
+                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Joel M. Seno</p>
+                  <p class="text-slate-600"><span class="font-medium">Member:</span> LnB Pres. Dante A. Borbajo</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CESAR CABAHUG JR. -->
+          <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col border-b-4 border-mandaue-blue">
+            <div class="p-5 flex flex-col flex-grow space-y-3">
+              <div class="border-b border-slate-200 pb-2">
+                <h3 class="font-bold text-lg text-mandaue-blue leading-tight">Hon. Cesar Y. Cabahug, Jr.</h3>
+                <span class="inline-block text-[11px] font-semibold text-slate-500 bg-slate-200 px-2 py-0.5 rounded mt-1">SP Member</span>
+              </div>
+              <div class="text-xs space-y-3 text-slate-700">
+                <div>
+                  <p class="font-bold text-slate-800">Committee on Environmental Protection</p>
+                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Jennifer S. Del Mar</p>
+                  <p class="text-slate-600"><span class="font-medium">Member:</span> Coun. Joel M. Seno</p>
+                </div>
+                <div>
+                  <p class="font-bold text-slate-800">Committee on Transportation and Public Utilities</p>
+                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Jimmy C. Lumapas</p>
+                  <p class="text-slate-600"><span class="font-medium">Member:</span> Coun. Andreo O. Icalina</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- JENNIFER DEL MAR -->
+          <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col border-b-4 border-mandaue-blue">
+            <div class="p-5 flex flex-col flex-grow space-y-3">
+              <div class="border-b border-slate-200 pb-2">
+                <h3 class="font-bold text-lg text-mandaue-blue leading-tight">Hon. Jennifer S. Del Mar</h3>
+                <span class="inline-block text-[11px] font-semibold text-slate-500 bg-slate-200 px-2 py-0.5 rounded mt-1">SP Member</span>
+              </div>
+              <div class="text-xs space-y-3 text-slate-700">
+                <div>
+                  <p class="font-bold text-slate-800">Committee on City Assets and Properties</p>
+                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Joel M. Seno</p>
+                  <p class="text-slate-600"><span class="font-medium">Member:</span> Coun. Raul F. Cabahug V</p>
+                </div>
+                <div>
+                  <p class="font-bold text-slate-800">Committee on Women and Family</p>
+                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Benjamin H. Basiga</p>
+                  <p class="text-slate-600"><span class="font-medium">Members:</span> Coun. Marie Immaline Cortes-Zafra, Coun. Eugene C. Andaya, Coun. Raul F. Cabahug V</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ANDREO OUANO-ICALINA -->
+          <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col border-b-4 border-mandaue-blue">
+            <div class="p-5 flex flex-col flex-grow space-y-3">
+              <div class="border-b border-slate-200 pb-2">
+                <h3 class="font-bold text-lg text-mandaue-blue leading-tight">Hon. Andreo O. Icalina</h3>
+                <span class="inline-block text-[11px] font-semibold text-slate-500 bg-slate-200 px-2 py-0.5 rounded mt-1">SP Member</span>
+              </div>
+              <div class="text-xs space-y-3 text-slate-700">
+                <div>
+                  <p class="font-bold text-slate-800">Committee on Agriculture</p>
+                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Jimmy C. Lumapas</p>
+                  <p class="text-slate-600"><span class="font-medium">Member:</span> Coun. Cesar Y. Cabahug, Jr.</p>
+                </div>
+                <div>
+                  <p class="font-bold text-slate-800">Committee on Police, Fire and Penology</p>
+                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Jennifer S. Del Mar</p>
+                  <p class="text-slate-600"><span class="font-medium">Member:</span> Coun. Eugene C. Andaya</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RAUL KEVIN CABAHUG V -->
+          <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col border-b-4 border-mandaue-blue">
+            <div class="p-5 flex flex-col flex-grow space-y-3">
+              <div class="border-b border-slate-200 pb-2">
+                <h3 class="font-bold text-lg text-mandaue-blue leading-tight">Hon. Raul F. Cabahug V</h3>
+                <span class="inline-block text-[11px] font-semibold text-slate-500 bg-slate-200 px-2 py-0.5 rounded mt-1">SP Member</span>
+              </div>
+              <div class="text-xs space-y-3 text-slate-700">
+                <div>
+                  <p class="font-bold text-slate-800">Committee on Health and Hospital Services</p>
+                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Benjamin H. Basiga</p>
+                  <p class="text-slate-600"><span class="font-medium">Members:</span> Coun. Marie Immaline Cortes-Zafra, Coun. Fritz B. Villamor, SKC Pres. F. G. T. Jumao-as</p>
+                </div>
+                <div>
+                  <p class="font-bold text-slate-800">Committee on Human Rights</p>
+                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Andreo O. Icalina</p>
+                  <p class="text-slate-600"><span class="font-medium">Member:</span> Coun. Carlo Pontico C. Fortuna</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="mt-auto bg-slate-800 text-white text-xs py-6 border-t-4 border-mandaue-yellow">
+    <div class="max-w-7xl mx-auto px-4 text-center space-y-2">
+      <p class="font-semibold">&copy; City Government of Mandaue. All Rights Reserved.</p>
+      <p class="text-slate-400">Management Information Systems Office (MISO)</p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT NAVIGATION LOGIC -->
   <script>
     function showPage(pageId) {
-      // Hide all page containers
-      document.getElementById('page-home').classList.add('hidden');
-      document.getElementById('page-about').classList.add('hidden');
-      document.getElementById('page-offices').classList.add('hidden');
+      // 1. Hide all page containers
+      const pages = ['home', 'about', 'officials', 'offices'];
+      pages.forEach(p => {
+        const el = document.getElementById('page-' + p);
+        if (el) el.classList.add('hidden');
+      });
 
-      // Show the selected page
-      document.getElementById('page-' + pageId).classList.remove('hidden');
-      
-      // Scroll to top on switch
+      // 2. Show selected page
+      const activePage = document.getElementById('page-' + pageId);
+      if (activePage) {
+        activePage.classList.remove('hidden');
+      }
+
+      // 3. Reset desktop nav button styles
+      document.querySelectorAll('.nav-item').forEach(btn => {
+        btn.className = "nav-item text-white hover:text-amber-300 transition px-3 py-1.5 rounded font-semibold";
+      });
+
+      // 4. Highlight active nav button with white badge
+      const activeBtn = document.getElementById('nav-btn-' + pageId);
+      if (activeBtn) {
+        activeBtn.className = "nav-item bg-white text-mandaue-blue px-3 py-1.5 rounded shadow-sm font-bold";
+      }
+
+      // 5. Scroll smoothly to top
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
@@ -549,5 +1070,6 @@
       menu.classList.toggle('hidden');
     }
   </script>
+
 </body>
 </html>
