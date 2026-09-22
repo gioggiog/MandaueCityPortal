@@ -21,28 +21,46 @@
 
   <!-- TOP NAVIGATION BAR -->
   <nav class="bg-mandaue-blue text-white shadow-md relative z-50">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between md:justify-end">
+    <div class="max-w-7xl mx-auto px-4 py-2.5 flex items-center justify-between">
       
-      <!-- Mobile Title / Brand Label -->
-      <span class="md:hidden font-bold text-sm tracking-wide">MANDAUE CITY PORTAL</span>
+      <!-- Top Left Logo & Title -->
+      <a href="#" class="flex items-center space-x-2.5 group">
+        <img src="MANDAUE.jpg" alt="Mandaue City Seal" class="h-8 w-8 rounded-full object-cover border border-white/20 shadow-sm">
+        <span class="font-bold text-xs sm:text-sm tracking-wider uppercase group-hover:text-amber-300 transition">MANDAUE CITY PORTAL</span>
+      </a>
 
       <!-- Mobile Hamburger Toggle Button -->
-      <button id="menu-toggle" class="md:hidden text-white focus:outline-none p-1 text-lg">
+      <button id="menu-toggle" class="md:hidden text-white focus:outline-none p-1.5 text-xl">
         <i class="fa-solid fa-bars"></i>
       </button>
 
-      <!-- Desktop & Mobile Links Container -->
-      <div id="nav-menu" class="hidden md:flex flex-col md:flex-row items-start md:items-center space-y-3 md:space-y-0 md:space-x-5 text-xs font-semibold absolute md:relative top-full left-0 w-full md:w-auto bg-mandaue-blue md:bg-transparent p-4 md:p-0 border-t border-blue-700 md:border-none shadow-lg md:shadow-none">
-        <a href="#" class="bg-white text-mandaue-blue px-3 py-1 rounded shadow-sm w-full md:w-auto text-center">Home</a>
-        <a href="#about" class="hover:text-amber-300 transition w-full md:w-auto">About <i class="fa-solid fa-chevron-down text-[10px] ml-0.5"></i></a>
-        <a href="#services" class="hover:text-amber-300 transition w-full md:w-auto">e-Services</a>
-        <a href="#sanggunian" class="hover:text-amber-300 transition w-full md:w-auto">Sangguniang Panlungsod</a>
-        <a href="#transparency" class="hover:text-amber-300 transition w-full md:w-auto">Transparency</a>
-        <a href="#links" class="hover:text-amber-300 transition w-full md:w-auto">Government Links</a>
-        <a href="#hotlines" class="hover:text-amber-300 transition w-full md:w-auto">Emergency Hotlines</a>
-        <a href="#search" class="hover:text-amber-300 transition hidden md:inline-block"><i class="fa-solid fa-magnifying-glass text-sm"></i></a>
+      <!-- Desktop Links Container -->
+      <div class="hidden md:flex items-center space-x-5 text-xs font-semibold">
+        <a href="#" class="bg-white text-mandaue-blue px-3 py-1 rounded shadow-sm">Home</a>
+        <a href="#about" class="hover:text-amber-300 transition">About <i class="fa-solid fa-chevron-down text-[10px] ml-0.5"></i></a>
+        <a href="#services" class="hover:text-amber-300 transition">e-Services</a>
+        <a href="#sanggunian" class="hover:text-amber-300 transition">Sangguniang Panlungsod</a>
+        <a href="#transparency" class="hover:text-amber-300 transition">Transparency</a>
+        <a href="#links" class="hover:text-amber-300 transition">Government Links</a>
+        <a href="#hotlines" class="hover:text-amber-300 transition">Emergency Hotlines</a>
+        <a href="#search" class="hover:text-amber-300 transition"><i class="fa-solid fa-magnifying-glass text-sm"></i></a>
       </div>
 
+    </div>
+
+    <!-- Mobile Dropdown Menu Container (Hidden by Default) -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#0a4b96] border-t border-blue-600/50 px-4 py-3 shadow-xl">
+      <div class="flex flex-col space-y-2 text-xs font-semibold">
+        <a href="#" class="bg-white text-mandaue-blue px-3 py-2 rounded text-left font-bold shadow-sm">Home</a>
+        <a href="#about" class="px-3 py-2 rounded hover:bg-blue-700/60 transition flex justify-between items-center border-b border-blue-600/30">
+          About <i class="fa-solid fa-chevron-down text-[10px]"></i>
+        </a>
+        <a href="#services" class="px-3 py-2 rounded hover:bg-blue-700/60 transition border-b border-blue-600/30">e-Services</a>
+        <a href="#sanggunian" class="px-3 py-2 rounded hover:bg-blue-700/60 transition border-b border-blue-600/30">Sangguniang Panlungsod</a>
+        <a href="#transparency" class="px-3 py-2 rounded hover:bg-blue-700/60 transition border-b border-blue-600/30">Transparency</a>
+        <a href="#links" class="px-3 py-2 rounded hover:bg-blue-700/60 transition border-b border-blue-600/30">Government Links</a>
+        <a href="#hotlines" class="px-3 py-2 rounded hover:bg-blue-700/60 transition">Emergency Hotlines</a>
+      </div>
     </div>
   </nav>
 
@@ -156,23 +174,23 @@
   </main>
 
   <!-- FOOTER / CONTACT BAR -->
-  <footer class="mt-auto bg-slate-200 border-t border-slate-300 py-4 text-center text-xs md:text-sm text-slate-800 font-medium">
+  <footer class="mt-auto bg-mandaue-blue text-white shadow-inner py-3.5 text-xs font-semibold">
     <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-center items-center gap-1.5 md:gap-2">
-      <span><strong>Call us on:</strong> +63 (032) 230 4500</span>
-      <span class="hidden sm:inline">|</span>
-      <span><strong>FB:</strong> <a href="https://www.facebook.com/MandaueCityPublicAffairsOffice" target="_blank" class="text-blue-600 hover:underline">Mandaue City Public Affairs Office</a></span>
-      <span class="hidden sm:inline">|</span>
-      <span><strong>Email:</strong> <a href="mailto:cmo@mandauecity.gov.ph" class="text-blue-600 hover:underline">cmo@mandauecity.gov.ph</a></span>
+      <span>Call us on: +63 (032) 230 4500</span>
+      <span class="hidden sm:inline text-blue-300">|</span>
+      <span>FB: <a href="https://www.facebook.com/MandaueCityPublicAffairsOffice" target="_blank" class="hover:text-amber-300 transition underline decoration-amber-300/50 underline-offset-2">Mandaue City Public Affairs Office</a></span>
+      <span class="hidden sm:inline text-blue-300">|</span>
+      <span>Email: <a href="mailto:cmo@mandauecity.gov.ph" class="hover:text-amber-300 transition underline decoration-amber-300/50 underline-offset-2">cmo@mandauecity.gov.ph</a></span>
     </div>
   </footer>
 
   <!-- JAVASCRIPT FOR MOBILE MENU TOGGLE -->
   <script>
     const menuToggle = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
 
     menuToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('hidden');
     });
   </script>
 
