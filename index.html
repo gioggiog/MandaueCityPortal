@@ -64,7 +64,47 @@
           </div>
         </div>
 
-        <a id="nav-btn-services" href="#services" onclick="showPage('home')" class="nav-item text-white hover:text-amber-300 transition px-3 py-1.5 rounded">e-Services</a>
+        <!-- E-SERVICES DROPDOWN MENU -->
+        <div class="relative group">
+          <button id="nav-btn-services" onclick="showPage('services')" class="nav-item text-white hover:text-amber-300 transition flex items-center px-3 py-1.5 rounded">
+            e-Services <i class="fa-solid fa-chevron-down text-[10px] ml-1.5"></i>
+          </button>
+          
+          <!-- Dropdown Box -->
+          <div class="absolute left-0 top-full hidden group-hover:block w-80 bg-[#0a4b96] border border-blue-600/40 shadow-xl rounded-b text-white py-2 z-50">
+            <a href="#" onclick="showPage('services'); return false;" class="px-4 py-2 hover:bg-blue-700/80 transition flex items-center text-xs">
+              Mandaue City Business Permit and Licensing
+            </a>
+            <a href="#" onclick="showPage('services'); return false;" class="px-4 py-2 hover:bg-blue-700/80 transition flex items-center text-xs">
+              Assessment and Payment for Real Property Tax
+            </a>
+            <a href="#" onclick="showPage('services'); return false;" class="px-4 py-2 hover:bg-blue-700/80 transition flex items-center text-xs">
+              Mandaue City Map (City's Data/Information and Guide)
+            </a>
+            <a href="#" onclick="showPage('services'); return false;" class="px-4 py-2 hover:bg-blue-700/80 transition flex items-center text-xs">
+              Delivery Permit Application
+            </a>
+            <a href="#" onclick="showPage('services'); return false;" class="px-4 py-2 hover:bg-blue-700/80 transition flex items-center text-xs">
+              Safety Seal Certification Program
+            </a>
+            <a href="#" onclick="showPage('services'); return false;" class="px-4 py-2 hover:bg-blue-700/80 transition flex items-center text-xs">
+              Application for License to Sell/Serve Liquor
+            </a>
+            <a href="#" onclick="showPage('services'); return false;" class="px-4 py-2 hover:bg-blue-700/80 transition flex items-center text-xs">
+              Eco - Watch
+            </a>
+            <a href="#" onclick="showPage('services'); return false;" class="px-4 py-2 hover:bg-blue-700/80 transition flex items-center text-xs">
+              Procurement System
+            </a>
+            <a href="#" onclick="showPage('services'); return false;" class="px-4 py-2 hover:bg-blue-700/80 transition flex items-center text-xs">
+              Human Resource Information System
+            </a>
+            <a href="#" onclick="showPage('services'); return false;" class="px-4 py-2 hover:bg-blue-700/80 transition flex items-center text-xs">
+              Traffic Violation System
+            </a>
+          </div>
+        </div>
+
         <a href="https://sites.google.com/mandauecity.gov.ph/spmandaue/home" target="_blank" rel="noopener noreferrer" class="nav-item text-white hover:text-amber-300 transition px-3 py-1.5 rounded">Sangguniang Panlungsod</a>
         <a href="#transparency" class="text-white hover:text-amber-300 transition px-3 py-1.5">Transparency</a>
         <a href="#links" class="text-white hover:text-amber-300 transition px-3 py-1.5">Government Links</a>
@@ -89,7 +129,22 @@
           <a href="#" onclick="showPage('about'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-amber-300">Maps</a>
         </div>
 
-        <a href="#services" onclick="showPage('home'); toggleMobileMenu()" class="mobile-nav-link px-3 py-2 rounded hover:bg-blue-700/60 transition border-b border-blue-600/30">e-Services</a>
+        <div class="space-y-1 pl-1 border-b border-blue-600/30 pb-2">
+          <button onclick="showPage('services'); toggleMobileMenu()" class="w-full text-left px-2 py-1.5 rounded hover:bg-blue-700/60 font-bold flex justify-between items-center text-amber-300">
+            e-Services <i class="fa-solid fa-chevron-down text-[10px]"></i>
+          </button>
+          <a href="#" onclick="showPage('services'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-amber-300">Mandaue City Business Permit and Licensing</a>
+          <a href="#" onclick="showPage('services'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-amber-300">Assessment and Payment for Real Property Tax</a>
+          <a href="#" onclick="showPage('services'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-amber-300">Mandaue City Map (City's Data/Information and Guide)</a>
+          <a href="#" onclick="showPage('services'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-amber-300">Delivery Permit Application</a>
+          <a href="#" onclick="showPage('services'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-amber-300">Safety Seal Certification Program</a>
+          <a href="#" onclick="showPage('services'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-amber-300">Application for License to Sell/Serve Liquor</a>
+          <a href="#" onclick="showPage('services'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-amber-300">Eco - Watch</a>
+          <a href="#" onclick="showPage('services'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-amber-300">Procurement System</a>
+          <a href="#" onclick="showPage('services'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-amber-300">Human Resource Information System</a>
+          <a href="#" onclick="showPage('services'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-amber-300">Traffic Violation System</a>
+        </div>
+
         <a href="https://sites.google.com/mandauecity.gov.ph/spmandaue/home" target="_blank" rel="noopener noreferrer" class="mobile-nav-link px-3 py-2 rounded hover:bg-blue-700/60 transition border-b border-blue-600/30">Sangguniang Panlungsod</a>
         <a href="#transparency" class="mobile-nav-link px-3 py-2 rounded hover:bg-blue-700/60 transition border-b border-blue-600/30">Transparency</a>
         <a href="#links" class="mobile-nav-link px-3 py-2 rounded hover:bg-blue-700/60 transition border-b border-blue-600/30">Government Links</a>
@@ -166,7 +221,7 @@
         </div>
 
         <!-- RIGHT COLUMN: ONGOING SERVICES -->
-        <aside id="services" class="space-y-4">
+        <aside class="space-y-4">
           <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-4 sm:p-5 space-y-4">
             <h2 class="text-xl md:text-2xl font-black text-slate-800 tracking-tight uppercase">ONGOING SERVICES</h2>
 
@@ -235,6 +290,102 @@
       </section>
 
     </main>
+  </div>
+
+  <!-- ==================== E-SERVICES PAGE VIEW ==================== -->
+  <div id="page-services" class="hidden max-w-7xl w-full mx-auto px-4 py-6 md:py-8">
+    <section class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 md:p-10 space-y-8">
+      
+      <!-- BREADCRUMB -->
+      <div class="flex items-center space-x-2 text-xs text-slate-500">
+        <button onclick="showPage('home')" class="hover:text-mandaue-blue underline">Home</button>
+        <span>/</span>
+        <span class="text-slate-800 font-semibold">e-Services</span>
+      </div>
+
+      <div class="border-b border-slate-200 pb-4">
+        <h1 class="text-2xl md:text-4xl font-black text-slate-800 tracking-tight uppercase">
+          e-Services
+        </h1>
+        <p class="text-slate-600 text-sm mt-1">Access Mandaue City's digital services and online application portals below.</p>
+      </div>
+
+      <!-- E-SERVICES LIST GRID -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
+        
+        <a href="#" class="bg-slate-50 hover:bg-blue-50 border-l-4 border-mandaue-blue rounded-r-lg p-4 shadow-sm hover:shadow transition flex items-center space-x-4 group">
+          <div class="w-10 h-10 rounded-full bg-blue-100 text-mandaue-blue flex items-center justify-center shrink-0 font-bold group-hover:bg-mandaue-blue group-hover:text-white transition">
+            <i class="fa-solid fa-file-lines"></i>
+          </div>
+          <span class="text-sm font-bold text-slate-800 group-hover:text-mandaue-blue transition">Mandaue City Business Permit and Licensing</span>
+        </a>
+
+        <a href="#" class="bg-slate-50 hover:bg-blue-50 border-l-4 border-mandaue-blue rounded-r-lg p-4 shadow-sm hover:shadow transition flex items-center space-x-4 group">
+          <div class="w-10 h-10 rounded-full bg-blue-100 text-mandaue-blue flex items-center justify-center shrink-0 font-bold group-hover:bg-mandaue-blue group-hover:text-white transition">
+            <i class="fa-solid fa-calculator"></i>
+          </div>
+          <span class="text-sm font-bold text-slate-800 group-hover:text-mandaue-blue transition">Assessment and Payment for Real Property Tax</span>
+        </a>
+
+        <a href="#" class="bg-slate-50 hover:bg-blue-50 border-l-4 border-mandaue-blue rounded-r-lg p-4 shadow-sm hover:shadow transition flex items-center space-x-4 group">
+          <div class="w-10 h-10 rounded-full bg-blue-100 text-mandaue-blue flex items-center justify-center shrink-0 font-bold group-hover:bg-mandaue-blue group-hover:text-white transition">
+            <i class="fa-solid fa-map"></i>
+          </div>
+          <span class="text-sm font-bold text-slate-800 group-hover:text-mandaue-blue transition">Mandaue City Map (City's Data/Information and Guide)</span>
+        </a>
+
+        <a href="#" class="bg-slate-50 hover:bg-blue-50 border-l-4 border-mandaue-blue rounded-r-lg p-4 shadow-sm hover:shadow transition flex items-center space-x-4 group">
+          <div class="w-10 h-10 rounded-full bg-blue-100 text-mandaue-blue flex items-center justify-center shrink-0 font-bold group-hover:bg-mandaue-blue group-hover:text-white transition">
+            <i class="fa-solid fa-truck"></i>
+          </div>
+          <span class="text-sm font-bold text-slate-800 group-hover:text-mandaue-blue transition">Delivery Permit Application</span>
+        </a>
+
+        <a href="#" class="bg-slate-50 hover:bg-blue-50 border-l-4 border-mandaue-blue rounded-r-lg p-4 shadow-sm hover:shadow transition flex items-center space-x-4 group">
+          <div class="w-10 h-10 rounded-full bg-blue-100 text-mandaue-blue flex items-center justify-center shrink-0 font-bold group-hover:bg-mandaue-blue group-hover:text-white transition">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <span class="text-sm font-bold text-slate-800 group-hover:text-mandaue-blue transition">Safety Seal Certification Program</span>
+        </a>
+
+        <a href="#" class="bg-slate-50 hover:bg-blue-50 border-l-4 border-mandaue-blue rounded-r-lg p-4 shadow-sm hover:shadow transition flex items-center space-x-4 group">
+          <div class="w-10 h-10 rounded-full bg-blue-100 text-mandaue-blue flex items-center justify-center shrink-0 font-bold group-hover:bg-mandaue-blue group-hover:text-white transition">
+            <i class="fa-solid fa-wine-bottle"></i>
+          </div>
+          <span class="text-sm font-bold text-slate-800 group-hover:text-mandaue-blue transition">Application for License to Sell/Serve Liquor</span>
+        </a>
+
+        <a href="#" class="bg-slate-50 hover:bg-blue-50 border-l-4 border-mandaue-blue rounded-r-lg p-4 shadow-sm hover:shadow transition flex items-center space-x-4 group">
+          <div class="w-10 h-10 rounded-full bg-blue-100 text-mandaue-blue flex items-center justify-center shrink-0 font-bold group-hover:bg-mandaue-blue group-hover:text-white transition">
+            <i class="fa-solid fa-leaf"></i>
+          </div>
+          <span class="text-sm font-bold text-slate-800 group-hover:text-mandaue-blue transition">Eco - Watch</span>
+        </a>
+
+        <a href="#" class="bg-slate-50 hover:bg-blue-50 border-l-4 border-mandaue-blue rounded-r-lg p-4 shadow-sm hover:shadow transition flex items-center space-x-4 group">
+          <div class="w-10 h-10 rounded-full bg-blue-100 text-mandaue-blue flex items-center justify-center shrink-0 font-bold group-hover:bg-mandaue-blue group-hover:text-white transition">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+          <span class="text-sm font-bold text-slate-800 group-hover:text-mandaue-blue transition">Procurement System</span>
+        </a>
+
+        <a href="#" class="bg-slate-50 hover:bg-blue-50 border-l-4 border-mandaue-blue rounded-r-lg p-4 shadow-sm hover:shadow transition flex items-center space-x-4 group">
+          <div class="w-10 h-10 rounded-full bg-blue-100 text-mandaue-blue flex items-center justify-center shrink-0 font-bold group-hover:bg-mandaue-blue group-hover:text-white transition">
+            <i class="fa-solid fa-user-tie"></i>
+          </div>
+          <span class="text-sm font-bold text-slate-800 group-hover:text-mandaue-blue transition">Human Resource Information System</span>
+        </a>
+
+        <a href="#" class="bg-slate-50 hover:bg-blue-50 border-l-4 border-mandaue-blue rounded-r-lg p-4 shadow-sm hover:shadow transition flex items-center space-x-4 group">
+          <div class="w-10 h-10 rounded-full bg-blue-100 text-mandaue-blue flex items-center justify-center shrink-0 font-bold group-hover:bg-mandaue-blue group-hover:text-white transition">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+          </div>
+          <span class="text-sm font-bold text-slate-800 group-hover:text-mandaue-blue transition">Traffic Violation System</span>
+        </a>
+
+      </div>
+
+    </section>
   </div>
 
   <!-- ==================== ABOUT PAGE VIEW ==================== -->
@@ -1044,7 +1195,7 @@
   <script>
     function showPage(pageId) {
       // 1. Hide all page containers
-      const pages = ['home', 'about', 'officials', 'offices'];
+      const pages = ['home', 'about', 'officials', 'offices', 'services'];
       pages.forEach(p => {
         const el = document.getElementById('page-' + p);
         if (el) el.classList.add('hidden');
@@ -1079,3 +1230,4 @@
 
 </body>
 </html>
+```[cite: 4]
