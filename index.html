@@ -1328,34 +1328,4 @@
 
     function updateSlide(index) {
       const slideWidth = slides[0].getBoundingClientRect().width;
-      track.scrollTo({ left: slideWidth * index, behavior: 'smooth' });
-      dots.forEach(dot => dot.classList.remove('active'));
-      dots[index].classList.add('active');
-      currentIndex = index;
-    }
-
-    nextBtn.addEventListener('click', () => {
-      updateSlide((currentIndex + 1) % slides.length);
-    });
-
-    prevBtn.addEventListener('click', () => {
-      updateSlide((currentIndex - 1 + slides.length) % slides.length);
-    });
-
-    dots.forEach((dot, index) => {
-      dot.addEventListener('click', () => updateSlide(index));
-    });
-
-    track.addEventListener('scroll', () => {
-      const slideWidth = slides[0].getBoundingClientRect().width;
-      const scrollIndex = Math.round(track.scrollLeft / slideWidth);
-      if (scrollIndex !== currentIndex && scrollIndex >= 0 && scrollIndex < slides.length) {
-        currentIndex = scrollIndex;
-        dots.forEach(dot => dot.classList.remove('active'));
-        dots[currentIndex].classList.add('active');
-      }
-    });
-  </script>
-
-</body>
-</html>
+      track.scrollTo({ left: slideWidth * index, behavior: 'smooth' -->
