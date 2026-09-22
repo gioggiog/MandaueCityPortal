@@ -13,6 +13,7 @@
     .bg-mandaue-blue { background-color: #0d5cb6; }
     .text-mandaue-blue { color: #0d5cb6; }
     .bg-mandaue-yellow { background-color: #f7ca18; }
+    .text-mandaue-yellow { color: #d97706; }
     .border-mandaue-yellow { border-color: #f7ca18; }
   </style>
 </head>
@@ -48,22 +49,28 @@
     </div>
   </header>
 
-  <!-- HERO ANNOUNCEMENT BANNER -->
+  <!-- HERO ANNOUNCEMENT BANNER (LIGHT THEME FIX) -->
   <section class="max-w-7xl mx-auto w-full px-4 mt-6">
-    <div class="bg-gradient-to-r from-mandaue-blue via-blue-800 to-slate-900 text-white rounded-xl overflow-hidden shadow-md relative border-b-4 border-mandaue-yellow">
-      <div class="p-8 md:p-12 max-w-3xl space-y-3 z-10 relative">
-        <h1 class="text-2xl md:text-4xl font-extrabold tracking-tight uppercase">
+    <div class="bg-slate-50 border border-slate-200 rounded-2xl overflow-hidden shadow-sm relative border-b-4 border-mandaue-yellow flex flex-col md:flex-row items-stretch">
+      
+      <!-- Text Container -->
+      <div class="p-8 md:p-10 md:w-2/3 space-y-3 z-10">
+        <h1 class="text-2xl md:text-3xl font-black tracking-tight uppercase text-slate-800 leading-tight">
           Amended Green Building Ordinance (IRR)
         </h1>
-        <p class="text-slate-200 text-sm md:text-base leading-relaxed">
+        <p class="text-slate-600 text-sm md:text-base leading-relaxed">
           View the official guidelines on BERDE requirements, permitting, and incentive applications for Mandaue City building projects.
         </p>
-        <p class="text-xs text-amber-300 italic pt-2">
-          Find it under <strong>About &gt; Offices &gt; Office of the Building Official &gt; OBO Guidelines &amp; Issuances</strong>
+        <p class="text-xs text-amber-600 italic font-medium pt-2">
+          Find it under <strong class="text-amber-700">About &gt; Offices &gt; Office of the Building Official &gt; OBO Guidelines &amp; Issuances</strong>
         </p>
       </div>
-      <!-- Background Graphic Overlay -->
-      <div class="absolute right-0 top-0 bottom-0 w-1/3 opacity-20 bg-cover bg-center hidden md:block" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80');"></div>
+
+      <!-- Image Container (Mandaue City Hall) -->
+      <div class="md:w-1/3 min-h-[220px] bg-cover bg-center relative" style="background-image: url('mandauecityhall.jpg');">
+        <div class="absolute inset-0 bg-slate-900/10"></div>
+      </div>
+
     </div>
   </section>
 
