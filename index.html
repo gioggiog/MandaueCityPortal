@@ -20,52 +20,65 @@
 <body class="bg-slate-100 font-sans text-slate-800 antialiased min-h-screen flex flex-col">
 
   <!-- TOP NAVIGATION BAR -->
-  <nav class="bg-mandaue-blue text-white shadow-md">
-    <div class="max-w-7xl mx-auto px-4 flex flex-wrap items-center justify-end space-x-6 py-2.5 text-xs font-semibold">
-      <a href="#" class="bg-white text-mandaue-blue px-3 py-1 rounded shadow-sm">Home</a>
-      <a href="#about" class="hover:text-amber-300 transition">About <i class="fa-solid fa-chevron-down text-[10px] ml-0.5"></i></a>
-      <a href="#services" class="hover:text-amber-300 transition">e-Services</a>
-      <a href="#sanggunian" class="hover:text-amber-300 transition">Sangguniang Panlungsod</a>
-      <a href="#transparency" class="hover:text-amber-300 transition">Transparency</a>
-      <a href="#links" class="hover:text-amber-300 transition">Government Links</a>
-      <a href="#hotlines" class="hover:text-amber-300 transition">Emergency Hotlines</a>
-      <a href="#search" class="hover:text-amber-300 transition"><i class="fa-solid fa-magnifying-glass text-sm"></i></a>
+  <nav class="bg-mandaue-blue text-white shadow-md relative z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between md:justify-end">
+      
+      <!-- Mobile Title / Brand Label -->
+      <span class="md:hidden font-bold text-sm tracking-wide">MANDAUE CITY PORTAL</span>
+
+      <!-- Mobile Hamburger Toggle Button -->
+      <button id="menu-toggle" class="md:hidden text-white focus:outline-none p-1 text-lg">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <!-- Desktop & Mobile Links Container -->
+      <div id="nav-menu" class="hidden md:flex flex-col md:flex-row items-start md:items-center space-y-3 md:space-y-0 md:space-x-5 text-xs font-semibold absolute md:relative top-full left-0 w-full md:w-auto bg-mandaue-blue md:bg-transparent p-4 md:p-0 border-t border-blue-700 md:border-none shadow-lg md:shadow-none">
+        <a href="#" class="bg-white text-mandaue-blue px-3 py-1 rounded shadow-sm w-full md:w-auto text-center">Home</a>
+        <a href="#about" class="hover:text-amber-300 transition w-full md:w-auto">About <i class="fa-solid fa-chevron-down text-[10px] ml-0.5"></i></a>
+        <a href="#services" class="hover:text-amber-300 transition w-full md:w-auto">e-Services</a>
+        <a href="#sanggunian" class="hover:text-amber-300 transition w-full md:w-auto">Sangguniang Panlungsod</a>
+        <a href="#transparency" class="hover:text-amber-300 transition w-full md:w-auto">Transparency</a>
+        <a href="#links" class="hover:text-amber-300 transition w-full md:w-auto">Government Links</a>
+        <a href="#hotlines" class="hover:text-amber-300 transition w-full md:w-auto">Emergency Hotlines</a>
+        <a href="#search" class="hover:text-amber-300 transition hidden md:inline-block"><i class="fa-solid fa-magnifying-glass text-sm"></i></a>
+      </div>
+
     </div>
   </nav>
 
   <!-- LOGO HEADER -->
-  <header class="bg-white py-4 border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 flex justify-center items-center space-x-6">
+  <header class="bg-white py-3 md:py-4 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 flex justify-center items-center space-x-3 md:space-x-6">
       <!-- Mandaue City Official Seal -->
-      <img src="MANDAUE.jpg" alt="Mandaue City Official Seal" class="h-16 md:h-20 w-auto object-contain">
+      <img src="MANDAUE.jpg" alt="Mandaue City Official Seal" class="h-10 sm:h-14 md:h-20 w-auto object-contain">
       
       <!-- Divider Line -->
-      <div class="h-12 w-px bg-slate-300"></div>
+      <div class="h-8 md:h-12 w-px bg-slate-300"></div>
 
       <!-- One Mandaue Logo -->
-      <img src="pngone_2.jpg" alt="One Mandaue Logo" class="h-14 md:h-16 w-auto object-contain">
+      <img src="pngone_2.jpg" alt="One Mandaue Logo" class="h-9 sm:h-12 md:h-16 w-auto object-contain">
     </div>
   </header>
 
   <!-- HERO ANNOUNCEMENT BANNER -->
-  <section class="max-w-7xl mx-auto w-full px-4 mt-6">
+  <section class="max-w-7xl mx-auto w-full px-4 mt-4 md:mt-6">
     <div class="bg-slate-50 border border-slate-200 rounded-2xl overflow-hidden shadow-sm relative border-b-4 border-mandaue-yellow flex flex-col md:flex-row items-stretch">
       
       <!-- Text Container -->
-      <div class="p-8 md:p-10 md:w-2/3 space-y-3 z-10">
-        <h1 class="text-2xl md:text-3xl font-black tracking-tight uppercase text-slate-800 leading-tight">
+      <div class="p-5 sm:p-8 md:p-10 md:w-2/3 space-y-2 md:space-y-3 z-10">
+        <h1 class="text-xl sm:text-2xl md:text-3xl font-black tracking-tight uppercase text-slate-800 leading-tight">
           Amended Green Building Ordinance (IRR)
         </h1>
-        <p class="text-slate-600 text-sm md:text-base leading-relaxed">
+        <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">
           View the official guidelines on BERDE requirements, permitting, and incentive applications for Mandaue City building projects.
         </p>
-        <p class="text-xs text-amber-600 italic font-medium pt-2">
+        <p class="text-xs text-amber-600 italic font-medium pt-1">
           Find it under <strong class="text-amber-700">About &gt; Offices &gt; Office of the Building Official &gt; OBO Guidelines &amp; Issuances</strong>
         </p>
       </div>
 
       <!-- Image Container (Mandaue City Hall) -->
-      <div class="md:w-1/3 min-h-[220px] bg-cover bg-center relative" style="background-image: url('mandauecityhall.jpg');">
+      <div class="md:w-1/3 h-48 md:h-auto bg-cover bg-center relative" style="background-image: url('mandauecityhall.jpg');">
         <div class="absolute inset-0 bg-slate-900/10"></div>
       </div>
 
@@ -73,21 +86,20 @@
   </section>
 
   <!-- MAIN CONTENT CONTAINER -->
-  <main class="max-w-7xl w-full mx-auto px-4 py-8">
+  <main class="max-w-7xl w-full mx-auto px-4 py-6 md:py-8">
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
       
       <!-- LEFT 2 COLUMNS: NEWS FEEDS -->
       <div class="lg:col-span-2 space-y-4">
-        <h2 class="text-3xl font-black text-slate-800 tracking-tight">NEWS</h2>
+        <h2 class="text-2xl md:text-3xl font-black text-slate-800 tracking-tight">NEWS</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
           
           <!-- MANDAUE CITY PUBLIC AFFAIRS OFFICE FACEBOOK EMBED -->
-          <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-4 flex justify-center items-center h-[530px] overflow-hidden">
+          <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-2 sm:p-4 flex justify-center items-center h-[480px] sm:h-[530px] overflow-hidden">
             <iframe 
               src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FMandaueCityPublicAffairsOffice&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" 
-              width="340" 
-              height="500" 
+              class="w-full max-w-[340px] h-full"
               style="border:none;overflow:hidden;" 
               scrolling="no" 
               frameborder="0" 
@@ -97,11 +109,10 @@
           </div>
 
           <!-- TRAFFIC ENFORCEMENT AGENCY OF MANDAUE (TEAM) FACEBOOK EMBED -->
-          <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-4 flex justify-center items-center h-[530px] overflow-hidden">
+          <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-2 sm:p-4 flex justify-center items-center h-[480px] sm:h-[530px] overflow-hidden">
             <iframe 
               src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTEAMandaue&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" 
-              width="340" 
-              height="500" 
+              class="w-full max-w-[340px] h-full"
               style="border:none;overflow:hidden;" 
               scrolling="no" 
               frameborder="0" 
@@ -115,8 +126,8 @@
 
       <!-- RIGHT COLUMN: ONGOING SERVICES -->
       <aside class="space-y-4">
-        <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5 space-y-4">
-          <h2 class="text-2xl font-black text-slate-800 tracking-tight uppercase">ONGOING SERVICES</h2>
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-4 sm:p-5 space-y-4">
+          <h2 class="text-xl md:text-2xl font-black text-slate-800 tracking-tight uppercase">ONGOING SERVICES</h2>
 
           <!-- SERVICE CARD 1 -->
           <div class="border border-slate-200 rounded-xl p-4 text-center space-y-3 hover:border-mandaue-blue transition group cursor-pointer shadow-sm">
@@ -148,10 +159,20 @@
   <footer class="mt-auto bg-white border-t border-slate-200 py-6">
     <div class="max-w-7xl mx-auto px-4 flex flex-col items-center justify-center space-y-2">
       <!-- Mandaue City Logo Footer Badge -->
-      <img src="MANDAUE.jpg" alt="Mandaue City Logo" class="h-12 w-12 rounded-full object-cover shadow">
-      <p class="text-xs text-slate-500">&copy; 2026 Mandaue City Web Portal.</p>
+      <img src="MANDAUE.jpg" alt="Mandaue City Logo" class="h-10 w-10 md:h-12 md:w-12 rounded-full object-cover shadow">
+      <p class="text-xs text-slate-500 text-center">&copy; 2026 Mandaue City Web Portal. Hosted via GitHub Pages.</p>
     </div>
   </footer>
+
+  <!-- JAVASCRIPT FOR MOBILE MENU TOGGLE -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('hidden');
+    });
+  </script>
 
 </body>
 </html>
