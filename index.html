@@ -35,7 +35,7 @@
       </button>
 
       <!-- Desktop Links Container -->
-      <div class="hidden md:flex items-center space-x-1 text-xs font-semibold">
+      <div class="hidden md:flex items-center space-x-2 text-xs font-semibold">
         <button id="nav-btn-home" onclick="showPage('home')" class="nav-item bg-white text-mandaue-blue px-3 py-1.5 rounded shadow-sm font-bold">Home</button>
         
         <!-- ABOUT DROPDOWN MENU -->
@@ -71,8 +71,8 @@
           </button>
           
           <!-- Dropdown Box -->
-          <div class="absolute left-0 top-full hidden group-hover:block w-80 bg-[#0a4b96] border border-blue-600/40 shadow-xl rounded-b text-white py-2 z-50 max-h-[85vh] overflow-y-auto">
-            <a href="#" onclick="showPage('services'); return false;" class="px-4 py-2 hover:bg-blue-700/80 transition flex items-center text-xs">
+          <div class="absolute left-0 top-full hidden group-hover:block w-80 bg-[#0a4b96] border border-blue-600/40 shadow-xl rounded-b text-white py-2 z-50">
+            <a href="https://www.sites.google.com/view/bplomandaue/home" target="_blank" rel="noopener noreferrer" class="px-4 py-2 hover:bg-blue-700/80 transition flex items-center text-xs">
               Mandaue City Business Permit and Licensing
             </a>
             <a href="#" onclick="showPage('services'); return false;" class="px-4 py-2 hover:bg-blue-700/80 transition flex items-center text-xs">
@@ -115,7 +115,7 @@
     </div>
 
     <!-- Mobile Dropdown Menu Container -->
-    <div id="mobile-menu" class="hidden md:hidden bg-[#0a4b96] border-t border-blue-600/50 px-4 py-3 shadow-xl max-h-[80vh] overflow-y-auto">
+    <div id="mobile-menu" class="hidden md:hidden bg-[#0a4b96] border-t border-blue-600/50 px-4 py-3 shadow-xl">
       <div class="flex flex-col space-y-2 text-xs font-semibold">
         <button onclick="showPage('home'); toggleMobileMenu()" class="text-left bg-white text-mandaue-blue px-3 py-2 rounded font-bold shadow-sm">Home</button>
         
@@ -133,7 +133,7 @@
           <button onclick="showPage('services'); toggleMobileMenu()" class="w-full text-left px-2 py-1.5 rounded hover:bg-blue-700/60 font-bold flex justify-between items-center text-amber-300">
             e-Services <i class="fa-solid fa-chevron-down text-[10px]"></i>
           </button>
-          <a href="#" onclick="showPage('services'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-amber-300">Mandaue City Business Permit and Licensing</a>
+          <a href="https://www.sites.google.com/view/bplomandaue/home" target="_blank" rel="noopener noreferrer" class="block pl-4 py-1 hover:text-amber-300">Mandaue City Business Permit and Licensing</a>
           <a href="#" onclick="showPage('services'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-amber-300">Assessment and Payment for Real Property Tax</a>
           <a href="#" onclick="showPage('services'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-amber-300">Mandaue City Map (City's Data/Information and Guide)</a>
           <a href="#" onclick="showPage('services'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-amber-300">Delivery Permit Application</a>
@@ -229,7 +229,7 @@
               <div class="text-3xl text-mandaue-blue group-hover:scale-110 transition duration-200">
                 <i class="fa-solid fa-handshake"></i>
               </div>
-              <a href="#" onclick="showPage('services'); return false;" class="block bg-mandaue-blue hover:bg-blue-800 text-white font-bold text-xs py-2 px-3 rounded uppercase tracking-wider transition">
+              <a href="https://www.sites.google.com/view/bplomandaue/home" target="_blank" rel="noopener noreferrer" class="block bg-mandaue-blue hover:bg-blue-800 text-white font-bold text-xs py-2 px-3 rounded uppercase tracking-wider transition">
                 Business Permit Renewal
               </a>
             </div>
@@ -240,78 +240,6 @@
               </div>
               <a href="#" onclick="showPage('services'); return false;" class="block bg-mandaue-blue hover:bg-blue-800 text-white font-bold text-xs py-2 px-3 rounded uppercase tracking-wider transition">
                 Real Property Tax Assessment
-              </a>
-            </div>
-
-            <div class="border border-slate-200 rounded-xl p-4 text-center space-y-3 hover:border-mandaue-blue transition group cursor-pointer shadow-sm">
-              <div class="text-3xl text-mandaue-blue group-hover:scale-110 transition duration-200">
-                <i class="fa-solid fa-map"></i>
-              </div>
-              <a href="#" onclick="showPage('services'); return false;" class="block bg-mandaue-blue hover:bg-blue-800 text-white font-bold text-xs py-2 px-3 rounded uppercase tracking-wider transition">
-                Mandaue City Map (City's Data/Information and Guide)
-              </a>
-            </div>
-
-            <div class="border border-slate-200 rounded-xl p-4 text-center space-y-3 hover:border-mandaue-blue transition group cursor-pointer shadow-sm">
-              <div class="text-3xl text-mandaue-blue group-hover:scale-110 transition duration-200">
-                <i class="fa-solid fa-truck"></i>
-              </div>
-              <a href="#" onclick="showPage('services'); return false;" class="block bg-mandaue-blue hover:bg-blue-800 text-white font-bold text-xs py-2 px-3 rounded uppercase tracking-wider transition">
-                Delivery Permit Application
-              </a>
-            </div>
-
-            <div class="border border-slate-200 rounded-xl p-4 text-center space-y-3 hover:border-mandaue-blue transition group cursor-pointer shadow-sm">
-              <div class="text-3xl text-mandaue-blue group-hover:scale-110 transition duration-200">
-                <i class="fa-solid fa-shield-halved"></i>
-              </div>
-              <a href="#" onclick="showPage('services'); return false;" class="block bg-mandaue-blue hover:bg-blue-800 text-white font-bold text-xs py-2 px-3 rounded uppercase tracking-wider transition">
-                Safety Seal Certification Program
-              </a>
-            </div>
-
-            <div class="border border-slate-200 rounded-xl p-4 text-center space-y-3 hover:border-mandaue-blue transition group cursor-pointer shadow-sm">
-              <div class="text-3xl text-mandaue-blue group-hover:scale-110 transition duration-200">
-                <i class="fa-solid fa-wine-bottle"></i>
-              </div>
-              <a href="#" onclick="showPage('services'); return false;" class="block bg-mandaue-blue hover:bg-blue-800 text-white font-bold text-xs py-2 px-3 rounded uppercase tracking-wider transition">
-                Application for License to Sell/Serve Liquor
-              </a>
-            </div>
-
-            <div class="border border-slate-200 rounded-xl p-4 text-center space-y-3 hover:border-mandaue-blue transition group cursor-pointer shadow-sm">
-              <div class="text-3xl text-mandaue-blue group-hover:scale-110 transition duration-200">
-                <i class="fa-solid fa-leaf"></i>
-              </div>
-              <a href="#" onclick="showPage('services'); return false;" class="block bg-mandaue-blue hover:bg-blue-800 text-white font-bold text-xs py-2 px-3 rounded uppercase tracking-wider transition">
-                Eco - Watch
-              </a>
-            </div>
-
-            <div class="border border-slate-200 rounded-xl p-4 text-center space-y-3 hover:border-mandaue-blue transition group cursor-pointer shadow-sm">
-              <div class="text-3xl text-mandaue-blue group-hover:scale-110 transition duration-200">
-                <i class="fa-solid fa-cart-shopping"></i>
-              </div>
-              <a href="#" onclick="showPage('services'); return false;" class="block bg-mandaue-blue hover:bg-blue-800 text-white font-bold text-xs py-2 px-3 rounded uppercase tracking-wider transition">
-                Procurement System
-              </a>
-            </div>
-
-            <div class="border border-slate-200 rounded-xl p-4 text-center space-y-3 hover:border-mandaue-blue transition group cursor-pointer shadow-sm">
-              <div class="text-3xl text-mandaue-blue group-hover:scale-110 transition duration-200">
-                <i class="fa-solid fa-user-tie"></i>
-              </div>
-              <a href="#" onclick="showPage('services'); return false;" class="block bg-mandaue-blue hover:bg-blue-800 text-white font-bold text-xs py-2 px-3 rounded uppercase tracking-wider transition">
-                Human Resource Information System
-              </a>
-            </div>
-
-            <div class="border border-slate-200 rounded-xl p-4 text-center space-y-3 hover:border-mandaue-blue transition group cursor-pointer shadow-sm">
-              <div class="text-3xl text-mandaue-blue group-hover:scale-110 transition duration-200">
-                <i class="fa-solid fa-triangle-exclamation"></i>
-              </div>
-              <a href="#" onclick="showPage('services'); return false;" class="block bg-mandaue-blue hover:bg-blue-800 text-white font-bold text-xs py-2 px-3 rounded uppercase tracking-wider transition">
-                Traffic Violation System
               </a>
             </div>
 
@@ -383,9 +311,9 @@
       </div>
 
       <!-- E-SERVICES LIST GRID -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
         
-        <a href="#" onclick="return false;" class="bg-slate-50 hover:bg-blue-50 border-l-4 border-mandaue-blue rounded-r-lg p-4 shadow-sm hover:shadow transition flex items-center space-x-4 group">
+        <a href="https://www.sites.google.com/view/bplomandaue/home" target="_blank" rel="noopener noreferrer" class="bg-slate-50 hover:bg-blue-50 border-l-4 border-mandaue-blue rounded-r-lg p-4 shadow-sm hover:shadow transition flex items-center space-x-4 group">
           <div class="w-10 h-10 rounded-full bg-blue-100 text-mandaue-blue flex items-center justify-center shrink-0 font-bold group-hover:bg-mandaue-blue group-hover:text-white transition">
             <i class="fa-solid fa-file-lines"></i>
           </div>
