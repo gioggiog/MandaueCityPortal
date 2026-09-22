@@ -50,23 +50,13 @@
               City Officials
             </a>
             
-            <div class="relative group/sub">
-              <a href="#" onclick="showPage('about'); return false;" class="px-4 py-2 hover:bg-blue-700/80 transition flex items-center justify-between text-xs">
-                <span class="flex items-center">
-                  <span class="border border-white/60 rounded px-1 py-0.5 text-[9px] mr-2"><i class="fa-solid fa-caret-down"></i></span>
-                  Offices
-                </span>
-              </a>
-            </div>
+            <a href="#" onclick="showPage('offices'); return false;" class="px-4 py-2 hover:bg-blue-700/80 transition flex items-center text-xs">
+              Offices
+            </a>
 
-            <div class="relative group/sub">
-              <a href="#" onclick="showPage('about'); return false;" class="px-4 py-2 hover:bg-blue-700/80 transition flex items-center justify-between text-xs">
-                <span class="flex items-center">
-                  <span class="border border-white/60 rounded px-1 py-0.5 text-[9px] mr-2"><i class="fa-solid fa-caret-down"></i></span>
-                  Barangays
-                </span>
-              </a>
-            </div>
+            <a href="#" onclick="showPage('about'); return false;" class="px-4 py-2 hover:bg-blue-700/80 transition flex items-center text-xs">
+              Barangays
+            </a>
 
             <a href="#" onclick="showPage('about'); return false;" class="px-4 py-2 hover:bg-blue-700/80 transition flex items-center text-xs">
               Maps
@@ -94,8 +84,8 @@
             About <i class="fa-solid fa-chevron-down text-[10px]"></i>
           </button>
           <a href="#" onclick="showPage('officials'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-amber-300">City Officials</a>
-          <a href="#" onclick="showPage('about'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-amber-300 flex items-center"><i class="fa-solid fa-caret-down text-[10px] mr-1.5"></i> Offices</a>
-          <a href="#" onclick="showPage('about'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-amber-300 flex items-center"><i class="fa-solid fa-caret-down text-[10px] mr-1.5"></i> Barangays</a>
+          <a href="#" onclick="showPage('offices'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-amber-300">Offices</a>
+          <a href="#" onclick="showPage('about'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-amber-300">Barangays</a>
           <a href="#" onclick="showPage('about'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-amber-300">Maps</a>
         </div>
 
@@ -124,7 +114,7 @@
             View the official guidelines on BERDE requirements, permitting, and incentive applications for Mandaue City building projects.
           </p>
           <p class="text-xs text-amber-600 italic font-medium pt-1">
-            Find it under <button onclick="showPage('about')" class="text-amber-700 underline font-bold">About &gt; Offices &gt; Office of the Building Official</button>
+            Find it under <button onclick="showPage('offices')" class="text-amber-700 underline font-bold">About &gt; Offices &gt; Office of the Building Official</button>
           </p>
         </div>
 
@@ -434,6 +424,268 @@
               </tr>
             </tbody>
           </table>
+        </div>
+
+      </div>
+
+    </section>
+  </div>
+
+  <!-- ==================== OFFICES PAGE VIEW ==================== -->
+  <div id="page-offices" class="hidden max-w-7xl w-full mx-auto px-4 py-6 md:py-8">
+    <section class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 md:p-10 space-y-8">
+      
+      <!-- BREADCRUMB -->
+      <div class="flex items-center space-x-2 text-xs text-slate-500">
+        <button onclick="showPage('home')" class="hover:text-mandaue-blue underline">Home</button>
+        <span>/</span>
+        <button onclick="showPage('about')" class="hover:text-mandaue-blue underline">About</button>
+        <span>/</span>
+        <span class="text-slate-800 font-semibold">Offices</span>
+      </div>
+
+      <div class="border-b border-slate-200 pb-4">
+        <h1 class="text-2xl md:text-4xl font-black text-slate-800 tracking-tight uppercase">
+          City Departments & Offices
+        </h1>
+      </div>
+
+      <!-- OFFICES GRID -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">City Mayor's Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">City Vice Mayor</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">Bids and Awards Committee</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">Business Permit and Licensing Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">City Accounting Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">City Administrator</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">City Agriculture Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">City Assessor Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">City Budget Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">City Cooperative Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">City Disaster Risk Reduction Management Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">City Engineering Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">City Health Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">City Legal Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">City Nutrition Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">City Planning and Development Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">City Public Market</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">City Social Welfare Services Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">City Sports Commission</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">City Treasurer's Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">City Veterinary</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">Department of General Services</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">Department of the Interior and Local Government</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">Gender and Development</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">Housing and Urban Development Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">Human Resource Management Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">Internal Audit Service Unit</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">Local Civil Registrar</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">Local Office of Muslim Affairs</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">Management Information Systems Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">Mandaue City Environmental & Natural Resource Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">Mandaue City College</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">MCCTEST</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">Mandaue City Persons with Disability Affairs Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">Mandaue City Sectoral Affairs</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">Mandaue City Slaughter House</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">Mandaue City Substance Abuse and Mental Health Services Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">Mandaue City Youth Development Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">Mandaue City Hospital</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">Mandaue City Public Library</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">Mandaue Investments Promotion and Action Center</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">Office of Senior Citizens Affairs</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">Office of Strategy Management</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">Office of the Building Official</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">Public Employment Services Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">Public Information Office</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3.5 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <i class="fa-solid fa-building text-mandaue-blue text-sm"></i>
+          <span class="text-xs font-bold text-slate-800">Traffic Enforcement Agency of Mandaue</span>
         </div>
 
       </div>
@@ -789,6 +1041,7 @@
       document.getElementById('page-home').classList.add('hidden');
       document.getElementById('page-about').classList.add('hidden');
       document.getElementById('page-officials').classList.add('hidden');
+      document.getElementById('page-offices').classList.add('hidden');
 
       // Show selected page
       const targetPage = document.getElementById('page-' + pageId);
