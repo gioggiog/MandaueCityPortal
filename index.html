@@ -15,7 +15,6 @@
     .bg-mandaue-yellow { background-color: #f7ca18; }
     .text-mandaue-yellow { color: #d97706; }
     .border-mandaue-yellow { border-color: #f7ca18; }
-    html { scroll-behavior: smooth; }
   </style>
 </head>
 <body class="bg-slate-100 font-sans text-slate-800 antialiased min-h-screen flex flex-col">
@@ -25,7 +24,7 @@
     <div class="max-w-7xl mx-auto px-4 py-2.5 flex items-center justify-between">
       
       <!-- Top Left Logo & Title -->
-      <a href="#" class="flex items-center space-x-2.5 group">
+      <a href="#" onclick="showPage('home')" class="flex items-center space-x-2.5 group">
         <img src="MANDAUE.jpg" alt="Mandaue City Seal" class="h-8 w-8 rounded-full object-cover border border-white/20 shadow-sm">
         <span class="font-bold text-xs sm:text-sm tracking-wider uppercase group-hover:text-amber-300 transition">MANDAUE CITY PORTAL</span>
       </a>
@@ -37,9 +36,9 @@
 
       <!-- Desktop Links Container -->
       <div class="hidden md:flex items-center space-x-5 text-xs font-semibold">
-        <a href="#" class="bg-white text-mandaue-blue px-3 py-1 rounded shadow-sm">Home</a>
-        <a href="#about" class="hover:text-amber-300 transition">About <i class="fa-solid fa-chevron-down text-[10px] ml-0.5"></i></a>
-        <a href="#services" class="hover:text-amber-300 transition">e-Services</a>
+        <button id="nav-btn-home" onclick="showPage('home')" class="bg-white text-mandaue-blue px-3 py-1 rounded shadow-sm font-bold">Home</button>
+        <button id="nav-btn-about" onclick="showPage('about')" class="hover:text-amber-300 transition flex items-center">About <i class="fa-solid fa-chevron-down text-[10px] ml-1"></i></button>
+        <a href="#services" onclick="showPage('home')" class="hover:text-amber-300 transition">e-Services</a>
         <a href="#sanggunian" class="hover:text-amber-300 transition">Sangguniang Panlungsod</a>
         <a href="#transparency" class="hover:text-amber-300 transition">Transparency</a>
         <a href="#links" class="hover:text-amber-300 transition">Government Links</a>
@@ -52,11 +51,11 @@
     <!-- Mobile Dropdown Menu Container -->
     <div id="mobile-menu" class="hidden md:hidden bg-[#0a4b96] border-t border-blue-600/50 px-4 py-3 shadow-xl">
       <div class="flex flex-col space-y-2 text-xs font-semibold">
-        <a href="#" class="bg-white text-mandaue-blue px-3 py-2 rounded text-left font-bold shadow-sm">Home</a>
-        <a href="#about" class="mobile-nav-link px-3 py-2 rounded hover:bg-blue-700/60 transition flex justify-between items-center border-b border-blue-600/30">
-          About <i class="fa-solid fa-chevron-down text-[10px]"></i>
-        </a>
-        <a href="#services" class="mobile-nav-link px-3 py-2 rounded hover:bg-blue-700/60 transition border-b border-blue-600/30">e-Services</a>
+        <button onclick="showPage('home')" class="text-left bg-white text-mandaue-blue px-3 py-2 rounded font-bold shadow-sm">Home</button>
+        <button onclick="showPage('about')" class="text-left px-3 py-2 rounded hover:bg-blue-700/60 transition flex justify-between items-center border-b border-blue-600/30">
+          About <i class="fa-solid fa-chevron-right text-[10px]"></i>
+        </button>
+        <a href="#services" onclick="showPage('home')" class="mobile-nav-link px-3 py-2 rounded hover:bg-blue-700/60 transition border-b border-blue-600/30">e-Services</a>
         <a href="#sanggunian" class="mobile-nav-link px-3 py-2 rounded hover:bg-blue-700/60 transition border-b border-blue-600/30">Sangguniang Panlungsod</a>
         <a href="#transparency" class="mobile-nav-link px-3 py-2 rounded hover:bg-blue-700/60 transition border-b border-blue-600/30">Transparency</a>
         <a href="#links" class="mobile-nav-link px-3 py-2 rounded hover:bg-blue-700/60 transition border-b border-blue-600/30">Government Links</a>
@@ -65,160 +64,175 @@
     </div>
   </nav>
 
-  <!-- HERO ANNOUNCEMENT BANNER -->
-  <section class="max-w-7xl mx-auto w-full px-4 mt-4 md:mt-6">
-    <div class="bg-slate-50 border border-slate-200 rounded-2xl overflow-hidden shadow-sm relative border-b-4 border-mandaue-yellow flex flex-col md:flex-row items-stretch">
-      
-      <!-- Text Container -->
-      <div class="p-5 sm:p-8 md:p-10 md:w-2/3 space-y-2 md:space-y-3 z-10">
-        <h1 class="text-xl sm:text-2xl md:text-3xl font-black tracking-tight uppercase text-slate-800 leading-tight">
-          Amended Green Building Ordinance (IRR)
-        </h1>
-        <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">
-          View the official guidelines on BERDE requirements, permitting, and incentive applications for Mandaue City building projects.
-        </p>
-        <p class="text-xs text-amber-600 italic font-medium pt-1">
-          Find it under <strong class="text-amber-700">About &gt; Offices &gt; Office of the Building Official &gt; OBO Guidelines &amp; Issuances</strong>
-        </p>
-      </div>
-
-      <!-- Image Container (Mandaue City Hall) -->
-      <div class="md:w-1/3 h-48 md:h-auto bg-cover bg-center relative" style="background-image: url('mandauecityhall.jpg');">
-        <div class="absolute inset-0 bg-slate-900/10"></div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- MAIN CONTENT CONTAINER -->
-  <main class="max-w-7xl w-full mx-auto px-4 py-6 md:py-8 space-y-8">
+  <!-- ==================== HOME PAGE VIEW ==================== -->
+  <div id="page-home" class="space-y-6">
     
-    <!-- GRID SECTION: NEWS & ONGOING SERVICES -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-      
-      <!-- LEFT 2 COLUMNS: NEWS FEEDS -->
-      <div class="lg:col-span-2 space-y-4">
-        <h2 class="text-2xl md:text-3xl font-black text-slate-800 tracking-tight">NEWS</h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
-          
-          <!-- MANDAUE CITY PUBLIC AFFAIRS OFFICE FACEBOOK EMBED -->
-          <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-2 sm:p-4 flex justify-center items-center h-[480px] sm:h-[530px] overflow-hidden">
-            <iframe 
-              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FMandaueCityPublicAffairsOffice&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" 
-              class="w-full max-w-[340px] h-full"
-              style="border:none;overflow:hidden;" 
-              scrolling="no" 
-              frameborder="0" 
-              allowfullscreen="true" 
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-            </iframe>
-          </div>
-
-          <!-- TRAFFIC ENFORCEMENT AGENCY OF MANDAUE (TEAM) FACEBOOK EMBED -->
-          <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-2 sm:p-4 flex justify-center items-center h-[480px] sm:h-[530px] overflow-hidden">
-            <iframe 
-              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTEAMandaue&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" 
-              class="w-full max-w-[340px] h-full"
-              style="border:none;overflow:hidden;" 
-              scrolling="no" 
-              frameborder="0" 
-              allowfullscreen="true" 
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-            </iframe>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- RIGHT COLUMN: ONGOING SERVICES -->
-      <aside id="services" class="space-y-4">
-        <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-4 sm:p-5 space-y-4">
-          <h2 class="text-xl md:text-2xl font-black text-slate-800 tracking-tight uppercase">ONGOING SERVICES</h2>
-
-          <!-- SERVICE CARD 1 -->
-          <div class="border border-slate-200 rounded-xl p-4 text-center space-y-3 hover:border-mandaue-blue transition group cursor-pointer shadow-sm">
-            <div class="text-3xl text-mandaue-blue group-hover:scale-110 transition duration-200">
-              <i class="fa-solid fa-handshake"></i>
-            </div>
-            <a href="#" class="block bg-mandaue-blue hover:bg-blue-800 text-white font-bold text-xs py-2 px-3 rounded uppercase tracking-wider transition">
-              Business Permit Renewal
-            </a>
-          </div>
-
-          <!-- SERVICE CARD 2 -->
-          <div class="border border-slate-200 rounded-xl p-4 text-center space-y-3 hover:border-mandaue-blue transition group cursor-pointer shadow-sm">
-            <div class="text-3xl text-mandaue-blue group-hover:scale-110 transition duration-200">
-              <i class="fa-solid fa-building-columns"></i>
-            </div>
-            <a href="#" class="block bg-mandaue-blue hover:bg-blue-800 text-white font-bold text-xs py-2 px-3 rounded uppercase tracking-wider transition">
-              Real Property Tax Assessment
-            </a>
-          </div>
-
-        </div>
-      </aside>
-
-    </div>
-
-    <!-- VISION, MISSION AND VALUES SECTION -->
-    <section class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 md:p-8 space-y-6">
-      <div class="border-b border-slate-200 pb-4">
-        <h2 class="text-2xl md:text-3xl font-black text-slate-800 tracking-tight uppercase">
-          Vision, Mission and Values Statement
-        </h2>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- VISION CARD -->
-        <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 border-t-4 border-mandaue-blue space-y-2">
-          <div class="flex items-center space-x-2 text-mandaue-blue font-bold text-lg">
-            <i class="fa-solid fa-eye"></i>
-            <h3>Vision</h3>
-          </div>
-          <p class="text-slate-700 text-sm leading-relaxed">
-            Mandaue: Resilient City driven by Manufacturing-based, Retail, and Services MSMEs.
+    <!-- HERO ANNOUNCEMENT BANNER -->
+    <section class="max-w-7xl mx-auto w-full px-4 mt-4 md:mt-6">
+      <div class="bg-slate-50 border border-slate-200 rounded-2xl overflow-hidden shadow-sm relative border-b-4 border-mandaue-yellow flex flex-col md:flex-row items-stretch">
+        
+        <!-- Text Container -->
+        <div class="p-5 sm:p-8 md:p-10 md:w-2/3 space-y-2 md:space-y-3 z-10">
+          <h1 class="text-xl sm:text-2xl md:text-3xl font-black tracking-tight uppercase text-slate-800 leading-tight">
+            Amended Green Building Ordinance (IRR)
+          </h1>
+          <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">
+            View the official guidelines on BERDE requirements, permitting, and incentive applications for Mandaue City building projects.
+          </p>
+          <p class="text-xs text-amber-600 italic font-medium pt-1">
+            Find it under <button onclick="showPage('about')" class="text-amber-700 underline font-bold">About &gt; Offices &gt; Office of the Building Official</button>
           </p>
         </div>
 
-        <!-- MISSION CARD -->
-        <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 border-t-4 border-mandaue-blue space-y-2">
-          <div class="flex items-center space-x-2 text-mandaue-blue font-bold text-lg">
-            <i class="fa-solid fa-bullseye"></i>
-            <h3>Mission</h3>
-          </div>
-          <p class="text-slate-700 text-sm leading-relaxed">
-            Create an environment for sustainable growth and liveable society through responsive governance and multi-sectoral involvement.
-          </p>
+        <!-- Image Container (Mandaue City Hall) -->
+        <div class="md:w-1/3 h-48 md:h-auto bg-cover bg-center relative" style="background-image: url('mandauecityhall.jpg');">
+          <div class="absolute inset-0 bg-slate-900/10"></div>
         </div>
 
-        <!-- VALUES CARD -->
-        <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 border-t-4 border-mandaue-yellow space-y-2">
-          <div class="flex items-center space-x-2 text-mandaue-yellow font-bold text-lg">
-            <i class="fa-solid fa-gem"></i>
-            <h3>Values</h3>
-          </div>
-          <p class="text-slate-700 text-sm leading-relaxed">
-            Excellence, Transparency, Resourcefulness, Accountability, Integrity and Teamwork.
-          </p>
-        </div>
       </div>
     </section>
 
-    <!-- ABOUT SECTION -->
-    <section id="about" class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 md:p-8 space-y-8 scroll-mt-20">
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="max-w-7xl w-full mx-auto px-4 py-4 md:py-6 space-y-8">
+      
+      <!-- GRID SECTION: NEWS & ONGOING SERVICES -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        
+        <!-- LEFT 2 COLUMNS: NEWS FEEDS -->
+        <div class="lg:col-span-2 space-y-4">
+          <h2 class="text-2xl md:text-3xl font-black text-slate-800 tracking-tight">NEWS</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
+            
+            <!-- MANDAUE CITY PUBLIC AFFAIRS OFFICE FACEBOOK EMBED -->
+            <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-2 sm:p-4 flex justify-center items-center h-[480px] sm:h-[530px] overflow-hidden">
+              <iframe 
+                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FMandaueCityPublicAffairsOffice&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" 
+                class="w-full max-w-[340px] h-full"
+                style="border:none;overflow:hidden;" 
+                scrolling="no" 
+                frameborder="0" 
+                allowfullscreen="true" 
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+              </iframe>
+            </div>
+
+            <!-- TRAFFIC ENFORCEMENT AGENCY OF MANDAUE (TEAM) FACEBOOK EMBED -->
+            <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-2 sm:p-4 flex justify-center items-center h-[480px] sm:h-[530px] overflow-hidden">
+              <iframe 
+                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTEAMandaue&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" 
+                class="w-full max-w-[340px] h-full"
+                style="border:none;overflow:hidden;" 
+                scrolling="no" 
+                frameborder="0" 
+                allowfullscreen="true" 
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+              </iframe>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: ONGOING SERVICES -->
+        <aside id="services" class="space-y-4">
+          <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-4 sm:p-5 space-y-4">
+            <h2 class="text-xl md:text-2xl font-black text-slate-800 tracking-tight uppercase">ONGOING SERVICES</h2>
+
+            <!-- SERVICE CARD 1 -->
+            <div class="border border-slate-200 rounded-xl p-4 text-center space-y-3 hover:border-mandaue-blue transition group cursor-pointer shadow-sm">
+              <div class="text-3xl text-mandaue-blue group-hover:scale-110 transition duration-200">
+                <i class="fa-solid fa-handshake"></i>
+              </div>
+              <a href="#" class="block bg-mandaue-blue hover:bg-blue-800 text-white font-bold text-xs py-2 px-3 rounded uppercase tracking-wider transition">
+                Business Permit Renewal
+              </a>
+            </div>
+
+            <!-- SERVICE CARD 2 -->
+            <div class="border border-slate-200 rounded-xl p-4 text-center space-y-3 hover:border-mandaue-blue transition group cursor-pointer shadow-sm">
+              <div class="text-3xl text-mandaue-blue group-hover:scale-110 transition duration-200">
+                <i class="fa-solid fa-building-columns"></i>
+              </div>
+              <a href="#" class="block bg-mandaue-blue hover:bg-blue-800 text-white font-bold text-xs py-2 px-3 rounded uppercase tracking-wider transition">
+                Real Property Tax Assessment
+              </a>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+
+      <!-- VISION, MISSION AND VALUES SECTION -->
+      <section class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 md:p-8 space-y-6">
+        <div class="border-b border-slate-200 pb-4">
+          <h2 class="text-2xl md:text-3xl font-black text-slate-800 tracking-tight uppercase">
+            Vision, Mission and Values Statement
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- VISION CARD -->
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 border-t-4 border-mandaue-blue space-y-2">
+            <div class="flex items-center space-x-2 text-mandaue-blue font-bold text-lg">
+              <i class="fa-solid fa-eye"></i>
+              <h3>Vision</h3>
+            </div>
+            <p class="text-slate-700 text-sm leading-relaxed">
+              Mandaue: Resilient City driven by Manufacturing-based, Retail, and Services MSMEs.
+            </p>
+          </div>
+
+          <!-- MISSION CARD -->
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 border-t-4 border-mandaue-blue space-y-2">
+            <div class="flex items-center space-x-2 text-mandaue-blue font-bold text-lg">
+              <i class="fa-solid fa-bullseye"></i>
+              <h3>Mission</h3>
+            </div>
+            <p class="text-slate-700 text-sm leading-relaxed">
+              Create an environment for sustainable growth and liveable society through responsive governance and multi-sectoral involvement.
+            </p>
+          </div>
+
+          <!-- VALUES CARD -->
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 border-t-4 border-mandaue-yellow space-y-2">
+            <div class="flex items-center space-x-2 text-mandaue-yellow font-bold text-lg">
+              <i class="fa-solid fa-gem"></i>
+              <h3>Values</h3>
+            </div>
+            <p class="text-slate-700 text-sm leading-relaxed">
+              Excellence, Transparency, Resourcefulness, Accountability, Integrity and Teamwork.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ==================== ABOUT PAGE VIEW ==================== -->
+  <div id="page-about" class="hidden max-w-7xl w-full mx-auto px-4 py-6 md:py-8">
+    <section class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 md:p-10 space-y-8">
+      
+      <!-- BREADCRUMB / BACK LINK -->
+      <div class="flex items-center space-x-2 text-xs text-slate-500">
+        <button onclick="showPage('home')" class="hover:text-mandaue-blue underline">Home</button>
+        <span>/</span>
+        <span class="text-slate-800 font-semibold">About</span>
+      </div>
+
       <div class="border-b border-slate-200 pb-4">
-        <h2 class="text-2xl md:text-3xl font-black text-slate-800 tracking-tight uppercase">
+        <h1 class="text-2xl md:text-4xl font-black text-slate-800 tracking-tight uppercase">
           About Mandaue City
-        </h2>
+        </h1>
       </div>
 
       <!-- HISTORY -->
       <div class="space-y-3">
-        <h3 class="text-xl font-bold text-mandaue-blue flex items-center space-x-2">
+        <h2 class="text-xl md:text-2xl font-bold text-mandaue-blue flex items-center space-x-2 border-b border-blue-50 pb-2">
           <i class="fa-solid fa-landmark"></i>
           <span>History</span>
-        </h3>
+        </h2>
         <div class="text-slate-700 text-sm sm:text-base leading-relaxed space-y-3">
           <p>
             The City of Mandaue was founded in April 7, 1521, when a “Cove of Cebu”, called Mandawe, was sighted by Spanish expedition led by Ferdinand Magellan. The “Cove of Cebu”, which is located in the present Barangay Tipolo, became the host to the first facility in the country. Its establishment marked the origins of the industrialization of the country as it helped in the promotion and sustainability of the Acapulco Trade which took place at that time.
@@ -239,11 +253,11 @@
       </div>
 
       <!-- GEOGRAPHY -->
-      <div class="space-y-3 pt-4 border-t border-slate-100">
-        <h3 class="text-xl font-bold text-mandaue-blue flex items-center space-x-2">
+      <div class="space-y-3 pt-6">
+        <h2 class="text-xl md:text-2xl font-bold text-mandaue-blue flex items-center space-x-2 border-b border-blue-50 pb-2">
           <i class="fa-solid fa-map-location-dot"></i>
           <span>Geography</span>
-        </h3>
+        </h2>
         <div class="text-slate-700 text-sm sm:text-base leading-relaxed space-y-3">
           <p>
             Mandaue City is located on the coastal plains of the Province of Cebu, approximately at 10° 9' 40.34" latitude and 123° 5' 28.16" longitude with an average elevation of 55 feet (16.8 meters) above sea level. The city is bounded on the north by the municipality of Consolacion, on the east by the Mactan Channel, on the southwest by Banilad (Cebu City), on the northwest by Talamban (Cebu City) and on the south by the Cebu City North Reclamation.
@@ -255,19 +269,18 @@
       </div>
 
       <!-- MUNICIPAL AND CITY MAYORS -->
-      <div class="space-y-3 pt-4 border-t border-slate-100">
-        <h3 class="text-xl font-bold text-mandaue-blue flex items-center space-x-2">
+      <div class="space-y-3 pt-6">
+        <h2 class="text-xl md:text-2xl font-bold text-mandaue-blue flex items-center space-x-2 border-b border-blue-50 pb-2">
           <i class="fa-solid fa-users"></i>
           <span>Municipal and City Mayors</span>
-        </h3>
-        <p class="text-slate-600 text-sm italic">
-          Official listing of leaders who have served Mandaue from its municipal history to its status as a chartered city.
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          Official directory and leadership timeline of executives who have governed Mandaue from its early pueblo administration to its current status as a highly urbanized city.
         </p>
       </div>
 
     </section>
-
-  </main>
+  </div>
 
   <!-- FOOTER / CONTACT BAR -->
   <footer class="mt-auto bg-mandaue-blue text-white shadow-inner py-3.5 text-xs font-normal">
@@ -280,21 +293,41 @@
     </div>
   </footer>
 
-  <!-- JAVASCRIPT FOR MOBILE MENU TOGGLE -->
+  <!-- JAVASCRIPT FOR PAGE SWITCHING & MOBILE MENU -->
   <script>
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
-    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+    const pageHome = document.getElementById('page-home');
+    const pageAbout = document.getElementById('page-about');
+    const navHome = document.getElementById('nav-btn-home');
+    const navAbout = document.getElementById('nav-btn-about');
 
     menuToggle.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
     });
 
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-      });
-    });
+    function showPage(page) {
+      // Hide mobile menu on navigation
+      mobileMenu.classList.add('hidden');
+
+      if (page === 'about') {
+        pageHome.classList.add('hidden');
+        pageAbout.classList.remove('hidden');
+        
+        // Navigation button active styles
+        navHome.className = "hover:text-amber-300 transition";
+        navAbout.className = "bg-white text-mandaue-blue px-3 py-1 rounded shadow-sm font-bold flex items-center";
+      } else {
+        pageAbout.classList.add('hidden');
+        pageHome.classList.remove('hidden');
+
+        // Navigation button active styles
+        navHome.className = "bg-white text-mandaue-blue px-3 py-1 rounded shadow-sm font-bold";
+        navAbout.className = "hover:text-amber-300 transition flex items-center";
+      }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   </script>
 
 </body>
