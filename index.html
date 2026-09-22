@@ -15,12 +15,13 @@
     .bg-mandaue-yellow { background-color: #f7ca18; }
     .text-mandaue-yellow { color: #d97706; }
     .border-mandaue-yellow { border-color: #f7ca18; }
+    html { scroll-behavior: smooth; }
   </style>
 </head>
 <body class="bg-slate-100 font-sans text-slate-800 antialiased min-h-screen flex flex-col">
 
   <!-- TOP NAVIGATION BAR -->
-  <nav class="bg-mandaue-blue text-white shadow-md relative z-50">
+  <nav class="bg-mandaue-blue text-white shadow-md sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 py-2.5 flex items-center justify-between">
       
       <!-- Top Left Logo & Title -->
@@ -48,18 +49,18 @@
 
     </div>
 
-    <!-- Mobile Dropdown Menu Container (Hidden by Default) -->
+    <!-- Mobile Dropdown Menu Container -->
     <div id="mobile-menu" class="hidden md:hidden bg-[#0a4b96] border-t border-blue-600/50 px-4 py-3 shadow-xl">
       <div class="flex flex-col space-y-2 text-xs font-semibold">
         <a href="#" class="bg-white text-mandaue-blue px-3 py-2 rounded text-left font-bold shadow-sm">Home</a>
-        <a href="#about" class="px-3 py-2 rounded hover:bg-blue-700/60 transition flex justify-between items-center border-b border-blue-600/30">
+        <a href="#about" class="mobile-nav-link px-3 py-2 rounded hover:bg-blue-700/60 transition flex justify-between items-center border-b border-blue-600/30">
           About <i class="fa-solid fa-chevron-down text-[10px]"></i>
         </a>
-        <a href="#services" class="px-3 py-2 rounded hover:bg-blue-700/60 transition border-b border-blue-600/30">e-Services</a>
-        <a href="#sanggunian" class="px-3 py-2 rounded hover:bg-blue-700/60 transition border-b border-blue-600/30">Sangguniang Panlungsod</a>
-        <a href="#transparency" class="px-3 py-2 rounded hover:bg-blue-700/60 transition border-b border-blue-600/30">Transparency</a>
-        <a href="#links" class="px-3 py-2 rounded hover:bg-blue-700/60 transition border-b border-blue-600/30">Government Links</a>
-        <a href="#hotlines" class="px-3 py-2 rounded hover:bg-blue-700/60 transition">Emergency Hotlines</a>
+        <a href="#services" class="mobile-nav-link px-3 py-2 rounded hover:bg-blue-700/60 transition border-b border-blue-600/30">e-Services</a>
+        <a href="#sanggunian" class="mobile-nav-link px-3 py-2 rounded hover:bg-blue-700/60 transition border-b border-blue-600/30">Sangguniang Panlungsod</a>
+        <a href="#transparency" class="mobile-nav-link px-3 py-2 rounded hover:bg-blue-700/60 transition border-b border-blue-600/30">Transparency</a>
+        <a href="#links" class="mobile-nav-link px-3 py-2 rounded hover:bg-blue-700/60 transition border-b border-blue-600/30">Government Links</a>
+        <a href="#hotlines" class="mobile-nav-link px-3 py-2 rounded hover:bg-blue-700/60 transition">Emergency Hotlines</a>
       </div>
     </div>
   </nav>
@@ -131,7 +132,7 @@
       </div>
 
       <!-- RIGHT COLUMN: ONGOING SERVICES -->
-      <aside class="space-y-4">
+      <aside id="services" class="space-y-4">
         <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-4 sm:p-5 space-y-4">
           <h2 class="text-xl md:text-2xl font-black text-slate-800 tracking-tight uppercase">ONGOING SERVICES</h2>
 
@@ -204,6 +205,68 @@
       </div>
     </section>
 
+    <!-- ABOUT SECTION -->
+    <section id="about" class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 md:p-8 space-y-8 scroll-mt-20">
+      <div class="border-b border-slate-200 pb-4">
+        <h2 class="text-2xl md:text-3xl font-black text-slate-800 tracking-tight uppercase">
+          About Mandaue City
+        </h2>
+      </div>
+
+      <!-- HISTORY -->
+      <div class="space-y-3">
+        <h3 class="text-xl font-bold text-mandaue-blue flex items-center space-x-2">
+          <i class="fa-solid fa-landmark"></i>
+          <span>History</span>
+        </h3>
+        <div class="text-slate-700 text-sm sm:text-base leading-relaxed space-y-3">
+          <p>
+            The City of Mandaue was founded in April 7, 1521, when a “Cove of Cebu”, called Mandawe, was sighted by Spanish expedition led by Ferdinand Magellan. The “Cove of Cebu”, which is located in the present Barangay Tipolo, became the host to the first facility in the country. Its establishment marked the origins of the industrialization of the country as it helped in the promotion and sustainability of the Acapulco Trade which took place at that time.
+          </p>
+          <p>
+            In 1571, Legaspi established the country’s first drydock complex on the shoreline of Tipolo, Mandaue, in order to hasten the colonization of the area. The drydock facilities, which were a few meters away from the existing location of the San Miguel Brewery Complex, reportedly serviced the Galleons of Legaspi.
+          </p>
+          <p>
+            Historically, Mandaue got its name from a thick, clinging vines known as “mantawi”, which were abundant in the early times, long before the coming of the Spanish conquestadores. During these times, Mandaue, with its eastern and southern boundaries facing the Mactan Strait, was already referred to as the “merchants’ paradise”. The major economic points within the area were already interlinked with several crude transportation network.
+          </p>
+          <p>
+            The “Cove of Cebu” was formally constituted into a “pueblo” between 1580 to 1700 and was officially known as the town of Mandaue in the year 1899.
+          </p>
+          <p>
+            From that “Cove of Cebu” emerged the now industrial city of Mandaue. Mandaue became a chartered city on June 21, 1969 through Republic Act 5519. It was considered a highly-urbanized city in the year 1991.
+          </p>
+        </div>
+      </div>
+
+      <!-- GEOGRAPHY -->
+      <div class="space-y-3 pt-4 border-t border-slate-100">
+        <h3 class="text-xl font-bold text-mandaue-blue flex items-center space-x-2">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <span>Geography</span>
+        </h3>
+        <div class="text-slate-700 text-sm sm:text-base leading-relaxed space-y-3">
+          <p>
+            Mandaue City is located on the coastal plains of the Province of Cebu, approximately at 10° 9' 40.34" latitude and 123° 5' 28.16" longitude with an average elevation of 55 feet (16.8 meters) above sea level. The city is bounded on the north by the municipality of Consolacion, on the east by the Mactan Channel, on the southwest by Banilad (Cebu City), on the northwest by Talamban (Cebu City) and on the south by the Cebu City North Reclamation.
+          </p>
+          <p>
+            Part and parcel of Metropolitan Cebu, Mandaue City is located right at the center of Cebu Province and of Region 7. Formed like a heart, the city is located at the heart of the province of Cebu. It is strategically located as it straddles through two major transport links, the 1st (old) Mandaue-Mactan Bridge and the 2nd (Marcelo Fernan) Mandaue-Mactan Bridge, and the Cebu International Port.
+          </p>
+        </div>
+      </div>
+
+      <!-- MUNICIPAL AND CITY MAYORS -->
+      <div class="space-y-3 pt-4 border-t border-slate-100">
+        <h3 class="text-xl font-bold text-mandaue-blue flex items-center space-x-2">
+          <i class="fa-solid fa-users"></i>
+          <span>Municipal and City Mayors</span>
+        </h3>
+        <p class="text-slate-600 text-sm italic">
+          Official listing of leaders who have served Mandaue from its municipal history to its status as a chartered city.
+        </p>
+      </div>
+
+    </section>
+
   </main>
 
   <!-- FOOTER / CONTACT BAR -->
@@ -221,9 +284,16 @@
   <script>
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
     menuToggle.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
     });
   </script>
 
