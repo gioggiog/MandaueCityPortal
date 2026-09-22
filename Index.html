@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mandaue City Web Portal</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Custom One Mandaue Brand Colors */
+    .bg-mandaue-blue { background-color: #0d5cb6; }
+    .text-mandaue-blue { color: #0d5cb6; }
+    .bg-mandaue-yellow { background-color: #f7ca18; }
+    .border-mandaue-yellow { border-color: #f7ca18; }
+  </style>
+</head>
+<body class="bg-slate-100 font-sans text-slate-800 antialiased min-h-screen flex flex-col">
+
+  <!-- TOP NAVIGATION BAR -->
+  <nav class="bg-mandaue-blue text-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 flex flex-wrap items-center justify-end space-x-6 py-2.5 text-xs font-semibold">
+      <a href="#" class="bg-white text-mandaue-blue px-3 py-1 rounded shadow-sm">Home</a>
+      <a href="#about" class="hover:text-amber-300 transition">About <i class="fa-solid fa-chevron-down text-[10px] ml-0.5"></i></a>
+      <a href="#services" class="hover:text-amber-300 transition">e-Services</a>
+      <a href="#sanggunian" class="hover:text-amber-300 transition">Sangguniang Panlungsod</a>
+      <a href="#transparency" class="hover:text-amber-300 transition">Transparency</a>
+      <a href="#links" class="hover:text-amber-300 transition">Government Links</a>
+      <a href="#hotlines" class="hover:text-amber-300 transition">Emergency Hotlines</a>
+      <a href="#search" class="hover:text-amber-300 transition"><i class="fa-solid fa-magnifying-glass text-sm"></i></a>
+    </div>
+  </nav>
+
+  <!-- LOGO HEADER -->
+  <header class="bg-white py-4 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 flex justify-center">
+      <!-- One Mandaue Logo Concept -->
+      <div class="text-center">
+        <div class="flex items-center justify-center space-x-1">
+          <span class="text-5xl font-black text-mandaue-blue tracking-tighter">M</span>
+          <span class="text-5xl font-black text-mandaue-yellow tracking-tighter">1</span>
+        </div>
+        <div class="text-mandaue-blue font-extrabold tracking-widest text-sm uppercase -mt-1">
+          ONE MANDAUE
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO ANNOUNCEMENT BANNER -->
+  <section class="max-w-7xl mx-auto w-full px-4 mt-6">
+    <div class="bg-gradient-to-r from-mandaue-blue via-blue-800 to-slate-900 text-white rounded-xl overflow-hidden shadow-md relative border-b-4 border-mandaue-yellow">
+      <div class="p-8 md:p-12 max-w-3xl space-y-3 z-10 relative">
+        <h1 class="text-2xl md:text-4xl font-extrabold tracking-tight uppercase">
+          Amended Green Building Ordinance (IRR)
+        </h1>
+        <p class="text-slate-200 text-sm md:text-base leading-relaxed">
+          View the official guidelines on BERDE requirements, permitting, and incentive applications for Mandaue City building projects.
+        </p>
+        <p class="text-xs text-amber-300 italic pt-2">
+          Find it under <strong>About &gt; Offices &gt; Office of the Building Official &gt; OBO Guidelines &amp; Issuances</strong>
+        </p>
+      </div>
+      <!-- Background Graphic Overlay -->
+      <div class="absolute right-0 top-0 bottom-0 w-1/3 opacity-20 bg-cover bg-center hidden md:block" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80');"></div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="max-w-7xl w-full mx-auto px-4 py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      
+      <!-- LEFT 2 COLUMNS: NEWS FEEDS -->
+      <div class="lg:col-span-2 space-y-4">
+        <h2 class="text-3xl font-black text-slate-800 tracking-tight">NEWS</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          
+          <!-- PUBLIC AFFAIRS OFFICE CARD -->
+          <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-4 space-y-3">
+            <div class="flex items-center justify-between border-b pb-3 border-slate-100">
+              <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 rounded border flex items-center justify-center text-xs font-bold bg-mandaue-blue text-white">M</div>
+                <div>
+                  <h3 class="text-xs font-bold text-slate-800 leading-tight">Mandaue City Public Aff...</h3>
+                  <p class="text-[10px] text-slate-400">101,201 followers</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="flex items-center text-xs text-slate-500 space-x-2">
+              <span class="bg-slate-100 px-2 py-0.5 rounded border text-[11px]"><i class="fa-solid fa-check text-slate-400 mr-1"></i>Followed</span>
+              <span class="bg-slate-100 px-2 py-0.5 rounded border text-[11px] cursor-pointer"><i class="fa-solid fa-share mr-1"></i>Share</span>
+            </div>
+
+            <div class="bg-emerald-900 text-white rounded p-3 text-xs space-y-2">
+              <div class="text-[10px] uppercase tracking-wider text-amber-300 font-bold">Public Service Advisory</div>
+              <div class="font-bold text-sm">Air Quality Monitoring</div>
+              <p class="text-[11px] text-emerald-100">Central Visayas stations reporting stable air parameters for Metro Mandaue zone.</p>
+            </div>
+          </div>
+
+          <!-- TEAM TRAFFIC ENFORCEMENT CARD -->
+          <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-4 space-y-3">
+            <div class="flex items-center justify-between border-b pb-3 border-slate-100">
+              <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 rounded border flex items-center justify-center text-xs font-bold bg-amber-500 text-slate-900">T</div>
+                <div>
+                  <h3 class="text-xs font-bold text-slate-800 leading-tight">Traffic Enforcement Age...</h3>
+                  <p class="text-[10px] text-slate-400">53,096 followers</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center text-xs text-slate-500 space-x-2">
+              <span class="bg-slate-100 px-2 py-0.5 rounded border text-[11px] cursor-pointer"><i class="fa-solid fa-plus text-slate-400 mr-1"></i>Follow Page</span>
+              <span class="bg-slate-100 px-2 py-0.5 rounded border text-[11px] cursor-pointer"><i class="fa-solid fa-share mr-1"></i>Share</span>
+            </div>
+
+            <div class="text-xs space-y-1.5">
+              <p class="font-bold text-slate-800">TRAFFIC ADVISORY:</p>
+              <p class="text-slate-600 text-[11px] leading-relaxed">
+                The Subangdaku Flyover will be closed to traffic for an asphalt overlaying project starting on...
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: ONGOING SERVICES -->
+      <aside class="space-y-4">
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5 space-y-4">
+          <h2 class="text-2xl font-black text-slate-800 tracking-tight uppercase">ONGOING SERVICES</h2>
+
+          <!-- SERVICE CARD 1 -->
+          <div class="border border-slate-200 rounded-xl p-4 text-center space-y-3 hover:border-mandaue-blue transition group cursor-pointer shadow-sm">
+            <div class="text-3xl text-mandaue-blue group-hover:scale-110 transition duration-200">
+              <i class="fa-solid fa-handshake"></i>
+            </div>
+            <a href="#" class="block bg-mandaue-blue hover:bg-blue-800 text-white font-bold text-xs py-2 px-3 rounded uppercase tracking-wider transition">
+              Business Permit Renewal
+            </a>
+          </div>
+
+          <!-- SERVICE CARD 2 -->
+          <div class="border border-slate-200 rounded-xl p-4 text-center space-y-3 hover:border-mandaue-blue transition group cursor-pointer shadow-sm">
+            <div class="text-3xl text-mandaue-blue group-hover:scale-110 transition duration-200">
+              <i class="fa-solid fa-building-columns"></i>
+            </div>
+            <a href="#" class="block bg-mandaue-blue hover:bg-blue-800 text-white font-bold text-xs py-2 px-3 rounded uppercase tracking-wider transition">
+              Real Property Tax Assessment
+            </a>
+          </div>
+
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="mt-auto bg-white border-t border-slate-200 py-6">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col items-center justify-center space-y-2">
+      <div class="w-12 h-12 rounded-full bg-mandaue-blue text-white font-bold flex items-center justify-center shadow">
+        MC
+      </div>
+      <p class="text-xs text-slate-500">&copy; 2026 Mandaue City Web Portal. Hosted via GitHub Pages.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
