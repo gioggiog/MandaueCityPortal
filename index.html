@@ -35,12 +35,12 @@
       </button>
 
       <!-- Desktop Links Container -->
-      <div class="hidden md:flex items-center space-x-5 text-xs font-semibold">
-        <button id="nav-btn-home" onclick="showPage('home')" class="bg-white text-mandaue-blue px-3 py-1.5 rounded shadow-sm font-bold">Home</button>
+      <div class="hidden md:flex items-center space-x-2 text-xs font-semibold">
+        <button id="nav-btn-home" onclick="showPage('home')" class="nav-item bg-white text-mandaue-blue px-3 py-1.5 rounded shadow-sm font-bold">Home</button>
         
         <!-- ABOUT DROPDOWN MENU -->
         <div class="relative group">
-          <button id="nav-btn-about" onclick="showPage('about')" class="hover:text-amber-300 transition flex items-center py-1.5">
+          <button id="nav-btn-about" onclick="showPage('about')" class="nav-item text-white hover:text-amber-300 transition flex items-center px-3 py-1.5 rounded">
             About <i class="fa-solid fa-chevron-down text-[10px] ml-1.5"></i>
           </button>
           
@@ -64,12 +64,12 @@
           </div>
         </div>
 
-        <a href="#services" onclick="showPage('home')" class="hover:text-amber-300 transition">e-Services</a>
-        <a href="#sanggunian" onclick="showPage('officials')" class="hover:text-amber-300 transition">Sangguniang Panlungsod</a>
-        <a href="#transparency" class="hover:text-amber-300 transition">Transparency</a>
-        <a href="#links" class="hover:text-amber-300 transition">Government Links</a>
-        <a href="#hotlines" class="hover:text-amber-300 transition">Emergency Hotlines</a>
-        <a href="#search" class="hover:text-amber-300 transition"><i class="fa-solid fa-magnifying-glass text-sm"></i></a>
+        <a id="nav-btn-services" href="#services" onclick="showPage('home')" class="nav-item text-white hover:text-amber-300 transition px-3 py-1.5 rounded">e-Services</a>
+        <a id="nav-btn-officials" href="#sanggunian" onclick="showPage('officials')" class="nav-item text-white hover:text-amber-300 transition px-3 py-1.5 rounded">Sangguniang Panlungsod</a>
+        <a href="#transparency" class="text-white hover:text-amber-300 transition px-3 py-1.5">Transparency</a>
+        <a href="#links" class="text-white hover:text-amber-300 transition px-3 py-1.5">Government Links</a>
+        <a href="#hotlines" class="text-white hover:text-amber-300 transition px-3 py-1.5">Emergency Hotlines</a>
+        <a href="#search" class="text-white hover:text-amber-300 transition px-2 py-1.5"><i class="fa-solid fa-magnifying-glass text-sm"></i></a>
       </div>
 
     </div>
@@ -712,7 +712,7 @@
         </h1>
       </div>
 
-      <!-- EXECUTIVE LEADERSHIP SECTION (RESIZED & COMPACT) -->
+      <!-- EXECUTIVE LEADERSHIP SECTION -->
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-xl mx-auto">
         <!-- MAYOR -->
         <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm flex flex-col items-center text-center transition hover:shadow-md border-b-4 border-mandaue-blue">
@@ -1037,19 +1037,31 @@
   <!-- JAVASCRIPT NAVIGATION LOGIC -->
   <script>
     function showPage(pageId) {
-      // Hide all page containers
-      document.getElementById('page-home').classList.add('hidden');
-      document.getElementById('page-about').classList.add('hidden');
-      document.getElementById('page-officials').classList.add('hidden');
-      document.getElementById('page-offices').classList.add('hidden');
+      // 1. Hide all page containers
+      const pages = ['home', 'about', 'officials', 'offices'];
+      pages.forEach(p => {
+        const el = document.getElementById('page-' + p);
+        if (el) el.classList.add('hidden');
+      });
 
-      // Show selected page
-      const targetPage = document.getElementById('page-' + pageId);
-      if (targetPage) {
-        targetPage.classList.remove('hidden');
+      // 2. Show selected page
+      const activePage = document.getElementById('page-' + pageId);
+      if (activePage) {
+        activePage.classList.remove('hidden');
       }
 
-      // Scroll smoothly to top
+      // 3. Reset desktop nav button styles
+      document.querySelectorAll('.nav-item').forEach(btn => {
+        btn.className = "nav-item text-white hover:text-amber-300 transition px-3 py-1.5 rounded font-semibold";
+      });
+
+      // 4. Highlight active nav button with white badge
+      const activeBtn = document.getElementById('nav-btn-' + pageId);
+      if (activeBtn) {
+        activeBtn.className = "nav-item bg-white text-mandaue-blue px-3 py-1.5 rounded shadow-sm font-bold";
+      }
+
+      // 5. Scroll smoothly to top
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
