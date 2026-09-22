@@ -36,8 +36,44 @@
 
       <!-- Desktop Links Container -->
       <div class="hidden md:flex items-center space-x-5 text-xs font-semibold">
-        <button id="nav-btn-home" onclick="showPage('home')" class="bg-white text-mandaue-blue px-3 py-1 rounded shadow-sm font-bold">Home</button>
-        <button id="nav-btn-about" onclick="showPage('about')" class="hover:text-amber-300 transition flex items-center">About <i class="fa-solid fa-chevron-down text-[10px] ml-1"></i></button>
+        <button id="nav-btn-home" onclick="showPage('home')" class="bg-white text-mandaue-blue px-3 py-1.5 rounded shadow-sm font-bold">Home</button>
+        
+        <!-- ABOUT DROPDOWN MENU -->
+        <div class="relative group">
+          <button id="nav-btn-about" onclick="showPage('about')" class="hover:text-amber-300 transition flex items-center py-1.5">
+            About <i class="fa-solid fa-chevron-down text-[10px] ml-1.5"></i>
+          </button>
+          
+          <!-- Dropdown Box -->
+          <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-[#0a4b96] border border-blue-600/40 shadow-xl rounded-b text-white py-2 z-50">
+            <a href="#" onclick="showPage('about'); return false;" class="px-4 py-2 hover:bg-blue-700/80 transition flex items-center text-xs">
+              City Officials
+            </a>
+            
+            <div class="relative group/sub">
+              <a href="#" class="px-4 py-2 hover:bg-blue-700/80 transition flex items-center justify-between text-xs">
+                <span class="flex items-center">
+                  <span class="border border-white/60 rounded px-1 py-0.5 text-[9px] mr-2"><i class="fa-solid fa-caret-down"></i></span>
+                  Offices
+                </span>
+              </a>
+            </div>
+
+            <div class="relative group/sub">
+              <a href="#" class="px-4 py-2 hover:bg-blue-700/80 transition flex items-center justify-between text-xs">
+                <span class="flex items-center">
+                  <span class="border border-white/60 rounded px-1 py-0.5 text-[9px] mr-2"><i class="fa-solid fa-caret-down"></i></span>
+                  Barangays
+                </span>
+              </a>
+            </div>
+
+            <a href="#" class="px-4 py-2 hover:bg-blue-700/80 transition flex items-center text-xs">
+              Maps
+            </a>
+          </div>
+        </div>
+
         <a href="#services" onclick="showPage('home')" class="hover:text-amber-300 transition">e-Services</a>
         <a href="#sanggunian" class="hover:text-amber-300 transition">Sangguniang Panlungsod</a>
         <a href="#transparency" class="hover:text-amber-300 transition">Transparency</a>
@@ -52,9 +88,17 @@
     <div id="mobile-menu" class="hidden md:hidden bg-[#0a4b96] border-t border-blue-600/50 px-4 py-3 shadow-xl">
       <div class="flex flex-col space-y-2 text-xs font-semibold">
         <button onclick="showPage('home')" class="text-left bg-white text-mandaue-blue px-3 py-2 rounded font-bold shadow-sm">Home</button>
-        <button onclick="showPage('about')" class="text-left px-3 py-2 rounded hover:bg-blue-700/60 transition flex justify-between items-center border-b border-blue-600/30">
-          About <i class="fa-solid fa-chevron-right text-[10px]"></i>
-        </button>
+        
+        <div class="space-y-1 pl-1 border-b border-blue-600/30 pb-2">
+          <button onclick="showPage('about')" class="w-full text-left px-2 py-1.5 rounded hover:bg-blue-700/60 font-bold flex justify-between items-center text-amber-300">
+            About <i class="fa-solid fa-chevron-down text-[10px]"></i>
+          </button>
+          <a href="#" onclick="showPage('about')" class="block pl-4 py-1 hover:text-amber-300">City Officials</a>
+          <a href="#" class="block pl-4 py-1 hover:text-amber-300 flex items-center"><i class="fa-solid fa-caret-down text-[10px] mr-1.5"></i> Offices</a>
+          <a href="#" class="block pl-4 py-1 hover:text-amber-300 flex items-center"><i class="fa-solid fa-caret-down text-[10px] mr-1.5"></i> Barangays</a>
+          <a href="#" class="block pl-4 py-1 hover:text-amber-300">Maps</a>
+        </div>
+
         <a href="#services" onclick="showPage('home')" class="mobile-nav-link px-3 py-2 rounded hover:bg-blue-700/60 transition border-b border-blue-600/30">e-Services</a>
         <a href="#sanggunian" class="mobile-nav-link px-3 py-2 rounded hover:bg-blue-700/60 transition border-b border-blue-600/30">Sangguniang Panlungsod</a>
         <a href="#transparency" class="mobile-nav-link px-3 py-2 rounded hover:bg-blue-700/60 transition border-b border-blue-600/30">Transparency</a>
@@ -84,7 +128,7 @@
           </p>
         </div>
 
-        <!-- Image Container (Mandaue City Hall) -->
+        <!-- Image Container -->
         <div class="md:w-1/3 h-48 md:h-auto bg-cover bg-center relative" style="background-image: url('mandauecityhall.jpg');">
           <div class="absolute inset-0 bg-slate-900/10"></div>
         </div>
@@ -104,7 +148,6 @@
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
             
-            <!-- MANDAUE CITY PUBLIC AFFAIRS OFFICE FACEBOOK EMBED -->
             <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-2 sm:p-4 flex justify-center items-center h-[480px] sm:h-[530px] overflow-hidden">
               <iframe 
                 src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FMandaueCityPublicAffairsOffice&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" 
@@ -117,7 +160,6 @@
               </iframe>
             </div>
 
-            <!-- TRAFFIC ENFORCEMENT AGENCY OF MANDAUE (TEAM) FACEBOOK EMBED -->
             <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-2 sm:p-4 flex justify-center items-center h-[480px] sm:h-[530px] overflow-hidden">
               <iframe 
                 src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTEAMandaue&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" 
@@ -138,7 +180,6 @@
           <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-4 sm:p-5 space-y-4">
             <h2 class="text-xl md:text-2xl font-black text-slate-800 tracking-tight uppercase">ONGOING SERVICES</h2>
 
-            <!-- SERVICE CARD 1 -->
             <div class="border border-slate-200 rounded-xl p-4 text-center space-y-3 hover:border-mandaue-blue transition group cursor-pointer shadow-sm">
               <div class="text-3xl text-mandaue-blue group-hover:scale-110 transition duration-200">
                 <i class="fa-solid fa-handshake"></i>
@@ -148,7 +189,6 @@
               </a>
             </div>
 
-            <!-- SERVICE CARD 2 -->
             <div class="border border-slate-200 rounded-xl p-4 text-center space-y-3 hover:border-mandaue-blue transition group cursor-pointer shadow-sm">
               <div class="text-3xl text-mandaue-blue group-hover:scale-110 transition duration-200">
                 <i class="fa-solid fa-building-columns"></i>
@@ -172,7 +212,6 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <!-- VISION CARD -->
           <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 border-t-4 border-mandaue-blue space-y-2">
             <div class="flex items-center space-x-2 text-mandaue-blue font-bold text-lg">
               <i class="fa-solid fa-eye"></i>
@@ -183,7 +222,6 @@
             </p>
           </div>
 
-          <!-- MISSION CARD -->
           <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 border-t-4 border-mandaue-blue space-y-2">
             <div class="flex items-center space-x-2 text-mandaue-blue font-bold text-lg">
               <i class="fa-solid fa-bullseye"></i>
@@ -194,7 +232,6 @@
             </p>
           </div>
 
-          <!-- VALUES CARD -->
           <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 border-t-4 border-mandaue-yellow space-y-2">
             <div class="flex items-center space-x-2 text-mandaue-yellow font-bold text-lg">
               <i class="fa-solid fa-gem"></i>
@@ -435,14 +472,14 @@
         pageHome.classList.add('hidden');
         pageAbout.classList.remove('hidden');
         
-        navHome.className = "hover:text-amber-300 transition";
-        navAbout.className = "bg-white text-mandaue-blue px-3 py-1 rounded shadow-sm font-bold flex items-center";
+        navHome.className = "hover:text-amber-300 transition py-1.5";
+        navAbout.className = "bg-white text-mandaue-blue px-3 py-1.5 rounded shadow-sm font-bold flex items-center";
       } else {
         pageAbout.classList.add('hidden');
         pageHome.classList.remove('hidden');
 
-        navHome.className = "bg-white text-mandaue-blue px-3 py-1 rounded shadow-sm font-bold";
-        navAbout.className = "hover:text-amber-300 transition flex items-center";
+        navHome.className = "bg-white text-mandaue-blue px-3 py-1.5 rounded shadow-sm font-bold";
+        navAbout.className = "hover:text-amber-300 transition flex items-center py-1.5";
       }
 
       window.scrollTo({ top: 0, behavior: 'smooth' });
