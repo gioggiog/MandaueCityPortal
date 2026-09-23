@@ -111,7 +111,7 @@
 
         <a href="https://sites.google.com/mandauecity.gov.ph/spmandaue/home" target="_blank" rel="noopener noreferrer" class="nav-item text-white hover:text-[#FFD305] transition px-3 py-1.5 rounded">Sangguniang Panlungsod</a>
         <a href="#links" class="text-white hover:text-[#FFD305] transition px-3 py-1.5">Government Links</a>
-        <a href="#hotlines" class="text-white hover:text-[#FFD305] transition px-3 py-1.5">Emergency Hotlines</a>
+        <a href="#" onclick="showPage('hotlines'); return false;" class="text-white hover:text-[#FFD305] transition px-3 py-1.5">Emergency Hotlines</a>
         <a href="#search" class="text-white hover:text-[#FFD305] transition px-2 py-1.5"><i class="fa-solid fa-magnifying-glass text-sm"></i></a>
       </div>
 
@@ -150,7 +150,7 @@
 
         <a href="https://sites.google.com/mandauecity.gov.ph/spmandaue/home" target="_blank" rel="noopener noreferrer" class="mobile-nav-link px-3 py-2 rounded hover:bg-[#0064CC] transition border-b border-blue-500/30">Sangguniang Panlungsod</a>
         <a href="#links" class="mobile-nav-link px-3 py-2 rounded hover:bg-[#0064CC] transition border-b border-blue-500/30">Government Links</a>
-        <a href="#hotlines" class="mobile-nav-link px-3 py-2 rounded hover:bg-[#0064CC] transition">Emergency Hotlines</a>
+        <a href="#" onclick="showPage('hotlines'); toggleMobileMenu(); return false;" class="mobile-nav-link px-3 py-2 rounded hover:bg-[#0064CC] transition">Emergency Hotlines</a>
       </div>
     </div>
   </nav>
@@ -1363,6 +1363,110 @@
     </section>
   </div>
 
+  <!-- ==================== EMERGENCY HOTLINES PAGE VIEW ==================== -->
+  <div id="page-hotlines" class="hidden max-w-7xl w-full mx-auto px-4 py-6 md:py-8">
+    <section class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 md:p-10 space-y-8">
+      
+      <!-- BREADCRUMB -->
+      <div class="flex items-center space-x-2 text-xs text-slate-500">
+        <button onclick="showPage('home')" class="hover:text-mandaue-blue underline">Home</button>
+        <span>/</span>
+        <span class="text-slate-800 font-semibold">Emergency Hotlines</span>
+      </div>
+
+      <div class="border-b border-slate-200 pb-4 flex items-center space-x-3">
+        <span class="w-2.5 h-6 bg-[#C10A20] rounded-sm inline-block"></span>
+        <div>
+          <h1 class="text-2xl md:text-4xl font-black text-slate-800 tracking-tight uppercase">
+            Emergency Hotlines
+          </h1>
+          <p class="text-slate-600 text-sm mt-1">Mandaue City emergency contact numbers and disaster response hotlines.</p>
+        </div>
+      </div>
+
+      <!-- HOTLINES GRID -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- CDRRMO -->
+        <div class="bg-slate-50 border-l-4 border-mandaue-red rounded-r-lg p-5 shadow-sm space-y-2">
+          <div class="flex items-center space-x-3 text-mandaue-red">
+            <i class="fa-solid fa-triangle-exclamation text-xl"></i>
+            <h3 class="font-bold text-slate-800 text-base">CDRRMO Operations Center</h3>
+          </div>
+          <p class="text-xs text-slate-600">Mandaue City Disaster Risk Reduction and Management Office</p>
+          <div class="pt-2 text-sm font-black text-mandaue-blue space-y-1">
+            <p><i class="fa-solid fa-phone mr-2 text-xs"></i> (032) 238-5405</p>
+            <p><i class="fa-solid fa-mobile-screen mr-2 text-xs"></i> 0917-312-3233</p>
+          </div>
+        </div>
+
+        <!-- MANDAUE CITY HOSPITAL -->
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-5 shadow-sm space-y-2">
+          <div class="flex items-center space-x-3 text-mandaue-blue">
+            <i class="fa-solid fa-hospital text-xl"></i>
+            <h3 class="font-bold text-slate-800 text-base">Mandaue City Hospital</h3>
+          </div>
+          <p class="text-xs text-slate-600">Medical emergencies and health assistance</p>
+          <div class="pt-2 text-sm font-black text-mandaue-blue space-y-1">
+            <p><i class="fa-solid fa-phone mr-2 text-xs"></i> (032) 346-6086</p>
+          </div>
+        </div>
+
+        <!-- FIRE DEPARTMENT -->
+        <div class="bg-slate-50 border-l-4 border-mandaue-red rounded-r-lg p-5 shadow-sm space-y-2">
+          <div class="flex items-center space-x-3 text-mandaue-red">
+            <i class="fa-solid fa-fire-extinguisher text-xl"></i>
+            <h3 class="font-bold text-slate-800 text-base">Bureau of Fire Protection (BFP)</h3>
+          </div>
+          <p class="text-xs text-slate-600">Mandaue City Fire Station</p>
+          <div class="pt-2 text-sm font-black text-mandaue-blue space-y-1">
+            <p><i class="fa-solid fa-phone mr-2 text-xs"></i> (032) 345-0333</p>
+            <p><i class="fa-solid fa-mobile-screen mr-2 text-xs"></i> 0998-591-5883</p>
+          </div>
+        </div>
+
+        <!-- PNP MANDAUE -->
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-5 shadow-sm space-y-2">
+          <div class="flex items-center space-x-3 text-mandaue-blue">
+            <i class="fa-solid fa-shield-halved text-xl"></i>
+            <h3 class="font-bold text-slate-800 text-base">Mandaue City Police Office (MCPO)</h3>
+          </div>
+          <p class="text-xs text-slate-600">Police response and law enforcement</p>
+          <div class="pt-2 text-sm font-black text-mandaue-blue space-y-1">
+            <p><i class="fa-solid fa-phone mr-2 text-xs"></i> (032) 344-3149</p>
+            <p><i class="fa-solid fa-mobile-screen mr-2 text-xs"></i> 0998-598-6349</p>
+          </div>
+        </div>
+
+        <!-- TEAM (TRAFFIC) -->
+        <div class="bg-slate-50 border-l-4 border-amber-500 rounded-r-lg p-5 shadow-sm space-y-2">
+          <div class="flex items-center space-x-3 text-amber-600">
+            <i class="fa-solid fa-traffic-light text-xl"></i>
+            <h3 class="font-bold text-slate-800 text-base">TEAM (Traffic Enforcement Agency)</h3>
+          </div>
+          <p class="text-xs text-slate-600">Traffic accidents and road assistance</p>
+          <div class="pt-2 text-sm font-black text-mandaue-blue space-y-1">
+            <p><i class="fa-solid fa-phone mr-2 text-xs"></i> (032) 345-6355</p>
+          </div>
+        </div>
+
+        <!-- VECO / VECO APCO -->
+        <div class="bg-slate-50 border-l-4 border-amber-500 rounded-r-lg p-5 shadow-sm space-y-2">
+          <div class="flex items-center space-x-3 text-amber-600">
+            <i class="fa-solid fa-bolt text-xl"></i>
+            <h3 class="font-bold text-slate-800 text-base">Visayan Electric (VECO)</h3>
+          </div>
+          <p class="text-xs text-slate-600">Power outages and electrical hazards</p>
+          <div class="pt-2 text-sm font-black text-mandaue-blue space-y-1">
+            <p><i class="fa-solid fa-phone mr-2 text-xs"></i> (032) 230-8326</p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+  </div>
+
   <!-- FOOTER -->
   <footer class="mt-auto bg-slate-800 text-white text-xs py-6 border-t-4 border-[#FFD305]">
     <div class="max-w-7xl mx-auto px-4 text-center space-y-2">
@@ -1371,42 +1475,32 @@
     </div>
   </footer>
 
-  <!-- JAVASCRIPT NAVIGATION LOGIC -->
+  <!-- JavaScript for Client-Side Single Page View Switching -->
   <script>
     function showPage(pageId) {
-      // 1. Hide all page containers
-      const pages = ['home', 'about', 'officials', 'offices', 'barangays', 'services'];
-      pages.forEach(p => {
-        const el = document.getElementById('page-' + p);
-        if (el) el.classList.add('hidden');
-      });
+      // Hide all main view containers
+      document.getElementById('page-home').classList.add('hidden');
+      document.getElementById('page-services').classList.add('hidden');
+      document.getElementById('page-about').classList.add('hidden');
+      document.getElementById('page-barangays').classList.add('hidden');
+      document.getElementById('page-offices').classList.add('hidden');
+      document.getElementById('page-officials').classList.add('hidden');
+      document.getElementById('page-hotlines').classList.add('hidden');
 
-      // 2. Show selected page
-      const activePage = document.getElementById('page-' + pageId);
-      if (activePage) {
-        activePage.classList.remove('hidden');
+      // Show the requested page
+      const targetPage = document.getElementById('page-' + pageId);
+      if (targetPage) {
+        targetPage.classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       }
-
-      // 3. Reset desktop nav button styles
-      document.querySelectorAll('.nav-item').forEach(btn => {
-        btn.className = "nav-item text-white hover:text-[#FFD305] transition px-3 py-1.5 rounded font-semibold";
-      });
-
-      // 4. Highlight active nav button with white badge (if applicable)
-      const activeBtn = document.getElementById('nav-btn-' + pageId);
-      if (activeBtn) {
-        activeBtn.className = "nav-item bg-white text-mandaue-blue px-3 py-1.5 rounded shadow-sm font-bold";
-      }
-
-      // 5. Scroll smoothly to top
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function toggleMobileMenu() {
       const menu = document.getElementById('mobile-menu');
-      menu.classList.toggle('hidden');
+      if (menu) {
+        menu.classList.toggle('hidden');
+      }
     }
   </script>
-
 </body>
 </html>
