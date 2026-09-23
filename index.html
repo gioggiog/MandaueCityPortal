@@ -25,15 +25,11 @@
 
   <!-- TOP NAVIGATION BAR -->
   <nav class="bg-mandaue-blue text-white shadow-md sticky top-0 z-50 border-b-4 border-[#FFD305]">
-    <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+    <div class="max-w-7xl mx-auto px-4 py-2.5 flex items-center justify-between">
       
-      <!-- Top Left Logos & Title (Matched to requested clean height / size layout) -->
+      <!-- Top Left Logo & Title -->
       <a href="#" onclick="showPage('home'); return false;" class="flex items-center space-x-2.5 group">
-        <div class="flex items-center space-x-1.5">
-          <img src="MANDAUE.jpg" alt="Mandaue City Seal" class="h-10 w-10 sm:h-11 sm:w-11 rounded-full object-cover border-2 border-white/30 shadow-sm">
-          <img src="pngone_2.jpg" alt="One Mandaue Logo" class="h-10 w-10 sm:h-11 sm:w-11 rounded-full object-cover border-2 border-white/30 shadow-sm bg-white">
-        </div>
-        <span class="font-black text-xs sm:text-sm tracking-wider uppercase group-hover:text-[#FFD305] transition">MANDAUE CITY PORTAL</span>
+        <img src="MANDAUE.jpg" alt="Mandaue City Seal" class="h-8 w-8 rounded-full object-cover border border-white/20 shadow-sm">
       </a>
 
       <!-- Mobile Hamburger Toggle Button -->
@@ -1381,42 +1377,156 @@
         <span class="w-2.5 h-6 bg-[#C10A20] rounded-sm inline-block"></span>
         <div>
           <h1 class="text-2xl md:text-4xl font-black text-slate-800 tracking-tight uppercase">
-            Emergency Hotlines & Key Contacts
+            Emergency Hotlines
           </h1>
-          <p class="text-slate-600 text-sm mt-1">Quick directory for emergency response, local offices, police stations, and major utilities in Mandaue City.</p>
+          <p class="text-slate-600 text-sm mt-1">Mandaue City emergency contact numbers and disaster response hotlines.</p>
         </div>
+      </div>
+
+      <!-- HOTLINES GRID -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- CDRRMO -->
+        <div class="bg-slate-50 border-l-4 border-mandaue-red rounded-r-lg p-5 shadow-sm space-y-2">
+          <div class="flex items-center space-x-3 text-mandaue-red">
+            <i class="fa-solid fa-triangle-exclamation text-xl"></i>
+            <h3 class="font-bold text-slate-800 text-base">CDRRMO Operations Center</h3>
+          </div>
+          <p class="text-xs text-slate-600">Mandaue City Disaster Risk Reduction and Management Office</p>
+          <div class="pt-2 text-sm font-black text-mandaue-blue space-y-1">
+            <p><i class="fa-solid fa-phone mr-2 text-xs"></i> (032) 238-5405</p>
+            <p><i class="fa-solid fa-mobile-screen mr-2 text-xs"></i> 0917-312-3233</p>
+          </div>
+        </div>
+
+        <!-- MANDAUE CITY HOSPITAL -->
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-5 shadow-sm space-y-2">
+          <div class="flex items-center space-x-3 text-mandaue-blue">
+            <i class="fa-solid fa-hospital text-xl"></i>
+            <h3 class="font-bold text-slate-800 text-base">Mandaue City Hospital</h3>
+          </div>
+          <p class="text-xs text-slate-600">Medical emergencies and health assistance</p>
+          <div class="pt-2 text-sm font-black text-mandaue-blue space-y-1">
+            <p><i class="fa-solid fa-phone mr-2 text-xs"></i> (032) 346-6086</p>
+          </div>
+        </div>
+
+        <!-- FIRE DEPARTMENT -->
+        <div class="bg-slate-50 border-l-4 border-mandaue-red rounded-r-lg p-5 shadow-sm space-y-2">
+          <div class="flex items-center space-x-3 text-mandaue-red">
+            <i class="fa-solid fa-fire-extinguisher text-xl"></i>
+            <h3 class="font-bold text-slate-800 text-base">Bureau of Fire Protection (BFP)</h3>
+          </div>
+          <p class="text-xs text-slate-600">Mandaue City Fire Station</p>
+          <div class="pt-2 text-sm font-black text-mandaue-blue space-y-1">
+            <p><i class="fa-solid fa-phone mr-2 text-xs"></i> (032) 345-0333</p>
+            <p><i class="fa-solid fa-mobile-screen mr-2 text-xs"></i> 0998-591-5883</p>
+          </div>
+        </div>
+
+        <!-- PNP MANDAUE -->
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-5 shadow-sm space-y-2">
+          <div class="flex items-center space-x-3 text-mandaue-blue">
+            <i class="fa-solid fa-shield-halved text-xl"></i>
+            <h3 class="font-bold text-slate-800 text-base">Mandaue City Police Office (MCPO)</h3>
+          </div>
+          <p class="text-xs text-slate-600">Police response and law enforcement</p>
+          <div class="pt-2 text-sm font-black text-mandaue-blue space-y-1">
+            <p><i class="fa-solid fa-phone mr-2 text-xs"></i> (032) 344-3149</p>
+            <p><i class="fa-solid fa-mobile-screen mr-2 text-xs"></i> 0998-598-6349</p>
+          </div>
+        </div>
+
+        <!-- TEAM (TRAFFIC) -->
+        <div class="bg-slate-50 border-l-4 border-amber-500 rounded-r-lg p-5 shadow-sm space-y-2">
+          <div class="flex items-center space-x-3 text-amber-600">
+            <i class="fa-solid fa-traffic-light text-xl"></i>
+            <h3 class="font-bold text-slate-800 text-base">TEAM (Traffic Enforcement Agency)</h3>
+          </div>
+          <p class="text-xs text-slate-600">Traffic accidents and road assistance</p>
+          <div class="pt-2 text-sm font-black text-mandaue-blue space-y-1">
+            <p><i class="fa-solid fa-phone mr-2 text-xs"></i> (032) 345-6355</p>
+          </div>
+        </div>
+
+        <!-- VECO / VECO APCO -->
+        <div class="bg-slate-50 border-l-4 border-amber-500 rounded-r-lg p-5 shadow-sm space-y-2">
+          <div class="flex items-center space-x-3 text-amber-600">
+            <i class="fa-solid fa-bolt text-xl"></i>
+            <h3 class="font-bold text-slate-800 text-base">Visayan Electric (VECO)</h3>
+          </div>
+          <p class="text-xs text-slate-600">Power outages and electrical hazards</p>
+          <div class="pt-2 text-sm font-black text-mandaue-blue space-y-1">
+            <p><i class="fa-solid fa-phone mr-2 text-xs"></i> (032) 230-8326</p>
+          </div>
+        </div>
+
       </div>
 
     </section>
   </div>
 
-  <!-- FOOTER -->
-  <footer class="bg-mandaue-blue text-white mt-auto border-t-4 border-[#FFD305]">
-    <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between text-xs space-y-3 sm:space-y-0">
-      <p>&copy; 2026 Mandaue City Web Portal. All rights reserved.</p>
-      <div class="flex space-x-4">
-        <a href="#" onclick="showPage('home'); return false;" class="hover:text-[#FFD305] transition">Privacy Policy</a>
-        <a href="#" onclick="showPage('home'); return false;" class="hover:text-[#FFD305] transition">Terms of Use</a>
-        <a href="#" onclick="showPage('hotlines'); return false;" class="hover:text-[#FFD305] transition">Contact Us</a>
+   <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-mandaue-blue text-white border-t-4 border-[#FFD305] mt-auto">
+    <div class="max-w-7xl mx-auto px-4 py-8 space-y-6">
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-xs">
+        <div class="space-y-3">
+          <div class="flex items-center space-x-2.5">
+            <img src="MANDAUE.jpg" alt="Mandaue City Seal" class="h-8 w-8 rounded-full object-cover border border-white/20">
+            <span class="font-black tracking-wider uppercase">MANDAUE CITY PORTAL</span>
+          </div>
+          <p class="text-slate-300 leading-relaxed">
+            Official website and digital service gateway of the Local Government Unit of Mandaue City, Cebu, Philippines.
+          </p>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="font-bold uppercase tracking-wider text-[#FFD305] text-sm">Quick Links</h4>
+          <ul class="space-y-1.5 text-slate-300">
+            <li><a href="#" onclick="showPage('home'); return false;" class="hover:text-white transition">Home</a></li>
+            <li><a href="#" onclick="showPage('about'); return false;" class="hover:text-white transition">About Mandaue</a></li>
+            <li><a href="#" onclick="showPage('officials'); return false;" class="hover:text-white transition">City Officials</a></li>
+            <li><a href="#" onclick="showPage('offices'); return false;" class="hover:text-white transition">Departments & Offices</a></li>
+            <li><a href="#" onclick="showPage('services'); return false;" class="hover:text-white transition">e-Services</a></li>
+            <li><a href="#" onclick="showPage('hotlines'); return false;" class="hover:text-white transition font-semibold text-[#FFD305]">Emergency Hotlines</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="font-bold uppercase tracking-wider text-[#FFD305] text-sm">Contact Us</h4>
+          <p class="text-slate-300">Mandaue City Hall, S.B. Cabahug St, Mandaue City, 6014 Cebu</p>
+          <p class="text-slate-300">Phone: <span class="text-white font-medium">+63 (032) 230-4500</span></p>
+          <p class="text-slate-300">Email: <span class="text-white font-medium">cmo@mandauecity.gov.ph</span></p>
+        </div>
       </div>
+
+      <div class="border-t border-blue-900/60 pt-4 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400">
+        <p>&copy; 2026 Mandaue City Local Government Unit. All Rights Reserved.</p>
+        <p class="mt-2 sm:mt-0">Managed by Management Information Systems Office (MISO)</p>
+      </div>
+
     </div>
   </footer>
 
-  <!-- JavaScript for Navigation Tab Switching and Mobile Menu -->
+  <!-- JavaScript for Client-Side Single Page View Switching -->
   <script>
     function showPage(pageId) {
-      const pages = ['home', 'services', 'about', 'barangays', 'offices', 'officials', 'hotlines'];
-      pages.forEach(p => {
-        const el = document.getElementById('page-' + p);
-        if (el) {
-          if (p === pageId) {
-            el.classList.remove('hidden');
-          } else {
-            el.classList.add('hidden');
-          }
-        }
-      });
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      // Hide all main view containers
+      document.getElementById('page-home').classList.add('hidden');
+      document.getElementById('page-services').classList.add('hidden');
+      document.getElementById('page-about').classList.add('hidden');
+      document.getElementById('page-barangays').classList.add('hidden');
+      document.getElementById('page-offices').classList.add('hidden');
+      document.getElementById('page-officials').classList.add('hidden');
+      document.getElementById('page-hotlines').classList.add('hidden');
+
+      // Show the requested page
+      const targetPage = document.getElementById('page-' + pageId);
+      if (targetPage) {
+        targetPage.classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     }
 
     function toggleMobileMenu() {
