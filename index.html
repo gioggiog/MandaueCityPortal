@@ -25,11 +25,14 @@
 
   <!-- TOP NAVIGATION BAR -->
   <nav class="bg-mandaue-blue text-white shadow-md sticky top-0 z-50 border-b-4 border-[#FFD305]">
-    <div class="max-w-7xl mx-auto px-4 py-2.5 flex items-center justify-between">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
       
-      <!-- Top Left Logo & Title -->
+      <!-- Top Left Logos & Title (Matched to requested clean height / size layout) -->
       <a href="#" onclick="showPage('home'); return false;" class="flex items-center space-x-2.5 group">
-        <img src="MANDAUE.jpg" alt="Mandaue City Seal" class="h-8 w-8 rounded-full object-cover border border-white/20 shadow-sm">
+        <div class="flex items-center space-x-1.5">
+          <img src="MANDAUE.jpg" alt="Mandaue City Seal" class="h-10 w-10 sm:h-11 sm:w-11 rounded-full object-cover border-2 border-white/30 shadow-sm">
+          <img src="pngone_2.jpg" alt="One Mandaue Logo" class="h-10 w-10 sm:h-11 sm:w-11 rounded-full object-cover border-2 border-white/30 shadow-sm bg-white">
+        </div>
         <span class="font-black text-xs sm:text-sm tracking-wider uppercase group-hover:text-[#FFD305] transition">MANDAUE CITY PORTAL</span>
       </a>
 
@@ -1384,157 +1387,36 @@
         </div>
       </div>
 
-      <!-- HOTLINES GRID -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        
-        <!-- General / Emergency -->
-        <div class="bg-slate-50 border-t-4 border-mandaue-red rounded-xl p-5 shadow-sm space-y-3">
-          <div class="flex items-center space-x-3 text-mandaue-red font-bold text-lg">
-            <i class="fa-solid fa-phone-volume"></i>
-            <h3>General & Command Center</h3>
-          </div>
-          <ul class="text-xs space-y-2 text-slate-700">
-            <li class="flex justify-between border-b border-slate-200 pb-1.5"><span class="font-semibold">All Offices / Emergency:</span> <a href="tel:0322304500" class="text-mandaue-blue font-bold hover:underline">(+6332) 230-4500</a></li>
-            <li class="flex justify-between border-b border-slate-200 pb-1.5"><span class="font-semibold">Command Center:</span> <a href="tel:0323831658" class="text-mandaue-blue font-bold hover:underline">(032) 383-1658</a></li>
-            <li class="flex justify-between border-b border-slate-200 pb-1.5"><span class="font-semibold">Command Mobile 1:</span> <a href="tel:09171116633" class="text-mandaue-blue font-bold hover:underline">0917-111-6633</a></li>
-            <li class="flex justify-between pb-1.5"><span class="font-semibold">Command Mobile 2:</span> <a href="tel:09384765461" class="text-mandaue-blue font-bold hover:underline">0938-476-5461</a></li>
-          </ul>
-        </div>
-
-        <!-- Rescue, Police & Fire -->
-        <div class="bg-slate-50 border-t-4 border-mandaue-blue rounded-xl p-5 shadow-sm space-y-3">
-          <div class="flex items-center space-x-3 text-mandaue-blue font-bold text-lg">
-            <i class="fa-solid fa-shield-halved"></i>
-            <h3>Rescue, Police & Fire</h3>
-          </div>
-          <ul class="text-xs space-y-2 text-slate-700">
-            <li class="flex justify-between border-b border-slate-200 pb-1.5"><span class="font-semibold">Emergency Rescue Unit (ERUF):</span> <a href="tel:0322339300" class="text-mandaue-blue font-bold hover:underline">(032) 233-9300</a></li>
-            <li class="flex justify-between border-b border-slate-200 pb-1.5"><span class="font-semibold">Mandaue City Police Office:</span> <a href="tel:0323443364" class="text-mandaue-blue font-bold hover:underline">(032) 344-3364</a></li>
-            <li class="flex justify-between border-b border-slate-200 pb-1.5"><span class="font-semibold">Police Mobile:</span> <a href="tel:09288907047" class="text-mandaue-blue font-bold hover:underline">0928-890-7047</a></li>
-            <li class="flex justify-between pb-1.5"><span class="font-semibold">Bureau of Fire Protection (BFP):</span> <a href="tel:0323444747" class="text-mandaue-blue font-bold hover:underline">(032) 344-4747</a></li>
-          </ul>
-        </div>
-
-        <!-- Utilities & Agencies -->
-        <div class="bg-slate-50 border-t-4 border-[#FFD305] rounded-xl p-5 shadow-sm space-y-3">
-          <div class="flex items-center space-x-3 text-[#F3A108] font-bold text-lg">
-            <i class="fa-solid fa-bolt"></i>
-            <h3>Utilities & Agencies</h3>
-          </div>
-          <ul class="text-xs space-y-2 text-slate-700">
-            <li class="flex justify-between border-b border-slate-200 pb-1.5"><span class="font-semibold">VECO (Electricity):</span> <a href="tel:0322308326" class="text-mandaue-blue font-bold hover:underline">(032) 230-8326</a></li>
-            <li class="flex justify-between border-b border-slate-200 pb-1.5"><span class="font-semibold">MCWD (Water):</span> <a href="tel:0324121836" class="text-mandaue-blue font-bold hover:underline">(032) 412-1836</a></li>
-            <li class="flex justify-between border-b border-slate-200 pb-1.5"><span class="font-semibold">Philippine Red Cross:</span> <a href="tel:0322539793" class="text-mandaue-blue font-bold hover:underline">(032) 253-9793</a></li>
-            <li class="flex justify-between pb-1.5"><span class="font-semibold">PAGASA (Weather):</span> <a href="tel:0324954844" class="text-mandaue-blue font-bold hover:underline">(032) 495-4844</a></li>
-          </ul>
-        </div>
-
-        <!-- Key City Hall Offices -->
-        <div class="bg-slate-50 border-t-4 border-mandaue-blue rounded-xl p-5 shadow-sm space-y-3">
-          <div class="flex items-center space-x-3 text-mandaue-blue font-bold text-lg">
-            <i class="fa-solid fa-building-columns"></i>
-            <h3>Key City Hall Offices</h3>
-          </div>
-          <ul class="text-xs space-y-2 text-slate-700">
-            <li class="flex justify-between border-b border-slate-200 pb-1.5"><span class="font-semibold">City Mayor's Office:</span> <span class="font-medium text-slate-900">Local 1003</span></li>
-            <li class="flex justify-between border-b border-slate-200 pb-1.5"><span class="font-semibold">City Vice Mayor's Office:</span> <span class="font-medium text-slate-900">Local 1128</span></li>
-            <li class="flex justify-between border-b border-slate-200 pb-1.5"><span class="font-semibold">Management Information Systems (MISO):</span> <span class="font-medium text-slate-900">Local 1038</span></li>
-            <li class="flex justify-between pb-1.5"><span class="font-semibold">Public Information Office (PIO):</span> <span class="font-medium text-slate-900">Local 1082</span></li>
-          </ul>
-        </div>
-
-        <!-- Hospitals & Medical -->
-        <div class="bg-slate-50 border-t-4 border-mandaue-blue rounded-xl p-5 shadow-sm space-y-3">
-          <div class="flex items-center space-x-3 text-mandaue-blue font-bold text-lg">
-            <i class="fa-solid fa-hospital"></i>
-            <h3>Hospitals & Medical</h3>
-          </div>
-          <ul class="text-xs space-y-2 text-slate-700">
-            <li class="flex justify-between border-b border-slate-200 pb-1.5"><span class="font-semibold">Mandaue City Hospital:</span> <a href="tel:0322533906" class="text-mandaue-blue font-bold hover:underline">(032) 253-3906</a></li>
-            <li class="flex justify-between border-b border-slate-200 pb-1.5"><span class="font-semibold">Vicente Sotto Memorial Med Center:</span> <a href="tel:0322539891" class="text-mandaue-blue font-bold hover:underline">(032) 253-9891</a></li>
-            <li class="flex justify-between pb-1.5"><span class="font-semibold">Eversley Childs Sanitarium:</span> <a href="tel:0323462468" class="text-mandaue-blue font-bold hover:underline">(032) 346-2468</a></li>
-          </ul>
-        </div>
-
-        <!-- Police Stations -->
-        <div class="bg-slate-50 border-t-4 border-mandaue-blue rounded-xl p-5 shadow-sm space-y-3">
-          <div class="flex items-center space-x-3 text-mandaue-blue font-bold text-lg">
-            <i class="fa-solid fa-shield"></i>
-            <h3>Police Precinct Stations</h3>
-          </div>
-          <ul class="text-xs space-y-2 text-slate-700">
-            <li class="flex justify-between border-b border-slate-200 pb-1.5"><span class="font-semibold">Police Station 1:</span> <a href="tel:0322398754" class="text-mandaue-blue font-bold hover:underline">(032) 239-8754</a></li>
-            <li class="flex justify-between border-b border-slate-200 pb-1.5"><span class="font-semibold">Police Station 2:</span> <a href="tel:0323280673" class="text-mandaue-blue font-bold hover:underline">(032) 328-0673</a></li>
-            <li class="flex justify-between pb-1.5"><span class="font-semibold">Police Station 3:</span> <a href="tel:0322398752" class="text-mandaue-blue font-bold hover:underline">(032) 239-8752</a></li>
-          </ul>
-        </div>
-
-      </div>
-
     </section>
   </div>
 
-   <!-- ==================== FOOTER ==================== -->
-  <footer class="bg-mandaue-blue text-white border-t-4 border-[#FFD305] mt-auto">
-    <div class="max-w-7xl mx-auto px-4 py-8 space-y-6">
-      
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-xs">
-        <div class="space-y-3">
-          <div class="flex items-center space-x-2.5">
-            <img src="MANDAUE.jpg" alt="Mandaue City Seal" class="h-8 w-8 rounded-full object-cover border border-white/20">
-            <span class="font-black tracking-wider uppercase">MANDAUE CITY PORTAL</span>
-          </div>
-          <p class="text-slate-300 leading-relaxed">
-            Official website and digital service gateway of the Local Government Unit of Mandaue City, Cebu, Philippines.
-          </p>
-        </div>
-
-        <div class="space-y-2">
-          <h4 class="font-bold uppercase tracking-wider text-[#FFD305] text-sm">Quick Links</h4>
-          <ul class="space-y-1.5 text-slate-300">
-            <li><a href="#" onclick="showPage('home'); return false;" class="hover:text-white transition">Home</a></li>
-            <li><a href="#" onclick="showPage('about'); return false;" class="hover:text-white transition">About Mandaue</a></li>
-            <li><a href="#" onclick="showPage('officials'); return false;" class="hover:text-white transition">City Officials</a></li>
-            <li><a href="#" onclick="showPage('offices'); return false;" class="hover:text-white transition">Departments & Offices</a></li>
-            <li><a href="#" onclick="showPage('services'); return false;" class="hover:text-white transition">e-Services</a></li>
-            <li><a href="#" onclick="showPage('hotlines'); return false;" class="hover:text-white transition font-semibold text-[#FFD305]">Emergency Hotlines</a></li>
-          </ul>
-        </div>
-
-        <div class="space-y-2">
-          <h4 class="font-bold uppercase tracking-wider text-[#FFD305] text-sm">Contact Us</h4>
-          <p class="text-slate-300">Mandaue City Hall, S.B. Cabahug St, Mandaue City, 6014 Cebu</p>
-          <p class="text-slate-300">Phone: <span class="text-white font-medium">+63 (032) 230-4500</span></p>
-          <p class="text-slate-300">Email: <span class="text-white font-medium">cmo@mandauecity.gov.ph</span></p>
-        </div>
+  <!-- FOOTER -->
+  <footer class="bg-mandaue-blue text-white mt-auto border-t-4 border-[#FFD305]">
+    <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between text-xs space-y-3 sm:space-y-0">
+      <p>&copy; 2026 Mandaue City Web Portal. All rights reserved.</p>
+      <div class="flex space-x-4">
+        <a href="#" onclick="showPage('home'); return false;" class="hover:text-[#FFD305] transition">Privacy Policy</a>
+        <a href="#" onclick="showPage('home'); return false;" class="hover:text-[#FFD305] transition">Terms of Use</a>
+        <a href="#" onclick="showPage('hotlines'); return false;" class="hover:text-[#FFD305] transition">Contact Us</a>
       </div>
-
-      <div class="border-t border-blue-900/60 pt-4 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400">
-        <p>&copy; 2026 Mandaue City Local Government Unit. All Rights Reserved.</p>
-        <p class="mt-2 sm:mt-0">Managed by Management Information Systems Office (MISO)</p>
-      </div>
-
     </div>
   </footer>
 
-  <!-- JavaScript for Client-Side Single Page View Switching -->
+  <!-- JavaScript for Navigation Tab Switching and Mobile Menu -->
   <script>
     function showPage(pageId) {
-      // Hide all main view containers
-      document.getElementById('page-home').classList.add('hidden');
-      document.getElementById('page-services').classList.add('hidden');
-      document.getElementById('page-about').classList.add('hidden');
-      document.getElementById('page-barangays').classList.add('hidden');
-      document.getElementById('page-offices').classList.add('hidden');
-      document.getElementById('page-officials').classList.add('hidden');
-      document.getElementById('page-hotlines').classList.add('hidden');
-
-      // Show the requested page
-      const targetPage = document.getElementById('page-' + pageId);
-      if (targetPage) {
-        targetPage.classList.remove('hidden');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
+      const pages = ['home', 'services', 'about', 'barangays', 'offices', 'officials', 'hotlines'];
+      pages.forEach(p => {
+        const el = document.getElementById('page-' + p);
+        if (el) {
+          if (p === pageId) {
+            el.classList.remove('hidden');
+          } else {
+            el.classList.add('hidden');
+          }
+        }
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function toggleMobileMenu() {
