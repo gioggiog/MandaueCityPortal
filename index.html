@@ -157,26 +157,64 @@
   <!-- ==================== HOME PAGE VIEW ==================== -->
   <div id="page-home" class="space-y-6">
     
-    <!-- HERO ANNOUNCEMENT BANNER -->
+    <!-- HERO WIDE CAROUSEL BANNER -->
     <section class="max-w-7xl mx-auto w-full px-4 mt-4 md:mt-6">
-      <div class="bg-slate-50 border border-slate-200 rounded-2xl overflow-hidden shadow-sm relative border-b-4 border-mandaue-yellow flex flex-col md:flex-row items-stretch">
+      <div class="relative bg-slate-900 rounded-2xl overflow-hidden shadow-md border-b-4 border-mandaue-yellow h-[320px] sm:h-[380px] md:h-[420px]" id="hero-carousel">
         
-        <!-- Text Container -->
-        <div class="p-5 sm:p-8 md:p-10 md:w-2/3 space-y-2 md:space-y-3 z-10">
-          <h1 class="text-xl sm:text-2xl md:text-3xl font-black tracking-tight uppercase text-slate-800 leading-tight">
-            Amended Green Building Ordinance (IRR)
-          </h1>
-          <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">
-            View the official guidelines on BERDE requirements, permitting, and incentive applications for Mandaue City building projects.
-          </p>
-          <p class="text-xs text-[#F3A108] italic font-medium pt-1">
-            <a href="https://drive.google.com/file/d/1CrhNYMxX8rxnbUd39-ot9X1B93g9BGeK/view" target="_blank" rel="noopener noreferrer" class="text-[#F3A108] hover:underline font-bold">Click here</a>
-          </p>
+        <!-- Slide 1: Amended Green Building Ordinance -->
+        <div class="carousel-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-100 flex items-center">
+          <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('mandauecityhall.jpg');"></div>
+          <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/70 to-transparent"></div>
+          <div class="relative z-10 p-6 sm:p-10 md:p-14 max-w-2xl space-y-3 text-white">
+            <span class="bg-mandaue-yellow text-slate-900 text-[10px] font-extrabold uppercase px-3 py-1 rounded-full tracking-wider inline-block">Official Announcement</span>
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight uppercase leading-tight text-white drop-shadow">
+              Amended Green Building Ordinance (IRR)
+            </h1>
+            <p class="text-slate-200 text-xs sm:text-sm md:text-base leading-relaxed drop-shadow">
+              View the official guidelines on BERDE requirements, permitting, and incentive applications for Mandaue City building projects.
+            </p>
+            <div class="pt-2">
+              <a href="https://drive.google.com/file/d/1CrhNYMxX8rxnbUd39-ot9X1B93g9BGeK/view" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-mandaue-yellow hover:bg-amber-400 text-slate-900 font-bold text-xs sm:text-sm px-5 py-2.5 rounded-lg shadow uppercase tracking-wider transition">
+                <span>Click Here to View Guidelines</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
         </div>
 
-        <!-- Image Container -->
-        <div class="md:w-1/3 h-48 md:h-auto bg-cover bg-center relative" style="background-image: url('mandauecityhall.jpg');">
-          <div class="absolute inset-0 bg-slate-900/10"></div>
+        <!-- Slide 2: Business Permit Renewal Online -->
+        <div class="carousel-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none flex items-center">
+          <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('bplo.jpg');"></div>
+          <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/70 to-transparent"></div>
+          <div class="relative z-10 p-6 sm:p-10 md:p-14 max-w-2xl space-y-3 text-white">
+            <span class="bg-blue-600 text-white text-[10px] font-extrabold uppercase px-3 py-1 rounded-full tracking-wider inline-block">e-Services Portal</span>
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight uppercase leading-tight text-white drop-shadow">
+              Renew Your Business Permit Online
+            </h1>
+            <p class="text-slate-200 text-xs sm:text-sm md:text-base leading-relaxed drop-shadow">
+              Fast, secure, and convenient online renewal of business permits through the Mandaue City Business Permit and Licensing Office (BPLO).
+            </p>
+            <div class="pt-2">
+              <a href="https://www.sites.google.com/view/bplomandaue/home" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-mandaue-yellow hover:bg-amber-400 text-slate-900 font-bold text-xs sm:text-sm px-5 py-2.5 rounded-lg shadow uppercase tracking-wider transition">
+                <span>Renew Now</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel Navigation Controls -->
+        <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/70 text-white w-10 h-10 rounded-full flex items-center justify-center transition backdrop-blur-sm focus:outline-none">
+          <i class="fa-solid fa-chevron-left text-sm"></i>
+        </button>
+        <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/70 text-white w-10 h-10 rounded-full flex items-center justify-center transition backdrop-blur-sm focus:outline-none">
+          <i class="fa-solid fa-chevron-right text-sm"></i>
+        </button>
+
+        <!-- Carousel Indicators -->
+        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex space-x-2">
+          <button onclick="currentSlide(0)" class="carousel-dot w-3 h-3 rounded-full bg-white/60 transition" id="dot-0"></button>
+          <button onclick="currentSlide(1)" class="carousel-dot w-3 h-3 rounded-full bg-white/60 transition" id="dot-1"></button>
         </div>
 
       </div>
@@ -1385,125 +1423,127 @@
 
       <!-- HOTLINES GRID -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        
-        <!-- CDRRMO -->
-        <div class="bg-slate-50 border-l-4 border-mandaue-red rounded-r-lg p-5 shadow-sm space-y-2">
-          <div class="flex items-center space-x-3 text-mandaue-red">
-            <i class="fa-solid fa-triangle-exclamation text-xl"></i>
-            <h3 class="font-bold text-slate-800 text-base">CDRRMO Operations Center</h3>
-          </div>
-          <p class="text-xs text-slate-600">Mandaue City Disaster Risk Reduction and Management Office</p>
-          <div class="pt-2 text-sm font-black text-mandaue-blue space-y-1">
-            <p><i class="fa-solid fa-phone mr-2 text-xs"></i> (032) 238-5405</p>
-            <p><i class="fa-solid fa-mobile-screen mr-2 text-xs"></i> 0917-312-3233</p>
-          </div>
+        <div class="bg-slate-50 border-l-4 border-mandaue-red rounded-r-lg p-4 shadow-sm">
+          <h3 class="font-bold text-slate-800">CDRRMO Emergency Operations Center</h3>
+          <p class="text-mandaue-red font-black text-lg mt-1">161 / (032) 345-2157</p>
         </div>
-
-        <!-- MANDAUE CITY HOSPITAL -->
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-5 shadow-sm space-y-2">
-          <div class="flex items-center space-x-3 text-mandaue-blue">
-            <i class="fa-solid fa-hospital text-xl"></i>
-            <h3 class="font-bold text-slate-800 text-base">Mandaue City Hospital</h3>
-          </div>
-          <p class="text-xs text-slate-600">Medical emergencies and health assistance</p>
-          <div class="pt-2 text-sm font-black text-mandaue-blue space-y-1">
-            <p><i class="fa-solid fa-phone mr-2 text-xs"></i> (032) 346-6086</p>
-          </div>
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-4 shadow-sm">
+          <h3 class="font-bold text-slate-800">Mandaue City Police Office</h3>
+          <p class="text-mandaue-blue font-black text-lg mt-1">(032) 344-3300</p>
         </div>
-
-        <!-- FIRE DEPARTMENT -->
-        <div class="bg-slate-50 border-l-4 border-mandaue-red rounded-r-lg p-5 shadow-sm space-y-2">
-          <div class="flex items-center space-x-3 text-mandaue-red">
-            <i class="fa-solid fa-fire-extinguisher text-xl"></i>
-            <h3 class="font-bold text-slate-800 text-base">Bureau of Fire Protection (BFP)</h3>
-          </div>
-          <p class="text-xs text-slate-600">Mandaue City Fire Station</p>
-          <div class="pt-2 text-sm font-black text-mandaue-blue space-y-1">
-            <p><i class="fa-solid fa-phone mr-2 text-xs"></i> (032) 345-0333</p>
-            <p><i class="fa-solid fa-mobile-screen mr-2 text-xs"></i> 0998-591-5883</p>
-          </div>
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-4 shadow-sm">
+          <h3 class="font-bold text-slate-800">Bureau of Fire Protection - Mandaue</h3>
+          <p class="text-mandaue-blue font-black text-lg mt-1">(032) 346-6144</p>
         </div>
-
-        <!-- PNP MANDAUE -->
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-5 shadow-sm space-y-2">
-          <div class="flex items-center space-x-3 text-mandaue-blue">
-            <i class="fa-solid fa-shield-halved text-xl"></i>
-            <h3 class="font-bold text-slate-800 text-base">Mandaue City Police Office (MCPO)</h3>
-          </div>
-          <p class="text-xs text-slate-600">Police response and law enforcement</p>
-          <div class="pt-2 text-sm font-black text-mandaue-blue space-y-1">
-            <p><i class="fa-solid fa-phone mr-2 text-xs"></i> (032) 344-3149</p>
-            <p><i class="fa-solid fa-mobile-screen mr-2 text-xs"></i> 0998-598-6349</p>
-          </div>
-        </div>
-
-        <!-- TEAM (TRAFFIC) -->
-        <div class="bg-slate-50 border-l-4 border-amber-500 rounded-r-lg p-5 shadow-sm space-y-2">
-          <div class="flex items-center space-x-3 text-amber-600">
-            <i class="fa-solid fa-traffic-light text-xl"></i>
-            <h3 class="font-bold text-slate-800 text-base">TEAM (Traffic Enforcement Agency)</h3>
-          </div>
-          <p class="text-xs text-slate-600">Traffic accidents and road assistance</p>
-          <div class="pt-2 text-sm font-black text-mandaue-blue space-y-1">
-            <p><i class="fa-solid fa-phone mr-2 text-xs"></i> (032) 345-6355</p>
-          </div>
-        </div>
-
-        <!-- VECO / VECO APCO -->
-        <div class="bg-slate-50 border-l-4 border-amber-500 rounded-r-lg p-5 shadow-sm space-y-2">
-          <div class="flex items-center space-x-3 text-amber-600">
-            <i class="fa-solid fa-bolt text-xl"></i>
-            <h3 class="font-bold text-slate-800 text-base">Visayan Electric (VECO)</h3>
-          </div>
-          <p class="text-xs text-slate-600">Power outages and electrical hazards</p>
-          <div class="pt-2 text-sm font-black text-mandaue-blue space-y-1">
-            <p><i class="fa-solid fa-phone mr-2 text-xs"></i> (032) 230-8326</p>
-          </div>
-        </div>
-
       </div>
 
     </section>
   </div>
 
-   <!-- FOOTER -->
-  <footer class="bg-mandaue-blue text-white mt-auto border-t-4 border-[#FFD305]">
-    <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between text-xs space-y-3 sm:space-y-0">
-      <p>&copy; 2026 Mandaue City Web Portal. All rights reserved.</p>
-      <div class="flex space-x-4">
-        <a href="#" onclick="showPage('home'); return false;" class="hover:text-[#FFD305] transition">Privacy Policy</a>
-        <a href="#" onclick="showPage('home'); return false;" class="hover:text-[#FFD305] transition">Terms of Use</a>
-        <a href="#" onclick="showPage('hotlines'); return false;" class="hover:text-[#FFD305] transition">Contact Us</a>
+  <!-- FOOTER -->
+  <footer class="bg-mandaue-blue text-white mt-auto border-t-4 border-mandaue-yellow py-6 px-4">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between text-xs space-y-4 md:space-y-0">
+      <div class="flex items-center space-x-3">
+        <img src="MANDAUE.jpg" alt="Seal" class="w-8 h-8 rounded-full border border-white/20 object-cover">
+        <div>
+          <p class="font-bold">Mandaue City Government Portal</p>
+          <p class="text-slate-300">Management Information Systems Office (MISO)</p>
+        </div>
       </div>
+      <p class="text-slate-300 text-center">&copy; 2026 City of Mandaue. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- JavaScript for Client-Side Single Page View Switching -->
+  <!-- JAVASCRIPT FOR NAVIGATION & CAROUSEL -->
   <script>
+    // Page Router Switcher
     function showPage(pageId) {
-      // Hide all main view containers
-      document.getElementById('page-home').classList.add('hidden');
-      document.getElementById('page-services').classList.add('hidden');
-      document.getElementById('page-about').classList.add('hidden');
-      document.getElementById('page-barangays').classList.add('hidden');
-      document.getElementById('page-offices').classList.add('hidden');
-      document.getElementById('page-officials').classList.add('hidden');
-      document.getElementById('page-hotlines').classList.add('hidden');
-
-      // Show the requested page
-      const targetPage = document.getElementById('page-' + pageId);
-      if (targetPage) {
-        targetPage.classList.remove('hidden');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
+      const pages = ['home', 'services', 'about', 'barangays', 'offices', 'officials', 'hotlines'];
+      pages.forEach(p => {
+        const el = document.getElementById('page-' + p);
+        if (el) {
+          if (p === pageId) {
+            el.classList.remove('hidden');
+          } else {
+            el.classList.add('hidden');
+          }
+        }
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
+    // Mobile Menu Toggle
     function toggleMobileMenu() {
       const menu = document.getElementById('mobile-menu');
       if (menu) {
         menu.classList.toggle('hidden');
       }
     }
+
+    // Carousel Logic
+    let currentSlideIndex = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.carousel-dot');
+    let carouselInterval;
+
+    function showSlide(index) {
+      if (slides.length === 0) return;
+      if (index >= slides.length) currentSlideIndex = 0;
+      else if (index < 0) currentSlideIndex = slides.length - 1;
+      else currentSlideIndex = index;
+
+      slides.forEach((slide, i) => {
+        if (i === currentSlideIndex) {
+          slide.classList.remove('opacity-0', 'pointer-events-none');
+          slide.classList.add('opacity-100');
+        } else {
+          slide.classList.remove('opacity-100');
+          slide.classList.add('opacity-0', 'pointer-events-none');
+        }
+      });
+
+      dots.forEach((dot, i) => {
+        if (i === currentSlideIndex) {
+          dot.classList.remove('bg-white/60');
+          dot.classList.add('bg-white', 'w-6');
+        } else {
+          dot.classList.remove('bg-white', 'w-6');
+          dot.classList.add('bg-white/60');
+        }
+      });
+    }
+
+    function nextSlide() {
+      showSlide(currentSlideIndex + 1);
+      resetInterval();
+    }
+
+    function prevSlide() {
+      showSlide(currentSlideIndex - 1);
+      resetInterval();
+    }
+
+    function currentSlide(index) {
+      showSlide(index);
+      resetInterval();
+    }
+
+    function startCarousel() {
+      carouselInterval = setInterval(() => {
+        showSlide(currentSlideIndex + 1);
+      }, 6000);
+    }
+
+    function resetInterval() {
+      clearInterval(carouselInterval);
+      startCarousel();
+    }
+
+    // Initialize carousel on load
+    document.addEventListener('DOMContentLoaded', () => {
+      showSlide(0);
+      startCarousel();
+    });
   </script>
 </body>
 </html>
