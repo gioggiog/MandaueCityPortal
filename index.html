@@ -226,37 +226,87 @@
       <!-- GRID SECTION: NEWS & ONGOING SERVICES -->
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
         
-        <!-- LEFT 2 COLUMNS: NEWS FEEDS -->
-        <div class="lg:col-span-2 space-y-4">
-          <h2 class="text-2xl md:text-3xl font-black text-slate-800 tracking-tight flex items-center space-x-3">
-            <span class="w-2.5 h-6 bg-[#C10A20] rounded-sm inline-block"></span>
-            <span>NEWS</span>
-          </h2>
+        <!-- LEFT 2 COLUMNS: NEWS FEEDS (REDESIGNED & PROFESSIONAL) -->
+        <div class="lg:col-span-2 space-y-6">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+              <span class="w-2.5 h-6 bg-[#C10A20] rounded-sm inline-block"></span>
+              <div>
+                <h2 class="text-2xl md:text-3xl font-black text-slate-800 tracking-tight uppercase">Latest News & Updates</h2>
+                <p class="text-xs text-slate-500 font-medium">Official announcements and real-time feeds from city departments</p>
+              </div>
+            </div>
+            <div class="hidden sm:flex items-center space-x-1 bg-white border border-slate-200 rounded-lg p-1 shadow-sm text-xs font-semibold">
+              <button onclick="switchNewsTab('all')" id="news-tab-all" class="px-3 py-1.5 rounded-md bg-mandaue-blue text-white transition shadow-sm">All Feeds</button>
+              <button onclick="switchNewsTab('pao')" id="news-tab-pao" class="px-3 py-1.5 rounded-md text-slate-600 hover:text-mandaue-blue transition">Public Affairs</button>
+              <button onclick="switchNewsTab('team')" id="news-tab-team" class="px-3 py-1.5 rounded-md text-slate-600 hover:text-mandaue-blue transition">TEAM Updates</button>
+            </div>
+          </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
             
-            <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-2 sm:p-4 flex justify-center items-center h-[480px] sm:h-[530px] overflow-hidden">
-              <iframe 
-                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FMandaueCityPublicAffairsOffice&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" 
-                class="w-full max-w-[340px] h-full"
-                style="border:none;overflow:hidden;" 
-                scrolling="no" 
-                frameborder="0" 
-                allowfullscreen="true" 
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-              </iframe>
+            <!-- Feed Card 1: Public Affairs -->
+            <div id="news-card-1" class="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition duration-300 flex flex-col overflow-hidden group">
+              <div class="bg-slate-900 text-white px-5 py-3.5 flex items-center justify-between border-b border-slate-800">
+                <div class="flex items-center space-x-2.5">
+                  <div class="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-xs font-bold text-white shadow">
+                    <i class="fa-solid fa-bullhorn text-[11px]"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-slate-100">Public Affairs Office</h3>
+                    <span class="text-[10px] text-slate-400">Official City Announcements</span>
+                  </div>
+                </div>
+                <a href="https://www.facebook.com/MandaueCityPublicAffairsOffice" target="_blank" rel="noopener noreferrer" class="text-[11px] font-semibold text-mandaue-yellow hover:underline flex items-center space-x-1">
+                  <span>Visit Page</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                </a>
+              </div>
+              <div class="p-4 sm:p-5 flex-grow flex justify-center items-center bg-slate-50/50">
+                <div class="w-full bg-white rounded-xl border border-slate-200 shadow-inner overflow-hidden flex justify-center items-center p-2 min-h-[440px]">
+                  <iframe 
+                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FMandaueCityPublicAffairsOffice&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" 
+                    class="w-full h-[440px]"
+                    style="border:none;overflow:hidden;" 
+                    scrolling="no" 
+                    frameborder="0" 
+                    allowfullscreen="true" 
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                  </iframe>
+                </div>
+              </div>
             </div>
 
-            <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-2 sm:p-4 flex justify-center items-center h-[480px] sm:h-[530px] overflow-hidden">
-              <iframe 
-                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTEAMandaue&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" 
-                class="w-full max-w-[340px] h-full"
-                style="border:none;overflow:hidden;" 
-                scrolling="no" 
-                frameborder="0" 
-                allowfullscreen="true" 
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-              </iframe>
+            <!-- Feed Card 2: TEAM Mandaue -->
+            <div id="news-card-2" class="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition duration-300 flex flex-col overflow-hidden group">
+              <div class="bg-slate-900 text-white px-5 py-3.5 flex items-center justify-between border-b border-slate-800">
+                <div class="flex items-center space-x-2.5">
+                  <div class="w-7 h-7 rounded-full bg-red-600 flex items-center justify-center text-xs font-bold text-white shadow">
+                    <i class="fa-solid fa-traffic-light text-[11px]"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-slate-100">TEAM Mandaue</h3>
+                    <span class="text-[10px] text-slate-400">Traffic & Advisory Updates</span>
+                  </div>
+                </div>
+                <a href="https://www.facebook.com/TEAMandaue" target="_blank" rel="noopener noreferrer" class="text-[11px] font-semibold text-mandaue-yellow hover:underline flex items-center space-x-1">
+                  <span>Visit Page</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                </a>
+              </div>
+              <div class="p-4 sm:p-5 flex-grow flex justify-center items-center bg-slate-50/50">
+                <div class="w-full bg-white rounded-xl border border-slate-200 shadow-inner overflow-hidden flex justify-center items-center p-2 min-h-[440px]">
+                  <iframe 
+                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTEAMandaue&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" 
+                    class="w-full h-[440px]"
+                    style="border:none;overflow:hidden;" 
+                    scrolling="no" 
+                    frameborder="0" 
+                    allowfullscreen="true" 
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                  </iframe>
+                </div>
+              </div>
             </div>
 
           </div>
@@ -1364,76 +1414,14 @@
                   <p class="text-slate-600"><span class="font-medium">Member:</span> Coun. Cesar Y. Cabahug, Jr.</p>
                 </div>
                 <div>
-                  <p class="font-bold text-slate-800">Committee on Police, Fire and Penology</p>
-                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Jennifer S. Del Mar</p>
-                  <p class="text-slate-600"><span class="font-medium">Member:</span> Coun. Eugene C. Andaya</p>
+                  <p class="font-bold text-slate-800">Committee on Police, Fire, Penology and Public Safety</p>
+                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Eugene C. Andaya</p>
+                  <p class="text-slate-600"><span class="font-medium">Members:</span> Coun. Cesar Y. Cabahug, Jr., Coun. Raul F. Cabahug V</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- RAUL KEVIN CABAHUG V -->
-          <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col border-b-4 border-mandaue-blue">
-            <div class="p-5 flex flex-col flex-grow space-y-3">
-              <div class="border-b border-slate-200 pb-2">
-                <h3 class="font-bold text-lg text-mandaue-blue leading-tight">Hon. Raul F. Cabahug V</h3>
-                <span class="inline-block text-[11px] font-semibold text-slate-500 bg-slate-200 px-2 py-0.5 rounded mt-1">SP Member</span>
-              </div>
-              <div class="text-xs space-y-3 text-slate-700">
-                <div>
-                  <p class="font-bold text-slate-800">Committee on Health and Hospital Services</p>
-                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Benjamin H. Basiga</p>
-                  <p class="text-slate-600"><span class="font-medium">Members:</span> Coun. Marie Immaline Cortes-Zafra, Coun. Fritz B. Villamor, SKC Pres. F. G. T. Jumao-as</p>
-                </div>
-                <div>
-                  <p class="font-bold text-slate-800">Committee on Human Rights</p>
-                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Andreo O. Icalina</p>
-                  <p class="text-slate-600"><span class="font-medium">Member:</span> Coun. Carlo Pontico C. Fortuna</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </section>
-  </div>
-
-  <!-- ==================== EMERGENCY HOTLINES PAGE VIEW ==================== -->
-  <div id="page-hotlines" class="hidden max-w-7xl w-full mx-auto px-4 py-6 md:py-8">
-    <section class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 md:p-10 space-y-8">
-      
-      <!-- BREADCRUMB -->
-      <div class="flex items-center space-x-2 text-xs text-slate-500">
-        <button onclick="showPage('home')" class="hover:text-mandaue-blue underline">Home</button>
-        <span>/</span>
-        <span class="text-slate-800 font-semibold">Emergency Hotlines</span>
-      </div>
-
-      <div class="border-b border-slate-200 pb-4 flex items-center space-x-3">
-        <span class="w-2.5 h-6 bg-[#C10A20] rounded-sm inline-block"></span>
-        <div>
-          <h1 class="text-2xl md:text-4xl font-black text-slate-800 tracking-tight uppercase">
-            Emergency Hotlines
-          </h1>
-          <p class="text-slate-600 text-sm mt-1">Mandaue City emergency contact numbers and disaster response hotlines.</p>
-        </div>
-      </div>
-
-      <!-- HOTLINES GRID -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-slate-50 border-l-4 border-mandaue-red rounded-r-lg p-4 shadow-sm">
-          <h3 class="font-bold text-slate-800">CDRRMO Emergency Operations Center</h3>
-          <p class="text-mandaue-red font-black text-lg mt-1">161 / (032) 345-2157</p>
-        </div>
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-4 shadow-sm">
-          <h3 class="font-bold text-slate-800">Mandaue City Police Office</h3>
-          <p class="text-mandaue-blue font-black text-lg mt-1">(032) 344-3300</p>
-        </div>
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-4 shadow-sm">
-          <h3 class="font-bold text-slate-800">Bureau of Fire Protection - Mandaue</h3>
-          <p class="text-mandaue-blue font-black text-lg mt-1">(032) 346-6144</p>
         </div>
       </div>
 
@@ -1441,24 +1429,31 @@
   </div>
 
   <!-- FOOTER -->
-  <footer class="bg-mandaue-blue text-white mt-auto border-t-4 border-mandaue-yellow py-6 px-4">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between text-xs space-y-4 md:space-y-0">
-      <div class="flex items-center space-x-3">
-        <img src="MANDAUE.jpg" alt="Seal" class="w-8 h-8 rounded-full border border-white/20 object-cover">
-        <div>
-          <p class="font-bold">Mandaue City Government Portal</p>
-          <p class="text-slate-300">Management Information Systems Office (MISO)</p>
-        </div>
+  <footer class="bg-mandaue-blue text-white mt-auto border-t-4 border-[#FFD305]">
+    <div class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-xs">
+      <div class="space-y-3">
+        <div class="flex items-center space-x-2">
+          <img src="MANDAUE.jpg" alt="Logo" class="w-8 h-8 rounded-full border border-white/20">
+          <span class="font-black text-sm uppercase tracking-wider">Mandaue City Web Portal</span>
       </div>
-      <p class="text-slate-300 text-center">&copy; 2026 City of Mandaue. All rights reserved.</p>
+      <div class="space-y-3">
+        <h3 class="font-bold text-sm uppercase tracking-wider text-mandaue-yellow">Quick Links</h3>
+        <ul class="space-y-1.5 text-slate-200">
+          <li><a href="#" onclick="showPage('home'); return false;" class="hover:underline">Home</a></li>
+          <li><a href="#" onclick="showPage('about'); return false;" class="hover:underline">About Mandaue City</a></li>
+          <li><a href="#" onclick="showPage('services'); return false;" class="hover:underline">e-Services Portal</a></li>
+          <li><a href="#" onclick="showPage('officials'); return false;" class="hover:underline">City Officials & Sangguniang Panlungsod</a></li>
+        </ul>
+    </div>
+    <div class="bg-slate-950 text-slate-400 text-center py-3 text-[11px] border-t border-white/10">
+      &copy; Mandaue City Local Government Unit. All Rights Reserved.
     </div>
   </footer>
 
-  <!-- JAVASCRIPT FOR NAVIGATION & CAROUSEL -->
+  <!-- JAVASCRIPT FUNCTIONS -->
   <script>
-    // Page Router Switcher
     function showPage(pageId) {
-      const pages = ['home', 'services', 'about', 'barangays', 'offices', 'officials', 'hotlines'];
+      const pages = ['home', 'services', 'about', 'barangays', 'offices', 'officials'];
       pages.forEach(p => {
         const el = document.getElementById('page-' + p);
         if (el) {
@@ -1472,7 +1467,6 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Mobile Menu Toggle
     function toggleMobileMenu() {
       const menu = document.getElementById('mobile-menu');
       if (menu) {
@@ -1480,70 +1474,80 @@
       }
     }
 
-    // Carousel Logic
+    // News tab switcher for enhanced interactivity
+    function switchNewsTab(tab) {
+      const card1 = document.getElementById('news-card-1');
+      const card2 = document.getElementById('news-card-2');
+      const tabAll = document.getElementById('news-tab-all');
+      const tabPao = document.getElementById('news-tab-pao');
+      const tabTeam = document.getElementById('news-tab-team');
+
+      // Reset buttons
+      [tabAll, tabPao, tabTeam].forEach(t => {
+        t.className = "px-3 py-1.5 rounded-md text-slate-600 hover:text-mandaue-blue transition";
+      });
+
+      if (tab === 'all') {
+        tabAll.className = "px-3 py-1.5 rounded-md bg-mandaue-blue text-white transition shadow-sm";
+        card1.style.display = 'flex';
+        card2.style.display = 'flex';
+      } else if (tab === 'pao') {
+        tabPao.className = "px-3 py-1.5 rounded-md bg-mandaue-blue text-white transition shadow-sm";
+        card1.style.display = 'flex';
+        card2.style.display = 'none';
+      } else if (tab === 'team') {
+        tabTeam.className = "px-3 py-1.5 rounded-md bg-mandaue-blue text-white transition shadow-sm";
+        card1.style.display = 'none';
+        card2.style.display = 'flex';
+      }
+    }
+
+    // Simple Hero Carousel Logic
     let currentSlideIndex = 0;
     const slides = document.querySelectorAll('.carousel-slide');
     const dots = document.querySelectorAll('.carousel-dot');
-    let carouselInterval;
 
     function showSlide(index) {
-      if (slides.length === 0) return;
+      if (!slides.length) return;
       if (index >= slides.length) currentSlideIndex = 0;
       else if (index < 0) currentSlideIndex = slides.length - 1;
       else currentSlideIndex = index;
 
       slides.forEach((slide, i) => {
         if (i === currentSlideIndex) {
-          slide.classList.remove('opacity-0', 'pointer-events-none');
-          slide.classList.add('opacity-100');
+          slide.style.opacity = '1';
+          slide.style.pointerEvents = 'auto';
         } else {
-          slide.classList.remove('opacity-100');
-          slide.classList.add('opacity-0', 'pointer-events-none');
+          slide.style.opacity = '0';
+          slide.style.pointerEvents = 'none';
         }
       });
 
       dots.forEach((dot, i) => {
         if (i === currentSlideIndex) {
-          dot.classList.remove('bg-white/60');
-          dot.classList.add('bg-white', 'w-6');
+          dot.style.backgroundColor = '#FFD305';
         } else {
-          dot.classList.remove('bg-white', 'w-6');
-          dot.classList.add('bg-white/60');
+          dot.style.backgroundColor = 'rgba(255, 255, 255, 0.6)';
         }
       });
     }
 
     function nextSlide() {
       showSlide(currentSlideIndex + 1);
-      resetInterval();
     }
 
     function prevSlide() {
       showSlide(currentSlideIndex - 1);
-      resetInterval();
     }
 
     function currentSlide(index) {
       showSlide(index);
-      resetInterval();
     }
 
-    function startCarousel() {
-      carouselInterval = setInterval(() => {
-        showSlide(currentSlideIndex + 1);
-      }, 6000);
-    }
-
-    function resetInterval() {
-      clearInterval(carouselInterval);
-      startCarousel();
-    }
-
-    // Initialize carousel on load
-    document.addEventListener('DOMContentLoaded', () => {
-      showSlide(0);
-      startCarousel();
-    });
+    // Auto rotate carousel every 6 seconds
+    setInterval(() => {
+      nextSlide();
+    }, 6000);
   </script>
 </body>
 </html>
