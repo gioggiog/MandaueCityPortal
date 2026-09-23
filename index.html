@@ -58,7 +58,7 @@
               Offices
             </a>
 
-            <a href="#" onclick="showPage('about'); return false;" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+            <a href="#" onclick="showPage('barangays'); return false;" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
               Barangays
             </a>
 
@@ -129,7 +129,7 @@
           </button>
           <a href="#" onclick="showPage('officials'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-[#FFD305]">City Officials</a>
           <a href="#" onclick="showPage('offices'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-[#FFD305]">Offices</a>
-          <a href="#" onclick="showPage('about'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-[#FFD305]">Barangays</a>
+          <a href="#" onclick="showPage('barangays'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-[#FFD305]">Barangays</a>
           <a href="#" onclick="showPage('about'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-[#FFD305]">Maps</a>
         </div>
 
@@ -590,6 +590,169 @@
               </tr>
             </tbody>
           </table>
+        </div>
+
+      </div>
+
+    </section>
+  </div>
+
+  <!-- ==================== BARANGAYS PAGE VIEW ==================== -->
+  <div id="page-barangays" class="hidden max-w-7xl w-full mx-auto px-4 py-6 md:py-8">
+    <section class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 md:p-10 space-y-8">
+      
+      <!-- BREADCRUMB -->
+      <div class="flex items-center space-x-2 text-xs text-slate-500">
+        <button onclick="showPage('home')" class="hover:text-mandaue-blue underline">Home</button>
+        <span>/</span>
+        <button onclick="showPage('about')" class="hover:text-mandaue-blue underline">About</button>
+        <span>/</span>
+        <span class="text-slate-800 font-semibold">Barangays</span>
+      </div>
+
+      <div class="border-b border-slate-200 pb-4 flex items-center space-x-3">
+        <span class="w-2.5 h-6 bg-[#C10A20] rounded-sm inline-block"></span>
+        <h1 class="text-2xl md:text-4xl font-black text-slate-800 tracking-tight uppercase">
+          Barangays of Mandaue City
+        </h1>
+      </div>
+
+      <!-- BARANGAYS GRID WITH LOGOS -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="BARANGAYS/ALANGALANG.jpg" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Alang-Alang</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="BARANGAYS/BAKILID.jpg" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Bakilid</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="BARANGAYS/BANILAD.jpg" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Banilad</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="BARANGAYS/BASAK.jpg" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Basak</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="BARANGAYS/CABANCALAN.jpg" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Cabancalan</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="BARANGAYS/CAMBARO.jpg" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Cambaro</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="BARANGAYS/CANDUMAN.jpg" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Canduman</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="BARANGAYS/CASILI.jpg" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Casili</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="BARANGAYS/CASUNTINGAN.jpg" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Casuntingan</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="BARANGAYS/CENTRO.jpg" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Centro (Poblacion)</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="BARANGAYS/CUBACUB.jpg" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Cubacub</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="BARANGAYS/GUIZO.jpg" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Guizo</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="BARANGAYS/IBABAO.jpg" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Ibabao-Estancia</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="BARANGAYS/JAGOBIAO.jpg" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Jagobiao</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="BARANGAYS/LABOGON.jpg" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Labogon</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="BARANGAYS/LOOC.jpg" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Looc</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="BARANGAYS/MAGUIKAY.jpg" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Maguikay</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="BARANGAYS/MANTUYONG.jpg" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Mantuyong</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="BARANGAYS/OPAO.jpg" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Opao</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="BARANGAYS/PAGSABUNGAN.jpg" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Pagsabungan</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="BARANGAYS/PAKNAAN.jpg" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Paknaan</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="BARANGAYS/SUBANGDAKU.jpg" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Subangdaku</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="BARANGAYS/TABOK.jpg" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Tabok</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="BARANGAYS/TAWASON.jpg" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Tawason</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="BARANGAYS/TINGUB.jpg" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Tingub</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="BARANGAYS/TIPOLO.jpg" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Tipolo</span>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="BARANGAYS/UMAPAD.jpg" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Umapad</span>
         </div>
 
       </div>
@@ -1214,7 +1377,7 @@
   <script>
     function showPage(pageId) {
       // 1. Hide all page containers
-      const pages = ['home', 'about', 'officials', 'offices', 'services'];
+      const pages = ['home', 'about', 'officials', 'offices', 'barangays', 'services'];
       pages.forEach(p => {
         const el = document.getElementById('page-' + p);
         if (el) el.classList.add('hidden');
@@ -1231,7 +1394,7 @@
         btn.className = "nav-item text-white hover:text-[#FFD305] transition px-3 py-1.5 rounded font-semibold";
       });
 
-      // 4. Highlight active nav button with white badge
+      // 4. Highlight active nav button with white badge (if applicable)
       const activeBtn = document.getElementById('nav-btn-' + pageId);
       if (activeBtn) {
         activeBtn.className = "nav-item bg-white text-mandaue-blue px-3 py-1.5 rounded shadow-sm font-bold";
