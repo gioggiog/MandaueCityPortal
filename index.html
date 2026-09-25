@@ -109,7 +109,42 @@
         </div>
 
         <a href="https://sites.google.com/mandauecity.gov.ph/spmandaue/home" target="_blank" rel="noopener noreferrer" class="nav-item text-white hover:text-[#FFD305] transition px-3 py-1.5 rounded">Sangguniang Panlungsod</a>
-        <a href="#links" class="text-white hover:text-[#FFD305] transition px-3 py-1.5">Government Links</a>
+        
+        <!-- GOVERNMENT LINKS DROPDOWN MENU -->
+        <div class="relative group">
+          <button class="nav-item text-white hover:text-[#FFD305] transition flex items-center px-3 py-1.5 rounded">
+            Government Links <i class="fa-solid fa-chevron-down text-[10px] ml-1.5"></i>
+          </button>
+          
+          <!-- Dropdown Box -->
+          <div class="absolute left-0 top-full hidden group-hover:block w-72 bg-[#173D9A] border border-blue-500/40 shadow-xl rounded-b text-white py-2 z-50">
+            <a href="https://www.gov.ph" target="_blank" rel="noopener noreferrer" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+              GOV.PH (Republic of the Philippines)
+            </a>
+            <a href="https://president.gov.ph" target="_blank" rel="noopener noreferrer" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+              Office of the President
+            </a>
+            <a href="https://ovp.gov.ph" target="_blank" rel="noopener noreferrer" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+              Office of the Vice President
+            </a>
+            <a href="https://www.senate.gov.ph" target="_blank" rel="noopener noreferrer" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+              Senate of the Philippines
+            </a>
+            <a href="https://www.congress.gov.ph" target="_blank" rel="noopener noreferrer" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+              House of Representatives
+            </a>
+            <a href="https://sc.judiciary.gov.ph" target="_blank" rel="noopener noreferrer" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+              Supreme Court
+            </a>
+            <a href="https://ca.judiciary.gov.ph" target="_blank" rel="noopener noreferrer" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+              Court of Appeals
+            </a>
+            <a href="https://sb.judiciary.gov.ph" target="_blank" rel="noopener noreferrer" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+              Sandiganbayan
+            </a>
+          </div>
+        </div>
+
         <a href="#" onclick="showPage('hotlines'); return false;" class="text-white hover:text-[#FFD305] transition px-3 py-1.5">Emergency Hotlines</a>
         <a href="#search" class="text-white hover:text-[#FFD305] transition px-2 py-1.5"><i class="fa-solid fa-magnifying-glass text-sm"></i></a>
       </div>
@@ -148,7 +183,21 @@
         </div>
 
         <a href="https://sites.google.com/mandauecity.gov.ph/spmandaue/home" target="_blank" rel="noopener noreferrer" class="mobile-nav-link px-3 py-2 rounded hover:bg-[#0064CC] transition border-b border-blue-500/30">Sangguniang Panlungsod</a>
-        <a href="#links" class="mobile-nav-link px-3 py-2 rounded hover:bg-[#0064CC] transition border-b border-blue-500/30">Government Links</a>
+        
+        <div class="space-y-1 pl-1 border-b border-blue-500/30 pb-2">
+          <span class="w-full text-left px-2 py-1.5 rounded font-bold flex justify-between items-center text-[#FFD305]">
+            Government Links <i class="fa-solid fa-chevron-down text-[10px]"></i>
+          </span>
+          <a href="https://www.gov.ph" target="_blank" rel="noopener noreferrer" class="block pl-4 py-1 hover:text-[#FFD305]">GOV.PH (Republic of the Philippines)</a>
+          <a href="https://president.gov.ph" target="_blank" rel="noopener noreferrer" class="block pl-4 py-1 hover:text-[#FFD305]">Office of the President</a>
+          <a href="https://ovp.gov.ph" target="_blank" rel="noopener noreferrer" class="block pl-4 py-1 hover:text-[#FFD305]">Office of the Vice President</a>
+          <a href="https://www.senate.gov.ph" target="_blank" rel="noopener noreferrer" class="block pl-4 py-1 hover:text-[#FFD305]">Senate of the Philippines</a>
+          <a href="https://www.congress.gov.ph" target="_blank" rel="noopener noreferrer" class="block pl-4 py-1 hover:text-[#FFD305]">House of Representatives</a>
+          <a href="https://sc.judiciary.gov.ph" target="_blank" rel="noopener noreferrer" class="block pl-4 py-1 hover:text-[#FFD305]">Supreme Court</a>
+          <a href="https://ca.judiciary.gov.ph" target="_blank" rel="noopener noreferrer" class="block pl-4 py-1 hover:text-[#FFD305]">Court of Appeals</a>
+          <a href="https://sb.judiciary.gov.ph" target="_blank" rel="noopener noreferrer" class="block pl-4 py-1 hover:text-[#FFD305]">Sandiganbayan</a>
+        </div>
+
         <a href="#" onclick="showPage('hotlines'); toggleMobileMenu(); return false;" class="mobile-nav-link px-3 py-2 rounded hover:bg-[#0064CC] transition">Emergency Hotlines</a>
       </div>
     </div>
@@ -1365,14 +1414,36 @@
               </div>
               <div class="text-xs space-y-3 text-slate-700">
                 <div>
-                  <p class="font-bold text-slate-800">Committee on Environmental Protection</p>
-                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Jennifer S. Del Mar</p>
-                  <p class="text-slate-600"><span class="font-medium">Member:</span> Coun. Joel M. Seno</p>
+                  <p class="font-bold text-slate-800">Committee on Environmental Protection, Ecology and Natural Resources</p>
+                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Andreo O. Icalina</p>
+                  <p class="text-slate-600"><span class="font-medium">Member:</span> Coun. Jesus P. Arcilla, Jr.</p>
                 </div>
                 <div>
-                  <p class="font-bold text-slate-800">Committee on Transportation and Public Utilities</p>
+                  <p class="font-bold text-slate-800">Committee on Transportation, Communication and Utilities</p>
                   <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Jimmy C. Lumapas</p>
-                  <p class="text-slate-600"><span class="font-medium">Member:</span> Coun. Andreo O. Icalina</p>
+                  <p class="text-slate-600"><span class="font-medium">Member:</span> Coun. Eugene C. Andaya</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RAUL CABAHUG V -->
+          <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col border-b-4 border-mandaue-blue">
+            <div class="p-5 flex flex-col flex-grow space-y-3">
+              <div class="border-b border-slate-200 pb-2">
+                <h3 class="font-bold text-lg text-mandaue-blue leading-tight">Hon. Raul F. Cabahug V</h3>
+                <span class="inline-block text-[11px] font-semibold text-slate-500 bg-slate-200 px-2 py-0.5 rounded mt-1">SP Member</span>
+              </div>
+              <div class="text-xs space-y-3 text-slate-700">
+                <div>
+                  <p class="font-bold text-slate-800">Committee on Human Rights, Social Welfare and Equal Opportunities</p>
+                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Jennifer S. Del Mar</p>
+                  <p class="text-slate-600"><span class="font-medium">Member:</span> Coun. Cesar Y. Cabahug, Jr.</p>
+                </div>
+                <div>
+                  <p class="font-bold text-slate-800">Committee on Games and Amusements</p>
+                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Andreo O. Icalina</p>
+                  <p class="text-slate-600"><span class="font-medium">Member:</span> Coun. Cesar Y. Cabahug, Jr.</p>
                 </div>
               </div>
             </div>
@@ -1387,20 +1458,20 @@
               </div>
               <div class="text-xs space-y-3 text-slate-700">
                 <div>
-                  <p class="font-bold text-slate-800">Committee on City Assets and Properties</p>
-                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Joel M. Seno</p>
-                  <p class="text-slate-600"><span class="font-medium">Member:</span> Coun. Raul F. Cabahug V</p>
+                  <p class="font-bold text-slate-800">Committee on Health and Sanitation</p>
+                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Jimmy C. Lumapas</p>
+                  <p class="text-slate-600"><span class="font-medium">Members:</span> Coun. Raul F. Cabahug V, Coun. Marie Immaline C. Cortes-Zafra, Coun. Benjamin H. Basiga</p>
                 </div>
                 <div>
-                  <p class="font-bold text-slate-800">Committee on Women and Family</p>
-                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Benjamin H. Basiga</p>
-                  <p class="text-slate-600"><span class="font-medium">Members:</span> Coun. Marie Immaline Cortes-Zafra, Coun. Eugene C. Andaya, Coun. Raul F. Cabahug V</p>
+                  <p class="font-bold text-slate-800">Committee on Barangay Affairs</p>
+                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> LnB Pres. Dante A. Borbajo</p>
+                  <p class="text-slate-600"><span class="font-medium">Member:</span> Coun. Eugene C. Andaya</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- ANDREO OUANO-ICALINA -->
+          <!-- ANDREO ICALINA -->
           <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col border-b-4 border-mandaue-blue">
             <div class="p-5 flex flex-col flex-grow space-y-3">
               <div class="border-b border-slate-200 pb-2">
@@ -1409,187 +1480,284 @@
               </div>
               <div class="text-xs space-y-3 text-slate-700">
                 <div>
-                  <p class="font-bold text-slate-800">Committee on Agriculture</p>
-                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Jimmy C. Lumapas</p>
-                  <p class="text-slate-600"><span class="font-medium">Member:</span> Coun. Cesar Y. Cabahug, Jr.</p>
-                </div>
-                <div>
-                  <p class="font-bold text-slate-800">Committee on Police, Fire, Penology and Public Safety</p>
-                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Eugene C. Andaya</p>
-                  <p class="text-slate-600"><span class="font-medium">Members:</span> Coun. Cesar Y. Cabahug, Jr., Coun. Raul F. Cabahug V</p>
+                  <p class="font-bold text-slate-800">Committee on Youth and Sports Development</p>
+                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> SKP Pres. Fleuritz Gayle T. Jumao-as</p>
+                  <p class="text-slate-600"><span class="font-medium">Members:</span> Coun. Raul F. Cabahug V, Coun. Cesar Y. Cabahug, Jr.</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- RAUL KEVIN CABAHUG V -->
+          <!-- DANTE BORBAJO -->
           <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col border-b-4 border-mandaue-blue">
             <div class="p-5 flex flex-col flex-grow space-y-3">
               <div class="border-b border-slate-200 pb-2">
-                <h3 class="font-bold text-lg text-mandaue-blue leading-tight">Hon. Raul F. Cabahug V</h3>
-                <span class="inline-block text-[11px] font-semibold text-slate-500 bg-slate-200 px-2 py-0.5 rounded mt-1">SP Member</span>
+                <h3 class="font-bold text-lg text-mandaue-blue leading-tight">Hon. Dante A. Borbajo</h3>
+                <span class="inline-block text-[11px] font-semibold text-slate-500 bg-slate-200 px-2 py-0.5 rounded mt-1">LnB President</span>
               </div>
               <div class="text-xs space-y-3 text-slate-700">
-                <div>
-                  <p class="font-bold text-slate-800">Committee on Health and Hospital Services</p>
-                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Benjamin H. Basiga</p>
-                  <p class="text-slate-600"><span class="font-medium">Members:</span> Coun. Marie Immaline Cortes-Zafra, Coun. Fritz B. Villamor, SKC Pres. F. G. T. Jumao-as</p>
-                </div>
-                <div>
-                  <p class="font-bold text-slate-800">Committee on Human Rights</p>
-                  <p class="text-slate-600"><span class="font-medium">Vice-Chairman:</span> Coun. Andreo O. Icalina</p>
-                  <p class="text-slate-600"><span class="font-medium">Member:</span> Coun. Carlo Pontico C. Fortuna</p>
-                </div>
+                <p class="text-slate-600">Liga ng mga Barangay President representing the barangay captains in the council.</p>
               </div>
             </div>
           </div>
 
-       </div>
-     </div>
+          <!-- FLEURITZ GAYLE JUMAO-AS -->
+          <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col border-b-4 border-mandaue-blue">
+            <div class="p-5 flex flex-col flex-grow space-y-3">
+              <div class="border-b border-slate-200 pb-2">
+                <h3 class="font-bold text-lg text-mandaue-blue leading-tight">Hon. Fleuritz Gayle T. Jumao-as</h3>
+                <span class="inline-block text-[11px] font-semibold text-slate-500 bg-slate-200 px-2 py-0.5 rounded mt-1">SK Federation President</span>
+              </div>
+              <div class="text-xs space-y-3 text-slate-700">
+                <p class="text-slate-600">Sangguniang Kabataan Federation President representing the youth sector.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- ==================== EMERGENCY HOTLINES PAGE VIEW ==================== -->
+  <div id="page-hotlines" class="hidden max-w-7xl w-full mx-auto px-4 py-6 md:py-8">
+    <section class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 md:p-10 space-y-8">
+      
+      <!-- BREADCRUMB -->
+      <div class="flex items-center space-x-2 text-xs text-slate-500">
+        <button onclick="showPage('home')" class="hover:text-mandaue-blue underline">Home</button>
+        <span>/</span>
+        <span class="text-slate-800 font-semibold">Emergency Hotlines</span>
+      </div>
+
+      <div class="border-b border-slate-200 pb-4 flex items-center space-x-3">
+        <span class="w-2.5 h-6 bg-[#C10A20] rounded-sm inline-block"></span>
+        <div>
+          <h1 class="text-2xl md:text-4xl font-black text-slate-800 tracking-tight uppercase">
+            Emergency Hotlines
+          </h1>
+          <p class="text-slate-600 text-sm mt-1">In case of emergency, reach out to the following Mandaue City response units immediately.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        
+        <div class="bg-slate-50 border-l-4 border-red-600 rounded-r-xl p-5 shadow-sm space-y-2">
+          <div class="flex items-center space-x-3 text-red-600">
+            <i class="fa-solid fa-triangle-exclamation text-xl"></i>
+            <h3 class="font-black text-slate-800 uppercase text-sm">CDRRMO Emergency Operations Center</h3>
+          </div>
+          <p class="text-xl font-black text-slate-900">0917-328-CDRR (2377)</p>
+          <p class="text-xs text-slate-500">24/7 Disaster Risk Reduction and Management Office</p>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-blue-600 rounded-r-xl p-5 shadow-sm space-y-2">
+          <div class="flex items-center space-x-3 text-blue-600">
+            <i class="fa-solid fa-shield-halved text-xl"></i>
+            <h3 class="font-black text-slate-800 uppercase text-sm">Mandaue City Police Office</h3>
+          </div>
+          <p class="text-xl font-black text-slate-900">(032) 344-1234</p>
+          <p class="text-xs text-slate-500">Philippine National Police - Mandaue</p>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-amber-600 rounded-r-xl p-5 shadow-sm space-y-2">
+          <div class="flex items-center space-x-3 text-amber-600">
+            <i class="fa-solid fa-fire-extinguisher text-xl"></i>
+            <h3 class="font-black text-slate-800 uppercase text-sm">Bureau of Fire Protection</h3>
+          </div>
+          <p class="text-xl font-black text-slate-900">(032) 345-0113</p>
+          <p class="text-xs text-slate-500">BFP Mandaue City Fire Station</p>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-emerald-600 rounded-r-xl p-5 shadow-sm space-y-2">
+          <div class="flex items-center space-x-3 text-emerald-600">
+            <i class="fa-solid fa-hospital text-xl"></i>
+            <h3 class="font-black text-slate-800 uppercase text-sm">Mandaue City Hospital</h3>
+          </div>
+          <p class="text-xl font-black text-slate-900">(032) 346-6086</p>
+          <p class="text-xs text-slate-500">Emergency Room & Medical Services</p>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-purple-600 rounded-r-xl p-5 shadow-sm space-y-2">
+          <div class="flex items-center space-x-3 text-purple-600">
+            <i class="fa-solid fa-traffic-light text-xl"></i>
+            <h3 class="font-black text-slate-800 uppercase text-sm">TEAM Mandaue</h3>
+          </div>
+          <p class="text-xl font-black text-slate-900">(032) 345-7281</p>
+          <p class="text-xs text-slate-500">Traffic Enforcement Agency of Mandaue</p>
+        </div>
+
+        <div class="bg-slate-50 border-l-4 border-indigo-600 rounded-r-xl p-5 shadow-sm space-y-2">
+          <div class="flex items-center space-x-3 text-indigo-600">
+            <i class="fa-solid fa-bolt text-xl"></i>
+            <h3 class="font-black text-slate-800 uppercase text-sm">VECO / MECO</h3>
+          </div>
+          <p class="text-xl font-black text-slate-900">(032) 230-8326</p>
+          <p class="text-xs text-slate-500">Power Outage & Electrical Emergencies</p>
+        </div>
+
+      </div>
 
     </section>
   </div>
 
   <!-- ==================== FOOTER ==================== -->
-  <footer class="bg-mandaue-blue text-white border-t-4 border-[#FFD305] mt-auto">
-    <div class="max-w-7xl mx-auto px-4 py-8 space-y-6">
+  <footer class="bg-slate-900 text-slate-400 text-xs mt-auto border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-8">
       
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-xs">
-        <div class="space-y-3">
-          <div class="flex items-center space-x-2.5">
-            <img src="MANDAUE.jpg" alt="Mandaue City Seal" class="h-8 w-8 rounded-full object-cover border border-white/20">
-            <span class="font-black tracking-wider uppercase">MANDAUE CITY PORTAL</span>
-          </div>
-          <p class="text-slate-300 leading-relaxed">
-            Official Website and Digital Service Gateway of the Local Government Unit of Mandaue City.
-          </p>
+      <!-- Footer Col 1 -->
+      <div class="space-y-3">
+        <div class="flex items-center space-x-2.5">
+          <img src="MANDAUE.jpg" alt="Mandaue City Seal" class="h-8 w-8 rounded-full object-cover">
+          <span class="text-white font-bold text-sm tracking-wider uppercase">Mandaue City Web Portal</span>
         </div>
-
-        <div class="space-y-2">
-          <h4 class="font-bold uppercase tracking-wider text-[#FFD305] text-sm">Quick Links</h4>
-          <ul class="space-y-1.5 text-slate-300">
-            <li><a href="#" onclick="showPage('home'); return false;" class="hover:text-white transition">Home</a></li>
-            <li><a href="#" onclick="showPage('about'); return false;" class="hover:text-white transition">About Mandaue</a></li>
-            <li><a href="#" onclick="showPage('officials'); return false;" class="hover:text-white transition">City Officials</a></li>
-            <li><a href="#" onclick="showPage('offices'); return false;" class="hover:text-white transition">Departments & Offices</a></li>
-            <li><a href="#" onclick="showPage('services'); return false;" class="hover:text-white transition">e-Services</a></li>
-            <li><a href="#" onclick="showPage('hotlines'); return false;" class="hover:text-white transition font-semibold text-[#FFD305]">Emergency Hotlines</a></li>
-          </ul>
-        </div>
-
-        <div class="space-y-2">
-          <h4 class="font-bold uppercase tracking-wider text-[#FFD305] text-sm">Contact Us</h4>
-          <p class="text-slate-300">Mandaue City Hall, S.B. Cabahug St, Mandaue City, 6014 Cebu</p>
-          <p class="text-slate-300">Phone: <span class="text-white font-medium">(032) 230-4500</span></p>
-        </div>
+        <p class="text-slate-400 leading-relaxed">
+          Official web portal of the City Government of Mandaue. Committed to transparent, responsive, and accountable public service.
+        </p>
       </div>
 
-      <div class="border-t border-blue-900/60 pt-4 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400">
-        <p>&copy; 2026 Mandaue City Local Government Unit. All Rights Reserved.</p>
-        <p class="mt-2 sm:mt-0">Managed by Management Information Systems Office (MISO)</p>
+      <!-- Footer Col 2 -->
+      <div class="space-y-3">
+        <h3 class="text-white font-bold uppercase tracking-wider text-xs border-b border-slate-800 pb-2">Quick Links</h3>
+        <ul class="space-y-1.5">
+          <li><a href="#" onclick="showPage('home'); return false;" class="hover:text-white transition">Home</a></li>
+          <li><a href="#" onclick="showPage('about'); return false;" class="hover:text-white transition">About Mandaue</a></li>
+          <li><a href="#" onclick="showPage('officials'); return false;" class="hover:text-white transition">City Officials</a></li>
+          <li><a href="#" onclick="showPage('offices'); return false;" class="hover:text-white transition">City Offices & Departments</a></li>
+          <li><a href="#" onclick="showPage('services'); return false;" class="hover:text-white transition">e-Services Portals</a></li>
+        </ul>
+      </div>
+
+      <!-- Footer Col 3 -->
+      <div class="space-y-3">
+        <h3 class="text-white font-bold uppercase tracking-wider text-xs border-b border-slate-800 pb-2">Contact & Location</h3>
+        <p class="leading-relaxed">
+          Mandaue City Hall, A. Cortes Ave, Mandaue City, 6014 Cebu, Philippines
+        </p>
+        <div class="pt-1 flex space-x-3 text-lg">
+          <a href="https://www.facebook.com/MandaueCityPublicAffairsOffice" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.mandauecity.gov.ph" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition"><i class="fa-solid fa-globe"></i></a>
+        </div>
       </div>
 
     </div>
+
+    <!-- Sub-footer -->
+    <div class="bg-slate-950 py-4 text-center text-[11px] text-slate-500 border-t border-slate-900">
+      <p>&copy; 2026 City Government of Mandaue. All rights reserved. Management Information Systems Office (MISO).</p>
+    </div>
   </footer>
 
-  <!-- JAVASCRIPT FUNCTIONS -->
+  <!-- JavaScript for Navigation Views and Interactive Elements -->
   <script>
     function showPage(pageId) {
-      const pages = ['home', 'services', 'about', 'barangays', 'offices', 'officials'];
-      pages.forEach(p => {
-        const el = document.getElementById('page-' + p);
-        if (el) {
-          if (p === pageId) {
-            el.classList.remove('hidden');
-          } else {
-            el.classList.add('hidden');
-          }
-        }
-      });
+      // Hide all page containers
+      document.getElementById('page-home').classList.add('hidden');
+      document.getElementById('page-services').classList.add('hidden');
+      document.getElementById('page-about').classList.add('hidden');
+      document.getElementById('page-barangays').classList.add('hidden');
+      document.getElementById('page-offices').classList.add('hidden');
+      document.getElementById('page-officials').classList.add('hidden');
+      document.getElementById('page-hotlines').classList.add('hidden');
+
+      // Show selected page
+      const targetPage = document.getElementById('page-' + pageId);
+      if (targetPage) {
+        targetPage.classList.remove('hidden');
+      }
+
+      // Scroll to top
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function toggleMobileMenu() {
-      const menu = document.getElementById('mobile-menu');
-      if (menu) {
-        menu.classList.toggle('hidden');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenu) {
+        mobileMenu.classList.toggle('hidden');
       }
     }
 
-    // News tab switcher for enhanced interactivity
+    // Carousel Slider Logic
+    let currentSlideIndex = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.carousel-dot');
+
+    function updateCarousel() {
+      slides.forEach((slide, index) => {
+        if (index === currentSlideIndex) {
+          slide.classList.remove('opacity-0', 'pointer-events-none');
+          slide.classList.add('opacity-100');
+        } else {
+          slide.classList.remove('opacity-100');
+          slide.classList.add('opacity-0', 'pointer-events-none');
+        }
+      });
+      dots.forEach((dot, index) => {
+        if (index === currentSlideIndex) {
+          dot.classList.remove('bg-white/60');
+          dot.classList.add('bg-white', 'w-6');
+        } else {
+          dot.classList.remove('bg-white', 'w-6');
+          dot.classList.add('bg-white/60');
+        }
+      });
+    }
+
+    function nextSlide() {
+      if (slides.length > 0) {
+        currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+        updateCarousel();
+      }
+    }
+
+    function prevSlide() {
+      if (slides.length > 0) {
+        currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+        updateCarousel();
+      }
+    }
+
+    function currentSlide(index) {
+      currentSlideIndex = index;
+      updateCarousel();
+    }
+
+    // Auto Advance Carousel Every 6 seconds
+    setInterval(nextSlide, 6000);
+
+    // Initialize carousel dots state
+    document.addEventListener("DOMContentLoaded", () => {
+      updateCarousel();
+    });
+
+    // News Tab Switcher Logic
     function switchNewsTab(tab) {
-      const card1 = document.getElementById('news-card-1');
-      const card2 = document.getElementById('news-card-2');
       const tabAll = document.getElementById('news-tab-all');
       const tabPao = document.getElementById('news-tab-pao');
       const tabTeam = document.getElementById('news-tab-team');
+      const card1 = document.getElementById('news-card-1');
+      const card2 = document.getElementById('news-card-2');
 
-      // Reset buttons
+      // Reset tabs styling
       [tabAll, tabPao, tabTeam].forEach(t => {
         t.className = "px-3 py-1.5 rounded-md text-slate-600 hover:text-mandaue-blue transition";
       });
 
       if (tab === 'all') {
         tabAll.className = "px-3 py-1.5 rounded-md bg-mandaue-blue text-white transition shadow-sm";
-        card1.style.display = 'flex';
-        card2.style.display = 'flex';
+        card1.classList.remove('hidden');
+        card2.classList.remove('hidden');
       } else if (tab === 'pao') {
         tabPao.className = "px-3 py-1.5 rounded-md bg-mandaue-blue text-white transition shadow-sm";
-        card1.style.display = 'flex';
-        card2.style.display = 'none';
+        card1.classList.remove('hidden');
+        card2.classList.add('hidden');
       } else if (tab === 'team') {
         tabTeam.className = "px-3 py-1.5 rounded-md bg-mandaue-blue text-white transition shadow-sm";
-        card1.style.display = 'none';
-        card2.style.display = 'flex';
+        card1.classList.add('hidden');
+        card2.classList.remove('hidden');
       }
     }
-
-    // Simple Hero Carousel Logic
-    let currentSlideIndex = 0;
-    const slides = document.querySelectorAll('.carousel-slide');
-    const dots = document.querySelectorAll('.carousel-dot');
-
-    function showSlide(index) {
-      if (!slides.length) return;
-      if (index >= slides.length) currentSlideIndex = 0;
-      else if (index < 0) currentSlideIndex = slides.length - 1;
-      else currentSlideIndex = index;
-
-      slides.forEach((slide, i) => {
-        if (i === currentSlideIndex) {
-          slide.style.opacity = '1';
-          slide.style.pointerEvents = 'auto';
-        } else {
-          slide.style.opacity = '0';
-          slide.style.pointerEvents = 'none';
-        }
-      });
-
-      dots.forEach((dot, i) => {
-        if (i === currentSlideIndex) {
-          dot.style.backgroundColor = '#FFD305';
-        } else {
-          dot.style.backgroundColor = 'rgba(255, 255, 255, 0.6)';
-        }
-      });
-    }
-
-    function nextSlide() {
-      showSlide(currentSlideIndex + 1);
-    }
-
-    function prevSlide() {
-      showSlide(currentSlideIndex - 1);
-    }
-
-    function currentSlide(index) {
-      showSlide(index);
-    }
-
-    // Auto rotate carousel every 6 seconds
-    setInterval(() => {
-      nextSlide();
-    }, 6000);
   </script>
 </body>
 </html>
