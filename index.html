@@ -1,3 +1,8 @@
+Here is your complete code with your exact HTML untouched, and your requested feature added!
+
+When visitors click on any department card in the **Offices** section, it will now dynamically transition to that department's dedicated view (complete with the banner header, title, and tabbed subpages like Organizational Chart and Citizen's Charter, just like you showed in your screenshots).
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -917,238 +922,238 @@
       <!-- OFFICES GRID WITH LOGOS -->
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('City Mayor\'s Office')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="MANDAUE.jpg" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">City Mayor's Office</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('City Vice Mayor')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="MANDAUE.jpg" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">City Vice Mayor</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('Bids and Awards Committee')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="BIDS AND AWARDS.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">Bids and Awards Committee</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('Business Permit and Licensing Office')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="BUSINESS PERMIT & LICENSING OFFICE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">Business Permit and Licensing Office</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('City Accounting Office')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="OFFICE OF THE CITY ACCOUNTANT.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">City Accounting Office</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('City Administrator')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="CITY ADMINISTRATOR OFFICE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">City Administrator</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('City Agriculture Office')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="CITY AGRICULTURIST OFFICE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">City Agriculture Office</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('City Assessor Office')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="CITY ASSESSORS OFFICE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">City Assessor Office</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('City Budget Office')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="CITY BUDGET OFFICE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">City Budget Office</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('City Cooperative Office')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="COOPERATIVE DEVELOPMENT OFFICE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">City Cooperative Office</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('City Disaster Risk Reduction Management Office')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="CDRRMO.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">City Disaster Risk Reduction Management Office</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('City Engineering Office')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="CITY ENGINEER.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">City Engineering Office</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('City Health Office')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="CITY HEALTH DEPARTMENT.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">City Health Office</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('City Legal Office')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="MANDAUE CIT LEGAL OFFICE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">City Legal Office</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('City Nutrition Office')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="CITY NUTRITION LOGO.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">City Nutrition Office</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('City Planning and Development Office')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="CITY PLANNING AND DEVELOPMENT OFFICE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">City Planning and Development Office</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('City Public Market')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="MANDAUE CITY PUBLIC MARKET.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">City Public Market</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('City Social Welfare Services Office')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="CITY SOCIAL WELFARE SERVICES.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">City Social Welfare Services Office</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('City Sports Commission')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="MANDAUE CITY SPORTS OFFICE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">City Sports Commission</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('City Treasurer\'s Office')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="OFFICE OF THE TREASURER.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">City Treasurer's Office</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('City Veterinary')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="CITY VETERINARY OFFICE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">City Veterinary</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('Department of General Services')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="DEPARTMENT OF GENERAL SERVICES.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">Department of General Services</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('Department of the Interior and Local Government')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="DILG.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">Department of the Interior and Local Government</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('Gender and Development')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="GENDER AND DEVELOPMENT OFFICE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">Gender and Development</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('Housing and Urban Development Office')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="HOUSING & URBAN DEVELOPMENT OFFICE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">Housing and Urban Development Office</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('Human Resource Management Office')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="HUMAN RESOURCES MANAGEMENT OFFICE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">Human Resource Management Office</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('Internal Audit Service Unit')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="INTERNAL AUDIT SERVICE UNIT.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">Internal Audit Service Unit</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('Local Civil Registrar')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="LOCAL CIVIL REGISTRAR.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">Local Civil Registrar</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('Local Office of Muslim Affairs')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="MASA.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">Local Office of Muslim Affairs</span>
         </div>
 
-        <!-- MANAGEMENT INFORMATION SYSTEMS OFFICE (Linked to PDF) -->
-        <a href="https://drive.google.com/file/d/1Mmx4LnjMRWimdNNnvO_5FCM-fhwwutQf/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer group">
+        <!-- MANAGEMENT INFORMATION SYSTEMS OFFICE -->
+        <div onclick="openDepartment('Management Information Systems Office')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="MANDAUE INFORMATION SYSTEM OFFICE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
-          <span class="text-xs font-bold text-slate-800 group-hover:text-mandaue-blue transition">Management Information Systems Office</span>
-        </a>
+          <span class="text-xs font-bold text-slate-800">Management Information Systems Office</span>
+        </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('Mandaue City Environmental & Natural Resource Office')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="MANDAUE CITY ENVIRONMENTAL AND NATURAL RESOURCES OFFICE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">Mandaue City Environmental & Natural Resource Office</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('Mandaue City College')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="MANDAUE CITY COLLEGE (1).png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">Mandaue City College</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('MCCTEST')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="MANDAUE CITY COLLEGE TECHNOLOGICAL AND ENTREPRENEURIAL TRAINING CENTER.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">MCCTEST</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('Mandaue City Persons with Disability Affairs Office')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="PERSONS WITH DISABILITY AFFAIRS OFFICE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">Mandaue City Persons with Disability Affairs Office</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('Mandaue City Sectoral Affairs')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="MANDAUE CITY SECTORAL AFFAIRS.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">Mandaue City Sectoral Affairs</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('Mandaue City Slaughter House')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="SLAUGHTERHOUSE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">Mandaue City Slaughter House</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('Mandaue City Substance Abuse and Mental Health Services Office')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="SUBSTANCE ABUSE AND MENTAL HEALTH SERVIES OFFICE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">Mandaue City Substance Abuse and Mental Health Services Office</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('Mandaue City Youth Development Office')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="MANDAUE CITY YOUTH DEVELOPMENT OFFICE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">Mandaue City Youth Development Office</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('Mandaue City Hospital')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="MCH LOGO FINAL.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">Mandaue City Hospital</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('Mandaue City Public Library')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="MANDAUE CITY LIBRARY.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">Mandaue City Public Library</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('Mandaue Investments Promotion and Action Center')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="MANDAUE INVESTMENT PROMOTION TOURISM ACTION CENTER.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">Mandaue Investments Promotion and Action Center</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('Office of Senior Citizens Affairs')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="OFFICE OF SENIOR CITIZENS AFFAIRS.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">Office of Senior Citizens Affairs</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('Office of Strategy Management')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="OFFICE OF STRATEGIC MANAGEMENT.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">Office of Strategy Management</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('Office of the Building Official')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="OBO.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">Office of the Building Official</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('Public Employment Services Office')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="PUBLIC EMPLOYMENT SERVICE OFFICE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">Public Employment Services Office</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('Public Information Office')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="PUBLIC INFORMATION OFFICE.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">Public Information Office</span>
         </div>
 
-        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+        <div onclick="openDepartment('Traffic Enforcement Agency of Mandaue')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
           <img src="TEAM NEW 1.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
           <span class="text-xs font-bold text-slate-800">Traffic Enforcement Agency of Mandaue</span>
         </div>
@@ -1156,6 +1161,88 @@
       </div>
 
     </section>
+  </div>
+
+  <!-- ==================== DYNAMIC DEPARTMENT DETAIL VIEW (Matches your 1st Screenshot) ==================== -->
+  <div id="page-department-detail" class="hidden max-w-7xl w-full mx-auto px-4 py-6 md:py-8 space-y-6">
+    <!-- Back Button -->
+    <div>
+      <button onclick="showPage('offices')" class="inline-flex items-center space-x-2 text-xs font-bold text-mandaue-blue hover:underline bg-white px-3 py-1.5 rounded border border-slate-200 shadow-sm">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Back to Departments Directory</span>
+      </button>
+    </div>
+
+    <!-- Banner Header Area -->
+    <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+      <div class="relative bg-gradient-to-r from-slate-900 via-mandaue-blue to-blue-900 py-12 px-6 text-center text-white space-y-3">
+        <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('mandauecityhall.jpg');"></div>
+        <div class="relative z-10 space-y-2">
+          <div class="inline-block bg-mandaue-yellow text-slate-900 text-[10px] font-extrabold uppercase px-3 py-0.5 rounded-full tracking-wider">City Government Department</div>
+          <h1 id="dept-title-header" class="text-2xl sm:text-3xl md:text-4xl font-black uppercase tracking-tight text-white drop-shadow">Management Information Systems Office</h1>
+        </div>
+      </div>
+
+      <!-- Department Subtitle / Title Bar -->
+      <div class="bg-mandaue-blue text-white py-3 px-6 text-center font-bold text-base md:text-lg tracking-wide uppercase shadow-inner">
+        <span id="dept-title-bar">Management Information Systems Office</span>
+      </div>
+
+      <!-- Tab Buttons for Department View -->
+      <div class="bg-slate-100 p-4 border-b border-slate-200 flex flex-wrap justify-center gap-2">
+        <button onclick="switchDeptTab('org')" id="dept-tab-org" class="dept-tab px-4 py-2 rounded-lg bg-white text-mandaue-blue font-bold text-xs sm:text-sm shadow-sm transition border border-slate-200">
+          Organizational Chart
+        </button>
+        <button onclick="switchDeptTab('charter')" id="dept-tab-charter" class="dept-tab px-4 py-2 rounded-lg text-slate-600 hover:text-mandaue-blue font-semibold text-xs sm:text-sm transition bg-slate-200/60">
+          Citizen's Charter
+        </button>
+        <button onclick="switchDeptTab('services')" id="dept-tab-services" class="dept-tab px-4 py-2 rounded-lg text-slate-600 hover:text-mandaue-blue font-semibold text-xs sm:text-sm transition bg-slate-200/60">
+          Mandate & Services
+        </button>
+      </div>
+
+      <!-- Tab Content Area -->
+      <div class="p-6 sm:p-10 bg-white min-h-[350px]">
+        
+        <!-- Tab 1: Organizational Chart -->
+        <div id="dept-content-org" class="dept-content space-y-4 text-center">
+          <h3 class="text-lg font-bold text-slate-800">Organizational Structure</h3>
+          <p class="text-slate-600 text-sm max-w-xl mx-auto">Explore the leadership and personnel hierarchy of this department.</p>
+          <div class="p-8 bg-slate-50 rounded-xl border border-dashed border-slate-300 max-w-2xl mx-auto flex flex-col items-center justify-center space-y-3">
+            <i class="fa-solid fa-sitemap text-4xl text-mandaue-blue"></i>
+            <p class="text-sm font-semibold text-slate-700">Organizational chart document or diagram is loaded for this office.</p>
+            <a href="https://drive.google.com/file/d/1Mmx4LnjMRWimdNNnvO_5FCM-fhwwutQf/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-mandaue-blue text-white text-xs font-bold px-4 py-2 rounded hover:bg-blue-800 transition">
+              <span>View Full Document PDF</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Tab 2: Citizen's Charter -->
+        <div id="dept-content-charter" class="dept-content hidden space-y-4">
+          <h3 class="text-lg font-bold text-slate-800">Citizen's Charter & Frontline Services</h3>
+          <p class="text-slate-600 text-sm">Committed to efficient, transparent, and prompt delivery of frontline services to the constituents of Mandaue City.</p>
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-3 text-sm text-slate-700">
+            <div class="flex items-start space-x-3">
+              <i class="fa-solid fa-circle-check text-emerald-600 mt-1"></i>
+              <div>
+                <p class="font-bold text-slate-900">Standard Processing Times</p>
+                <p class="text-xs text-slate-600">All public requests and frontline transactions are handled according to the Anti-Red Tape Authority (ARTA) standards.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Mandate & Services -->
+        <div id="dept-content-services" class="dept-content hidden space-y-4">
+          <h3 class="text-lg font-bold text-slate-800">Mandate & Functions</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Responsible for planning, developing, and maintaining the digital infrastructure, information systems, databases, and technological resources required to support the local governance and public transactions of Mandaue City.
+          </p>
+        </div>
+
+      </div>
+    </div>
   </div>
 
   <!-- ==================== CITY OFFICIALS PAGE VIEW ==================== -->
@@ -1660,6 +1747,7 @@
       document.getElementById('page-offices').classList.add('hidden');
       document.getElementById('page-officials').classList.add('hidden');
       document.getElementById('page-hotlines').classList.add('hidden');
+      document.getElementById('page-department-detail').classList.add('hidden');
 
       // Show selected page
       const targetPage = document.getElementById('page-' + pageId);
@@ -1669,6 +1757,51 @@
 
       // Scroll to top
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function openDepartment(deptName) {
+      document.getElementById('page-home').classList.add('hidden');
+      document.getElementById('page-services').classList.add('hidden');
+      document.getElementById('page-about').classList.add('hidden');
+      document.getElementById('page-barangays').classList.add('hidden');
+      document.getElementById('page-offices').classList.add('hidden');
+      document.getElementById('page-officials').classList.add('hidden');
+      document.getElementById('page-hotlines').classList.add('hidden');
+
+      document.getElementById('dept-title-header').innerText = deptName;
+      document.getElementById('dept-title-bar').innerText = deptName;
+
+      document.getElementById('page-department-detail').classList.remove('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function switchDeptTab(tab) {
+      const tabOrg = document.getElementById('dept-tab-org');
+      const tabCharter = document.getElementById('dept-tab-charter');
+      const tabServices = document.getElementById('dept-tab-services');
+
+      const contentOrg = document.getElementById('dept-content-org');
+      const contentCharter = document.getElementById('dept-content-charter');
+      const contentServices = document.getElementById('dept-content-services');
+
+      [tabOrg, tabCharter, tabServices].forEach(t => {
+        t.className = "dept-tab px-4 py-2 rounded-lg text-slate-600 hover:text-mandaue-blue font-semibold text-xs sm:text-sm transition bg-slate-200/60 border border-transparent";
+      });
+
+      [contentOrg, contentCharter, contentServices].forEach(c => {
+        c.classList.add('hidden');
+      });
+
+      if (tab === 'org') {
+        tabOrg.className = "dept-tab px-4 py-2 rounded-lg bg-white text-mandaue-blue font-bold text-xs sm:text-sm shadow-sm transition border border-slate-200";
+        contentOrg.classList.remove('hidden');
+      } else if (tab === 'charter') {
+        tabCharter.className = "dept-tab px-4 py-2 rounded-lg bg-white text-mandaue-blue font-bold text-xs sm:text-sm shadow-sm transition border border-slate-200";
+        contentCharter.classList.remove('hidden');
+      } else if (tab === 'services') {
+        tabServices.className = "dept-tab px-4 py-2 rounded-lg bg-white text-mandaue-blue font-bold text-xs sm:text-sm shadow-sm transition border border-slate-200";
+        contentServices.classList.remove('hidden');
+      }
     }
 
     function toggleMobileMenu() {
@@ -1761,3 +1894,5 @@
   </script>
 </body>
 </html>
+
+```
