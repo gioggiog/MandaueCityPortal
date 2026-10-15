@@ -197,6 +197,7 @@
   <div id="page-home" class="space-y-6">
     <section class="max-w-7xl mx-auto w-full px-4 mt-4 md:mt-6">
       <div class="relative bg-slate-900 rounded-2xl overflow-hidden shadow-md border-b-4 border-mandaue-yellow h-[320px] sm:h-[380px] md:h-[420px]" id="hero-carousel">
+        
         <div class="carousel-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-100 flex items-center">
           <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('mandauecityhall.jpg');"></div>
           <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/70 to-transparent"></div>
@@ -248,6 +249,7 @@
           <button onclick="currentSlide(0)" class="carousel-dot w-3 h-3 rounded-full bg-white/60 transition" id="dot-0"></button>
           <button onclick="currentSlide(1)" class="carousel-dot w-3 h-3 rounded-full bg-white/60 transition" id="dot-1"></button>
         </div>
+
       </div>
     </section>
 
@@ -389,7 +391,174 @@
     </main>
   </div>
 
-  <!-- Placeholders for other pages (Services, About, Barangays, Offices, Officials, Hotlines) can remain in index.html as structured in your original template -->
+  <!-- ==================== E-SERVICES PAGE VIEW ==================== -->
+  <div id="page-services" class="hidden max-w-7xl w-full mx-auto px-4 py-6 md:py-8">
+    <section class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 md:p-10 space-y-8">
+      <div class="flex items-center space-x-2 text-xs text-slate-500">
+        <button onclick="showPage('home')" class="hover:text-mandaue-blue underline">Home</button>
+        <span>/</span>
+        <span class="text-slate-800 font-semibold">e-Services</span>
+      </div>
+      <div class="border-b border-slate-200 pb-4 flex items-center space-x-3">
+        <span class="w-2.5 h-6 bg-[#C10A20] rounded-sm inline-block"></span>
+        <div>
+          <h1 class="text-2xl md:text-4xl font-black text-slate-800 tracking-tight uppercase">e-Services</h1>
+          <p class="text-slate-600 text-sm mt-1">Access Mandaue City's digital services and online application portals below.</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
+        <a href="https://www.sites.google.com/view/bplomandaue/home" target="_blank" rel="noopener noreferrer" class="bg-slate-50 hover:bg-blue-50 border-l-4 border-mandaue-blue rounded-r-lg p-4 shadow-sm hover:shadow transition flex items-center space-x-4 group">
+          <div class="w-10 h-10 rounded-full bg-blue-100 text-mandaue-blue flex items-center justify-center shrink-0 font-bold group-hover:bg-mandaue-blue group-hover:text-white transition"><i class="fa-solid fa-file-lines"></i></div>
+          <span class="text-sm font-bold text-slate-800 group-hover:text-mandaue-blue transition">Mandaue City Business Permit and Licensing</span>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <!-- ==================== ABOUT PAGE VIEW ==================== -->
+  <div id="page-about" class="hidden max-w-7xl w-full mx-auto px-4 py-6 md:py-8">
+    <section class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 md:p-10 space-y-8">
+      <div class="flex items-center space-x-2 text-xs text-slate-500">
+        <button onclick="showPage('home')" class="hover:text-mandaue-blue underline">Home</button>
+        <span>/</span>
+        <span class="text-slate-800 font-semibold">About</span>
+      </div>
+      <div class="border-b border-slate-200 pb-4 flex items-center space-x-3">
+        <span class="w-2.5 h-6 bg-[#C10A20] rounded-sm inline-block"></span>
+        <h1 class="text-2xl md:text-4xl font-black text-slate-800 tracking-tight uppercase">About Mandaue City</h1>
+      </div>
+      <div class="space-y-3">
+        <h2 class="text-xl md:text-2xl font-bold text-mandaue-blue flex items-center space-x-2 border-b border-blue-50 pb-2">
+          <i class="fa-solid fa-landmark"></i><span>History</span>
+        </h2>
+        <div class="text-slate-700 text-sm sm:text-base leading-relaxed space-y-3">
+          <p>The City of Mandaue was founded in April 7, 1521, when a “Cove of Cebu”, called Mandawe, was sighted by Spanish expedition led by Ferdinand Magellan...</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ==================== BARANGAYS PAGE VIEW ==================== -->
+  <div id="page-barangays" class="hidden max-w-7xl w-full mx-auto px-4 py-6 md:py-8">
+    <section class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 md:p-10 space-y-8">
+      <div class="flex items-center space-x-2 text-xs text-slate-500">
+        <button onclick="showPage('home')" class="hover:text-mandaue-blue underline">Home</button><span>/</span>
+        <button onclick="showPage('about')" class="hover:text-mandaue-blue underline">About</button><span>/</span>
+        <span class="text-slate-800 font-semibold">Barangays</span>
+      </div>
+      <div class="border-b border-slate-200 pb-4 flex items-center space-x-3">
+        <span class="w-2.5 h-6 bg-[#C10A20] rounded-sm inline-block"></span>
+        <h1 class="text-2xl md:text-4xl font-black text-slate-800 tracking-tight uppercase">Barangays of Mandaue City</h1>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow transition flex items-center space-x-3">
+          <img src="BARANGAYS/ALANG ALANG.jpg.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">Alang-Alang</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ==================== OFFICES PAGE VIEW ==================== -->
+  <div id="page-offices" class="hidden max-w-7xl w-full mx-auto px-4 py-6 md:py-8">
+    <section class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 md:p-10 space-y-8">
+      <div class="flex items-center space-x-2 text-xs text-slate-500">
+        <button onclick="showPage('home')" class="hover:text-mandaue-blue underline">Home</button><span>/</span>
+        <button onclick="showPage('about')" class="hover:text-mandaue-blue underline">About</button><span>/</span>
+        <span class="text-slate-800 font-semibold">Offices</span>
+      </div>
+      <div class="border-b border-slate-200 pb-4 flex items-center space-x-3">
+        <span class="w-2.5 h-6 bg-[#C10A20] rounded-sm inline-block"></span>
+        <h1 class="text-2xl md:text-4xl font-black text-slate-800 tracking-tight uppercase">City Departments & Offices</h1>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div onclick="openDepartment('City Mayor\'s Office')" class="bg-slate-50 border-l-4 border-mandaue-blue rounded-r-lg p-3 shadow-sm hover:shadow hover:bg-blue-50 transition flex items-center space-x-3 cursor-pointer">
+          <img src="MANDAUE.jpg" alt="Logo" class="w-8 h-8 rounded-full object-cover shrink-0 border border-slate-200">
+          <span class="text-xs font-bold text-slate-800">City Mayor's Office</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ==================== DYNAMIC DEPARTMENT DETAIL VIEW ==================== -->
+  <div id="page-department-detail" class="hidden max-w-7xl w-full mx-auto px-4 py-6 md:py-8 space-y-6">
+    <div>
+      <button onclick="showPage('offices')" class="inline-flex items-center space-x-2 text-xs font-bold text-mandaue-blue hover:underline bg-white px-3 py-1.5 rounded border border-slate-200 shadow-sm">
+        <i class="fa-solid fa-arrow-left"></i><span>Back to Departments Directory</span>
+      </button>
+    </div>
+    <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+      <div class="relative bg-gradient-to-r from-slate-900 via-mandaue-blue to-blue-900 py-12 px-6 text-center text-white space-y-3">
+        <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('mandauecityhall.jpg');"></div>
+        <div class="relative z-10 space-y-2">
+          <div class="inline-block bg-mandaue-yellow text-slate-900 text-[10px] font-extrabold uppercase px-3 py-0.5 rounded-full tracking-wider">City Government Department</div>
+          <h1 id="dept-title-header" class="text-2xl sm:text-3xl md:text-4xl font-black uppercase tracking-tight text-white drop-shadow">Management Information Systems Office</h1>
+        </div>
+      </div>
+      <div class="bg-mandaue-blue text-white py-3 px-6 text-center font-bold text-base md:text-lg tracking-wide uppercase shadow-inner">
+        <span id="dept-title-bar">Management Information Systems Office</span>
+      </div>
+      <div class="bg-slate-100 p-4 border-b border-slate-200 flex flex-wrap justify-center gap-2">
+        <button onclick="switchDeptTab('org')" id="dept-tab-org" class="dept-tab px-4 py-2 rounded-lg bg-white text-mandaue-blue font-bold text-xs sm:text-sm shadow-sm transition border border-slate-200">Organizational Chart</button>
+        <button onclick="switchDeptTab('charter')" id="dept-tab-charter" class="dept-tab px-4 py-2 rounded-lg text-slate-600 hover:text-mandaue-blue font-semibold text-xs sm:text-sm transition bg-slate-200/60">Citizen's Charter</button>
+        <button onclick="switchDeptTab('services')" id="dept-tab-services" class="dept-tab px-4 py-2 rounded-lg text-slate-600 hover:text-mandaue-blue font-semibold text-xs sm:text-sm transition bg-slate-200/60">Mandate & Services</button>
+      </div>
+      <div class="p-6 sm:p-10 bg-white min-h-[350px]">
+        <div id="dept-content-org" class="dept-content space-y-4 text-center">
+          <h3 class="text-lg font-bold text-slate-800">Organizational Structure</h3>
+        </div>
+        <div id="dept-content-charter" class="dept-content hidden space-y-4">
+          <h3 class="text-lg font-bold text-slate-800">Citizen's Charter & Frontline Services</h3>
+        </div>
+        <div id="dept-content-services" class="dept-content hidden space-y-4">
+          <h3 class="text-lg font-bold text-slate-800">Mandate & Functions</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== CITY OFFICIALS PAGE VIEW ==================== -->
+  <div id="page-officials" class="hidden max-w-7xl w-full mx-auto px-4 py-6 md:py-8">
+    <section class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 md:p-10 space-y-10">
+      <div class="flex items-center space-x-2 text-xs text-slate-500">
+        <button onclick="showPage('home')" class="hover:text-mandaue-blue underline">Home</button><span>/</span>
+        <button onclick="showPage('about')" class="hover:text-mandaue-blue underline">About</button><span>/</span>
+        <span class="text-slate-800 font-semibold">City Officials</span>
+      </div>
+      <div class="border-b border-slate-200 pb-4 flex items-center space-x-3">
+        <span class="w-2.5 h-6 bg-[#C10A20] rounded-sm inline-block"></span>
+        <h1 class="text-2xl md:text-4xl font-black text-slate-800 tracking-tight uppercase">City Officials</h1>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-xl mx-auto">
+        <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm flex flex-col items-center text-center transition hover:shadow-md border-b-4 border-mandaue-blue">
+          <div class="w-full aspect-[4/3] max-h-64 bg-slate-100 overflow-hidden relative">
+            <img src="Mayor_Ouano_Jonkie.jpg" alt="Hon. Thadeo Jovito 'Jonkie' M. Ouano" class="w-full h-full object-cover object-top">
+          </div>
+          <div class="p-4 w-full space-y-1.5">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-mandaue-blue bg-blue-100 px-2.5 py-0.5 rounded-full inline-block">City Mayor</span>
+            <h2 class="text-sm sm:text-base font-black text-slate-800 leading-tight">Hon. Thadeo Jovito "Jonkie" M. Ouano</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ==================== EMERGENCY HOTLINES PAGE VIEW ==================== -->
+  <div id="page-hotlines" class="hidden max-w-7xl w-full mx-auto px-4 py-6 md:py-8">
+    <section class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 md:p-10 space-y-8">
+      <div class="flex items-center space-x-2 text-xs text-slate-500">
+        <button onclick="showPage('home')" class="hover:text-mandaue-blue underline">Home</button><span>/</span>
+        <span class="text-slate-800 font-semibold">Emergency Hotlines</span>
+      </div>
+      <div class="border-b border-slate-200 pb-4 flex items-center space-x-3">
+        <span class="w-2.5 h-6 bg-[#C10A20] rounded-sm inline-block"></span>
+        <div>
+          <h1 class="text-2xl md:text-4xl font-black text-slate-800 tracking-tight uppercase">Emergency Hotlines</h1>
+          <p class="text-slate-600 text-sm mt-1">In case of emergency, reach out to the following Mandaue City response units immediately.</p>
+        </div>
+      </div>
+    </section>
+  </div>
 
   <!-- ==================== FOOTER ==================== -->
   <footer class="bg-slate-900 text-slate-400 text-xs mt-auto border-t border-slate-800">
@@ -403,30 +572,7 @@
           Official web portal of the City Government of Mandaue. Committed to transparent, responsive, and accountable public service.
         </p>
       </div>
-
-      <div class="space-y-3">
-        <h3 class="text-white font-bold uppercase tracking-wider text-xs border-b border-slate-800 pb-2">Quick Links</h3>
-        <ul class="space-y-1.5">
-          <li><a href="#" onclick="showPage('home'); return false;" class="hover:text-white transition">Home</a></li>
-          <li><a href="#" onclick="showPage('about'); return false;" class="hover:text-white transition">About Mandaue</a></li>
-          <li><a href="#" onclick="showPage('officials'); return false;" class="hover:text-white transition">City Officials</a></li>
-          <li><a href="#" onclick="showPage('offices'); return false;" class="hover:text-white transition">City Offices & Departments</a></li>
-          <li><a href="#" onclick="showPage('services'); return false;" class="hover:text-white transition">e-Services Portals</a></li>
-        </ul>
-      </div>
-
-      <div class="space-y-3">
-        <h3 class="text-white font-bold uppercase tracking-wider text-xs border-b border-slate-800 pb-2">Contact & Location</h3>
-        <p class="leading-relaxed">
-          Mandaue City Hall, A. Cortes Ave, Mandaue City, 6014 Cebu, Philippines
-        </p>
-        <div class="pt-1 flex space-x-3 text-lg">
-          <a href="https://www.facebook.com/MandaueCityPublicAffairsOffice" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition"><i class="fa-brands fa-facebook"></i></a>
-          <a href="https://www.mandauecity.gov.ph" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition"><i class="fa-solid fa-globe"></i></a>
-        </div>
-      </div>
     </div>
-
     <div class="bg-slate-950 py-4 text-center text-[11px] text-slate-500 border-t border-slate-900">
       <p>&copy; 2026 City Government of Mandaue. All rights reserved. Management Information Systems Office (MISO).</p>
     </div>
