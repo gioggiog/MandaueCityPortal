@@ -122,3 +122,27 @@ function switchNewsTab(tab) {
     if(card2) card2.classList.remove('hidden');
   }
 }
+
+// Scroll Fade-Up Animation Observer
+document.addEventListener("DOMContentLoaded", () => {
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.15 // Triggers when 15% of the element is visible on screen
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove('opacity-0', 'translate-y-8');
+        entry.target.classList.add('opacity-100', 'translate-y-0');
+        observer.unobserve(entry.target); // Animate only once
+      }
+    });
+  }, observerOptions);
+
+  const newsSection = document.getElementById('news-fade-section');
+  if (newsSection) {
+    observer.observe(newsSection);
+  }
+});
