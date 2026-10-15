@@ -13,182 +13,110 @@
 </head>
 <body class="bg-slate-100 font-sans text-slate-800 antialiased min-h-screen flex flex-col">
 
-  <!-- TOP NAVIGATION BAR -->
-  <nav class="bg-mandaue-blue text-white shadow-md sticky top-0 z-50 border-b-4 border-[#FFD305]">
-    <div class="max-w-7xl mx-auto px-4 py-2.5 flex items-center justify-between">
+<!-- MAIN NAVIGATION BAR (White background with larger typography) -->
+  <nav class="bg-white text-slate-800 shadow-md sticky top-0 z-50 border-b border-slate-200">
+    <div class="w-full px-6 md:px-12 py-3.5 flex items-center justify-between">
       
-      <!-- Top Left Logo & Title -->
-      <a href="#" onclick="showPage('home'); return false;" class="flex items-center space-x-2.5 group">
-        <img src="MANDAUE.jpg" alt="Mandaue City Seal" class="h-8 w-8 rounded-full object-cover border border-white/20 shadow-sm">
+      <!-- Brand Logo + City Title -->
+      <a href="#" onclick="showPage('home'); return false;" class="flex items-center space-x-3 group shrink-0">
+        <img src="MANDAUE.jpg" alt="Mandaue City Seal" class="h-12 w-12 sm:h-14 sm:w-14 rounded-full object-cover shadow-sm border border-slate-200">
+        <div class="flex flex-col">
+          <span class="text-xl sm:text-2xl font-black text-[#173D9A] tracking-wider leading-none uppercase">MANDAUE</span>
+          <span class="text-[10px] sm:text-xs font-bold text-slate-500 tracking-widest uppercase">City Government</span>
+        </div>
       </a>
 
-      <!-- Mobile Hamburger Toggle Button -->
-      <button id="menu-toggle" onclick="toggleMobileMenu()" class="md:hidden text-white focus:outline-none p-1.5 text-xl">
+      <!-- Mobile Hamburger Button -->
+      <button id="menu-toggle" onclick="toggleMobileMenu()" class="lg:hidden text-slate-800 focus:outline-none p-2 text-2xl">
         <i class="fa-solid fa-bars"></i>
       </button>
 
-      <!-- Desktop Links Container -->
-      <div class="hidden md:flex items-center space-x-2 text-xs font-semibold">
-        <button id="nav-btn-home" onclick="showPage('home')" class="nav-item bg-white text-mandaue-blue px-3 py-1.5 rounded shadow-sm font-bold">Home</button>
+      <!-- Desktop Links Container (Larger font & refined spacing) -->
+      <div class="hidden lg:flex items-center space-x-6 text-sm sm:text-base font-bold text-[#173D9A]">
+        
+        <button id="nav-btn-home" onclick="showPage('home')" class="hover:text-blue-600 transition py-1">Home</button>
         
         <!-- ABOUT DROPDOWN MENU -->
         <div class="relative group">
-          <button id="nav-btn-about" onclick="showPage('about')" class="nav-item text-white hover:text-[#FFD305] transition flex items-center px-3 py-1.5 rounded">
-            About <i class="fa-solid fa-chevron-down text-[10px] ml-1.5"></i>
+          <button id="nav-btn-about" onclick="showPage('about')" class="hover:text-blue-600 transition flex items-center py-1">
+            About Mandaue <i class="fa-solid fa-chevron-down text-xs ml-1.5 opacity-70"></i>
           </button>
           
-          <!-- Dropdown Box -->
-          <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-[#173D9A] border border-blue-500/40 shadow-xl rounded-b text-white py-2 z-50">
-            <a href="#" onclick="showPage('officials'); return false;" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+          <div class="absolute left-0 top-full hidden group-hover:block w-52 bg-white border border-slate-200 shadow-xl rounded-b text-slate-800 py-2 z-50">
+            <a href="#" onclick="showPage('officials'); return false;" class="px-4 py-2.5 hover:bg-slate-100 hover:text-[#173D9A] transition flex items-center text-xs sm:text-sm font-semibold">
               City Officials
             </a>
-            <a href="#" onclick="showPage('offices'); return false;" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
-              Offices
+            <a href="#" onclick="showPage('offices'); return false;" class="px-4 py-2.5 hover:bg-slate-100 hover:text-[#173D9A] transition flex items-center text-xs sm:text-sm font-semibold">
+              Offices & Departments
             </a>
-            <a href="#" onclick="showPage('barangays'); return false;" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+            <a href="#" onclick="showPage('barangays'); return false;" class="px-4 py-2.5 hover:bg-slate-100 hover:text-[#173D9A] transition flex items-center text-xs sm:text-sm font-semibold">
               Barangays
             </a>
-            <a href="#" onclick="showPage('about'); return false;" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
-              Maps
+            <a href="#" onclick="showPage('about'); return false;" class="px-4 py-2.5 hover:bg-slate-100 hover:text-[#173D9A] transition flex items-center text-xs sm:text-sm font-semibold">
+              Maps & History
             </a>
           </div>
         </div>
 
         <!-- E-SERVICES DROPDOWN MENU -->
         <div class="relative group">
-          <button id="nav-btn-services" onclick="showPage('services')" class="nav-item text-white hover:text-[#FFD305] transition flex items-center px-3 py-1.5 rounded">
-            e-Services <i class="fa-solid fa-chevron-down text-[10px] ml-1.5"></i>
+          <button id="nav-btn-services" onclick="showPage('services')" class="hover:text-blue-600 transition flex items-center py-1">
+            Online Services <i class="fa-solid fa-chevron-down text-xs ml-1.5 opacity-70"></i>
           </button>
           
-          <!-- Dropdown Box -->
-          <div class="absolute left-0 top-full hidden group-hover:block w-80 bg-[#173D9A] border border-blue-500/40 shadow-xl rounded-b text-white py-2 z-50">
-            <a href="https://www.sites.google.com/view/bplomandaue/home" target="_blank" rel="noopener noreferrer" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
-              Mandaue City Business Permit and Licensing
+          <div class="absolute left-0 top-full hidden group-hover:block w-80 bg-white border border-slate-200 shadow-xl rounded-b text-slate-800 py-2 z-50">
+            <a href="https://www.sites.google.com/view/bplomandaue/home" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 hover:bg-slate-100 hover:text-[#173D9A] transition flex items-center text-xs sm:text-sm font-semibold">
+              Business Permit and Licensing
             </a>
-            <a href="#" onclick="showPage('services'); return false;" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
-              Assessment and Payment for Real Property Tax
+            <a href="#" onclick="showPage('services'); return false;" class="px-4 py-2.5 hover:bg-slate-100 hover:text-[#173D9A] transition flex items-center text-xs sm:text-sm font-semibold">
+              Real Property Tax Assessment
             </a>
-            <a href="#" onclick="showPage('services'); return false;" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
-              Mandaue City Map (City's Data/Information and Guide)
-            </a>
-            <a href="#" onclick="showPage('services'); return false;" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+            <a href="#" onclick="showPage('services'); return false;" class="px-4 py-2.5 hover:bg-slate-100 hover:text-[#173D9A] transition flex items-center text-xs sm:text-sm font-semibold">
               Delivery Permit Application
             </a>
-            <a href="#" onclick="showPage('services'); return false;" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
-              Safety Seal Certification Program
-            </a>
-            <a href="#" onclick="showPage('services'); return false;" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
-              Application for License to Sell/Serve Liquor
-            </a>
-            <a href="#" onclick="showPage('services'); return false;" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
-              Eco - Watch
-            </a>
-            <a href="#" onclick="showPage('services'); return false;" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
-              Procurement System
-            </a>
-            <a href="#" onclick="showPage('services'); return false;" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
-              Human Resource Information System
-            </a>
-            <a href="#" onclick="showPage('services'); return false;" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+            <a href="#" onclick="showPage('services'); return false;" class="px-4 py-2.5 hover:bg-slate-100 hover:text-[#173D9A] transition flex items-center text-xs sm:text-sm font-semibold">
               Traffic Violation System
             </a>
           </div>
         </div>
 
-        <a href="https://sites.google.com/mandauecity.gov.ph/spmandaue/home" target="_blank" rel="noopener noreferrer" class="nav-item text-white hover:text-[#FFD305] transition px-3 py-1.5 rounded">Sangguniang Panlungsod</a>
-        
-        <!-- GOVERNMENT LINKS DROPDOWN MENU -->
+        <a href="https://sites.google.com/mandauecity.gov.ph/spmandaue/home" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition py-1">Sangguniang Panlungsod</a>
+
+        <!-- GOVERNMENT LINKS DROPDOWN -->
         <div class="relative group">
-          <button class="nav-item text-white hover:text-[#FFD305] transition flex items-center px-3 py-1.5 rounded">
-            Government Links <i class="fa-solid fa-chevron-down text-[10px] ml-1.5"></i>
+          <button class="hover:text-blue-600 transition flex items-center py-1">
+            Full Disclosure <i class="fa-solid fa-chevron-down text-xs ml-1.5 opacity-70"></i>
           </button>
           
-          <div class="absolute left-0 top-full hidden group-hover:block w-72 bg-[#173D9A] border border-blue-500/40 shadow-xl rounded-b text-white py-2 z-50">
-            <a href="https://www.gov.ph" target="_blank" rel="noopener noreferrer" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+          <div class="absolute left-0 top-full hidden group-hover:block w-72 bg-white border border-slate-200 shadow-xl rounded-b text-slate-800 py-2 z-50">
+            <a href="https://www.gov.ph" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 hover:bg-slate-100 hover:text-[#173D9A] transition flex items-center text-xs sm:text-sm font-semibold">
               GOV.PH (Republic of the Philippines)
             </a>
-            <a href="https://president.gov.ph" target="_blank" rel="noopener noreferrer" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+            <a href="https://president.gov.ph" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 hover:bg-slate-100 hover:text-[#173D9A] transition flex items-center text-xs sm:text-sm font-semibold">
               Office of the President
             </a>
-            <a href="https://ovp.gov.ph" target="_blank" rel="noopener noreferrer" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+            <a href="https://ovp.gov.ph" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 hover:bg-slate-100 hover:text-[#173D9A] transition flex items-center text-xs sm:text-sm font-semibold">
               Office of the Vice President
-            </a>
-            <a href="https://www.senate.gov.ph" target="_blank" rel="noopener noreferrer" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
-              Senate of the Philippines
-            </a>
-            <a href="https://www.congress.gov.ph" target="_blank" rel="noopener noreferrer" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
-              House of Representatives
-            </a>
-            <a href="https://sc.judiciary.gov.ph" target="_blank" rel="noopener noreferrer" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
-              Supreme Court
-            </a>
-            <a href="https://ca.judiciary.gov.ph" target="_blank" rel="noopener noreferrer" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
-              Court of Appeals
-            </a>
-            <a href="https://sb.judiciary.gov.ph" target="_blank" rel="noopener noreferrer" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
-              Sandiganbayan
             </a>
           </div>
         </div>
 
-        <a href="#" onclick="showPage('hotlines'); return false;" class="text-white hover:text-[#FFD305] transition px-3 py-1.5">Emergency Hotlines</a>
-        <a href="#search" class="text-white hover:text-[#FFD305] transition px-2 py-1.5"><i class="fa-solid fa-magnifying-glass text-sm"></i></a>
+        <a href="#" onclick="showPage('hotlines'); return false;" class="hover:text-blue-600 transition py-1">Emergency Hotlines</a>
       </div>
 
     </div>
 
     <!-- Mobile Dropdown Menu Container -->
-    <div id="mobile-menu" class="hidden md:hidden bg-[#173D9A] border-t border-blue-500/50 px-4 py-3 shadow-xl">
-      <div class="flex flex-col space-y-2 text-xs font-semibold">
-        <button onclick="showPage('home'); toggleMobileMenu()" class="text-left bg-white text-mandaue-blue px-3 py-2 rounded font-bold shadow-sm">Home</button>
-        
-        <div class="space-y-1 pl-1 border-b border-blue-500/30 pb-2">
-          <button onclick="showPage('about'); toggleMobileMenu()" class="w-full text-left px-2 py-1.5 rounded hover:bg-[#0064CC] font-bold flex justify-between items-center text-[#FFD305]">
-            About <i class="fa-solid fa-chevron-down text-[10px]"></i>
-          </button>
-          <a href="#" onclick="showPage('officials'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-[#FFD305]">City Officials</a>
-          <a href="#" onclick="showPage('offices'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-[#FFD305]">Offices</a>
-          <a href="#" onclick="showPage('barangays'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-[#FFD305]">Barangays</a>
-          <a href="#" onclick="showPage('about'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-[#FFD305]">Maps</a>
-        </div>
-
-        <div class="space-y-1 pl-1 border-b border-blue-500/30 pb-2">
-          <button onclick="showPage('services'); toggleMobileMenu()" class="w-full text-left px-2 py-1.5 rounded hover:bg-[#0064CC] font-bold flex justify-between items-center text-[#FFD305]">
-            e-Services <i class="fa-solid fa-chevron-down text-[10px]"></i>
-          </button>
-          <a href="https://www.sites.google.com/view/bplomandaue/home" target="_blank" rel="noopener noreferrer" class="block pl-4 py-1 hover:text-[#FFD305]">Mandaue City Business Permit and Licensing</a>
-          <a href="#" onclick="showPage('services'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-[#FFD305]">Assessment and Payment for Real Property Tax</a>
-          <a href="#" onclick="showPage('services'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-[#FFD305]">Mandaue City Map (City's Data/Information and Guide)</a>
-          <a href="#" onclick="showPage('services'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-[#FFD305]">Delivery Permit Application</a>
-          <a href="#" onclick="showPage('services'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-[#FFD305]">Safety Seal Certification Program</a>
-          <a href="#" onclick="showPage('services'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-[#FFD305]">Application for License to Sell/Serve Liquor</a>
-          <a href="#" onclick="showPage('services'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-[#FFD305]">Eco - Watch</a>
-          <a href="#" onclick="showPage('services'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-[#FFD305]">Procurement System</a>
-          <a href="#" onclick="showPage('services'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-[#FFD305]">Human Resource Information System</a>
-          <a href="#" onclick="showPage('services'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-[#FFD305]">Traffic Violation System</a>
-        </div>
-
-        <a href="https://sites.google.com/mandauecity.gov.ph/spmandaue/home" target="_blank" rel="noopener noreferrer" class="mobile-nav-link px-3 py-2 rounded hover:bg-[#0064CC] transition border-b border-blue-500/30">Sangguniang Panlungsod</a>
-        
-        <div class="space-y-1 pl-1 border-b border-blue-500/30 pb-2">
-          <span class="w-full text-left px-2 py-1.5 rounded font-bold flex justify-between items-center text-[#FFD305]">
-            Government Links <i class="fa-solid fa-chevron-down text-[10px]"></i>
-          </span>
-          <a href="https://www.gov.ph" target="_blank" rel="noopener noreferrer" class="block pl-4 py-1 hover:text-[#FFD305]">GOV.PH (Republic of the Philippines)</a>
-          <a href="https://president.gov.ph" target="_blank" rel="noopener noreferrer" class="block pl-4 py-1 hover:text-[#FFD305]">Office of the President</a>
-          <a href="https://ovp.gov.ph" target="_blank" rel="noopener noreferrer" class="block pl-4 py-1 hover:text-[#FFD305]">Office of the Vice President</a>
-          <a href="https://www.senate.gov.ph" target="_blank" rel="noopener noreferrer" class="block pl-4 py-1 hover:text-[#FFD305]">Senate of the Philippines</a>
-          <a href="https://www.congress.gov.ph" target="_blank" rel="noopener noreferrer" class="block pl-4 py-1 hover:text-[#FFD305]">House of Representatives</a>
-          <a href="https://sc.judiciary.gov.ph" target="_blank" rel="noopener noreferrer" class="block pl-4 py-1 hover:text-[#FFD305]">Supreme Court</a>
-          <a href="https://ca.judiciary.gov.ph" target="_blank" rel="noopener noreferrer" class="block pl-4 py-1 hover:text-[#FFD305]">Court of Appeals</a>
-          <a href="https://sb.judiciary.gov.ph" target="_blank" rel="noopener noreferrer" class="block pl-4 py-1 hover:text-[#FFD305]">Sandiganbayan</a>
-        </div>
-
-        <a href="#" onclick="showPage('hotlines'); toggleMobileMenu(); return false;" class="mobile-nav-link px-3 py-2 rounded hover:bg-[#0064CC] transition">Emergency Hotlines</a>
+    <div id="mobile-menu" class="hidden lg:hidden bg-slate-900 text-white px-6 py-4 shadow-xl">
+      <div class="flex flex-col space-y-3 text-sm font-semibold">
+        <button onclick="showPage('home'); toggleMobileMenu()" class="text-left py-1 hover:text-amber-300">Home</button>
+        <button onclick="showPage('about'); toggleMobileMenu()" class="text-left py-1 hover:text-amber-300">About Mandaue</button>
+        <button onclick="showPage('services'); toggleMobileMenu()" class="text-left py-1 hover:text-amber-300">Online Services</button>
+        <a href="https://sites.google.com/mandauecity.gov.ph/spmandaue/home" target="_blank" class="py-1 hover:text-amber-300">Sangguniang Panlungsod</a>
+        <button onclick="showPage('hotlines'); toggleMobileMenu()" class="text-left py-1 hover:text-amber-300">Emergency Hotlines</button>
       </div>
     </div>
   </nav>
-
 <!-- ==================== HOME PAGE VIEW ==================== -->
   <div id="page-home" class="space-y-6">
 
