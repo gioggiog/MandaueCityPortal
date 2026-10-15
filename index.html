@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mandaue City Web Portal</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- External CSS Link -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-100 font-sans text-slate-800 antialiased min-h-screen flex flex-col">
+
+  <!-- TOP NAVIGATION BAR -->
+  <nav class="bg-mandaue-blue text-white shadow-md sticky top-0 z-50 border-b-4 border-[#FFD305]">
+    <div class="max-w-7xl mx-auto px-4 py-2.5 flex items-center justify-between">
+      
+      <!-- Top Left Logo & Title -->
+      <a href="#" onclick="showPage('home'); return false;" class="flex items-center space-x-2.5 group">
+        <img src="MANDAUE.jpg" alt="Mandaue City Seal" class="h-8 w-8 rounded-full object-cover border border-white/20 shadow-sm">
+      </a>
+
+      <!-- Mobile Hamburger Toggle Button -->
+      <button id="menu-toggle" onclick="toggleMobileMenu()" class="md:hidden text-white focus:outline-none p-1.5 text-xl">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <!-- Desktop Links Container -->
+      <div class="hidden md:flex items-center space-x-2 text-xs font-semibold">
+        <button id="nav-btn-home" onclick="showPage('home')" class="nav-item bg-white text-mandaue-blue px-3 py-1.5 rounded shadow-sm font-bold">Home</button>
+        
+        <!-- ABOUT DROPDOWN MENU -->
+        <div class="relative group">
+          <button id="nav-btn-about" onclick="showPage('about')" class="nav-item text-white hover:text-[#FFD305] transition flex items-center px-3 py-1.5 rounded">
+            About <i class="fa-solid fa-chevron-down text-[10px] ml-1.5"></i>
+          </button>
+          
+          <!-- Dropdown Box -->
+          <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-[#173D9A] border border-blue-500/40 shadow-xl rounded-b text-white py-2 z-50">
+            <a href="#" onclick="showPage('officials'); return false;" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+              City Officials
+            </a>
+            
+            <a href="#" onclick="showPage('offices'); return false;" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+              Offices
+            </a>
+
+            <a href="#" onclick="showPage('barangays'); return false;" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+              Barangays
+            </a>
+
+            <a href="#" onclick="showPage('about'); return false;" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+              Maps
+            </a>
+          </div>
+        </div>
+
+        <!-- E-SERVICES DROPDOWN MENU -->
+        <div class="relative group">
+          <button id="nav-btn-services" onclick="showPage('services')" class="nav-item text-white hover:text-[#FFD305] transition flex items-center px-3 py-1.5 rounded">
+            e-Services <i class="fa-solid fa-chevron-down text-[10px] ml-1.5"></i>
+          </button>
+          
+          <!-- Dropdown Box -->
+          <div class="absolute left-0 top-full hidden group-hover:block w-80 bg-[#173D9A] border border-blue-500/40 shadow-xl rounded-b text-white py-2 z-50">
+            <a href="https://www.sites.google.com/view/bplomandaue/home" target="_blank" rel="noopener noreferrer" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+              Mandaue City Business Permit and Licensing
+            </a>
+            <a href="#" onclick="showPage('services'); return false;" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+              Assessment and Payment for Real Property Tax
+            </a>
+            <a href="#" onclick="showPage('services'); return false;" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+              Mandaue City Map (City's Data/Information and Guide)
+            </a>
+            <a href="#" onclick="showPage('services'); return false;" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+              Delivery Permit Application
+            </a>
+            <a href="#" onclick="showPage('services'); return false;" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+              Safety Seal Certification Program
+            </a>
+            <a href="#" onclick="showPage('services'); return false;" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+              Application for License to Sell/Serve Liquor
+            </a>
+            <a href="#" onclick="showPage('services'); return false;" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+              Eco - Watch
+            </a>
+            <a href="#" onclick="showPage('services'); return false;" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+              Procurement System
+            </a>
+            <a href="#" onclick="showPage('services'); return false;" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+              Human Resource Information System
+            </a>
+            <a href="#" onclick="showPage('services'); return false;" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+              Traffic Violation System
+            </a>
+          </div>
+        </div>
+
+        <a href="https://sites.google.com/mandauecity.gov.ph/spmandaue/home" target="_blank" rel="noopener noreferrer" class="nav-item text-white hover:text-[#FFD305] transition px-3 py-1.5 rounded">Sangguniang Panlungsod</a>
+        
+        <!-- GOVERNMENT LINKS DROPDOWN MENU -->
+        <div class="relative group">
+          <button class="nav-item text-white hover:text-[#FFD305] transition flex items-center px-3 py-1.5 rounded">
+            Government Links <i class="fa-solid fa-chevron-down text-[10px] ml-1.5"></i>
+          </button>
+          
+          <!-- Dropdown Box -->
+          <div class="absolute left-0 top-full hidden group-hover:block w-72 bg-[#173D9A] border border-blue-500/40 shadow-xl rounded-b text-white py-2 z-50">
+            <a href="https://www.gov.ph" target="_blank" rel="noopener noreferrer" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+              GOV.PH (Republic of the Philippines)
+            </a>
+            <a href="https://president.gov.ph" target="_blank" rel="noopener noreferrer" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+              Office of the President
+            </a>
+            <a href="https://ovp.gov.ph" target="_blank" rel="noopener noreferrer" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+              Office of the Vice President
+            </a>
+            <a href="https://www.senate.gov.ph" target="_blank" rel="noopener noreferrer" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+              Senate of the Philippines
+            </a>
+            <a href="https://www.congress.gov.ph" target="_blank" rel="noopener noreferrer" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+              House of Representatives
+            </a>
+            <a href="https://sc.judiciary.gov.ph" target="_blank" rel="noopener noreferrer" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+              Supreme Court
+            </a>
+            <a href="https://ca.judiciary.gov.ph" target="_blank" rel="noopener noreferrer" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+              Court of Appeals
+            </a>
+            <a href="https://sb.judiciary.gov.ph" target="_blank" rel="noopener noreferrer" class="px-4 py-2 hover:bg-[#0064CC] transition flex items-center text-xs">
+              Sandiganbayan
+            </a>
+          </div>
+        </div>
+
+        <a href="#" onclick="showPage('hotlines'); return false;" class="text-white hover:text-[#FFD305] transition px-3 py-1.5">Emergency Hotlines</a>
+        <a href="#search" class="text-white hover:text-[#FFD305] transition px-2 py-1.5"><i class="fa-solid fa-magnifying-glass text-sm"></i></a>
+      </div>
+
+    </div>
+
+    <!-- Mobile Dropdown Menu Container -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#173D9A] border-t border-blue-500/50 px-4 py-3 shadow-xl">
+      <div class="flex flex-col space-y-2 text-xs font-semibold">
+        <button onclick="showPage('home'); toggleMobileMenu()" class="text-left bg-white text-mandaue-blue px-3 py-2 rounded font-bold shadow-sm">Home</button>
+        
+        <div class="space-y-1 pl-1 border-b border-blue-500/30 pb-2">
+          <button onclick="showPage('about'); toggleMobileMenu()" class="w-full text-left px-2 py-1.5 rounded hover:bg-[#0064CC] font-bold flex justify-between items-center text-[#FFD305]">
+            About <i class="fa-solid fa-chevron-down text-[10px]"></i>
+          </button>
+          <a href="#" onclick="showPage('officials'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-[#FFD305]">City Officials</a>
+          <a href="#" onclick="showPage('offices'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-[#FFD305]">Offices</a>
+          <a href="#" onclick="showPage('barangays'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-[#FFD305]">Barangays</a>
+          <a href="#" onclick="showPage('about'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-[#FFD305]">Maps</a>
+        </div>
+
+        <div class="space-y-1 pl-1 border-b border-blue-500/30 pb-2">
+          <button onclick="showPage('services'); toggleMobileMenu()" class="w-full text-left px-2 py-1.5 rounded hover:bg-[#0064CC] font-bold flex justify-between items-center text-[#FFD305]">
+            e-Services <i class="fa-solid fa-chevron-down text-[10px]"></i>
+          </button>
+          <a href="https://www.sites.google.com/view/bplomandaue/home" target="_blank" rel="noopener noreferrer" class="block pl-4 py-1 hover:text-[#FFD305]">Mandaue City Business Permit and Licensing</a>
+          <a href="#" onclick="showPage('services'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-[#FFD305]">Assessment and Payment for Real Property Tax</a>
+          <a href="#" onclick="showPage('services'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-[#FFD305]">Mandaue City Map (City's Data/Information and Guide)</a>
+          <a href="#" onclick="showPage('services'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-[#FFD305]">Delivery Permit Application</a>
+          <a href="#" onclick="showPage('services'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-[#FFD305]">Safety Seal Certification Program</a>
+          <a href="#" onclick="showPage('services'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-[#FFD305]">Application for License to Sell/Serve Liquor</a>
+          <a href="#" onclick="showPage('services'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-[#FFD305]">Eco - Watch</a>
+          <a href="#" onclick="showPage('services'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-[#FFD305]">Procurement System</a>
+          <a href="#" onclick="showPage('services'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-[#FFD305]">Human Resource Information System</a>
+          <a href="#" onclick="showPage('services'); toggleMobileMenu(); return false;" class="block pl-4 py-1 hover:text-[#FFD305]">Traffic Violation System</a>
+        </div>
+
+        <a href="https://sites.google.com/mandauecity.gov.ph/spmandaue/home" target="_blank" rel="noopener noreferrer" class="mobile-nav-link px-3 py-2 rounded hover:bg-[#0064CC] transition border-b border-blue-500/30">Sangguniang Panlungsod</a>
+        
+        <div class="space-y-1 pl-1 border-b border-blue-500/30 pb-2">
+          <span class="w-full text-left px-2 py-1.5 rounded font-bold flex justify-between items-center text-[#FFD305]">
+            Government Links <i class="fa-solid fa-chevron-down text-[10px]"></i>
+          </span>
+          <a href="https://www.gov.ph" target="_blank" rel="noopener noreferrer" class="block pl-4 py-1 hover:text-[#FFD305]">GOV.PH (Republic of the Philippines)</a>
+          <a href="https://president.gov.ph" target="_blank" rel="noopener noreferrer" class="block pl-4 py-1 hover:text-[#FFD305]">Office of the President</a>
+          <a href="https://ovp.gov.ph" target="_blank" rel="noopener noreferrer" class="block pl-4 py-1 hover:text-[#FFD305]">Office of the Vice President</a>
+          <a href="https://www.senate.gov.ph" target="_blank" rel="noopener noreferrer" class="block pl-4 py-1 hover:text-[#FFD305]">Senate of the Philippines</a>
+          <a href="https://www.congress.gov.ph" target="_blank" rel="noopener noreferrer" class="block pl-4 py-1 hover:text-[#FFD305]">House of Representatives</a>
+          <a href="https://sc.judiciary.gov.ph" target="_blank" rel="noopener noreferrer" class="block pl-4 py-1 hover:text-[#FFD305]">Supreme Court</a>
+          <a href="https://ca.judiciary.gov.ph" target="_blank" rel="noopener noreferrer" class="block pl-4 py-1 hover:text-[#FFD305]">Court of Appeals</a>
+          <a href="https://sb.judiciary.gov.ph" target="_blank" rel="noopener noreferrer" class="block pl-4 py-1 hover:text-[#FFD305]">Sandiganbayan</a>
+        </div>
+
+        <a href="#" onclick="showPage('hotlines'); toggleMobileMenu(); return false;" class="mobile-nav-link px-3 py-2 rounded hover:bg-[#0064CC] transition">Emergency Hotlines</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HOME PAGE VIEW ==================== -->
+  <div id="page-home" class="space-y-6">
+    <section class="max-w-7xl mx-auto w-full px-4 mt-4 md:mt-6">
+      <div class="relative bg-slate-900 rounded-2xl overflow-hidden shadow-md border-b-4 border-mandaue-yellow h-[320px] sm:h-[380px] md:h-[420px]" id="hero-carousel">
+        <div class="carousel-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-100 flex items-center">
+          <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('mandauecityhall.jpg');"></div>
+          <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/70 to-transparent"></div>
+          <div class="relative z-10 p-6 sm:p-10 md:p-14 max-w-2xl space-y-3 text-white">
+            <span class="bg-mandaue-yellow text-slate-900 text-[10px] font-extrabold uppercase px-3 py-1 rounded-full tracking-wider inline-block">Official Announcement</span>
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight uppercase leading-tight text-white drop-shadow">
+              Amended Green Building Ordinance (IRR)
+            </h1>
+            <p class="text-slate-200 text-xs sm:text-sm md:text-base leading-relaxed drop-shadow">
+              View the official guidelines on BERDE requirements, permitting, and incentive applications for Mandaue City building projects.
+            </p>
+            <div class="pt-2">
+              <a href="https://drive.google.com/file/d/1CrhNYMxX8rxnbUd39-ot9X1B93g9BGeK/view" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-mandaue-yellow hover:bg-amber-400 text-slate-900 font-bold text-xs sm:text-sm px-5 py-2.5 rounded-lg shadow uppercase tracking-wider transition">
+                <span>Click Here to View Guidelines</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none flex items-center">
+          <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('bplo.jpg');"></div>
+          <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/70 to-transparent"></div>
+          <div class="relative z-10 p-6 sm:p-10 md:p-14 max-w-2xl space-y-3 text-white">
+            <span class="bg-blue-600 text-white text-[10px] font-extrabold uppercase px-3 py-1 rounded-full tracking-wider inline-block">e-Services Portal</span>
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight uppercase leading-tight text-white drop-shadow">
+              Renew Your Business Permit Online
+            </h1>
+            <p class="text-slate-200 text-xs sm:text-sm md:text-base leading-relaxed drop-shadow">
+              Fast, secure, and convenient online renewal of business permits through the Mandaue City Business Permit and Licensing Office (BPLO).
+            </p>
+            <div class="pt-2">
+              <a href="https://www.sites.google.com/view/bplomandaue/home" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-mandaue-yellow hover:bg-amber-400 text-slate-900 font-bold text-xs sm:text-sm px-5 py-2.5 rounded-lg shadow uppercase tracking-wider transition">
+                <span>Renew Now</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/70 text-white w-10 h-10 rounded-full flex items-center justify-center transition backdrop-blur-sm focus:outline-none">
+          <i class="fa-solid fa-chevron-left text-sm"></i>
+        </button>
+        <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/70 text-white w-10 h-10 rounded-full flex items-center justify-center transition backdrop-blur-sm focus:outline-none">
+          <i class="fa-solid fa-chevron-right text-sm"></i>
+        </button>
+
+        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex space-x-2">
+          <button onclick="currentSlide(0)" class="carousel-dot w-3 h-3 rounded-full bg-white/60 transition" id="dot-0"></button>
+          <button onclick="currentSlide(1)" class="carousel-dot w-3 h-3 rounded-full bg-white/60 transition" id="dot-1"></button>
+        </div>
+      </div>
+    </section>
+
+    <main class="max-w-7xl w-full mx-auto px-4 py-4 md:py-6 space-y-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="lg:col-span-2 space-y-6">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+              <span class="w-2.5 h-6 bg-[#C10A20] rounded-sm inline-block"></span>
+              <div>
+                <h2 class="text-2xl md:text-3xl font-black text-slate-800 tracking-tight uppercase">Latest News & Updates</h2>
+                <p class="text-xs text-slate-500 font-medium">Official Announcements and Real-time Feeds</p>
+              </div>
+            </div>
+            <div class="hidden sm:flex items-center space-x-1 bg-white border border-slate-200 rounded-lg p-1 shadow-sm text-xs font-semibold">
+              <button onclick="switchNewsTab('all')" id="news-tab-all" class="px-3 py-1.5 rounded-md bg-mandaue-blue text-white transition shadow-sm">All Feeds</button>
+              <button onclick="switchNewsTab('pao')" id="news-tab-pao" class="px-3 py-1.5 rounded-md text-slate-600 hover:text-mandaue-blue transition">Public Affairs</button>
+              <button onclick="switchNewsTab('team')" id="news-tab-team" class="px-3 py-1.5 rounded-md text-slate-600 hover:text-mandaue-blue transition">TEAM Updates</button>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+            <div id="news-card-1" class="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition duration-300 flex flex-col overflow-hidden group">
+              <div class="bg-[#C10A20] text-white px-5 py-3.5 flex items-center justify-between border-b border-[#a0081a]">
+                <div class="flex items-center space-x-2.5">
+                  <div class="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center text-xs font-bold text-white shadow">
+                    <i class="fa-solid fa-bullhorn text-[11px]"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-slate-100">Public Affairs Office</h3>
+                    <span class="text-[10px] text-slate-200">Official City Announcements</span>
+                  </div>
+                </div>
+                <a href="https://www.facebook.com/MandaueCityPublicAffairsOffice" target="_blank" rel="noopener noreferrer" class="text-[11px] font-semibold text-mandaue-yellow hover:underline flex items-center space-x-1">
+                  <span>Visit Page</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                </a>
+              </div>
+              <div class="p-4 sm:p-5 flex-grow flex justify-center items-center bg-slate-50/50">
+                <div class="w-full bg-white rounded-xl border border-slate-200 shadow-inner overflow-hidden flex justify-center items-center p-2 min-h-[440px]">
+                  <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FMandaueCityPublicAffairsOffice&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" class="w-full h-[440px]" style="border:none;overflow:hidden;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                </div>
+              </div>
+            </div>
+
+            <div id="news-card-2" class="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition duration-300 flex flex-col overflow-hidden group">
+              <div class="bg-[#C10A20] text-white px-5 py-3.5 flex items-center justify-between border-b border-[#a0081a]">
+                <div class="flex items-center space-x-2.5">
+                  <div class="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center text-xs font-bold text-white shadow">
+                    <i class="fa-solid fa-traffic-light text-[11px]"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-slate-100">TEAM Mandaue</h3>
+                    <span class="text-[10px] text-slate-200">Traffic & Advisory Updates</span>
+                  </div>
+                </div>
+                <a href="https://www.facebook.com/TEAMandaue" target="_blank" rel="noopener noreferrer" class="text-[11px] font-semibold text-mandaue-yellow hover:underline flex items-center space-x-1">
+                  <span>Visit Page</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                </a>
+              </div>
+              <div class="p-4 sm:p-5 flex-grow flex justify-center items-center bg-slate-50/50">
+                <div class="w-full bg-white rounded-xl border border-slate-200 shadow-inner overflow-hidden flex justify-center items-center p-2 min-h-[440px]">
+                  <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTEAMandaue&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" class="w-full h-[440px]" style="border:none;overflow:hidden;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="space-y-4">
+          <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-4 sm:p-5 space-y-4">
+            <h2 class="text-xl md:text-2xl font-black text-slate-800 tracking-tight uppercase flex items-center space-x-2">
+              <span class="w-2 h-5 bg-[#C10A20] rounded-sm inline-block"></span>
+              <span>ONGOING SERVICES</span>
+            </h2>
+
+            <div class="border border-slate-200 rounded-xl p-4 text-center space-y-3 hover:border-mandaue-blue transition group cursor-pointer shadow-sm">
+              <div class="text-3xl text-mandaue-blue group-hover:scale-110 transition duration-200">
+                <i class="fa-solid fa-handshake"></i>
+              </div>
+              <a href="https://www.sites.google.com/view/bplomandaue/home" target="_blank" rel="noopener noreferrer" class="block bg-mandaue-blue hover:bg-[#0064CC] text-white font-bold text-xs py-2 px-3 rounded uppercase tracking-wider transition">
+                Business Permit Renewal
+              </a>
+            </div>
+
+            <div class="border border-slate-200 rounded-xl p-4 text-center space-y-3 hover:border-mandaue-blue transition group cursor-pointer shadow-sm">
+              <div class="text-3xl text-mandaue-blue group-hover:scale-110 transition duration-200">
+                <i class="fa-solid fa-building-columns"></i>
+              </div>
+              <a href="#" onclick="showPage('services'); return false;" class="block bg-mandaue-blue hover:bg-[#0064CC] text-white font-bold text-xs py-2 px-3 rounded uppercase tracking-wider transition">
+                Real Property Tax Assessment
+              </a>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <section class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 md:p-8 space-y-6">
+        <div class="border-b border-slate-200 pb-4 flex items-center space-x-3">
+          <span class="w-2.5 h-6 bg-[#C10A20] rounded-sm inline-block"></span>
+          <h2 class="text-2xl md:text-3xl font-black text-slate-800 tracking-tight uppercase">
+            Vision, Mission and Values Statement
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 border-t-4 border-mandaue-blue space-y-2">
+            <div class="flex items-center space-x-2 text-mandaue-blue font-bold text-lg">
+              <i class="fa-solid fa-eye"></i>
+              <h3>Vision</h3>
+            </div>
+            <p class="text-slate-700 text-sm leading-relaxed">
+              Mandaue: Resilient City driven by Manufacturing-based, Retail, and Services MSMEs.
+            </p>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 border-t-4 border-mandaue-blue space-y-2">
+            <div class="flex items-center space-x-2 text-mandaue-blue font-bold text-lg">
+              <i class="fa-solid fa-bullseye"></i>
+              <h3>Mission</h3>
+            </div>
+            <p class="text-slate-700 text-sm leading-relaxed">
+              Create an environment for sustainable growth and liveable society through responsive governance and multi-sectoral involvement.
+            </p>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 border-t-4 border-[#FFD305] space-y-2">
+            <div class="flex items-center space-x-2 text-[#F3A108] font-bold text-lg">
+              <i class="fa-solid fa-gem"></i>
+              <h3>Values</h3>
+            </div>
+            <p class="text-slate-700 text-sm leading-relaxed">
+              Excellence, Transparency, Resourcefulness, Accountability, Integrity and Teamwork.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Placeholders for other pages (Services, About, Barangays, Offices, Officials, Hotlines) can remain in index.html as structured in your original template -->
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-slate-900 text-slate-400 text-xs mt-auto border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="space-y-3">
+        <div class="flex items-center space-x-2.5">
+          <img src="MANDAUE.jpg" alt="Mandaue City Seal" class="h-8 w-8 rounded-full object-cover">
+          <span class="text-white font-bold text-sm tracking-wider uppercase">Mandaue City Web Portal</span>
+        </div>
+        <p class="text-slate-400 leading-relaxed">
+          Official web portal of the City Government of Mandaue. Committed to transparent, responsive, and accountable public service.
+        </p>
+      </div>
+
+      <div class="space-y-3">
+        <h3 class="text-white font-bold uppercase tracking-wider text-xs border-b border-slate-800 pb-2">Quick Links</h3>
+        <ul class="space-y-1.5">
+          <li><a href="#" onclick="showPage('home'); return false;" class="hover:text-white transition">Home</a></li>
+          <li><a href="#" onclick="showPage('about'); return false;" class="hover:text-white transition">About Mandaue</a></li>
+          <li><a href="#" onclick="showPage('officials'); return false;" class="hover:text-white transition">City Officials</a></li>
+          <li><a href="#" onclick="showPage('offices'); return false;" class="hover:text-white transition">City Offices & Departments</a></li>
+          <li><a href="#" onclick="showPage('services'); return false;" class="hover:text-white transition">e-Services Portals</a></li>
+        </ul>
+      </div>
+
+      <div class="space-y-3">
+        <h3 class="text-white font-bold uppercase tracking-wider text-xs border-b border-slate-800 pb-2">Contact & Location</h3>
+        <p class="leading-relaxed">
+          Mandaue City Hall, A. Cortes Ave, Mandaue City, 6014 Cebu, Philippines
+        </p>
+        <div class="pt-1 flex space-x-3 text-lg">
+          <a href="https://www.facebook.com/MandaueCityPublicAffairsOffice" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.mandauecity.gov.ph" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition"><i class="fa-solid fa-globe"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-slate-950 py-4 text-center text-[11px] text-slate-500 border-t border-slate-900">
+      <p>&copy; 2026 City Government of Mandaue. All rights reserved. Management Information Systems Office (MISO).</p>
+    </div>
+  </footer>
+
+  <!-- External JavaScript Link -->
+  <script src="script.js" defer></script>
+</body>
+</html>
