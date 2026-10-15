@@ -192,125 +192,47 @@
     <!-- MAIN CONTENT CONTAINER -->
     <main class="max-w-7xl w-full mx-auto px-4 py-4 md:py-6 space-y-8">
       
-      <!-- GRID SECTION: NEWS & ONGOING SERVICES -->
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        
-        <!-- LEFT 2 COLUMNS: NEWS FEEDS -->
-        <div class="lg:col-span-2 space-y-6">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-              <span class="w-2.5 h-6 bg-[#C10A20] rounded-sm inline-block"></span>
-              <div>
-                <h2 class="text-2xl md:text-3xl font-black text-slate-800 tracking-tight uppercase">Latest News & Updates</h2>
-                <p class="text-xs text-slate-500 font-medium">Official Announcements and Real-time Feeds</p>
-              </div>
-            </div>
-            <div class="hidden sm:flex items-center space-x-1 bg-white border border-slate-200 rounded-lg p-1 shadow-sm text-xs font-semibold">
-              <button onclick="switchNewsTab('all')" id="news-tab-all" class="px-3 py-1.5 rounded-md bg-mandaue-blue text-white transition shadow-sm">All Feeds</button>
-              <button onclick="switchNewsTab('pao')" id="news-tab-pao" class="px-3 py-1.5 rounded-md text-slate-600 hover:text-mandaue-blue transition">Public Affairs</button>
-              <button onclick="switchNewsTab('team')" id="news-tab-team" class="px-3 py-1.5 rounded-md text-slate-600 hover:text-mandaue-blue transition">TEAM Updates</button>
-            </div>
-          </div>
+<!-- LATEST NEWS & UPDATES SECTION WITH SCROLL FADE-UP -->
+<section class="max-w-7xl w-full mx-auto px-4 py-8 md:py-12">
+  <div id="news-fade-section" class="opacity-0 translate-y-8 transition-all duration-700 ease-out space-y-6">
+    
+    <!-- Section Header -->
+    <div class="flex items-center space-x-3">
+      <span class="w-2.5 h-6 bg-[#C10A20] rounded-sm inline-block"></span>
+      <div>
+        <h2 class="text-2xl md:text-3xl font-black text-slate-800 tracking-tight uppercase">Latest News & Updates</h2>
+        <p class="text-xs text-slate-500 font-medium">Official announcements and community updates from the City Government</p>
+      </div>
+    </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
-            
-            <!-- Feed Card 1: Public Affairs -->
-            <div id="news-card-1" class="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition duration-300 flex flex-col overflow-hidden group">
-              <div class="bg-[#C10A20] text-white px-5 py-3.5 flex items-center justify-between border-b border-[#a0081a]">
-                <div class="flex items-center space-x-2.5">
-                  <div class="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center text-xs font-bold text-white shadow">
-                    <i class="fa-solid fa-bullhorn text-[11px]"></i>
-                  </div>
-                  <div>
-                    <h3 class="text-xs font-bold uppercase tracking-wider text-slate-100">Public Affairs Office</h3>
-                    <span class="text-[10px] text-slate-200">Official City Announcements</span>
-                  </div>
-                </div>
-                <a href="https://www.facebook.com/MandaueCityPublicAffairsOffice" target="_blank" rel="noopener noreferrer" class="text-[11px] font-semibold text-mandaue-yellow hover:underline flex items-center space-x-1">
-                  <span>Visit Page</span>
-                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
-                </a>
-              </div>
-              <div class="p-4 sm:p-5 flex-grow flex justify-center items-center bg-slate-50/50">
-                <div class="w-full bg-white rounded-xl border border-slate-200 shadow-inner overflow-hidden flex justify-center items-center p-2 min-h-[440px]">
-                  <iframe 
-                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FMandaueCityPublicAffairsOffice&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" 
-                    class="w-full h-[440px]"
-                    style="border:none;overflow:hidden;" 
-                    scrolling="no" 
-                    frameborder="0" 
-                    allowfullscreen="true" 
-                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                  </iframe>
-                </div>
-              </div>
-            </div>
+    <!-- Clickable Banner Card linking directly to Mandaue City PAO Facebook Page -->
+    <a href="https://www.facebook.com/MandaueCityPublicAffairsOffice" target="_blank" rel="noopener noreferrer" 
+       class="group relative block bg-slate-900 rounded-2xl overflow-hidden shadow-lg border border-slate-200 hover:shadow-2xl transition-all duration-300">
+      
+      <!-- Background Image / Placeholder (uses mandauecityhall.jpg or any photo) -->
+      <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700 opacity-40" style="background-image: url('mandauecityhall.jpg');"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/80 to-transparent"></div>
 
-            <!-- Feed Card 2: TEAM Mandaue -->
-            <div id="news-card-2" class="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition duration-300 flex flex-col overflow-hidden group">
-              <div class="bg-[#C10A20] text-white px-5 py-3.5 flex items-center justify-between border-b border-[#a0081a]">
-                <div class="flex items-center space-x-2.5">
-                  <div class="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center text-xs font-bold text-white shadow">
-                    <i class="fa-solid fa-traffic-light text-[11px]"></i>
-                  </div>
-                  <div>
-                    <h3 class="text-xs font-bold uppercase tracking-wider text-slate-100">TEAM Mandaue</h3>
-                    <span class="text-[10px] text-slate-200">Traffic & Advisory Updates</span>
-                  </div>
-                </div>
-                <a href="https://www.facebook.com/TEAMandaue" target="_blank" rel="noopener noreferrer" class="text-[11px] font-semibold text-mandaue-yellow hover:underline flex items-center space-x-1">
-                  <span>Visit Page</span>
-                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
-                </a>
-              </div>
-              <div class="p-4 sm:p-5 flex-grow flex justify-center items-center bg-slate-50/50">
-                <div class="w-full bg-white rounded-xl border border-slate-200 shadow-inner overflow-hidden flex justify-center items-center p-2 min-h-[440px]">
-                  <iframe 
-                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTEAMandaue&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" 
-                    class="w-full h-[440px]"
-                    style="border:none;overflow:hidden;" 
-                    scrolling="no" 
-                    frameborder="0" 
-                    allowfullscreen="true" 
-                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                  </iframe>
-                </div>
-              </div>
-            </div>
-
-          </div>
+      <div class="relative z-10 p-6 sm:p-10 md:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div class="space-y-3 max-w-2xl">
+          <span class="bg-[#C10A20] text-white text-[10px] font-extrabold uppercase px-3 py-1 rounded-full tracking-wider inline-block">Official Facebook Page</span>
+          <h3 class="text-xl sm:text-2xl md:text-3xl font-black text-white group-hover:text-amber-300 transition-colors">
+            Mandaue City Public Affairs Office
+          </h3>
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+            Click here to view real-time press releases, advisories, photo galleries, and live video updates directly on our official Facebook community page.
+          </p>
         </div>
 
-        <!-- RIGHT COLUMN: ONGOING SERVICES -->
-        <aside class="space-y-4">
-          <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-4 sm:p-5 space-y-4">
-            <h2 class="text-xl md:text-2xl font-black text-slate-800 tracking-tight uppercase flex items-center space-x-2">
-              <span class="w-2 h-5 bg-[#C10A20] rounded-sm inline-block"></span>
-              <span>ONGOING SERVICES</span>
-            </h2>
-
-            <div class="border border-slate-200 rounded-xl p-4 text-center space-y-3 hover:border-mandaue-blue transition group cursor-pointer shadow-sm">
-              <div class="text-3xl text-mandaue-blue group-hover:scale-110 transition duration-200">
-                <i class="fa-solid fa-handshake"></i>
-              </div>
-              <a href="https://www.sites.google.com/view/bplomandaue/home" target="_blank" rel="noopener noreferrer" class="block bg-mandaue-blue hover:bg-[#0064CC] text-white font-bold text-xs py-2 px-3 rounded uppercase tracking-wider transition">
-                Business Permit Renewal
-              </a>
-            </div>
-
-            <div class="border border-slate-200 rounded-xl p-4 text-center space-y-3 hover:border-mandaue-blue transition group cursor-pointer shadow-sm">
-              <div class="text-3xl text-mandaue-blue group-hover:scale-110 transition duration-200">
-                <i class="fa-solid fa-building-columns"></i>
-              </div>
-              <a href="#" onclick="showPage('services'); return false;" class="block bg-mandaue-blue hover:bg-[#0064CC] text-white font-bold text-xs py-2 px-3 rounded uppercase tracking-wider transition">
-                Real Property Tax Assessment
-              </a>
-            </div>
-
-          </div>
-        </aside>
-
+        <div class="shrink-0 bg-white text-slate-900 font-bold text-xs sm:text-sm px-6 py-3 rounded-lg shadow-md group-hover:bg-[#FFD305] transition-colors flex items-center space-x-2">
+          <span>Visit Facebook Page</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+        </div>
       </div>
+    </a>
+
+  </div>
+</section>
 
       <!-- VISION, MISSION AND VALUES SECTION -->
       <section class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 md:p-8 space-y-6">
