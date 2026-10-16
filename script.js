@@ -162,3 +162,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const vmvSection = document.getElementById('vmv-fade-section');
   if (vmvSection) observer.observe(vmvSection);
 });
+
+// Real-Time Clock for Top Ticker Bar
+function updateClock() {
+  const now = new Date();
+  const options = { 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric', 
+    hour: '2-digit', 
+    minute: '2-digit', 
+    second: '2-digit', 
+    hour12: true 
+  };
+  const formattedString = now.toLocaleDateString('en-US', options);
+  const clockElement = document.getElementById('real-time-clock');
+  if (clockElement) {
+    clockElement.textContent = formattedString;
+  }
+}
+
+// Initialize clock interval
+setInterval(updateClock, 1000);
+updateClock();
