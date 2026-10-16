@@ -185,3 +185,16 @@ function updateClock() {
 // Initialize clock interval
 setInterval(updateClock, 1000);
 updateClock();
+
+// Function to update real date on the Calendar section
+function updateCalendarTodayDate() {
+  const dateElement = document.getElementById('calendar-today-date');
+  if (dateElement) {
+    const now = new Date();
+    const options = { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' };
+    dateElement.textContent = now.toLocaleDateString('en-US', options);
+  }
+}
+
+// Call on page load
+updateCalendarTodayDate();
