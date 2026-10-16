@@ -9,7 +9,6 @@
 .bg-mandaue-red { background-color: #C10A20; }
 .text-mandaue-red { color: #C10A20; }
 
-/* style.css */
 .max-w-7xl {
   max-w-none !important;
   max-width: 100% !important;
@@ -31,28 +30,6 @@ body {
 }
 
 /* Uniform Section Paragraph Text Style (matches About Mandaue) */
-.portal-text-body {
-  font-size: 1rem;
-  line-height: 1.75;
-  font-weight: 500;
-  color: #334155; /* slate-700 */
-}
-
-@media (min-width: 640px) {
-  .portal-text-body {
-    font-size: 1.125rem; /* text-lg */
-  }
-}
-
-/* Uniform Page Headings */
-.portal-heading {
-  font-weight: 900;
-  letter-spacing: -0.025em;
-  text-transform: uppercase;
-  color: #0f172a; /* slate-900 */
-}
-
-/* Uniform Section Body Text Style (matches About Mandaue) */
 .portal-text-body {
   font-size: 1rem;
   line-height: 1.75;
