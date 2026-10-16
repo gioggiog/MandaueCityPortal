@@ -198,3 +198,75 @@ function updateCalendarTodayDate() {
 
 // Call on page load
 updateCalendarTodayDate();
+
+// Master List of Official Philippine Holidays
+const phHolidays = [
+  { name: "New Year's Day", date: "2026-01-01", type: "Regular Holiday", month: "Jan", day: "01", style: "blue" },
+  { name: "Mawlid / Eid milad-un-Nabi", date: "2026-08-26", type: "Observance", month: "Aug", day: "26", style: "blue" },
+  { name: "National Heroes Day", date: "2026-08-31", type: "Regular Holiday", month: "Aug", day: "31", style: "blue" },
+  { name: "All Saints' Day", date: "2026-11-01", type: "Special Non-Working", month: "Nov", day: "01", style: "red" },
+  { name: "All Souls' Day", date: "2026-11-02", type: "Special Working", month: "Nov", day: "02", style: "red" },
+  { name: "Bonifacio Day", date: "2026-11-30", type: "Regular Holiday", month: "Nov", day: "30", style: "blue" },
+  { name: "Feast of the Immaculate Conception", date: "2026-12-08", type: "Special Non-Working", month: "Dec", day: "08", style: "red" },
+  { name: "Christmas Eve", date: "2026-12-24", type: "Special Non-Working", month: "Dec", day: "24", style: "red" },
+  { name: "Christmas Day", date: "2026-12-25", type: "Regular Holiday", month: "Dec", day: "25", style: "blue" },
+  { name: "Rizal Day", date: "2026-12-30", type: "Regular Holiday", month: "Dec", day: "30", style: "blue" },
+  { name: "Last Day of the Year", date: "2026-12-31", type: "Special Non-Working", month: "Dec", day: "31", style: "red" }
+];
+
+function updateCalendarTodayDate() {
+  const dateElement = document.getElementById('calendar-today-date');
+  if (dateElement) {
+    const now = new Date();
+    const options = { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' };
+    dateElement.textContent = now.toLocaleDateString('en-US', options);
+  }
+}
+
+function renderUpcomingHolidays() {
+  const container = document.getElementById('ph-holidays-list');
+  if (!container) return;
+
+  const today = new Date();
+  today.setHours(0, 0, 0, 0); // Reset time to midnight for accurate date comparison
+
+  // Filter out holidays that have already passed
+  const upcoming = phHolidays.filter(holiday => {
+    const holidayDate = new Date(holiday.date);
+    return holidayDate >= today;
+  });
+
+  if (upcoming.length === 0) {
+    container.innerHTML = `<p class="text-xs text-slate-500 col-span-2">No more upcoming national holidays for this year.</p>`;
+    return;
+  }
+
+  // Render only upcoming holidays
+  container.innerHTML = upcoming.map(holiday => {
+    const isRed = holiday.style === 'red';
+    const bgBadge = isRed ? 'bg-red-50 border-red-200 text-red-600' : 'bg-blue-50 border-blue-200 text-[#173D9A]';
+    const bgBox = isRed ? 'bg-red-100 text-[#C10A20]' : 'bg-blue-100 text-[#173D9A]';
+
+    return `
+      <div class="bg-slate-50 border border-slate-200 rounded-lg p-4 flex items-start space-x-3.5 hover:shadow-md transition">
+        <div class="${bgBox} font-black rounded-lg p-2.5 text-center shrink-0 w-14">
+          <span class="block text-xs uppercase font-bold">${holiday.month}</span>
+          <span class="block text-xl leading-none">${holiday.day}</span>
+        </div>
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-wider ${bgBadge} border px-2 py-0.5 rounded-full inline-block">
+            ${holiday.type}
+          </span>
+          <h4 class="text-sm md:text-base font-bold text-slate-800 mt-1">${holiday.name}</h4>
+          <p class="text-xs text-slate-500 mt-0.5">National Holiday</p>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+// Run functions when the page finishes loading
+document.addEventListener('DOMContentLoaded', () => {
+  updateCalendarTodayDate();
+  renderUpcomingHolidays();
+});
