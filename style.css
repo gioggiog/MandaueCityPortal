@@ -19,3 +19,35 @@
 body {
   overflow-x: hidden;
 }
+
+/* Custom Global Typography & Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #1e293b; /* slate-800 */
+}
+
+/* Uniform Section Paragraph Text Style (matches About Mandaue) */
+.portal-text-body {
+  font-size: 1rem;
+  line-height: 1.75;
+  font-weight: 500;
+  color: #334155; /* slate-700 */
+}
+
+@media (min-width: 640px) {
+  .portal-text-body {
+    font-size: 1.125rem; /* text-lg */
+  }
+}
+
+/* Uniform Page Headings */
+.portal-heading {
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  color: #0f172a; /* slate-900 */
+}
