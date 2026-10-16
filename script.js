@@ -270,20 +270,3 @@ document.addEventListener('DOMContentLoaded', () => {
   updateCalendarTodayDate();
   renderUpcomingHolidays();
 });
-
-function showPage(pageId) {
-  // Hide all pages and show current page...
-  
-  // Reset all nav buttons to normal font
-  document.querySelectorAll('.nav-link').forEach(btn => {
-    btn.classList.remove('font-bold');
-    btn.classList.add('font-normal');
-  });
-
-  // Make only the active nav button bold
-  const activeBtn = document.getElementById(`nav-btn-${pageId}`);
-  if (activeBtn) {
-    activeBtn.classList.remove('font-normal');
-    activeBtn.classList.add('font-bold');
-  }
-}
