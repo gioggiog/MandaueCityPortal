@@ -270,3 +270,16 @@ document.addEventListener('DOMContentLoaded', () => {
   updateCalendarTodayDate();
   renderUpcomingHolidays();
 });
+
+function scrollToHotlines() {
+  // 1. Switch back to the Home page view if on a different page
+  showPage('home');
+
+  // 2. Locate the Emergency Hotlines section and scroll smoothly to it
+  setTimeout(() => {
+    const hotlinesSection = document.getElementById('emergency-hotlines-section');
+    if (hotlinesSection) {
+      hotlinesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, 100); // Short delay ensures the home view DOM is rendered before scrolling
+}
