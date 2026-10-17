@@ -637,7 +637,7 @@
         </p>
       </div>
 
-      <!-- 1. HISTORY SECTION -->
+      <!-- 1. HISTORY SECTION WITH PHOTO CAROUSEL -->
 <div class="space-y-6">
   <div class="flex items-center space-x-3 text-[#173D9A] border-b border-blue-50 pb-3">
     <i class="fa-solid fa-landmark text-2xl sm:text-3xl"></i>
@@ -668,18 +668,72 @@
       </p>
     </div>
 
-    <!-- RIGHT: HISTORY PHOTO CARD (Takes up 1 column & sticks nicely on scroll) -->
+    <!-- RIGHT: PHOTO CAROUSEL (Takes up 1 column & sticks on scroll) -->
     <div class="lg:col-span-1 lg:sticky lg:top-24 space-y-3">
       <div class="bg-white border-2 border-slate-200 rounded-2xl p-3 shadow-md">
-        <img src="MANDAUE PIC/_JYD3702b.jpg" alt="Mandaue History Heritage" class="w-full h-auto rounded-xl object-cover shadow-inner">
+        
+        <!-- CAROUSEL CONTAINER -->
+        <div id="history-carousel" class="relative overflow-hidden rounded-xl aspect-[4/3] bg-slate-100 shadow-inner">
+          
+          <!-- Slide 1 -->
+          <div class="history-slide absolute inset-0 transition-opacity duration-700 opacity-100 flex items-center justify-center">
+            <img src="MANDAUE PIC/_JYD3702b.jpg" alt="Mandaue Historical Photo 1" class="w-full h-full object-cover">
+          </div>
+          <!-- Slide 2 -->
+          <div class="history-slide absolute inset-0 transition-opacity duration-700 opacity-0 flex items-center justify-center">
+            <img src="MANDAUE PIC/_JYD3705 - Copy - Copy crop.jpg" alt="Mandaue Historical Photo 2" class="w-full h-full object-cover">
+          </div>
+          <!-- Slide 3 -->
+          <div class="history-slide absolute inset-0 transition-opacity duration-700 opacity-0 flex items-center justify-center">
+            <img src="MANDAUE PIC/smc.jpg" alt="Mandaue Historical Photo 3" class="w-full h-full object-cover">
+          </div>
+          <!-- Slide 4 -->
+          <div class="history-slide absolute inset-0 transition-opacity duration-700 opacity-0 flex items-center justify-center">
+            <img src="MANDAUE PIC/Screen Shot 2016-07-19 at 6.22.28 AM.png" alt="Mandaue Historical Photo 4" class="w-full h-full object-cover">
+          </div>
+
+          <!-- Carousel Navigation Buttons -->
+          <button onclick="moveHistorySlide(-1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/75 text-white p-2 rounded-full transition text-xs shadow">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button onclick="moveHistorySlide(1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/75 text-white p-2 rounded-full transition text-xs shadow">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+
         <p class="text-xs text-slate-500 text-center font-semibold pt-2">
-          Historical Heritage of Mandaue City
+          Glimpses of Mandaue's Rich Heritage & History
         </p>
       </div>
     </div>
 
   </div>
 </div>
+
+<!-- CAROUSEL SCRIPT -->
+<script>
+  let currentHistorySlide = 0;
+  const historySlides = document.querySelectorAll('.history-slide');
+
+  function showHistorySlide(index) {
+    if (!historySlides.length) return;
+    historySlides.forEach(slide => slide.classList.remove('opacity-100'));
+    historySlides.forEach(slide => slide.classList.add('opacity-0'));
+    
+    currentHistorySlide = (index + historySlides.length) % historySlides.length;
+    historySlides[currentHistorySlide].classList.remove('opacity-0');
+    historySlides[currentHistorySlide].classList.add('opacity-100');
+  }
+
+  function moveHistorySlide(direction) {
+    showHistorySlide(currentHistorySlide + direction);
+  }
+
+  // Auto-advance every 5 seconds
+  setInterval(() => {
+    moveHistorySlide(1);
+  }, 5000);
+</script>
       
       <!-- 2. GEOGRAPHY SECTION -->
       <div class="space-y-6 pt-4">
