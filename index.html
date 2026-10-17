@@ -115,7 +115,7 @@
           </div>
         </div>
 
-        <a href="#hotlines" onclick="showPage('hotlines'); return false;" class="hover:text-blue-600 transition py-1">Emergency Hotlines</a>
+        <button onclick="scrollToHotlines()" class="hover:text-blue-600 transition py-1">Emergency Hotlines</button>
       </div>
 
     </div>
@@ -130,7 +130,7 @@
         <a href="https://drive.google.com/drive/u/0/folders/16-G2nvbHAeMmx1pkqEf0NpEhALbgVNCa" target="_blank" class="py-1 hover:text-amber-300">Full Disclosure Data</a>
         <a href="https://drive.google.com/drive/u/0/folders/1iSCCCs4yHxUSiNcY79ecqqo0Whaldg4-" target="_blank" class="py-1 hover:text-amber-300">Bids and Awards</a>
         <a href="https://drive.google.com/drive/u/0/folders/1sL5vyEwNW86kGW6vDkGF1O0iHT6_aYpa" target="_blank" class="py-1 hover:text-amber-300">Citizen's Charter Handbook</a>
-        <button onclick="showPage('hotlines'); toggleMobileMenu()" class="text-left py-1 hover:text-amber-300">Emergency Hotlines</button>
+        <button onclick="scrollToHotlines(); toggleMobileMenu()" class="text-left py-1 hover:text-amber-300">Emergency Hotlines</button>
       </div>
     </div>
   </nav>
@@ -365,7 +365,7 @@
   </section>
 
 <!-- ==================== EMERGENCY HOTLINES SECTION ==================== -->
-<section class="max-w-7xl w-full mx-auto px-4 pt-2 pb-12">
+<section id="emergency-hotlines-section" class="max-w-7xl w-full mx-auto px-4 pt-2 pb-12">
   <div class="bg-gradient-to-br from-red-50 via-white to-slate-50 rounded-2xl border-2 border-red-300 shadow-xl p-6 md:p-10 space-y-8 border-t-8 border-[#C10A20]">
     
     <!-- SECTION HEADER -->
