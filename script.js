@@ -283,3 +283,30 @@ function scrollToHotlines() {
     }
   }, 100); // Short delay ensures the home view DOM is rendered before scrolling
 }
+
+// Intersection Observer for Selected Sections Fade-Up Animation
+document.addEventListener("DOMContentLoaded", function () {
+  initFadeUpObserver();
+});
+
+function initFadeUpObserver() {
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px 0px -50px 0px',
+    threshold: 0.1
+  };
+
+  const fadeObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Observe only elements with the 'fade-up' class
+  document.querySelectorAll('.fade-up').forEach(element => {
+    fadeObserver.observe(element);
+  });
+}
