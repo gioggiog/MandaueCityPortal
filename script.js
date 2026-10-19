@@ -330,3 +330,26 @@ function switchDeptTab(tabName) {
     activeTab.classList.add('bg-white', 'text-mandaue-blue', 'font-bold', 'shadow-sm', 'border', 'border-slate-200');
   }
 }
+
+// Shared Citizen's Charter file for all city departments
+const sharedCitizensCharterUrl = "https://drive.google.com/file/d/1ivSyy7l_4eequYi6SE4w8G2r4vu8PIRn/view?usp=sharing";
+
+function openDepartment(deptName) {
+  // 1. Switch to Department Detail View
+  showPage('department-detail');
+
+  // 2. Update Header & Subtitle Titles dynamically
+  const headerTitle = document.getElementById('dept-title-header');
+  const barTitle = document.getElementById('dept-title-bar');
+  if (headerTitle) headerTitle.innerText = deptName;
+  if (barTitle) barTitle.innerText = deptName;
+
+  // 3. Set the shared Citizen's Charter button link
+  const charterBtn = document.getElementById('dept-charter-pdf-link');
+  if (charterBtn) {
+    charterBtn.href = sharedCitizensCharterUrl;
+  }
+
+  // 4. Default to showing the Citizen's Charter tab first
+  switchDeptTab('charter');
+}
