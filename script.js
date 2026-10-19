@@ -1015,7 +1015,18 @@ function openBarangay(brgyName) {
   }
 }
 
-// ==================== SMOOTH EXPANDING SEARCH LOGIC ==================== //
+// ==================== REVISED EXPANDING SEARCH LOGIC ==================== //
+
+// Fallback helper in case openBarangay is not defined elsewhere
+if (typeof openBarangay !== 'function') {
+  window.openBarangay = function(barangayName) {
+    showPage('barangays');
+    setTimeout(() => {
+      const el = document.getElementById('barangay-' + barangayName.toLowerCase().replace(/\s+/g, '-'));
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }, 200);
+  };
+}
 
 const portalSearchData = [
   // Barangays
@@ -1058,7 +1069,7 @@ const portalSearchData = [
   { title: "Procurement System (GEPS)", category: "Online Service", url: "http://geps.mymandaue.com/Login.aspx" },
   { title: "Human Resource Information System", category: "Online Service", url: "http://hris.mandauecity.ph/Login.aspx" },
   
-  // Quick Navigation Pages
+  // Navigation Pages
   { title: "City Officials Directory", category: "Navigation", action: () => showPage('officials') },
   { title: "Offices & Departments Directory", category: "Navigation", action: () => showPage('offices') },
   { title: "Interactive City Maps", category: "Navigation", action: () => showPage('maps') },
@@ -1076,13 +1087,11 @@ function toggleSearch() {
   const isHidden = container.classList.contains('w-0');
 
   if (isHidden) {
-    // Expand smoothly from right to left with fade-in
     container.style.visibility = 'visible';
     container.classList.remove('w-0', 'opacity-0', 'pointer-events-none');
     container.classList.add('w-64', 'md:w-80', 'opacity-100', 'pointer-events-auto');
     if (input) input.focus();
   } else {
-    // Collapse back
     container.classList.remove('w-64', 'md:w-80', 'opacity-100', 'pointer-events-auto');
     container.classList.add('w-0', 'opacity-0', 'pointer-events-none');
     setTimeout(() => {
@@ -1098,52 +1107,69 @@ function handleSearch() {
   
   if (!input || !dropdown) return;
 
-  const query = input.value.toLowerCase().trim();
+  const query = input.value.trim().toLowerCase();
 
   if (!query) {
     dropdown.classList.add('hidden');
+    dropdown.innerHTML = '';
     return;
   }
 
   const matches = portalSearchData.filter(item => item.title.toLowerCase().includes(query));
 
   if (matches.length === 0) {
-    dropdown.innerHTML = `<div class="text-center py-4 text-slate-500 text-xs">No results found for "<strong>${query}</strong>"</div>`;
-    dropdown.classList.remove('hidden');
-    return;
-  }
-
-  dropdown.innerHTML = matches.map((item, index) => `
-    <div onclick="executeSearchResult(${index})" class="px-4 py-2.5 hover:bg-slate-50 cursor-pointer flex items-center justify-between transition group">
-      <div>
-        <p class="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-[#173D9A]">${item.title}</p>
-        <span class="text-[9px] uppercase font-bold tracking-wider text-slate-400 bg-slate-100 px-1.5 py-0.5 rounded">${item.category}</span>
+    dropdown.innerHTML = `<div class="px-4 py-3 text-center text-slate-500 text-xs">No matching results found</div>`;
+  } else {
+    dropdown.innerHTML = matches.map((item, index) => `
+      <div onclick="executeSearchResult(${index})" class="px-4 py-2.5 hover:bg-slate-100 cursor-pointer flex items-center justify-between transition group border-b border-slate-100 last:border-0">
+        <div>
+          <p class="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-[#173D9A]">${item.title}</p>
+          <span class="text-[9px] uppercase font-bold tracking-wider text-slate-500 bg-slate-200 px-1.5 py-0.5 rounded">${item.category}</span>
+        </div>
+        <i class="fa-solid fa-arrow-right text-xs text-slate-400 group-hover:text-[#173D9A] transition-transform group-hover:translate-x-0.5"></i>
       </div>
-      <i class="fa-solid fa-arrow-right text-xs text-slate-300 group-hover:text-[#173D9A] group-hover:translate-x-1 transition-transform"></i>
-    </div>
-  `).join('');
+    `).join('');
+  }
 
   dropdown.classList.remove('hidden');
   window.currentSearchMatches = matches;
 }
 
 function executeSearchResult(index) {
+  if (!window.currentSearchMatches || !window.currentSearchMatches[index]) return;
   const item = window.currentSearchMatches[index];
-  toggleSearch(); // Close search box
-  if (item.action) {
+  
+  const dropdown = document.getElementById('search-results-dropdown');
+  if (dropdown) dropdown.classList.add('hidden');
+  
+  toggleSearch(); // Hide input bar
+
+  if (typeof item.action === 'function') {
     item.action();
   } else if (item.url) {
     window.open(item.url, '_blank');
   }
 }
 
-// Close search dropdown when clicking outside
+// Ensure event listener connects on DOM load
+document.addEventListener('DOMContentLoaded', () => {
+  const input = document.getElementById('search-input');
+  if (input) {
+    input.addEventListener('keyup', handleSearch);
+    input.addEventListener('input', handleSearch);
+  }
+});
+
+// Close when clicking outside
 document.addEventListener('click', (e) => {
   const container = document.getElementById('search-bar-container');
   const searchBtn = document.getElementById('search-icon-btn');
+  const dropdown = document.getElementById('search-results-dropdown');
+
   if (container && !container.contains(e.target) && searchBtn && !searchBtn.contains(e.target)) {
     if (!container.classList.contains('w-0')) {
       toggleSearch();
     }
+    if (dropdown) dropdown.classList.add('hidden');
   }
 });
