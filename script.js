@@ -364,16 +364,19 @@ function openBarangay(brgyName) {
 
   const data = barangayData[brgyName];
 
+  // Header Title
   const header = document.getElementById('brgy-title-header');
-  const mapLabel = document.getElementById('brgy-map-label');
   if (header) header.innerText = "Barangay " + brgyName;
-  if (mapLabel) mapLabel.innerText = "Barangay " + brgyName;
 
+  // History & Officials
   const historyEl = document.getElementById('brgy-history-text');
   if (historyEl) historyEl.innerHTML = data && data.history ? data.history : "Historical background for this barangay is currently being updated.";
 
   const captainEl = document.getElementById('brgy-captain-name');
   if (captainEl) captainEl.innerText = data ? data.captain : "Information being updated.";
+
+  const skChairmanEl = document.getElementById('sk-chairman-name');
+  if (skChairmanEl) skChairmanEl.innerText = data ? data.skChairman : "Information being updated.";
 
   // Dynamic Map Handler
   const mapFrame = document.getElementById('brgy-map-iframe');
@@ -389,23 +392,25 @@ function openBarangay(brgyName) {
     directLink.href = data && data.directUrl ? data.directUrl : `https://www.google.com/maps/search/Barangay+${encodeURIComponent(brgyName)}+Mandaue+City`;
   }
 
+  // Render Councilors (Larger Text: text-sm sm:text-base font-bold)
   const councilGrid = document.getElementById('brgy-councilors-grid');
   if (councilGrid) {
     councilGrid.innerHTML = data && data.councilors ? data.councilors.map((cName, idx) => `
-      <div class="bg-slate-50 border border-slate-200 rounded-lg p-3 flex items-center space-x-3">
+      <div class="bg-slate-50 border border-slate-200 rounded-lg p-3.5 flex items-center space-x-3.5 shadow-sm">
         <span class="text-xs font-black text-slate-400 shrink-0">#${idx + 1}</span>
-        <p class="text-xs font-semibold text-slate-800">${cName}</p>
+        <p class="text-sm sm:text-base font-bold text-slate-800">${cName}</p>
       </div>
-    `).join('') : `<p class="text-xs text-slate-500 col-span-full">Councilor list currently unavailable.</p>`;
+    `).join('') : `<p class="text-sm text-slate-500 col-span-full">Councilor list currently unavailable.</p>`;
   }
 
+  // Render SK Councilors (Larger Text: text-sm sm:text-base font-bold)
   const skCouncilGrid = document.getElementById('sk-councilors-grid');
   if (skCouncilGrid) {
     skCouncilGrid.innerHTML = data && data.skCouncilors ? data.skCouncilors.map((cName, idx) => `
-      <div class="bg-slate-50 border border-slate-200 rounded-lg p-3 flex items-center space-x-3">
+      <div class="bg-slate-50 border border-slate-200 rounded-lg p-3.5 flex items-center space-x-3.5 shadow-sm">
         <span class="text-xs font-black text-amber-500 shrink-0">#${idx + 1}</span>
-        <p class="text-xs font-semibold text-slate-800">${cName}</p>
+        <p class="text-sm sm:text-base font-bold text-slate-800">${cName}</p>
       </div>
-    `).join('') : `<p class="text-xs text-slate-500 col-span-full">SK Councilor list currently unavailable.</p>`;
+    `).join('') : `<p class="text-sm text-slate-500 col-span-full">SK Councilor list currently unavailable.</p>`;
   }
 }
