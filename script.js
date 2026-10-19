@@ -331,7 +331,7 @@ function openDepartment(deptName) {
   switchDeptTab('org');
 }
 
-// ==================== BARANGAY DATA & DYNAMIC MAPS ==================== //
+// ==================== COMPLETE MANDAUE CITY BARANGAY DATA (ALL 27 BARANGAYS) ==================== //
 const barangayData = {
   "Alang-alang": {
     history: "<strong>Alang-alang.</strong> Old Cebuano for <em>ylang-ylang</em>. It got its name from its closeness to the town center, Poblacion or Centro. The name from the Visayan denotes middling distance from one point to the other. Before it had become an independent sitio, it was at the boundary of barangays Ibabao and Opao. When substantial population could justify its separation, people who came from there began to refer to it as \"<em>Alang-alang sa Ibabao ug sa Opao</em>\" (somewhere between Ibabao and Opao), which would later be contracted to \"Alang-alang\".",
@@ -356,6 +356,587 @@ const barangayData = {
       "Basaca, Ritz Eal"
     ],
     directUrl: "https://maps.app.goo.gl/bqGH6aYesDnv3R8P9"
+  },
+  "Bakilid": {
+    history: "<strong>Bakilid.</strong> The people who lived in this place called it bakilid for its very steep topography, as opposed to a gently rolling terrain of a hill. “Diha’s dapit sa bakilid nga bungtod” (near the very steep hill) was how they would locate their village. Mrs. Corazon B. Ruelan and her group spearheaded the separation of Bakilid carved out from Maguikay and Tipolo in the 1970s. She became the first Barangay Captain of Bakilid. The steep topography can still be discerned along A.S. Fortuna street.",
+    captain: "Lumapas, Roy C.",
+    councilors: [
+      "Flores, Samuel S.",
+      "Lumapas, James Martin U.",
+      "Baretto, Gloria G.",
+      "Seno, Pablito S.",
+      "Orlanes, Restituto A.",
+      "Petancio, Jose J."
+    ],
+    skChairman: "Ardon, Janelle O.",
+    skCouncilors: [
+      "Avila, Edsel John",
+      "Ruizo, Shaira",
+      "Perez, Beatrice O.",
+      "Estrera, Erika Mae",
+      "Soroño, Jhon Mike",
+      "Pilapil, Allyssa Ashley",
+      "Comajig, Jan Louie"
+    ]
+  },
+  "Banilad": {
+    history: "<strong>Banilad.</strong> Named after the endemic tree <em>Sterculia philippinensis</em>, locally known as Banilad. Spanish-era accounts recall a farmer replying \"banilad\" when asked for the name of the place, assuming the explorer was asking about the shade tree he was resting under. The tree's bark fiber was historically used as a substitute for artwork brushes and chewed for medicinal purposes.",
+    captain: "Yap, Greg B.",
+    councilors: [
+      "Baga, Alexis A.",
+      "Saberon, Leo B.",
+      "Seno, Harold D.",
+      "Gabuya, Edgar M.",
+      "Oporto, Antonieta S.",
+      "Ouano, Rudolfo B.",
+      "Buenavista, Doris Y."
+    ],
+    skChairman: "Omolon, Margut Ann",
+    skCouncilors: [
+      "Seno, Shiera",
+      "Cabellon, Zylle",
+      "Oporto, Clyde",
+      "Caballes, Kevin",
+      "Buenavista, Estelito",
+      "Azura, Christian",
+      "Talle, Charisse"
+    ]
+  },
+  "Basak": {
+    history: "<strong>Basak.</strong> Derived from the Cebuano word for wet or swampy land (<em>basakan</em>). In early times, water abounded even during droughts, making it an ideal wet cultivation area for rice, <em>tangkong</em> (swamp cabbage), and livestock fodder. The contraction from \"Didto’s basakan nga dapit\" led to the name Basak.",
+    captain: "Diano, Felipe M.",
+    councilors: [
+      "Franza, Junrel D.",
+      "Catayas, Roberta G.",
+      "Gocotano, Mary Jean M.",
+      "Escoton, Herminio I.",
+      "Dayanan, Vicente C.",
+      "Franza, Flordelisa L.",
+      "Escoton, Milagros G."
+    ],
+    skChairman: "Macasero, Gwyneth",
+    skCouncilors: [
+      "Franza, Joseph",
+      "Ortega, April Marie",
+      "Jemina, Kimberly Joe",
+      "Nario, Jairo",
+      "Aligno, Ritchelle Honey",
+      "Mantalaba, Rose Ann",
+      "Villacampa, Ray Ann"
+    ]
+  },
+  "Cabancalan": {
+    history: "<strong>Cabancalan.</strong> Named after the <em>bangcal</em> or Leichhardt trees (<em>Nauclea orientalis</em>) that once surrounded a mossy 20-foot deep spring cave called \"Bito\". Farmers resting under these trees when asked where they were would say \"Diha ra gyud sa may ka bancal-an\". Cabancalan was established as a barrio as early as 1602.",
+    captain: "Remedio, Francis Karlo C.",
+    councilors: [
+      "Bellen, Jonathan R.",
+      "Adolfo, Glen C.",
+      "Remedio, Irish Dwight L.",
+      "Borbajo, Marck Philippe C.",
+      "Ceniza, Jose Jefferson C.",
+      "Remedio, Luke R."
+    ],
+    skChairman: "Adolfo, Daniella",
+    skCouncilors: [
+      "Remedio, Chenny",
+      "Millor, Quennie",
+      "Neis, Zara Amira",
+      "Oliveros, Kirstine",
+      "Bangquerigo, MJ-Jean",
+      "Gellanga, Jefferson"
+    ]
+  },
+  "Cambaro": {
+    history: "<strong>Cambaro.</strong> Derived from the practice of early residents borrowing items and money, referred to in English as \"Come and borrow\" or \"Can borrow\" (<em>makahulam</em>). Formerly a sitio of Looc, Cambaro was formally created as an independent barangay in 1969 when Mandaue was preparing for cityhood chartering.",
+    captain: "Cañete, Maricar S.",
+    councilors: [
+      "Almodiel, Junil A.",
+      "Alindajao, Wernher Yul S.",
+      "Alindajao, Erwin C.",
+      "Heyrosa, Rico A.",
+      "Quino, Daniel Jr. A.",
+      "Omolon, Hernan F.",
+      "Salazar, Nera B."
+    ],
+    skChairman: "Antigua, Charles Louie",
+    skCouncilors: [
+      "Lumapas, Trixie",
+      "Ejares, Ken Angela",
+      "Oncenes, Charlie L.",
+      "Cortes, Adrian Matthew",
+      "Branzuela, Julia Rae G.",
+      "Parba, Chaela Marie A.",
+      "Macalolo-oy, Kyle Jasper Q."
+    ]
+  },
+  "Canduman": {
+    history: "<strong>Canduman.</strong> Traces back to a wealthy and generous landowner named Duman (or Do Oman) who helped residents survive the great famine of 1842. People traveling to his vast agricultural lands would say \"Kang Do Oman\" or \"Do Oman's place\", which morphed into Canduman during American registration.",
+    captain: "Borbajo, Dante A.",
+    councilors: [
+      "Jabas, Leo C.",
+      "Mangubat, Alden E.",
+      "Zanoria, Dalmacio S.",
+      "Comiso, Doris A.",
+      "Antolijao, Wendell P.",
+      "Zanoria, Adele C.",
+      "Toring, Mardonia P."
+    ],
+    skChairman: "Asibuque, Kyla Marie B.",
+    skCouncilors: [
+      "Beldad, Romel",
+      "Pradilla, Danamar D.",
+      "Polison, Abegail P.",
+      "Bacaron, Astir Sheery",
+      "Bathan, Christian Philip",
+      "Salandron, Kaylle M.",
+      "Melendres, Kian A."
+    ]
+  },
+  "Casili": {
+    history: "<strong>Casili.</strong> Named after the creek bisecting Mandaue and Consolacion where freshwater eels (<em>kasili</em>) were abundant. Alternative historical records note it was derived from <em>sili</em> (chili peppers) growing plentifully in the area. Casili has been documented as a distinct barrio since at least 1868.",
+    captain: "Santillana, Robert S.",
+    councilors: [
+      "Seno, Lourde Mae S.",
+      "Cabatingan, Edwin T.",
+      "Libardo, Randolf S.",
+      "Valle, Dennis M.",
+      "Isok, John Paul T.",
+      "Monsanto, Charlie M.",
+      "Gerona, Inocencia C."
+    ],
+    skChairman: "Nerona, Aaliyah Mei T.",
+    skCouncilors: [
+      "Santillana, Stephany S.",
+      "Romero, Cesar Junior S. III",
+      "Quiño, Kyla Shane N.",
+      "Heyrana, Alyssa Mae S.",
+      "Cabisan, Joyce Anne B.",
+      "Panangin, Pearl Noelle E.",
+      "Dela Vega, John Paul S."
+    ]
+  },
+  "Casuntingan": {
+    history: "<strong>Casuntingan.</strong> Named after the wild medicinal plant <em>Sunting</em> or <em>Asunting</em> (<em>Cassia alata Linn</em>) that grew abundantly in the area. Early elders used the prefix \"Ka\" to designate the area (\"Ka-suntingan\") to distinguish it from the neighboring bangkal groves of Cabancalan.",
+    captain: "Ranile, Jose Ronnie S.",
+    councilors: [
+      "Del Castillo, Louie S.",
+      "Ale, Amelia B.",
+      "Monsanto, Jesus Edward P.",
+      "Cortes, Eriberto D.",
+      "Baclaan, Caroline C.",
+      "Vega, Marcial S.",
+      "Albaño, Alfonso Jr. S."
+    ],
+    skChairman: "Martinez, Jose C.",
+    skCouncilors: [
+      "Arranchado, Gryka Krissen A.",
+      "Torion, Niño",
+      "Sanchez, John Arvin",
+      "Trapero, Chenie",
+      "Cantalejo, Marjorie",
+      "Balatayo, Vince Silver",
+      "Pareja, Shanil Louise"
+    ]
+  },
+  "Centro (Poblacion)": {
+    history: "<strong>Centro.</strong> The historic town center of Mandaue where St. Joseph Parish was founded in the 17th century. It served as the central meeting place (\"sentro\") for community gatherings, civic governance, trade, and politics. In 1937, the municipal hall and public plaza were established here.",
+    captain: "Cortes, Ignacio G. II",
+    councilors: [
+      "Latonio, Eric P.",
+      "Alesna, David Jim M.",
+      "Seno, Ira Noemi N.",
+      "Heyrosa, Alexander Joshua P.",
+      "Pesons, Carlo D.",
+      "Taghoy, Chona D."
+    ],
+    skChairman: "Malig-on, Bianca Leighne A.",
+    skCouncilors: [
+      "Mañago, Joseph G.",
+      "Andales, Melord Kent M.",
+      "Espinosa, John Kyle G.",
+      "Ehurango, Samantha T.",
+      "Batulan, Jancris A.",
+      "Arlan, Mary Odette Y."
+    ]
+  },
+  "Cubacub": {
+    history: "<strong>Cubacub.</strong> Takes its name from the Cebuano word <em>cubcub</em> (to dig/excavate), referring to the massive earthworks and road cutting operations commissioned by Mayor Demetrio Cortes in the mid-1960s to connect the once-isolated hinterland to H. Abellana Street.",
+    captain: "Borbajo, Alex V.",
+    councilors: [
+      "Vega, Celso B.",
+      "Sicad, Aserio B.",
+      "Bihag, Arpie Pol C.",
+      "Gogo, Sherwin O.",
+      "Alivio, Elsa J.",
+      "Alivio, Emmanuel A."
+    ],
+    skChairman: "Agbon, Lovely Mae B.",
+    skCouncilors: [
+      "Borbajo, Niña Hope",
+      "Bontuyan, Glenn Harvey B.",
+      "Flores, Michael Y.",
+      "Vega, Jay Calvin",
+      "Borbajo, Amiel Rufaus",
+      "Nuñez Jr., Vianney Sepe",
+      "Ancajas, Marco"
+    ]
+  },
+  "Guizo": {
+    history: "<strong>Guizo.</strong> Local lore tells of a laborer carrying white clay earth (<em>giso</em>) who misunderstood a Spaniard's question regarding the location's name and answered \"Giso\". Another account attributes the name to the <em>Gisok</em> or Balau Red tree (<em>Shorea guiso</em>) which grew plentifully in the area.",
+    captain: "Neri Sr., Jesus C.",
+    councilors: [
+      "Capacite, Arnulfo S.",
+      "Bejo, Jesus A.",
+      "Espina, Lydia C.",
+      "Flores, Pureza T.",
+      "Carba, Shiela Paz E.",
+      "Marababol, Alenton G.",
+      "Seno, Art-Wen C."
+    ],
+    skChairman: "Marababol, Sophia Jane C.",
+    skCouncilors: [
+      "Arceo, Mariell N.",
+      "Lanza, Christine Deah M.",
+      "Batulan, Melvin",
+      "Lapiña, Sophia C.",
+      "Musa, Aiza U.",
+      "Porlas, John Ivan C.",
+      "Estrobo, Ronan Khen M."
+    ]
+  },
+  "Ibabao-Estancia": {
+    history: "<strong>Ibabao-Estancia.</strong> Formed by merging Ibabao (meaning \"upper part\", referring to its position north of Centro) and Estancia (meaning \"residence/ranch\", historically linked to a land grant donated to the Jesuits in 1599).",
+    captain: "Echavez, Romulo P. Jr.",
+    councilors: [
+      "Soco, Jose Wendell L.",
+      "Cabahug, Abner Lou S.",
+      "Ygay, Eric Bernard S.",
+      "Ouano, Alfredo C.",
+      "Del Mar, Arcille E.",
+      "Quimque, Noel F.",
+      "Villamor, Marcos C. Jr."
+    ],
+    skChairman: "Tinio, Genesis Q.",
+    skCouncilors: [
+      "Obenza, Glaizza Mae P.",
+      "Lepiten, Nico",
+      "Mendoza, Jian D.",
+      "Cortes, Margarette Justice",
+      "Cortes, Johannah D.",
+      "Mandawe, JM",
+      "Palco, Jay Ver S."
+    ]
+  },
+  "Jagobiao": {
+    history: "<strong>Jagobiao.</strong> Derived from a combination of Cebuano words <em>Hago</em> (tiresome) and <em>Biao</em> (river). Washerwomen carrying wet laundry uphill from the deep riverbank frequently complained \"Pwerting ka hagong bi-aoa\". The moniker eventually contracted to Jagobiao.",
+    captain: "Merino, Marydith M.",
+    councilors: [
+      "Alburo, Emilio L.",
+      "Alegre, Estrella G.",
+      "Godinez, Elsa J.",
+      "Ledris, Lino G.",
+      "Montesa, Maria Edita M.",
+      "Rivera, Noel Angelo V.",
+      "Lim, Elsa C."
+    ],
+    skChairman: "Ligaray, Ian Bruce",
+    skCouncilors: [
+      "Gagarani, Jericho A.",
+      "Mondares, Vincent",
+      "Rondina, Klendy P.",
+      "Lamela, Karl Roland B.",
+      "Mondejar, Shaira Mae B.",
+      "Garing Jr., Joel B.",
+      "Olivar, Jonas S."
+    ]
+  },
+  "Labogon": {
+    history: "<strong>Labogon.</strong> According to oral tradition, the name originates from a local seafood delicacy made from stingray (<em>pagui</em>) cooked in coconut milk (<em>tinonoan</em>), locally called <em>labog</em>. Over time, the area where people enjoyed the dish became known as Labogon.",
+    captain: "Nejana, Helbert B.",
+    councilors: [
+      "Lloren, Reynaldo B.",
+      "Gitgano, Nelson B.",
+      "Suson, Renato P.",
+      "Sarausad, Lyndelia",
+      "Bayon-on Jr., Mariano S.",
+      "Tumulak, Corazon D.",
+      "Ermac, Agnes I."
+    ],
+    skChairman: "Mondares, Janice M.",
+    skCouncilors: [
+      "Fuentes, Niña Mae G.",
+      "Mandaue, Jhon Mar",
+      "Narra, Abigail S.",
+      "Manatad, Roxanne",
+      "Maluya, Christian B.",
+      "Bo-oc, John Carlo C.",
+      "Gumabras, Jade L."
+    ]
+  },
+  "Looc": {
+    history: "<strong>Looc.</strong> Derived from the Cebuano word <em>su-ok</em> or <em>lu-uk</em>, meaning a narrow nook or corner of land. Located at the easternmost point of Mandaue near the historic watchtower <em>Bantayan sa Hari</em>, it was historically a dense merchant and fishing enclave.",
+    captain: "Cabahug, Edelito P. Jr.",
+    councilors: [
+      "Cabahug, Raul IV",
+      "Ceniza, Goldie",
+      "Flores, Christopher",
+      "Ouano, Francisco",
+      "Lozano, Jose Jr."
+    ],
+    skChairman: "Ouano, Francis Maxi N.",
+    skCouncilors: [
+      "Naparate, Junel",
+      "Go, Jhuniel",
+      "Agustin, Stanley",
+      "Boc, Cherry Ann",
+      "Añoza, Jasmin Hazel V.",
+      "Baclohan, Swera Mae"
+    ]
+  },
+  "Maguikay": {
+    history: "<strong>Maguikay.</strong> Evolved from the Cebuano word <em>maghikay</em> (to prepare or cook delicacies). Maguikay's early residents were famous for producing Mandaue's classic delicacies such as <em>bud-bud</em>, <em>bibingka</em>, <em>puto</em>, <em>tagaktak</em>, and <em>masareal</em>.",
+    captain: "Gumera, Eduardo B.",
+    councilors: [
+      "Omolon, Victoria C.",
+      "Cabahug, Edgar S.",
+      "King, Winston E.",
+      "Espina, Jojie I.",
+      "Menchavez, Yance L.",
+      "Ceniza, Mark Joseph C."
+    ],
+    skChairman: "Oplado, Jacquardole T.",
+    skCouncilors: [
+      "Cortes, Sophia G.",
+      "Judilla, Jasper",
+      "Abing, Hannah L.",
+      "Mangoba, Aljon B.",
+      "Buante, Gewelyn Y.",
+      "Cortes, Jun Glendeel",
+      "Albaño, Sophia G."
+    ]
+  },
+  "Mantuyong": {
+    history: "<strong>Mantuyong.</strong> Named in honor of an early intelligent community leader named Mantu. Respected as a father figure by his people, he was given the honorific title <em>Uyong</em>. Following his death, the settlement was named Mantuyong (combining Mantu and Uyong).",
+    captain: "Areopagita, Julius Ceasar L.",
+    councilors: [
+      "Sanchez, Joseph Bryan A.",
+      "Pepito, Jose A.",
+      "Ramos, Rizza P.",
+      "Heyrosa, Jiovanni B.",
+      "Pono, D 'Andrei Christan",
+      "Batistis, Randy Dennis"
+    ],
+    skChairman: "Dela Rama, Daisy",
+    skCouncilors: [
+      "Frias, John Vincent",
+      "Lopez, Carlos George",
+      "Abrantes, Claire",
+      "Cabrido, Nica",
+      "Gonzales, Lean Louise Tyra",
+      "Garciano, Rica Lyn",
+      "Pepito, Honey Roseann"
+    ]
+  },
+  "Opao": {
+    history: "<strong>Opao.</strong> Derived from the Cebuano word <em>opao</em> (bare), describing the barren coastal flats devoid of vegetation during low tide. Between 1947 and 1956, Secretary Sotero Cabahug constructed the Butuanon River diversion dike, protecting Opao permanently from flash floods.",
+    captain: "Dizon, Nixon T.",
+    councilors: [
+      "Frias, Allan B.",
+      "Regudo, Rene M.",
+      "Icalina, Adonis O.",
+      "Macalolooy, Joannah Marie B.",
+      "Naparate, Dexter P.",
+      "Cuizon, Fedelis O."
+    ],
+    skChairman: "Semblante, Kyle Andreev H.",
+    skCouncilors: [
+      "Requiso, Jhon Lloyd",
+      "Frias, Jaycee R.",
+      "Baunsit, Mitz M.",
+      "Yapha, Khayecee Marie M."
+    ]
+  },
+  "Pagsabungan": {
+    history: "<strong>Pagsabungan.</strong> Named after <em>sabung</em> (cockfighting). In early times, this venue in northern Mandaue was the primary center for game fowl breeding, training, and blade-less cockfights, drawing enthusiasts from across Mandaue and Consolacion.",
+    captain: "Suson, Asterio J.",
+    councilors: [
+      "Elbina, Maxima J.",
+      "Montecillo, Raquel B.",
+      "Yares, Elizabeth M.",
+      "Goc-ong, Catalino P. Jr.",
+      "Cabahug, Leonherdt John C.",
+      "Booc, Ericson M."
+    ],
+    skChairman: "Tibon, Keith Justine A.",
+    skCouncilors: [
+      "Adong, Aubrey Karylle J.",
+      "Enero, Janelle S.",
+      "Asufra, Christian Fate M.",
+      "Dizon, Jhanine C.",
+      "Judilla, Karylle",
+      "Rosal, Trescia C.",
+      "Cescar, Marco"
+    ]
+  },
+  "Paknaan": {
+    history: "<strong>Paknaan.</strong> Traces its origin to a traditional bow-and-arrow defense weapon called <em>pana</em> used during Spanish colonial times. The area was initially known as Pana-an before evolving into Paknaan.",
+    captain: "Ulgasan, Marisa Fe Tecling",
+    councilors: [
+      "Sanchez, Mark Anthony A.",
+      "Cortes, Eric Jefferson A.",
+      "Bongo, Francisco E.",
+      "Mag-isa, Marilou S.",
+      "Diano, Ariel Ian M.",
+      "Mangubat Sr., Diosdado G."
+    ],
+    skChairman: "Jumao-as, Fleuritz Gayle T.",
+    skCouncilors: [
+      "Tecling, Kyla R.",
+      "Diano, Darvin Judilla",
+      "Diano, Adrian L.",
+      "Basaca, Troy Joshua A.",
+      "Arnado, Joshuel M.",
+      "Bongo, John Henry D.",
+      "Bantilan, Jeffrey A."
+    ]
+  },
+  "Subangdaku": {
+    history: "<strong>Subangdaku.</strong> Derived from the Cebuano phrase <em>suba nga daku</em> (big river). Local legend tells of a traveler who lost his way in the lush jungle and described his origin near the wide Butuanon river mouth. Established as an official barrio in 1918.",
+    captain: "Manatad, Ramonita R.",
+    councilors: [
+      "Ouano, Edgar R.",
+      "Albaño, Benedicto R.",
+      "Manatad, Ernie N.",
+      "Del Mar, Sylvie C.",
+      "Colina, Glen T.",
+      "Tecson, Rene C.",
+      "Luchavez Jr., Santiago N."
+    ],
+    skChairman: "Dy, Robeanne",
+    skCouncilors: [
+      "Bartolini, Franceil",
+      "Tecson, Kassandra Miles",
+      "Osabel, Hanah Marie",
+      "Hong, Mark Joseph",
+      "Ponce, Rhay Mar",
+      "Roble, Vincent",
+      "Estabillo, Jellus"
+    ]
+  },
+  "Tabok": {
+    history: "<strong>Tabok.</strong> Named after the Cebuano word <em>tabok</em> (to cross over). Located at the northern bank of the Butuanon River, residents in early times had to cross the river on foot before bridges were built.",
+    captain: "Tarriman, Dario S.",
+    councilors: [
+      "Vega, Julieto M.",
+      "Suico, Edgar C.",
+      "Cabatingan, Viel T.",
+      "Cortes, Nestor C.",
+      "Rosal, Emiliano M.",
+      "Rivera, Elmer T.",
+      "Tarriman Jr. Tranquilino S."
+    ],
+    skChairman: "Perez, Christella",
+    skCouncilors: [
+      "Abantao, Arbel A.",
+      "Avila, Raymund",
+      "Mendoza, Arianna Renee",
+      "Monguez, Shane Ann",
+      "Garcia, Mariel",
+      "Alcos, Karylle Mae C.",
+      "Malingin, Harvey C."
+    ]
+  },
+  "Tawason": {
+    history: "<strong>Tawason.</strong> Named after the abundance of <em>tawas</em> (alum crystals) that were once harvested directly from the ground for medicinal, antiseptic, and deodorizing uses before natural reserves were depleted.",
+    captain: "Bordario, Glenn S.",
+    councilors: [
+      "Arcilla, Chris Andrey I.",
+      "Loyola, Jovelyn A.",
+      "Bilocura, Roselyn B.",
+      "Tibon, Rico H.",
+      "Tibon, Roberto V. Jr.",
+      "Heyrana, Wenjay C.",
+      "Seno, Dulcisima Q."
+    ],
+    skChairman: "Sungahid, Jes Vincent A.",
+    skCouncilors: [
+      "Arcilla, Khyce T.",
+      "Arcilla, Jhon Khenjie T.",
+      "Dabalos, Kent S.",
+      "Mendoza, Crissa Jane S.",
+      "Opo, Hanz Kristian",
+      "Ducante, Jovyll A.",
+      "Ibañez, Shainna Fhaye"
+    ]
+  },
+  "Tingub": {
+    history: "<strong>Tingub.</strong> Named after the accumulation (<em>tingub</em>) of converging streams from Canduman, Tabok, and Pagsabungan into a local creek. During World War II, its dense bamboo groves served as a major hiding sanctuary for evacuees.",
+    captain: "Bihag, Mario B.",
+    councilors: [
+      "Curay, Mark P.",
+      "Daso, Randy C.",
+      "Ceniza, Jaime P.",
+      "Antolihao, Jose C.",
+      "Ouano, Oliver C.",
+      "Bihag, Ariel J.",
+      "Saraosos Jr., Buenaventura R."
+    ],
+    skChairman: "Jayme, Kate Francis B.",
+    skCouncilors: [
+      "Dabon, Dwight Kent",
+      "Paway, Faith Geralyn P.",
+      "Ouano, Sean Dominique R.",
+      "Castro, Bea B.",
+      "Capol, Ella Jean T.",
+      "Ates, Jeselle Mae",
+      "Ylanan, Trisha Mae D."
+    ]
+  },
+  "Tipolo": {
+    history: "<strong>Tipolo.</strong> Named after the imposing groves of Tipolo trees (<em>Artocarpus bancoi</em>) that once grew around a popular fresh spring where locals gathered to bathe and do laundry along the old railway line.",
+    captain: "Villanueva, Restituto",
+    councilors: [
+      "Alimpangog, Ramon V.",
+      "Villanueva, Procopio R.",
+      "Paciencia, Sercia M.",
+      "Grafe, Kevin Djon J.",
+      "Cortes, Jessica C.",
+      "Retuya, Brendo M.",
+      "Cuizon, Philip Richard J. II."
+    ],
+    skChairman: "Jayme, Rodnie B.",
+    skCouncilors: [
+      "Cuizon, Pearl Andrea A.",
+      "Bernales, Florey Mae",
+      "Avila, Maureen G.",
+      "Daymiel, Rey C.",
+      "Bacatan, Syndy M.",
+      "Sansub, Baron James",
+      "Bacatan, Kenji Maurice C."
+    ]
+  },
+  "Umapad": {
+    history: "<strong>Umapad.</strong> Derived from combining <em>umahan</em> (farmlands) and <em>lapad</em> (vast). Once an uninhabited marshland called Pilapil, the area was transformed into extensive agricultural paddies, giving birth to the name Umapad.",
+    captain: "Cortes, Reb V.",
+    councilors: [
+      "Lumapas, Libertine J.",
+      "Alilin, Avelino S.",
+      "Agacita, Ronnie J.",
+      "Candazo, Sarah Jean C.",
+      "Baylon Jr., Bernardo J.",
+      "Entrampas, Josefina V.",
+      "Quindao, Arlou T."
+    ],
+    skChairman: "Largo, Kurt Louie",
+    skCouncilors: [
+      "Duarte, Kyla Faith C.",
+      "Alilin, Angel Kate",
+      "Baclay, Marc Louie",
+      "Sortones, Jemuel",
+      "Abrigana, Zyrik",
+      "Cortes, Chaz Stephen G.",
+      "Abraham, Glazelle Anne"
+    ]
   }
 };
 
