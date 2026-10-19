@@ -1058,6 +1058,102 @@
   </section>
 </div>
 
+  <!-- ==================== DYNAMIC BARANGAY DETAIL VIEW ==================== -->
+<div id="page-barangay-detail" class="hidden max-w-7xl w-full mx-auto px-4 py-6 md:py-8 space-y-6">
+  
+  <!-- Back Button -->
+  <div>
+    <button onclick="showPage('barangays')" class="inline-flex items-center space-x-2 text-xs font-bold text-[#173D9A] hover:underline bg-white px-3 py-1.5 rounded border border-slate-200 shadow-sm">
+      <i class="fa-solid fa-arrow-left"></i>
+      <span>Back to Barangays Directory</span>
+    </button>
+  </div>
+
+  <!-- Banner Header Area -->
+  <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+    <div class="relative bg-gradient-to-r from-slate-900 via-[#173D9A] to-blue-900 py-10 px-6 text-center text-white space-y-3">
+      <div class="relative z-10 space-y-2">
+        <div class="inline-block bg-amber-400 text-slate-900 text-[10px] font-extrabold uppercase px-3 py-0.5 rounded-full tracking-wider">Mandaue City Barangay</div>
+        <h1 id="brgy-title-header" class="text-2xl sm:text-3xl md:text-4xl font-black uppercase tracking-tight text-white drop-shadow">Barangay Name</h1>
+      </div>
+    </div>
+
+    <!-- Title Sub-bar -->
+    <div class="bg-[#173D9A] text-white py-2.5 px-6 text-center font-bold text-sm sm:text-base tracking-wide uppercase shadow-inner">
+      <span>Barangay Profile & Local Governance</span>
+    </div>
+
+    <div class="p-6 sm:p-10 space-y-10">
+      
+      <!-- History & Map Section -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 space-y-3">
+          <div class="flex items-center space-x-2 text-[#173D9A]">
+            <i class="fa-solid fa-book-bookmark text-lg"></i>
+            <h3 class="text-lg font-bold text-slate-800">Historical Lore</h3>
+          </div>
+          <p id="brgy-history-text" class="text-xs sm:text-sm text-slate-600 leading-relaxed"></p>
+        </div>
+
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 space-y-3">
+          <div class="flex items-center space-x-2 text-[#173D9A]">
+            <i class="fa-solid fa-location-dot text-lg"></i>
+            <h3 class="text-lg font-bold text-slate-800">Jurisdiction Map</h3>
+          </div>
+          <div class="rounded-lg overflow-hidden border border-slate-200 shadow-sm bg-white min-h-[220px] flex items-center justify-center">
+            <p class="text-xs text-slate-400 font-semibold p-4 text-center">Interactive Google Map bounds for <span id="brgy-map-label">this barangay</span>.</p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="border-slate-200">
+
+      <!-- Barangay Officials Section -->
+      <div class="space-y-4">
+        <div class="border-l-4 border-[#173D9A] pl-3">
+          <h3 class="text-lg font-bold text-slate-800">Barangay Officials</h3>
+          <p class="text-xs text-slate-500">Current elected leadership governing the barangay council.</p>
+        </div>
+
+        <div class="bg-blue-50/60 border border-blue-200 rounded-xl p-5 flex items-center space-x-4">
+          <div class="bg-[#173D9A] text-white p-3.5 rounded-xl text-xl shrink-0">
+            <i class="fa-solid fa-user-tie"></i>
+          </div>
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#173D9A] bg-white border border-blue-200 px-2.5 py-0.5 rounded-full inline-block">Barangay Captain</span>
+            <h4 id="brgy-captain-name" class="text-base sm:text-lg font-bold text-slate-900 mt-1">Loading...</h4>
+          </div>
+        </div>
+
+        <div id="brgy-councilors-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3"></div>
+      </div>
+
+      <hr class="border-slate-200">
+
+      <!-- SK Officials Section -->
+      <div class="space-y-4">
+        <div class="border-l-4 border-amber-500 pl-3">
+          <h3 class="text-lg font-bold text-slate-800">Sangguniang Kabataan (SK) Officials</h3>
+          <p class="text-xs text-slate-500">Youth council leadership representation.</p>
+        </div>
+
+        <div class="bg-amber-50/60 border border-amber-200 rounded-xl p-5 flex items-center space-x-4">
+          <div class="bg-amber-500 text-white p-3.5 rounded-xl text-xl shrink-0">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-wider text-amber-800 bg-white border border-amber-200 px-2.5 py-0.5 rounded-full inline-block">SK Chairman</span>
+            <h4 id="sk-chairman-name" class="text-base sm:text-lg font-bold text-slate-900 mt-1">Loading...</h4>
+          </div>
+        </div>
+
+        <div id="sk-councilors-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 <!-- ==================== OFFICES PAGE VIEW ==================== -->
   <div id="page-offices" class="hidden max-w-7xl w-full mx-auto px-4 py-6 md:py-8">
     <section class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 md:p-10 space-y-8">
