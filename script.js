@@ -464,3 +464,86 @@ function showPage(pageId) {
   window.location.hash = pageId;
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+// ==================== BARANGAY DATA & DYNAMIC MAPS ==================== //
+const barangayData = {
+  "Alang-alang": {
+    history: "<strong>Alang-alang.</strong> Old Cebuano for <em>ylang-ylang</em>. It got its name from its closeness to the town center, Poblacion or Centro...",
+    captain: "Go, Jesse James L.",
+    councilors: [
+      "Alimpangog, Dennis V.",
+      "Cuizon, Jeric Mikhail",
+      "Saladaga, Amedello",
+      "Sanchez, Myles Arri",
+      "Cortes, Kristian P.",
+      "Jundos, Joseph R.",
+      "Soco, Genaro C. Jr."
+    ],
+    skChairman: "Soco, Gabrielle Val T.",
+    skCouncilors: [
+      "Ortega, Marjorie Rose",
+      "Cuizon, Luther Ian F.",
+      "Sumalinog, Ivan P.",
+      "Sayson, Justine Y.",
+      "Opura, Leandro",
+      "Nieves, Jan Michael B.",
+      "Basaca, Ritz Eal"
+    ],
+    // Direct link to the official/custom Google Map
+    directUrl: "https://maps.app.goo.gl/bqGH6aYesDnv3R8P9"
+  }
+};
+
+function openBarangay(brgyName) {
+  showPage('barangay-detail');
+
+  const data = barangayData[brgyName];
+
+  // Header Title
+  const header = document.getElementById('brgy-title-header');
+  if (header) header.innerText = "Barangay " + brgyName;
+
+  // History & Officials
+  const historyEl = document.getElementById('brgy-history-text');
+  if (historyEl) historyEl.innerHTML = data && data.history ? data.history : "Historical background for this barangay is currently being updated.";
+
+  const captainEl = document.getElementById('brgy-captain-name');
+  if (captainEl) captainEl.innerText = data ? data.captain : "Information being updated.";
+
+  // Dynamic Map Handler (Zero Hassle)
+  const mapFrame = document.getElementById('brgy-map-iframe');
+  const directLink = document.getElementById('brgy-map-direct-link');
+
+  // Automatic Query Embed: Highlights any barangay in Mandaue instantly
+  const queryEmbedUrl = `https://www.google.com/maps?q=Barangay+${encodeURIComponent(brgyName)}+Mandaue+City&output=embed`;
+  
+  if (mapFrame) {
+    mapFrame.src = queryEmbedUrl;
+  }
+
+  if (directLink) {
+    directLink.href = data && data.directUrl ? data.directUrl : `https://www.google.com/maps/search/Barangay+${encodeURIComponent(brgyName)}+Mandaue+City`;
+  }
+
+  // Render Councilors
+  const councilGrid = document.getElementById('brgy-councilors-grid');
+  if (councilGrid) {
+    councilGrid.innerHTML = data && data.councilors ? data.councilors.map((cName, idx) => `
+      <div class="bg-slate-50 border border-slate-200 rounded-lg p-3 flex items-center space-x-3">
+        <span class="text-xs font-black text-slate-400 shrink-0">#${idx + 1}</span>
+        <p class="text-xs font-semibold text-slate-800">${cName}</p>
+      </div>
+    `).join('') : `<p class="text-xs text-slate-500 col-span-full">Councilor list currently unavailable.</p>`;
+  }
+
+  // Render SK Councilors
+  const skCouncilGrid = document.getElementById('sk-councilors-grid');
+  if (skCouncilGrid) {
+    skCouncilGrid.innerHTML = data && data.skCouncilors ? data.skCouncilors.map((cName, idx) => `
+      <div class="bg-slate-50 border border-slate-200 rounded-lg p-3 flex items-center space-x-3">
+        <span class="text-xs font-black text-amber-500 shrink-0">#${idx + 1}</span>
+        <p class="text-xs font-semibold text-slate-800">${cName}</p>
+      </div>
+    `).join('') : `<p class="text-xs text-slate-500 col-span-full">SK Councilor list currently unavailable.</p>`;
+  }
+}
