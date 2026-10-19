@@ -1015,9 +1015,8 @@ function openBarangay(brgyName) {
   }
 }
 
-// ==================== SEARCH MODAL LOGIC ==================== //
+// ==================== SMOOTH EXPANDING SEARCH LOGIC ==================== //
 
-// Indexable Portal Items Database
 const portalSearchData = [
   // Barangays
   { title: "Barangay Alang-alang", category: "Barangay", action: () => openBarangay('Alang-alang') },
@@ -1055,6 +1054,9 @@ const portalSearchData = [
   { title: "Traffic Violation System (TEAM)", category: "Online Service", url: "http://team.mandauecity.ph/login.aspx" },
   { title: "Safety Seal Certification", category: "Online Service", url: "https://docs.google.com/forms/d/e/1FAIpQLSdRCrFoB--zBkwSN0fooJ1PL9koSXWO-LeK3nFJXY93cVOPnQ/viewform" },
   { title: "License to Sell/Serve Liquor", category: "Online Service", url: "https://docs.google.com/forms/d/e/1FAIpQLSd1oQ01f2FrsC9KDLQkjQlxvRUsWaeakKZYteEHDpgpQMoanA/closedform" },
+  { title: "Eco - Watch Portal", category: "Online Service", url: "http://ecowatch.mandauecity.ph/Login.aspx" },
+  { title: "Procurement System (GEPS)", category: "Online Service", url: "http://geps.mymandaue.com/Login.aspx" },
+  { title: "Human Resource Information System", category: "Online Service", url: "http://hris.mandauecity.ph/Login.aspx" },
   
   // Quick Navigation Pages
   { title: "City Officials Directory", category: "Navigation", action: () => showPage('officials') },
@@ -1064,66 +1066,84 @@ const portalSearchData = [
   { title: "Emergency Hotlines", category: "Navigation", action: () => scrollToHotlines() }
 ];
 
-function openSearchModal() {
-  const modal = document.getElementById('search-modal');
+function toggleSearch() {
+  const container = document.getElementById('search-bar-container');
   const input = document.getElementById('search-input');
-  if (modal) {
-    modal.classList.remove('hidden');
-    if (input) {
-      input.value = '';
-      input.focus();
-    }
-    handleSearch(); // Reset view
+  const dropdown = document.getElementById('search-results-dropdown');
+  
+  if (!container) return;
+
+  const isHidden = container.classList.contains('w-0');
+
+  if (isHidden) {
+    // Expand smoothly from right to left with fade-in
+    container.style.visibility = 'visible';
+    container.classList.remove('w-0', 'opacity-0', 'pointer-events-none');
+    container.classList.add('w-64', 'md:w-80', 'opacity-100', 'pointer-events-auto');
+    if (input) input.focus();
+  } else {
+    // Collapse back
+    container.classList.remove('w-64', 'md:w-80', 'opacity-100', 'pointer-events-auto');
+    container.classList.add('w-0', 'opacity-0', 'pointer-events-none');
+    setTimeout(() => {
+      container.style.visibility = 'hidden';
+      if (dropdown) dropdown.classList.add('hidden');
+    }, 300);
   }
 }
 
-function closeSearchModal() {
-  const modal = document.getElementById('search-modal');
-  if (modal) modal.classList.add('hidden');
-}
-
-// Close Modal on ESC key
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') closeSearchModal();
-});
-
-// Real-time filtering function
 function handleSearch() {
-  const query = document.getElementById('search-input').value.toLowerCase().trim();
-  const resultsContainer = document.getElementById('search-results');
+  const input = document.getElementById('search-input');
+  const dropdown = document.getElementById('search-results-dropdown');
+  
+  if (!input || !dropdown) return;
+
+  const query = input.value.toLowerCase().trim();
 
   if (!query) {
-    resultsContainer.innerHTML = `<div class="text-center py-8 text-slate-400 text-sm">Type something above to search across the portal...</div>`;
+    dropdown.classList.add('hidden');
     return;
   }
 
   const matches = portalSearchData.filter(item => item.title.toLowerCase().includes(query));
 
   if (matches.length === 0) {
-    resultsContainer.innerHTML = `<div class="text-center py-8 text-slate-500 text-sm">No results found for "<strong>${query}</strong>".</div>`;
+    dropdown.innerHTML = `<div class="text-center py-4 text-slate-500 text-xs">No results found for "<strong>${query}</strong>"</div>`;
+    dropdown.classList.remove('hidden');
     return;
   }
 
-  resultsContainer.innerHTML = matches.map((item, index) => `
-    <div onclick="executeSearchResult(${index})" class="p-3 hover:bg-blue-50 rounded-lg cursor-pointer flex items-center justify-between transition group">
+  dropdown.innerHTML = matches.map((item, index) => `
+    <div onclick="executeSearchResult(${index})" class="px-4 py-2.5 hover:bg-slate-50 cursor-pointer flex items-center justify-between transition group">
       <div>
-        <p class="text-sm font-bold text-slate-800 group-hover:text-[#173D9A]">${item.title}</p>
-        <span class="text-[10px] uppercase font-black tracking-wider text-slate-400 bg-slate-100 px-2 py-0.5 rounded">${item.category}</span>
+        <p class="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-[#173D9A]">${item.title}</p>
+        <span class="text-[9px] uppercase font-bold tracking-wider text-slate-400 bg-slate-100 px-1.5 py-0.5 rounded">${item.category}</span>
       </div>
       <i class="fa-solid fa-arrow-right text-xs text-slate-300 group-hover:text-[#173D9A] group-hover:translate-x-1 transition-transform"></i>
     </div>
   `).join('');
-  
-  // Store current matches in window for index reference
+
+  dropdown.classList.remove('hidden');
   window.currentSearchMatches = matches;
 }
 
 function executeSearchResult(index) {
   const item = window.currentSearchMatches[index];
-  closeSearchModal();
+  toggleSearch(); // Close search box
   if (item.action) {
     item.action();
   } else if (item.url) {
     window.open(item.url, '_blank');
   }
 }
+
+// Close search dropdown when clicking outside
+document.addEventListener('click', (e) => {
+  const container = document.getElementById('search-bar-container');
+  const searchBtn = document.getElementById('search-icon-btn');
+  if (container && !container.contains(e.target) && searchBtn && !searchBtn.contains(e.target)) {
+    if (!container.classList.contains('w-0')) {
+      toggleSearch();
+    }
+  }
+});
