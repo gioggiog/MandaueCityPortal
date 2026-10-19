@@ -9,7 +9,8 @@ function showPage(pageId) {
     'page-officials', 
     'page-hotlines', 
     'page-department-detail', 
-    'page-barangay-detail'
+    'page-barangay-detail',
+    'page-maps' // Added page-maps to routing
   ];
   
   pages.forEach(id => {
