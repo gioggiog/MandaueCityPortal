@@ -1014,3 +1014,116 @@ function openBarangay(brgyName) {
     }
   }
 }
+
+// ==================== SEARCH MODAL LOGIC ==================== //
+
+// Indexable Portal Items Database
+const portalSearchData = [
+  // Barangays
+  { title: "Barangay Alang-alang", category: "Barangay", action: () => openBarangay('Alang-alang') },
+  { title: "Barangay Bakilid", category: "Barangay", action: () => openBarangay('Bakilid') },
+  { title: "Barangay Banilad", category: "Barangay", action: () => openBarangay('Banilad') },
+  { title: "Barangay Basak", category: "Barangay", action: () => openBarangay('Basak') },
+  { title: "Barangay Cabancalan", category: "Barangay", action: () => openBarangay('Cabancalan') },
+  { title: "Barangay Cambaro", category: "Barangay", action: () => openBarangay('Cambaro') },
+  { title: "Barangay Canduman", category: "Barangay", action: () => openBarangay('Canduman') },
+  { title: "Barangay Casili", category: "Barangay", action: () => openBarangay('Casili') },
+  { title: "Barangay Casuntingan", category: "Barangay", action: () => openBarangay('Casuntingan') },
+  { title: "Barangay Centro (Poblacion)", category: "Barangay", action: () => openBarangay('Centro (Poblacion)') },
+  { title: "Barangay Cubacub", category: "Barangay", action: () => openBarangay('Cubacub') },
+  { title: "Barangay Guizo", category: "Barangay", action: () => openBarangay('Guizo') },
+  { title: "Barangay Ibabao-Estancia", category: "Barangay", action: () => openBarangay('Ibabao-Estancia') },
+  { title: "Barangay Jagobiao", category: "Barangay", action: () => openBarangay('Jagobiao') },
+  { title: "Barangay Labogon", category: "Barangay", action: () => openBarangay('Labogon') },
+  { title: "Barangay Looc", category: "Barangay", action: () => openBarangay('Looc') },
+  { title: "Barangay Maguikay", category: "Barangay", action: () => openBarangay('Maguikay') },
+  { title: "Barangay Mantuyong", category: "Barangay", action: () => openBarangay('Mantuyong') },
+  { title: "Barangay Opao", category: "Barangay", action: () => openBarangay('Opao') },
+  { title: "Barangay Pagsabungan", category: "Barangay", action: () => openBarangay('Pagsabungan') },
+  { title: "Barangay Paknaan", category: "Barangay", action: () => openBarangay('Paknaan') },
+  { title: "Barangay Subangdaku", category: "Barangay", action: () => openBarangay('Subangdaku') },
+  { title: "Barangay Tabok", category: "Barangay", action: () => openBarangay('Tabok') },
+  { title: "Barangay Tawason", category: "Barangay", action: () => openBarangay('Tawason') },
+  { title: "Barangay Tingub", category: "Barangay", action: () => openBarangay('Tingub') },
+  { title: "Barangay Tipolo", category: "Barangay", action: () => openBarangay('Tipolo') },
+  { title: "Barangay Umapad", category: "Barangay", action: () => openBarangay('Umapad') },
+
+  // Online Services
+  { title: "Business Permit & Licensing (BPLO)", category: "Online Service", url: "https://www.sites.google.com/view/bplomandaue/home" },
+  { title: "Real Property Tax Assessment & Payment", category: "Online Service", url: "https://mandauecity.online/WebPortal/Register.aspx" },
+  { title: "Delivery Permit Application", category: "Online Service", url: "https://sites.google.com/view/bplomandaue/services/delivery-permit" },
+  { title: "Traffic Violation System (TEAM)", category: "Online Service", url: "http://team.mandauecity.ph/login.aspx" },
+  { title: "Safety Seal Certification", category: "Online Service", url: "https://docs.google.com/forms/d/e/1FAIpQLSdRCrFoB--zBkwSN0fooJ1PL9koSXWO-LeK3nFJXY93cVOPnQ/viewform" },
+  { title: "License to Sell/Serve Liquor", category: "Online Service", url: "https://docs.google.com/forms/d/e/1FAIpQLSd1oQ01f2FrsC9KDLQkjQlxvRUsWaeakKZYteEHDpgpQMoanA/closedform" },
+  
+  // Quick Navigation Pages
+  { title: "City Officials Directory", category: "Navigation", action: () => showPage('officials') },
+  { title: "Offices & Departments Directory", category: "Navigation", action: () => showPage('offices') },
+  { title: "Interactive City Maps", category: "Navigation", action: () => showPage('maps') },
+  { title: "Full Disclosure Policy Documents", category: "Navigation", action: () => showPage('fulldisclosure') },
+  { title: "Emergency Hotlines", category: "Navigation", action: () => scrollToHotlines() }
+];
+
+function openSearchModal() {
+  const modal = document.getElementById('search-modal');
+  const input = document.getElementById('search-input');
+  if (modal) {
+    modal.classList.remove('hidden');
+    if (input) {
+      input.value = '';
+      input.focus();
+    }
+    handleSearch(); // Reset view
+  }
+}
+
+function closeSearchModal() {
+  const modal = document.getElementById('search-modal');
+  if (modal) modal.classList.add('hidden');
+}
+
+// Close Modal on ESC key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeSearchModal();
+});
+
+// Real-time filtering function
+function handleSearch() {
+  const query = document.getElementById('search-input').value.toLowerCase().trim();
+  const resultsContainer = document.getElementById('search-results');
+
+  if (!query) {
+    resultsContainer.innerHTML = `<div class="text-center py-8 text-slate-400 text-sm">Type something above to search across the portal...</div>`;
+    return;
+  }
+
+  const matches = portalSearchData.filter(item => item.title.toLowerCase().includes(query));
+
+  if (matches.length === 0) {
+    resultsContainer.innerHTML = `<div class="text-center py-8 text-slate-500 text-sm">No results found for "<strong>${query}</strong>".</div>`;
+    return;
+  }
+
+  resultsContainer.innerHTML = matches.map((item, index) => `
+    <div onclick="executeSearchResult(${index})" class="p-3 hover:bg-blue-50 rounded-lg cursor-pointer flex items-center justify-between transition group">
+      <div>
+        <p class="text-sm font-bold text-slate-800 group-hover:text-[#173D9A]">${item.title}</p>
+        <span class="text-[10px] uppercase font-black tracking-wider text-slate-400 bg-slate-100 px-2 py-0.5 rounded">${item.category}</span>
+      </div>
+      <i class="fa-solid fa-arrow-right text-xs text-slate-300 group-hover:text-[#173D9A] group-hover:translate-x-1 transition-transform"></i>
+    </div>
+  `).join('');
+  
+  // Store current matches in window for index reference
+  window.currentSearchMatches = matches;
+}
+
+function executeSearchResult(index) {
+  const item = window.currentSearchMatches[index];
+  closeSearchModal();
+  if (item.action) {
+    item.action();
+  } else if (item.url) {
+    window.open(item.url, '_blank');
+  }
+}
