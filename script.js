@@ -1,25 +1,31 @@
+// ==================== NAVIGATION & PAGE ROUTING ==================== //
 function showPage(pageId) {
-  // Hide all page containers (added 'page-barangay-detail' here)
-  const pages = ['page-home', 'page-services', 'page-about', 'page-barangays', 'page-offices', 'page-officials', 'page-hotlines', 'page-department-detail', 'page-barangay-detail'];
+  const pages = [
+    'page-home', 
+    'page-services', 
+    'page-about', 
+    'page-barangays', 
+    'page-offices', 
+    'page-officials', 
+    'page-hotlines', 
+    'page-department-detail', 
+    'page-barangay-detail'
+  ];
+  
   pages.forEach(id => {
     const el = document.getElementById(id);
     if (el) el.classList.add('hidden');
   });
 
-  // Show selected page
   const targetPage = document.getElementById('page-' + pageId);
   if (targetPage) {
     targetPage.classList.remove('hidden');
   }
 
-  // Update browser URL hash cleanly without causing a harsh jump
   window.location.hash = pageId;
-
-  // Scroll to top smoothly
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Automatically load page based on URL hash on load or refresh
 window.addEventListener('DOMContentLoaded', () => {
   const hash = window.location.hash.replace('#', '');
   if (hash && document.getElementById('page-' + hash)) {
@@ -27,6 +33,11 @@ window.addEventListener('DOMContentLoaded', () => {
   } else {
     showPage('home');
   }
+  updateCarousel();
+  updateClock();
+  updateCalendarTodayDate();
+  renderUpcomingHolidays();
+  initFadeUpObserver();
 });
 
 function toggleMobileMenu() {
@@ -36,12 +47,14 @@ function toggleMobileMenu() {
   }
 }
 
-// Carousel Slider Logic
+// ==================== CAROUSEL SLIDER LOGIC ==================== //
 let currentSlideIndex = 0;
-const slides = document.querySelectorAll('.carousel-slide');
-const dots = document.querySelectorAll('.carousel-dot');
 
 function updateCarousel() {
+  const slides = document.querySelectorAll('.carousel-slide');
+  const dots = document.querySelectorAll('.carousel-dot');
+  if (slides.length === 0) return;
+
   slides.forEach((slide, index) => {
     if (index === currentSlideIndex) {
       slide.classList.remove('opacity-0', 'pointer-events-none');
@@ -51,6 +64,7 @@ function updateCarousel() {
       slide.classList.add('opacity-0', 'pointer-events-none');
     }
   });
+
   dots.forEach((dot, index) => {
     if (index === currentSlideIndex) {
       dot.classList.remove('bg-white/60');
@@ -63,6 +77,7 @@ function updateCarousel() {
 }
 
 function nextSlide() {
+  const slides = document.querySelectorAll('.carousel-slide');
   if (slides.length > 0) {
     currentSlideIndex = (currentSlideIndex + 1) % slides.length;
     updateCarousel();
@@ -70,6 +85,7 @@ function nextSlide() {
 }
 
 function prevSlide() {
+  const slides = document.querySelectorAll('.carousel-slide');
   if (slides.length > 0) {
     currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
     updateCarousel();
@@ -81,14 +97,9 @@ function currentSlide(index) {
   updateCarousel();
 }
 
-// Auto Advance Carousel Every 6 seconds
 setInterval(nextSlide, 6000);
 
-document.addEventListener("DOMContentLoaded", () => {
-  updateCarousel();
-});
-
-// News Tab Switcher Logic
+// ==================== NEWS TAB SWITCHER ==================== //
 function switchNewsTab(tab) {
   const tabAll = document.getElementById('news-tab-all');
   const tabPao = document.getElementById('news-tab-pao');
@@ -97,52 +108,47 @@ function switchNewsTab(tab) {
   const card2 = document.getElementById('news-card-2');
 
   [tabAll, tabPao, tabTeam].forEach(t => {
-    if(t) t.className = "px-3 py-1.5 rounded-md text-slate-600 hover:text-mandaue-blue transition";
+    if (t) t.className = "px-3 py-1.5 rounded-md text-slate-600 hover:text-mandaue-blue transition";
   });
 
   if (tab === 'all') {
-    if(tabAll) tabAll.className = "px-3 py-1.5 rounded-md bg-mandaue-blue text-white transition shadow-sm";
-    if(card1) card1.classList.remove('hidden');
-    if(card2) card2.classList.remove('hidden');
+    if (tabAll) tabAll.className = "px-3 py-1.5 rounded-md bg-mandaue-blue text-white transition shadow-sm";
+    if (card1) card1.classList.remove('hidden');
+    if (card2) card2.classList.remove('hidden');
   } else if (tab === 'pao') {
-    if(tabPao) tabPao.className = "px-3 py-1.5 rounded-md bg-mandaue-blue text-white transition shadow-sm";
-    if(card1) card1.classList.remove('hidden');
-    if(card2) card2.classList.add('hidden');
+    if (tabPao) tabPao.className = "px-3 py-1.5 rounded-md bg-mandaue-blue text-white transition shadow-sm";
+    if (card1) card1.classList.remove('hidden');
+    if (card2) card2.classList.add('hidden');
   } else if (tab === 'team') {
-    if(tabTeam) tabTeam.className = "px-3 py-1.5 rounded-md bg-mandaue-blue text-white transition shadow-sm";
-    if(card1) card1.classList.add('hidden');
-    if(card2) card2.classList.remove('hidden');
+    if (tabTeam) tabTeam.className = "px-3 py-1.5 rounded-md bg-mandaue-blue text-white transition shadow-sm";
+    if (card1) card1.classList.add('hidden');
+    if (card2) card2.classList.remove('hidden');
   }
 }
 
-// Combined Scroll Fade-Up Animation Observer
-document.addEventListener("DOMContentLoaded", () => {
+// ==================== FADE-UP ANIMATION OBSERVER ==================== //
+function initFadeUpObserver() {
   const observerOptions = {
     root: null,
-    rootMargin: '0px',
-    threshold: 0.15
+    rootMargin: '0px 0px -50px 0px',
+    threshold: 0.1
   };
 
-  const observer = new IntersectionObserver((entries, observer) => {
+  const fadeObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.remove('opacity-0', 'translate-y-8');
-        entry.target.classList.add('opacity-100', 'translate-y-0');
+        entry.target.classList.add('visible');
         observer.unobserve(entry.target);
       }
     });
   }, observerOptions);
 
-  // Observe News Section
-  const newsSection = document.getElementById('news-fade-section');
-  if (newsSection) observer.observe(newsSection);
+  document.querySelectorAll('.fade-up').forEach(element => {
+    fadeObserver.observe(element);
+  });
+}
 
-  // Observe Vision, Mission, Values Section
-  const vmvSection = document.getElementById('vmv-fade-section');
-  if (vmvSection) observer.observe(vmvSection);
-});
-
-// Real-Time Clock for Top Ticker Bar
+// ==================== REAL-TIME CLOCK & CALENDAR ==================== //
 function updateClock() {
   const now = new Date();
   const options = { 
@@ -154,18 +160,13 @@ function updateClock() {
     second: '2-digit', 
     hour12: true 
   };
-  const formattedString = now.toLocaleDateString('en-US', options);
   const clockElement = document.getElementById('real-time-clock');
   if (clockElement) {
-    clockElement.textContent = formattedString;
+    clockElement.textContent = now.toLocaleDateString('en-US', options);
   }
 }
-
-// Initialize clock interval
 setInterval(updateClock, 1000);
-updateClock();
 
-// Function to update real date on the Calendar section
 function updateCalendarTodayDate() {
   const dateElement = document.getElementById('calendar-today-date');
   if (dateElement) {
@@ -175,10 +176,6 @@ function updateCalendarTodayDate() {
   }
 }
 
-// Call on page load
-updateCalendarTodayDate();
-
-// Master List of Official Philippine Holidays
 const phHolidays = [
   { name: "New Year's Day", date: "2026-01-01", type: "Regular Holiday", month: "Jan", day: "01", style: "blue" },
   { name: "Mawlid / Eid milad-un-Nabi", date: "2026-08-26", type: "Observance", month: "Aug", day: "26", style: "blue" },
@@ -200,10 +197,7 @@ function renderUpcomingHolidays() {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
-  const upcoming = phHolidays.filter(holiday => {
-    const holidayDate = new Date(holiday.date);
-    return holidayDate >= today;
-  });
+  const upcoming = phHolidays.filter(holiday => new Date(holiday.date) >= today);
 
   if (upcoming.length === 0) {
     container.innerHTML = `<p class="text-xs text-slate-500 col-span-2">No more upcoming national holidays for this year.</p>`;
@@ -233,11 +227,6 @@ function renderUpcomingHolidays() {
   }).join('');
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  updateCalendarTodayDate();
-  renderUpcomingHolidays();
-});
-
 function scrollToHotlines() {
   showPage('home');
   setTimeout(() => {
@@ -248,31 +237,7 @@ function scrollToHotlines() {
   }, 100);
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  initFadeUpObserver();
-});
-
-function initFadeUpObserver() {
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px 0px -50px 0px',
-    threshold: 0.1
-  };
-
-  const fadeObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  document.querySelectorAll('.fade-up').forEach(element => {
-    fadeObserver.observe(element);
-  });
-}
-
+// ==================== DEPARTMENT VIEWS & TABS ==================== //
 function switchDeptTab(tabName) {
   document.querySelectorAll('.dept-content').forEach(el => el.classList.add('hidden'));
   document.querySelectorAll('.dept-tab').forEach(el => {
@@ -366,7 +331,7 @@ function openDepartment(deptName) {
   switchDeptTab('org');
 }
 
-// ==================== BARANGAY DETAIL LOGIC ==================== //
+// ==================== BARANGAY DATA & DYNAMIC MAPS ==================== //
 const barangayData = {
   "Alang-alang": {
     history: "<strong>Alang-alang.</strong> Old Cebuano for <em>ylang-ylang</em>. It got its name from its closeness to the town center, Poblacion or Centro. The name from the Visayan denotes middling distance from one point to the other. Before it had become an independent sitio, it was at the boundary of barangays Ibabao and Opao. When substantial population could justify its separation, people who came from there began to refer to it as \"<em>Alang-alang sa Ibabao ug sa Opao</em>\" (somewhere between Ibabao and Opao), which would later be contracted to \"Alang-alang\".",
@@ -389,7 +354,8 @@ const barangayData = {
       "Opura, Leandro",
       "Nieves, Jan Michael B.",
       "Basaca, Ritz Eal"
-    ]
+    ],
+    directUrl: "https://maps.app.goo.gl/bqGH6aYesDnv3R8P9"
   }
 };
 
@@ -404,117 +370,15 @@ function openBarangay(brgyName) {
   if (mapLabel) mapLabel.innerText = "Barangay " + brgyName;
 
   const historyEl = document.getElementById('brgy-history-text');
-  if (historyEl) {
-    historyEl.innerHTML = data && data.history ? data.history : "Historical background for this barangay is currently being updated.";
-  }
-
-  const captainEl = document.getElementById('brgy-captain-name');
-  if (captainEl) {
-    captainEl.innerText = data ? data.captain : "Information being updated.";
-  }
-
-  const councilGrid = document.getElementById('brgy-councilors-grid');
-  if (councilGrid) {
-    if (data && data.councilors) {
-      councilGrid.innerHTML = data.councilors.map((cName, idx) => `
-        <div class="bg-slate-50 border border-slate-200 rounded-lg p-3 flex items-center space-x-3">
-          <span class="text-xs font-black text-slate-400 shrink-0">#${idx + 1}</span>
-          <p class="text-xs font-semibold text-slate-800">${cName}</p>
-        </div>
-      `).join('');
-    } else {
-      councilGrid.innerHTML = `<p class="text-xs text-slate-500 col-span-full">Councilor list currently unavailable.</p>`;
-    }
-  }
-
-  const skChairmanEl = document.getElementById('sk-chairman-name');
-  if (skChairmanEl) {
-    skChairmanEl.innerText = data ? data.skChairman : "Information being updated.";
-  }
-
-  const skCouncilGrid = document.getElementById('sk-councilors-grid');
-  if (skCouncilGrid) {
-    if (data && data.skCouncilors) {
-      skCouncilGrid.innerHTML = data.skCouncilors.map((cName, idx) => `
-        <div class="bg-slate-50 border border-slate-200 rounded-lg p-3 flex items-center space-x-3">
-          <span class="text-xs font-black text-amber-500 shrink-0">#${idx + 1}</span>
-          <p class="text-xs font-semibold text-slate-800">${cName}</p>
-        </div>
-      `).join('');
-    } else {
-      skCouncilGrid.innerHTML = `<p class="text-xs text-slate-500 col-span-full">SK Councilor list currently unavailable.</p>`;
-    }
-  }
-}
-
-function showPage(pageId) {
-  // Make sure 'page-barangay-detail' is in this array!
-  const pages = ['page-home', 'page-services', 'page-about', 'page-barangays', 'page-offices', 'page-officials', 'page-hotlines', 'page-department-detail', 'page-barangay-detail'];
-  
-  pages.forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.classList.add('hidden');
-  });
-
-  const targetPage = document.getElementById('page-' + pageId);
-  if (targetPage) {
-    targetPage.classList.remove('hidden');
-  }
-
-  window.location.hash = pageId;
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-// ==================== BARANGAY DATA & DYNAMIC MAPS ==================== //
-const barangayData = {
-  "Alang-alang": {
-    history: "<strong>Alang-alang.</strong> Old Cebuano for <em>ylang-ylang</em>. It got its name from its closeness to the town center, Poblacion or Centro...",
-    captain: "Go, Jesse James L.",
-    councilors: [
-      "Alimpangog, Dennis V.",
-      "Cuizon, Jeric Mikhail",
-      "Saladaga, Amedello",
-      "Sanchez, Myles Arri",
-      "Cortes, Kristian P.",
-      "Jundos, Joseph R.",
-      "Soco, Genaro C. Jr."
-    ],
-    skChairman: "Soco, Gabrielle Val T.",
-    skCouncilors: [
-      "Ortega, Marjorie Rose",
-      "Cuizon, Luther Ian F.",
-      "Sumalinog, Ivan P.",
-      "Sayson, Justine Y.",
-      "Opura, Leandro",
-      "Nieves, Jan Michael B.",
-      "Basaca, Ritz Eal"
-    ],
-    // Direct link to the official/custom Google Map
-    directUrl: "https://maps.app.goo.gl/bqGH6aYesDnv3R8P9"
-  }
-};
-
-function openBarangay(brgyName) {
-  showPage('barangay-detail');
-
-  const data = barangayData[brgyName];
-
-  // Header Title
-  const header = document.getElementById('brgy-title-header');
-  if (header) header.innerText = "Barangay " + brgyName;
-
-  // History & Officials
-  const historyEl = document.getElementById('brgy-history-text');
   if (historyEl) historyEl.innerHTML = data && data.history ? data.history : "Historical background for this barangay is currently being updated.";
 
   const captainEl = document.getElementById('brgy-captain-name');
   if (captainEl) captainEl.innerText = data ? data.captain : "Information being updated.";
 
-  // Dynamic Map Handler (Zero Hassle)
+  // Dynamic Map Handler
   const mapFrame = document.getElementById('brgy-map-iframe');
   const directLink = document.getElementById('brgy-map-direct-link');
 
-  // Automatic Query Embed: Highlights any barangay in Mandaue instantly
   const queryEmbedUrl = `https://www.google.com/maps?q=Barangay+${encodeURIComponent(brgyName)}+Mandaue+City&output=embed`;
   
   if (mapFrame) {
@@ -525,7 +389,6 @@ function openBarangay(brgyName) {
     directLink.href = data && data.directUrl ? data.directUrl : `https://www.google.com/maps/search/Barangay+${encodeURIComponent(brgyName)}+Mandaue+City`;
   }
 
-  // Render Councilors
   const councilGrid = document.getElementById('brgy-councilors-grid');
   if (councilGrid) {
     councilGrid.innerHTML = data && data.councilors ? data.councilors.map((cName, idx) => `
@@ -536,7 +399,6 @@ function openBarangay(brgyName) {
     `).join('') : `<p class="text-xs text-slate-500 col-span-full">Councilor list currently unavailable.</p>`;
   }
 
-  // Render SK Councilors
   const skCouncilGrid = document.getElementById('sk-councilors-grid');
   if (skCouncilGrid) {
     skCouncilGrid.innerHTML = data && data.skCouncilors ? data.skCouncilors.map((cName, idx) => `
