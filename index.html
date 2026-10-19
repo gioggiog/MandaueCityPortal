@@ -1321,7 +1321,7 @@
     </section>
   </div>
   
-  <!-- ==================== DYNAMIC DEPARTMENT DETAIL VIEW ==================== -->
+<!-- ==================== DYNAMIC DEPARTMENT DETAIL VIEW ==================== -->
   <div id="page-department-detail" class="hidden max-w-7xl w-full mx-auto px-4 py-6 md:py-8 space-y-6">
     <!-- Back Button -->
     <div>
@@ -1346,16 +1346,13 @@
         <span id="dept-title-bar">Management Information Systems Office</span>
       </div>
 
-      <!-- Tab Buttons for Department View -->
+      <!-- Tab Buttons for Department View (Reduced to 2 Tabs) -->
       <div class="bg-slate-100 p-4 border-b border-slate-200 flex flex-wrap justify-center gap-2">
-        <button onclick="switchDeptTab('org')" id="dept-tab-org" class="dept-tab px-4 py-2 rounded-lg bg-white text-mandaue-blue font-bold text-xs sm:text-sm shadow-sm transition border border-slate-200">
+        <button onclick="switchDeptTab('org')" id="dept-tab-org" class="dept-tab px-5 py-2.5 rounded-lg bg-white text-mandaue-blue font-bold text-xs sm:text-sm shadow-sm transition border border-slate-200">
           Organizational Chart
         </button>
-        <button onclick="switchDeptTab('charter')" id="dept-tab-charter" class="dept-tab px-4 py-2 rounded-lg text-slate-600 hover:text-mandaue-blue font-semibold text-xs sm:text-sm transition bg-slate-200/60">
+        <button onclick="switchDeptTab('charter')" id="dept-tab-charter" class="dept-tab px-5 py-2.5 rounded-lg text-slate-600 hover:text-mandaue-blue font-semibold text-xs sm:text-sm transition bg-slate-200/60">
           Citizen's Charter
-        </button>
-        <button onclick="switchDeptTab('services')" id="dept-tab-services" class="dept-tab px-4 py-2 rounded-lg text-slate-600 hover:text-mandaue-blue font-semibold text-xs sm:text-sm transition bg-slate-200/60">
-          Mandate & Services
         </button>
       </div>
 
@@ -1365,10 +1362,10 @@
         <!-- Tab 1: Organizational Chart -->
         <div id="dept-content-org" class="dept-content space-y-4 text-center">
           <h3 class="text-lg font-bold text-slate-800">Organizational Structure</h3>
-          <p class="text-slate-600 text-sm max-w-xl mx-auto">Explore the leadership and personnel hierarchy of this department.</p>
+          <p class="text-slate-600 text-sm max-w-xl mx-auto">Explore the Leadership and Personnel hierarchy of this department.</p>
           <div class="p-8 bg-slate-50 rounded-xl border border-dashed border-slate-300 max-w-2xl mx-auto flex flex-col items-center justify-center space-y-3">
             <i class="fa-solid fa-sitemap text-4xl text-mandaue-blue"></i>
-            <p class="text-sm font-semibold text-slate-700">Organizational chart document or diagram is loaded for this office.</p>
+            <p class="text-sm font-semibold text-slate-700">Organizational Chart document or diagram is loaded for this office.</p>
             <a href="https://drive.google.com/file/d/1Mmx4LnjMRWimdNNnvO_5FCM-fhwwutQf/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-mandaue-blue text-white text-xs font-bold px-4 py-2 rounded hover:bg-blue-800 transition">
               <span>View Full Document PDF</span>
               <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
@@ -1389,14 +1386,6 @@
               </div>
             </div>
           </div>
-        </div>
-
-        <!-- Tab 3: Mandate & Services -->
-        <div id="dept-content-services" class="dept-content hidden space-y-4">
-          <h3 class="text-lg font-bold text-slate-800">Mandate & Functions</h3>
-          <p class="text-slate-600 text-sm leading-relaxed">
-            Responsible for planning, developing, and maintaining the digital infrastructure, information systems, databases, and technological resources required to support the local governance and public transactions of Mandaue City.
-          </p>
         </div>
 
       </div>
