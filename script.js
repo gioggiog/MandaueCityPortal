@@ -375,7 +375,3 @@ function openDepartment(deptName) {
   // 5. Default to showing the Citizen's Charter tab first
   switchDeptTab('charter');
 }
-
-  // 5. Default to showing the Citizen's Charter tab first
-  switchDeptTab('charter');
-}
