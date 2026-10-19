@@ -359,11 +359,25 @@ function openDepartment(deptName) {
   if (headerTitle) headerTitle.innerText = deptName;
   if (barTitle) barTitle.innerText = deptName;
 
-  // 3. Set the specific Org Chart link (falls back to a default folder if any name doesn't match)
-  const orgChartUrl = departmentOrgCharts[deptName] || "https://drive.google.com/drive/u/0/folders/1sL5vyEwNW86kGW6vDkGF1O0iHT6_aYpa";
+  // 3. Handle Organizational Chart URL (Check if it exists for this specific department)
+  const orgChartUrl = departmentOrgCharts[deptName];
+  const orgBtnContainer = document.getElementById('dept-org-button-container'); // Container wrapping the download button
   const orgBtn = document.getElementById('dept-org-pdf-link');
-  if (orgBtn) {
-    orgBtn.href = orgChartUrl;
+  const orgNoLinkMsg = document.getElementById('dept-org-missing-msg'); // Optional message for missing charts
+
+  if (orgChartUrl) {
+    // If URL exists, show the button and set the href
+    if (orgBtn) {
+      orgBtn.href = orgChartUrl;
+      orgBtn.style.display = 'inline-flex';
+    }
+    if (orgNoLinkMsg) orgNoLinkMsg.classList.add('hidden');
+  } else {
+    // If NO URL exists (like Mayor's Office, City Administrator, MASA, etc.), hide the button or show a message
+    if (orgBtn) {
+      orgBtn.style.display = 'none';
+    }
+    if (orgNoLinkMsg) orgNoLinkMsg.classList.remove('hidden');
   }
 
   // 4. Set the shared Citizen's Charter button link
@@ -372,6 +386,6 @@ function openDepartment(deptName) {
     charterBtn.href = sharedCitizensCharterUrl;
   }
 
-  // 5. Default to showing the Citizen's Charter tab first
-  switchDeptTab('charter');
+  // 5. Default to showing the Organizational Chart tab first
+  switchDeptTab('org');
 }
