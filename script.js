@@ -310,3 +310,23 @@ function initFadeUpObserver() {
     fadeObserver.observe(element);
   });
 }
+
+function switchDeptTab(tabName) {
+  // Hide all contents
+  document.querySelectorAll('.dept-content').forEach(el => el.classList.add('hidden'));
+  // Reset all tabs style
+  document.querySelectorAll('.dept-tab').forEach(el => {
+    el.classList.remove('bg-white', 'text-mandaue-blue', 'shadow-sm', 'border', 'border-slate-200');
+    el.classList.add('text-slate-600', 'bg-slate-200/60', 'font-semibold');
+  });
+
+  // Show active content & style active tab
+  const activeContent = document.getElementById(`dept-content-${tabName}`);
+  const activeTab = document.getElementById(`dept-tab-${tabName}`);
+
+  if (activeContent) activeContent.classList.remove('hidden');
+  if (activeTab) {
+    activeTab.classList.remove('text-slate-600', 'bg-slate-200/60', 'font-semibold');
+    activeTab.classList.add('bg-white', 'text-mandaue-blue', 'font-bold', 'shadow-sm', 'border', 'border-slate-200');
+  }
+}
