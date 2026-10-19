@@ -29,27 +29,6 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-function openDepartment(deptName) {
-  showPage('department-detail');
-  document.getElementById('dept-title-header').innerText = deptName;
-  document.getElementById('dept-title-bar').innerText = deptName;
-}
-
-function switchDeptTab(tab) {
-  const tabs = ['org', 'charter', 'services'];
-  tabs.forEach(t => {
-    const tabBtn = document.getElementById('dept-tab-' + t);
-    const contentEl = document.getElementById('dept-content-' + t);
-    if (t === tab) {
-      if (tabBtn) tabBtn.className = "dept-tab px-4 py-2 rounded-lg bg-white text-mandaue-blue font-bold text-xs sm:text-sm shadow-sm transition border border-slate-200";
-      if (contentEl) contentEl.classList.remove('hidden');
-    } else {
-      if (tabBtn) tabBtn.className = "dept-tab px-4 py-2 rounded-lg text-slate-600 hover:text-mandaue-blue font-semibold text-xs sm:text-sm transition bg-slate-200/60 border border-transparent";
-      if (contentEl) contentEl.classList.add('hidden');
-    }
-  });
-}
-
 function toggleMobileMenu() {
   const mobileMenu = document.getElementById('mobile-menu');
   if (mobileMenu) {
@@ -214,15 +193,6 @@ const phHolidays = [
   { name: "Last Day of the Year", date: "2026-12-31", type: "Special Non-Working", month: "Dec", day: "31", style: "red" }
 ];
 
-function updateCalendarTodayDate() {
-  const dateElement = document.getElementById('calendar-today-date');
-  if (dateElement) {
-    const now = new Date();
-    const options = { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' };
-    dateElement.textContent = now.toLocaleDateString('en-US', options);
-  }
-}
-
 function renderUpcomingHolidays() {
   const container = document.getElementById('ph-holidays-list');
   if (!container) return;
@@ -334,6 +304,16 @@ function switchDeptTab(tabName) {
 // Shared Citizen's Charter file for all city departments
 const sharedCitizensCharterUrl = "https://drive.google.com/file/d/1ivSyy7l_4eequYi6SE4w8G2r4vu8PIRn/view?usp=sharing";
 
+// Organizational Chart links database for initial departments
+const departmentOrgCharts = {
+  "Mandaue City Substance Abuse and Mental Health Services Office": "https://drive.google.com/file/d/1MBFZPHNbjLxVipHyn0vTm1TjRwb6818b/view?usp=sharing",
+  "Gender and Development": "https://drive.google.com/file/d/1yvs3ORdaoL4RrrxITYi5GKMclUcKwdO_/view?usp=sharing",
+  "Office of the Building Official": "https://drive.google.com/file/d/1nGjICirOXpy9mpHsVaTINV58E1rL9Psk/view?usp=sharing",
+  "Mandaue City Environmental & Natural Resource Office": "https://drive.google.com/file/d/1Sk9p4kib27wkiabr3zgzUhDPhQs0ZUlI/view?usp=sharing",
+  "Public Information Office": "https://drive.google.com/file/d/1ikABTZBgGQflsaO0ImI0kBVUQKzDZ38D/view?usp=sharing",
+  "Office of Senior Citizens Affairs": "https://drive.google.com/file/d/1ikABTZBgGQflsaO0ImI0kBVUQKzDZ38D/view?usp=sharing"
+};
+
 function openDepartment(deptName) {
   // 1. Switch to Department Detail View
   showPage('department-detail');
@@ -344,12 +324,19 @@ function openDepartment(deptName) {
   if (headerTitle) headerTitle.innerText = deptName;
   if (barTitle) barTitle.innerText = deptName;
 
-  // 3. Set the shared Citizen's Charter button link
+  // 3. Set the specific Org Chart link (falls back to a default folder if not listed yet)
+  const orgChartUrl = departmentOrgCharts[deptName] || "https://drive.google.com/drive/u/0/folders/1sL5vyEwNW86kGW6vDkGF1O0iHT6_aYpa";
+  const orgBtn = document.getElementById('dept-org-pdf-link');
+  if (orgBtn) {
+    orgBtn.href = orgChartUrl;
+  }
+
+  // 4. Set the shared Citizen's Charter button link
   const charterBtn = document.getElementById('dept-charter-pdf-link');
   if (charterBtn) {
     charterBtn.href = sharedCitizensCharterUrl;
   }
 
-  // 4. Default to showing the Citizen's Charter tab first
+  // 5. Default to showing the Citizen's Charter tab first
   switchDeptTab('charter');
 }
