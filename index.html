@@ -14,7 +14,7 @@
 <body class="bg-slate-100 font-sans text-slate-800 antialiased min-h-screen flex flex-col">
 
 <!-- MAIN NAVIGATION BAR -->
-  <nav class="bg-white text-slate-800 shadow-md sticky top-0 z-50 border-b border-slate-200">
+  <nav class="bg-white text-slate-800 shadow-sm sticky top-0 z-50 border-b border-slate-200">
     <!-- TOP TICKER BAR -->
     <div class="bg-[#173D9A] text-white text-sm md:text-base px-6 md:px-12 py-2.5 md:py-3 flex items-center justify-between font-normal tracking-wide">
       <!-- Left: PH Flag & Real-Time Date/Time -->
@@ -45,28 +45,28 @@
         <i class="fa-solid fa-bars"></i>
       </button>
 
-      <!-- Desktop Links Container -->
-      <div class="hidden lg:flex items-center space-x-6 text-sm sm:text-base font-bold text-[#173D9A]">
+      <!-- Desktop Links Container (Pasig-style clean font weights) -->
+      <div class="hidden lg:flex items-center space-x-7 text-sm sm:text-base font-semibold text-slate-800">
         
-        <button id="nav-btn-home" onclick="showPage('home')" class="hover:text-blue-600 transition py-1">Home</button>
+        <button id="nav-btn-home" onclick="showPage('home')" class="hover:text-[#173D9A] transition py-1">Home</button>
         
         <!-- ABOUT DROPDOWN MENU -->
         <div class="relative group">
-          <button id="nav-btn-about" onclick="showPage('about')" class="hover:text-blue-600 transition flex items-center py-1">
-            About Mandaue <i class="fa-solid fa-chevron-down text-xs ml-1.5 opacity-70"></i>
+          <button id="nav-btn-about" onclick="showPage('about')" class="hover:text-[#173D9A] transition flex items-center py-1">
+            About Mandaue <i class="fa-solid fa-chevron-down text-xs ml-1.5 opacity-60"></i>
           </button>
           
           <div class="absolute left-0 top-full hidden group-hover:block w-52 bg-white border border-slate-200 shadow-xl rounded-b text-slate-800 py-2 z-50">
-            <a href="#officials" onclick="showPage('officials'); return false;" class="px-4 py-2.5 hover:bg-slate-100 hover:text-[#173D9A] transition flex items-center text-xs sm:text-sm font-semibold">
+            <a href="#officials" onclick="showPage('officials'); return false;" class="px-4 py-2.5 hover:bg-slate-50 hover:text-[#173D9A] transition flex items-center text-xs sm:text-sm font-medium">
               City Officials
             </a>
-            <a href="#offices" onclick="showPage('offices'); return false;" class="px-4 py-2.5 hover:bg-slate-100 hover:text-[#173D9A] transition flex items-center text-xs sm:text-sm font-semibold">
+            <a href="#offices" onclick="showPage('offices'); return false;" class="px-4 py-2.5 hover:bg-slate-50 hover:text-[#173D9A] transition flex items-center text-xs sm:text-sm font-medium">
               Offices & Departments
             </a>
-            <a href="#barangays" onclick="showPage('barangays'); return false;" class="px-4 py-2.5 hover:bg-slate-100 hover:text-[#173D9A] transition flex items-center text-xs sm:text-sm font-semibold">
+            <a href="#barangays" onclick="showPage('barangays'); return false;" class="px-4 py-2.5 hover:bg-slate-50 hover:text-[#173D9A] transition flex items-center text-xs sm:text-sm font-medium">
               Barangays
             </a>
-            <a href="#about" onclick="showPage('about'); return false;" class="px-4 py-2.5 hover:bg-slate-100 hover:text-[#173D9A] transition flex items-center text-xs sm:text-sm font-semibold">
+            <a href="#about" onclick="showPage('about'); return false;" class="px-4 py-2.5 hover:bg-slate-50 hover:text-[#173D9A] transition flex items-center text-xs sm:text-sm font-medium">
               Maps & History
             </a>
           </div>
@@ -74,55 +74,55 @@
 
         <!-- E-SERVICES DROPDOWN MENU -->
         <div class="relative group">
-          <button id="nav-btn-services" onclick="showPage('services')" class="hover:text-blue-600 transition flex items-center py-1">
-            Online Services <i class="fa-solid fa-chevron-down text-xs ml-1.5 opacity-70"></i>
+          <button id="nav-btn-services" onclick="showPage('services')" class="hover:text-[#173D9A] transition flex items-center py-1">
+            Online Services <i class="fa-solid fa-chevron-down text-xs ml-1.5 opacity-60"></i>
           </button>
           
           <div class="absolute left-0 top-full hidden group-hover:block w-80 bg-white border border-slate-200 shadow-xl rounded-b text-slate-800 py-2 z-50">
-            <a href="https://www.sites.google.com/view/bplomandaue/home" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 hover:bg-slate-100 hover:text-[#173D9A] transition flex items-center text-xs sm:text-sm font-semibold">
+            <a href="https://www.sites.google.com/view/bplomandaue/home" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 hover:bg-slate-50 hover:text-[#173D9A] transition flex items-center text-xs sm:text-sm font-medium">
               Business Permit and Licensing
             </a>
-            <a href="#services" onclick="showPage('services'); return false;" class="px-4 py-2.5 hover:bg-slate-100 hover:text-[#173D9A] transition flex items-center text-xs sm:text-sm font-semibold">
+            <a href="#services" onclick="showPage('services'); return false;" class="px-4 py-2.5 hover:bg-slate-50 hover:text-[#173D9A] transition flex items-center text-xs sm:text-sm font-medium">
               Real Property Tax Assessment
             </a>
-            <a href="#services" onclick="showPage('services'); return false;" class="px-4 py-2.5 hover:bg-slate-100 hover:text-[#173D9A] transition flex items-center text-xs sm:text-sm font-semibold">
+            <a href="#services" onclick="showPage('services'); return false;" class="px-4 py-2.5 hover:bg-slate-50 hover:text-[#173D9A] transition flex items-center text-xs sm:text-sm font-medium">
               Delivery Permit Application
             </a>
-            <a href="#services" onclick="showPage('services'); return false;" class="px-4 py-2.5 hover:bg-slate-100 hover:text-[#173D9A] transition flex items-center text-xs sm:text-sm font-semibold">
+            <a href="#services" onclick="showPage('services'); return false;" class="px-4 py-2.5 hover:bg-slate-50 hover:text-[#173D9A] transition flex items-center text-xs sm:text-sm font-medium">
               Traffic Violation System
             </a>
           </div>
         </div>
 
-        <a href="https://sites.google.com/mandauecity.gov.ph/spmandaue/home" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition py-1">Sangguniang Panlungsod</a>
+        <a href="https://sites.google.com/mandauecity.gov.ph/spmandaue/home" target="_blank" rel="noopener noreferrer" class="hover:text-[#173D9A] transition py-1">Sangguniang Panlungsod</a>
 
         <!-- FULL DISCLOSURE DROPDOWN -->
         <div class="relative group">
-          <button class="hover:text-blue-600 transition flex items-center py-1">
-            Full Disclosure <i class="fa-solid fa-chevron-down text-xs ml-1.5 opacity-70"></i>
+          <button class="hover:text-[#173D9A] transition flex items-center py-1">
+            Full Disclosure <i class="fa-solid fa-chevron-down text-xs ml-1.5 opacity-60"></i>
           </button>
           
           <div class="absolute left-0 top-full hidden group-hover:block w-72 bg-white border border-slate-200 shadow-xl rounded-b text-slate-800 py-2 z-50">
-            <a href="https://drive.google.com/drive/u/0/folders/16-G2nvbHAeMmx1pkqEf0NpEhALbgVNCa" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 hover:bg-slate-100 hover:text-[#173D9A] transition flex items-center text-xs sm:text-sm font-semibold">
-              <i class="fa-solid fa-folder-open mr-2 text-mandaue-blue"></i> Full Disclosure Data
+            <a href="https://drive.google.com/drive/u/0/folders/16-G2nvbHAeMmx1pkqEf0NpEhALbgVNCa" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 hover:bg-slate-50 hover:text-[#173D9A] transition flex items-center text-xs sm:text-sm font-medium">
+              <i class="fa-solid fa-folder-open mr-2 text-blue-600"></i> Full Disclosure Data
             </a>
-            <a href="https://drive.google.com/drive/u/0/folders/1iSCCCs4yHxUSiNcY79ecqqo0Whaldg4-" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 hover:bg-slate-100 hover:text-[#173D9A] transition flex items-center text-xs sm:text-sm font-semibold">
-              <i class="fa-solid fa-folder-open mr-2 text-mandaue-blue"></i> Bids and Awards
+            <a href="https://drive.google.com/drive/u/0/folders/1iSCCCs4yHxUSiNcY79ecqqo0Whaldg4-" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 hover:bg-slate-50 hover:text-[#173D9A] transition flex items-center text-xs sm:text-sm font-medium">
+              <i class="fa-solid fa-folder-open mr-2 text-blue-600"></i> Bids and Awards
             </a>
-            <a href="https://drive.google.com/drive/u/0/folders/1sL5vyEwNW86kGW6vDkGF1O0iHT6_aYpa" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 hover:bg-slate-100 hover:text-[#173D9A] transition flex items-center text-xs sm:text-sm font-semibold">
-              <i class="fa-solid fa-folder-open mr-2 text-mandaue-blue"></i> Citizen's Charter Handbook
+            <a href="https://drive.google.com/drive/u/0/folders/1sL5vyEwNW86kGW6vDkGF1O0iHT6_aYpa" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 hover:bg-slate-50 hover:text-[#173D9A] transition flex items-center text-xs sm:text-sm font-medium">
+              <i class="fa-solid fa-folder-open mr-2 text-blue-600"></i> Citizen's Charter Handbook
             </a>
           </div>
         </div>
 
-        <button onclick="scrollToHotlines()" class="hover:text-blue-600 transition py-1">Emergency Hotlines</button>
+        <button onclick="scrollToHotlines()" class="hover:text-[#173D9A] transition py-1">Emergency Hotlines</button>
       </div>
 
     </div>
 
     <!-- Mobile Dropdown Menu Container -->
     <div id="mobile-menu" class="hidden lg:hidden bg-slate-900 text-white px-6 py-4 shadow-xl">
-      <div class="flex flex-col space-y-3 text-sm font-semibold">
+      <div class="flex flex-col space-y-3 text-sm font-medium">
         <button onclick="showPage('home'); toggleMobileMenu()" class="text-left py-1 hover:text-amber-300">Home</button>
         <button onclick="showPage('about'); toggleMobileMenu()" class="text-left py-1 hover:text-amber-300">About Mandaue</button>
         <button onclick="showPage('services'); toggleMobileMenu()" class="text-left py-1 hover:text-amber-300">Online Services</button>
@@ -134,7 +134,7 @@
       </div>
     </div>
   </nav>
-
+  
 <!-- ==================== HOME PAGE VIEW ==================== -->
   <div id="page-home" class="space-y-6">
 
