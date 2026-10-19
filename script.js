@@ -1,6 +1,6 @@
 function showPage(pageId) {
-  // Hide all page containers
-  const pages = ['page-home', 'page-services', 'page-about', 'page-barangays', 'page-offices', 'page-officials', 'page-hotlines', 'page-department-detail'];
+  // Hide all page containers (added 'page-barangay-detail' here)
+  const pages = ['page-home', 'page-services', 'page-about', 'page-barangays', 'page-offices', 'page-officials', 'page-hotlines', 'page-department-detail', 'page-barangay-detail'];
   pages.forEach(id => {
     const el = document.getElementById(id);
     if (el) el.classList.add('hidden');
@@ -198,9 +198,8 @@ function renderUpcomingHolidays() {
   if (!container) return;
 
   const today = new Date();
-  today.setHours(0, 0, 0, 0); // Reset time to midnight for accurate date comparison
+  today.setHours(0, 0, 0, 0);
 
-  // Filter out holidays that have already passed
   const upcoming = phHolidays.filter(holiday => {
     const holidayDate = new Date(holiday.date);
     return holidayDate >= today;
@@ -211,7 +210,6 @@ function renderUpcomingHolidays() {
     return;
   }
 
-  // Render only upcoming holidays
   container.innerHTML = upcoming.map(holiday => {
     const isRed = holiday.style === 'red';
     const bgBadge = isRed ? 'bg-red-50 border-red-200 text-red-600' : 'bg-blue-50 border-blue-200 text-[#173D9A]';
@@ -235,26 +233,21 @@ function renderUpcomingHolidays() {
   }).join('');
 }
 
-// Run functions when the page finishes loading
 document.addEventListener('DOMContentLoaded', () => {
   updateCalendarTodayDate();
   renderUpcomingHolidays();
 });
 
 function scrollToHotlines() {
-  // 1. Switch back to the Home page view if on a different page
   showPage('home');
-
-  // 2. Locate the Emergency Hotlines section and scroll smoothly to it
   setTimeout(() => {
     const hotlinesSection = document.getElementById('emergency-hotlines-section');
     if (hotlinesSection) {
       hotlinesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-  }, 100); // Short delay ensures the home view DOM is rendered before scrolling
+  }, 100);
 }
 
-// Intersection Observer for Selected Sections Fade-Up Animation
 document.addEventListener("DOMContentLoaded", function () {
   initFadeUpObserver();
 });
@@ -275,22 +268,18 @@ function initFadeUpObserver() {
     });
   }, observerOptions);
 
-  // Observe only elements with the 'fade-up' class
   document.querySelectorAll('.fade-up').forEach(element => {
     fadeObserver.observe(element);
   });
 }
 
 function switchDeptTab(tabName) {
-  // Hide all contents
   document.querySelectorAll('.dept-content').forEach(el => el.classList.add('hidden'));
-  // Reset all tabs style
   document.querySelectorAll('.dept-tab').forEach(el => {
     el.classList.remove('bg-white', 'text-mandaue-blue', 'shadow-sm', 'border', 'border-slate-200');
     el.classList.add('text-slate-600', 'bg-slate-200/60', 'font-semibold');
   });
 
-  // Show active content & style active tab
   const activeContent = document.getElementById(`dept-content-${tabName}`);
   const activeTab = document.getElementById(`dept-tab-${tabName}`);
 
@@ -301,20 +290,15 @@ function switchDeptTab(tabName) {
   }
 }
 
-// Shared Citizen's Charter file for all city departments
 const sharedCitizensCharterUrl = "https://drive.google.com/file/d/1ivSyy7l_4eequYi6SE4w8G2r4vu8PIRn/view?usp=sharing";
 
-// Organizational Chart links database for all departments
 const departmentOrgCharts = {
-  // Initial Batch
   "Mandaue City Substance Abuse and Mental Health Services Office": "https://drive.google.com/file/d/1MBFZPHNbjLxVipHyn0vTm1TjRwb6818b/view?usp=sharing",
   "Gender and Development": "https://drive.google.com/file/d/1yvs3ORdaoL4RrrxITYi5GKMclUcKwdO_/view?usp=sharing",
   "Office of the Building Official": "https://drive.google.com/file/d/1nGjICirOXpy9mpHsVaTINV58E1rL9Psk/view?usp=sharing",
   "Mandaue City Environmental & Natural Resource Office": "https://drive.google.com/file/d/1Sk9p4kib27wkiabr3zgzUhDPhQs0ZUlI/view?usp=sharing",
   "Public Information Office": "https://drive.google.com/file/d/1ikABTZBgGQflsaO0ImI0kBVUQKzDZ38D/view?usp=sharing",
   "Office of Senior Citizens Affairs": "https://drive.google.com/file/d/19gZvYVCBRt4hPaZB0OzzH52g971Fhg77/view?usp=sharing",
-
-  // New Batch
   "Housing and Urban Development Office": "https://drive.google.com/file/d/1d7CQEKBVOZWjRH3j_YZ8kkZDAKPIm3f5/view?usp=sharing",
   "Local Civil Registrar": "https://drive.google.com/file/d/1xg1FNgYr0_dX24R_A8tZys53YX3I5jVj/view?usp=sharing",
   "Office of Strategy Management": "https://drive.google.com/file/d/12N4ZUeZNH9qlSjNDyPF5TWCHMAPAbLN9/view?usp=sharing",
@@ -350,42 +334,115 @@ const departmentOrgCharts = {
 };
 
 function openDepartment(deptName) {
-  // 1. Switch to Department Detail View
   showPage('department-detail');
 
-  // 2. Update Header & Subtitle Titles dynamically
   const headerTitle = document.getElementById('dept-title-header');
   const barTitle = document.getElementById('dept-title-bar');
   if (headerTitle) headerTitle.innerText = deptName;
   if (barTitle) barTitle.innerText = deptName;
 
-  // 3. Handle Organizational Chart URL (Check if it exists for this specific department)
   const orgChartUrl = departmentOrgCharts[deptName];
-  const orgBtnContainer = document.getElementById('dept-org-button-container'); // Container wrapping the download button
   const orgBtn = document.getElementById('dept-org-pdf-link');
-  const orgNoLinkMsg = document.getElementById('dept-org-missing-msg'); // Optional message for missing charts
+  const orgNoLinkMsg = document.getElementById('dept-org-missing-msg');
 
   if (orgChartUrl) {
-    // If URL exists, show the button and set the href
     if (orgBtn) {
       orgBtn.href = orgChartUrl;
       orgBtn.style.display = 'inline-flex';
     }
     if (orgNoLinkMsg) orgNoLinkMsg.classList.add('hidden');
   } else {
-    // If NO URL exists (like Mayor's Office, City Administrator, MASA, etc.), hide the button or show a message
     if (orgBtn) {
       orgBtn.style.display = 'none';
     }
     if (orgNoLinkMsg) orgNoLinkMsg.classList.remove('hidden');
   }
 
-  // 4. Set the shared Citizen's Charter button link
   const charterBtn = document.getElementById('dept-charter-pdf-link');
   if (charterBtn) {
     charterBtn.href = sharedCitizensCharterUrl;
   }
 
-  // 5. Default to showing the Organizational Chart tab first
   switchDeptTab('org');
+}
+
+// ==================== BARANGAY DETAIL LOGIC ==================== //
+const barangayData = {
+  "Alang-alang": {
+    history: "<strong>Alang-alang.</strong> Old Cebuano for <em>ylang-ylang</em>. It got its name from its closeness to the town center, Poblacion or Centro. The name from the Visayan denotes middling distance from one point to the other. Before it had become an independent sitio, it was at the boundary of barangays Ibabao and Opao. When substantial population could justify its separation, people who came from there began to refer to it as \"<em>Alang-alang sa Ibabao ug sa Opao</em>\" (somewhere between Ibabao and Opao), which would later be contracted to \"Alang-alang\".",
+    captain: "Go, Jesse James L.",
+    councilors: [
+      "Alimpangog, Dennis V.",
+      "Cuizon, Jeric Mikhail",
+      "Saladaga, Amedello",
+      "Sanchez, Myles Arri",
+      "Cortes, Kristian P.",
+      "Jundos, Joseph R.",
+      "Soco, Genaro C. Jr."
+    ],
+    skChairman: "Soco, Gabrielle Val T.",
+    skCouncilors: [
+      "Ortega, Marjorie Rose",
+      "Cuizon, Luther Ian F.",
+      "Sumalinog, Ivan P.",
+      "Sayson, Justine Y.",
+      "Opura, Leandro",
+      "Nieves, Jan Michael B.",
+      "Basaca, Ritz Eal"
+    ]
+  }
+};
+
+function openBarangay(brgyName) {
+  showPage('barangay-detail');
+
+  const data = barangayData[brgyName];
+
+  const header = document.getElementById('brgy-title-header');
+  const mapLabel = document.getElementById('brgy-map-label');
+  if (header) header.innerText = "Barangay " + brgyName;
+  if (mapLabel) mapLabel.innerText = "Barangay " + brgyName;
+
+  const historyEl = document.getElementById('brgy-history-text');
+  if (historyEl) {
+    historyEl.innerHTML = data && data.history ? data.history : "Historical background for this barangay is currently being updated.";
+  }
+
+  const captainEl = document.getElementById('brgy-captain-name');
+  if (captainEl) {
+    captainEl.innerText = data ? data.captain : "Information being updated.";
+  }
+
+  const councilGrid = document.getElementById('brgy-councilors-grid');
+  if (councilGrid) {
+    if (data && data.councilors) {
+      councilGrid.innerHTML = data.councilors.map((cName, idx) => `
+        <div class="bg-slate-50 border border-slate-200 rounded-lg p-3 flex items-center space-x-3">
+          <span class="text-xs font-black text-slate-400 shrink-0">#${idx + 1}</span>
+          <p class="text-xs font-semibold text-slate-800">${cName}</p>
+        </div>
+      `).join('');
+    } else {
+      councilGrid.innerHTML = `<p class="text-xs text-slate-500 col-span-full">Councilor list currently unavailable.</p>`;
+    }
+  }
+
+  const skChairmanEl = document.getElementById('sk-chairman-name');
+  if (skChairmanEl) {
+    skChairmanEl.innerText = data ? data.skChairman : "Information being updated.";
+  }
+
+  const skCouncilGrid = document.getElementById('sk-councilors-grid');
+  if (skCouncilGrid) {
+    if (data && data.skCouncilors) {
+      skCouncilGrid.innerHTML = data.skCouncilors.map((cName, idx) => `
+        <div class="bg-slate-50 border border-slate-200 rounded-lg p-3 flex items-center space-x-3">
+          <span class="text-xs font-black text-amber-500 shrink-0">#${idx + 1}</span>
+          <p class="text-xs font-semibold text-slate-800">${cName}</p>
+        </div>
+      `).join('');
+    } else {
+      skCouncilGrid.innerHTML = `<p class="text-xs text-slate-500 col-span-full">SK Councilor list currently unavailable.</p>`;
+    }
+  }
 }
