@@ -368,15 +368,24 @@ function openBarangay(brgyName) {
   const header = document.getElementById('brgy-title-header');
   if (header) header.innerText = "Barangay " + brgyName;
 
-  // History & Officials
+  // History Lore Text (Enlarged inside HTML template)
   const historyEl = document.getElementById('brgy-history-text');
-  if (historyEl) historyEl.innerHTML = data && data.history ? data.history : "Historical background for this barangay is currently being updated.";
+  if (historyEl) {
+    historyEl.innerHTML = data && data.history 
+      ? data.history 
+      : "Historical background for this barangay is currently being updated.";
+  }
 
+  // Captain & SK Chairman
   const captainEl = document.getElementById('brgy-captain-name');
-  if (captainEl) captainEl.innerText = data ? data.captain : "Information being updated.";
+  if (captainEl) {
+    captainEl.innerText = data && data.captain ? data.captain : "Information being updated.";
+  }
 
   const skChairmanEl = document.getElementById('sk-chairman-name');
-  if (skChairmanEl) skChairmanEl.innerText = data ? data.skChairman : "Information being updated.";
+  if (skChairmanEl) {
+    skChairmanEl.innerText = data && data.skChairman ? data.skChairman : "Information being updated.";
+  }
 
   // Dynamic Map Handler
   const mapFrame = document.getElementById('brgy-map-iframe');
@@ -392,25 +401,33 @@ function openBarangay(brgyName) {
     directLink.href = data && data.directUrl ? data.directUrl : `https://www.google.com/maps/search/Barangay+${encodeURIComponent(brgyName)}+Mandaue+City`;
   }
 
-  // Render Councilors (Larger Text: text-sm sm:text-base font-bold)
+  // Render Barangay Councilors Grid (With enlarged text: text-sm sm:text-base font-bold)
   const councilGrid = document.getElementById('brgy-councilors-grid');
   if (councilGrid) {
-    councilGrid.innerHTML = data && data.councilors ? data.councilors.map((cName, idx) => `
-      <div class="bg-slate-50 border border-slate-200 rounded-lg p-3.5 flex items-center space-x-3.5 shadow-sm">
-        <span class="text-xs font-black text-slate-400 shrink-0">#${idx + 1}</span>
-        <p class="text-sm sm:text-base font-bold text-slate-800">${cName}</p>
-      </div>
-    `).join('') : `<p class="text-sm text-slate-500 col-span-full">Councilor list currently unavailable.</p>`;
+    if (data && data.councilors && data.councilors.length > 0) {
+      councilGrid.innerHTML = data.councilors.map((cName, idx) => `
+        <div class="bg-slate-50 border border-slate-200 rounded-lg p-3.5 flex items-center space-x-3.5 shadow-sm">
+          <span class="text-xs font-black text-slate-400 shrink-0">#${idx + 1}</span>
+          <p class="text-sm sm:text-base font-bold text-slate-800">${cName}</p>
+        </div>
+      `).join('');
+    } else {
+      councilGrid.innerHTML = `<p class="text-sm text-slate-500 col-span-full">Barangay councilor list currently unavailable.</p>`;
+    }
   }
 
-  // Render SK Councilors (Larger Text: text-sm sm:text-base font-bold)
+  // Render SK Councilors Grid (With enlarged text: text-sm sm:text-base font-bold)
   const skCouncilGrid = document.getElementById('sk-councilors-grid');
   if (skCouncilGrid) {
-    skCouncilGrid.innerHTML = data && data.skCouncilors ? data.skCouncilors.map((cName, idx) => `
-      <div class="bg-slate-50 border border-slate-200 rounded-lg p-3.5 flex items-center space-x-3.5 shadow-sm">
-        <span class="text-xs font-black text-amber-500 shrink-0">#${idx + 1}</span>
-        <p class="text-sm sm:text-base font-bold text-slate-800">${cName}</p>
-      </div>
-    `).join('') : `<p class="text-sm text-slate-500 col-span-full">SK Councilor list currently unavailable.</p>`;
+    if (data && data.skCouncilors && data.skCouncilors.length > 0) {
+      skCouncilGrid.innerHTML = data.skCouncilors.map((cName, idx) => `
+        <div class="bg-slate-50 border border-slate-200 rounded-lg p-3.5 flex items-center space-x-3.5 shadow-sm">
+          <span class="text-xs font-black text-amber-500 shrink-0">#${idx + 1}</span>
+          <p class="text-sm sm:text-base font-bold text-slate-800">${cName}</p>
+        </div>
+      `).join('');
+    } else {
+      skCouncilGrid.innerHTML = `<p class="text-sm text-slate-500 col-span-full">SK councilor list currently unavailable.</p>`;
+    }
   }
 }
