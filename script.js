@@ -446,3 +446,21 @@ function openBarangay(brgyName) {
     }
   }
 }
+
+function showPage(pageId) {
+  // Make sure 'page-barangay-detail' is in this array!
+  const pages = ['page-home', 'page-services', 'page-about', 'page-barangays', 'page-offices', 'page-officials', 'page-hotlines', 'page-department-detail', 'page-barangay-detail'];
+  
+  pages.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.add('hidden');
+  });
+
+  const targetPage = document.getElementById('page-' + pageId);
+  if (targetPage) {
+    targetPage.classList.remove('hidden');
+  }
+
+  window.location.hash = pageId;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
