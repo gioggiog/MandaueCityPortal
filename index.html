@@ -2391,6 +2391,46 @@
     </div>
   </footer>
 
+      <!-- ==================== SEARCH MODAL ==================== -->
+<div id="search-modal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-start justify-center pt-20 px-4 transition-opacity">
+  <div class="bg-white w-full max-w-2xl rounded-2xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[80vh]">
+    
+    <!-- Modal Search Input Header -->
+    <div class="p-4 border-b border-slate-200 flex items-center space-x-3 bg-slate-50">
+      <i class="fa-solid fa-magnifying-glass text-slate-400 text-lg"></i>
+      <input 
+        type="text" 
+        id="search-input" 
+        oninput="handleSearch()" 
+        placeholder="Search Barangays, Offices, or Services (e.g., Banilad, BPLO, Tax)..." 
+        class="w-full bg-transparent text-slate-800 text-base font-semibold focus:outline-none placeholder:text-slate-400"
+      >
+      <button onclick="closeSearchModal()" class="text-slate-400 hover:text-slate-600 p-1 rounded-lg hover:bg-slate-200 transition">
+        <i class="fa-solid fa-xmark text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Real-time Search Results Container -->
+    <div id="search-results" class="p-4 overflow-y-auto space-y-2 divide-y divide-slate-100">
+      <div class="text-center py-8 text-slate-400 text-sm">
+        Type something above to search across the portal...
+      </div>
+    </div>
+
+    <!-- Modal Footer -->
+    <div class="px-4 py-2.5 bg-slate-100 border-t border-slate-200 text-xs text-slate-500 flex justify-between items-center">
+      <span>Press <kbd class="px-1.5 py-0.5 bg-white border rounded font-mono text-[10px]">ESC</kbd> to exit</span>
+      <span class="font-bold text-[#173D9A]">Mandaue City Portal Search</span>
+    </div>
+
+  </div>
+</div>
+
+      <!-- External JavaScript Link -->
+  <script src="script.js" defer></script>
+</body>
+</html>
+      
   <!-- External JavaScript Link -->
   <script src="script.js" defer></script>
 </body>
