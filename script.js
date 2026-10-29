@@ -46,8 +46,9 @@ function toggleMobileMenu() {
   const mobileMenu = document.getElementById('mobile-menu');
   const toggleBtn = document.getElementById('menu-toggle');
   if (!mobileMenu) return;
-  mobileMenu.classList.toggle('hidden');
-  const isOpen = !mobileMenu.classList.contains('hidden');
+
+  const isOpen = mobileMenu.classList.toggle('is-open');
+
   if (toggleBtn) {
     toggleBtn.setAttribute('aria-expanded', String(isOpen));
     const icon = toggleBtn.querySelector('i');
@@ -61,7 +62,7 @@ function toggleMobileMenu() {
 // Close the mobile menu if the screen grows to desktop width
 window.addEventListener('resize', () => {
   const mobileMenu = document.getElementById('mobile-menu');
-  if (window.innerWidth >= 1024 && mobileMenu && !mobileMenu.classList.contains('hidden')) {
+  if (window.innerWidth >= 1024 && mobileMenu && mobileMenu.classList.contains('is-open')) {
     toggleMobileMenu();
   }
 });
@@ -1185,3 +1186,9 @@ document.addEventListener('click', (e) => {
     if (dropdown) dropdown.classList.add('hidden');
   }
 });
+
+// ==================== NAV SHADOW ON SCROLL ==================== //
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('nav');
+  if (nav) nav.classList.toggle('nav-scrolled', window.scrollY > 10);
+}, { passive: true });
